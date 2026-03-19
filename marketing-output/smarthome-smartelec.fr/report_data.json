@@ -1,0 +1,119 @@
+{
+  "url": "https://smarthome-smartelec.fr",
+  "date": "19 mars 2026",
+  "brand_name": "SMARTHOME SMARTELEC",
+  "overall_score": 37,
+  "executive_summary": "SMARTHOME SMARTELEC obtient 37/100, r\u00e9v\u00e9lant un d\u00e9calage profond entre une vision strat\u00e9gique pertinente (automatisation IA pour PME/artisans) et son ex\u00e9cution marketing. Le site souffre d'une crise d'identit\u00e9 : la homepage annonce un pivot vers l'IA tandis que la navigation, le nom de domaine et les certifications parlent encore de domotique/\u00e9lectricit\u00e9. L'absence totale de preuve sociale (z\u00e9ro t\u00e9moignage, z\u00e9ro \u00e9tude de cas) et un tunnel de conversion \u00e0 point unique (97-99% des visiteurs repartent sans trace) freinent drastiquement l'acquisition. L'impl\u00e9mentation des recommandations prioritaires pourrait g\u00e9n\u00e9rer 3 \u00e0 8 nouveaux clients qualifi\u00e9s par mois, soit un potentiel de 4 500\u20ac \u00e0 40 000\u20ac/mois de CA additionnel.",
+  "categories": {
+    "Content & Messaging": {
+      "score": 41,
+      "weight": "25%"
+    },
+    "Conversion Optimization": {
+      "score": 28,
+      "weight": "20%"
+    },
+    "SEO & Discoverability": {
+      "score": 42,
+      "weight": "20%"
+    },
+    "Competitive Positioning": {
+      "score": 34,
+      "weight": "15%"
+    },
+    "Brand & Trust": {
+      "score": 38,
+      "weight": "10%"
+    },
+    "Growth & Strategy": {
+      "score": 42,
+      "weight": "10%"
+    }
+  },
+  "findings": [
+    {
+      "severity": "Critical",
+      "finding": "Crise d'identit\u00e9 de marque : le nom SMARTHOME SMARTELEC, le logo 2018, la navigation (alarme, domotique, \u00e9lectricit\u00e9) et les certifications affich\u00e9es contredisent le repositionnement IA/automatisation annonc\u00e9 sur la homepage."
+    },
+    {
+      "severity": "Critical",
+      "finding": "Z\u00e9ro preuve sociale : aucun t\u00e9moignage client, aucune \u00e9tude de cas, aucun chiffre de r\u00e9sultat, aucun logo client, aucun avis Google. Pour une micro-entreprise en reconversion, c'est r\u00e9dhibitoire."
+    },
+    {
+      "severity": "Critical",
+      "finding": "Point de conversion unique sans filet : seul le booking Cal.com existe. Pas de formulaire de contact, pas de lead magnet, pas de capture email. Estimation : 97-99% des visiteurs repartent sans laisser de trace."
+    },
+    {
+      "severity": "Critical",
+      "finding": "Meta descriptions absentes sur la homepage et la page blog. Google g\u00e9n\u00e8re des extraits automatiques non engageants, p\u00e9nalisant le CTR dans les SERPs."
+    },
+    {
+      "severity": "High",
+      "finding": "Redirection externe vers cal.com au lieu d'un embed inline : cr\u00e9e une rupture de domaine qui augmente l'abandon de 10-20%. Cal.com propose un widget embed gratuit."
+    },
+    {
+      "severity": "High",
+      "finding": "Email Gmail (smarthome.smartelec@gmail.com) comme contact professionnel : signal d'amateurisme r\u00e9dhibitoire en contexte B2B, alors que l'h\u00e9bergement OVH permet des emails @smarthome-smartelec.fr."
+    },
+    {
+      "severity": "High",
+      "finding": "Images quasi sans attributs alt (logo, hero, articles, logos partenaires) : impact direct sur le SEO images et l'accessibilit\u00e9 WCAG. Le logo a pour alt 'AI Automation' en anglais."
+    },
+    {
+      "severity": "High",
+      "finding": "Article de blog enti\u00e8rement en anglais ('Unlocking Workflow Automation') sans hreflang sur un site fr-FR ciblant des artisans fran\u00e7ais. Signal contradictoire pour Google."
+    },
+    {
+      "severity": "Medium",
+      "finding": "Absent des plateformes de d\u00e9couverte cl\u00e9s : pas de profil Malt, pas de Google Business optimis\u00e9, pas de pr\u00e9sence LinkedIn active. Ce sont les canaux n\u00b01 pour le B2B PME en France."
+    },
+    {
+      "severity": "Medium",
+      "finding": "Aucune tarification visible alors que les concurrents Utilia AI (800-18 000\u20ac) et Synapze (500-15 000\u20ac) affichent leurs fourchettes. Les artisans ont besoin de rep\u00e8res budg\u00e9taires."
+    }
+  ],
+  "quick_wins": [
+    "Ajouter un statement anti-risque sous le CTA : 'Sans engagement \u2014 vous repartez avec un plan d'action concret, que vous travailliez avec nous ou non' (+5-10% clics)",
+    "Cr\u00e9er un email professionnel contact@smarthome-smartelec.fr via OVH et remplacer l'adresse Gmail partout sur le site",
+    "Rendre le num\u00e9ro de t\u00e9l\u00e9phone cliquable (balise tel:) pour le click-to-call mobile (+10-15% contacts)",
+    "R\u00e9diger les meta descriptions manquantes pour la homepage, le blog et les pages de services dans Rank Math (+15-25% CTR)",
+    "Ajouter les attributs alt sur toutes les images : logo, hero, articles, logos partenaires (SEO + accessibilit\u00e9)",
+    "Int\u00e9grer Cal.com en embed inline au lieu de la redirection externe (+10-20% compl\u00e9tion booking)"
+  ],
+  "medium_term": [
+    "Purger la navigation des services obsolètes (alarme, domotique, \u00e9lectricit\u00e9) et cr\u00e9er une page 'Notre histoire' valorisant la transition",
+    "Publier 2-3 \u00e9tudes de cas avec r\u00e9sultats chiffr\u00e9s (m\u00eame anonymis\u00e9es) et solliciter 3 premiers avis Google Business",
+    "Cr\u00e9er un lead magnet PDF '10 t\u00e2ches que l'IA peut automatiser dans votre PME' + formulaire de capture email + s\u00e9quence de nurturing",
+    "Afficher 3 offres packag\u00e9es avec fourchettes de prix ('\u00c0 partir de 500\u20ac') pour r\u00e9duire la friction de vente",
+    "Activer et optimiser profil LinkedIn avec repositionnement IA clair + 2-3 posts/semaine sur les probl\u00e9matiques artisans"
+  ],
+  "strategic": [
+    "Repositionnement de marque : nouveau nom commercial ou sous-marque d\u00e9di\u00e9e IA/automatisation pour \u00e9liminer la confusion identitaire",
+    "Strat\u00e9gie de contenu SEO cibl\u00e9e : contenu pilier 'Automatisation IA pour PME' + pages locales (/automatisation-valence/, /assistant-ia-drome/) + pages 'versus' (n8n vs Make, n8n vs Zapier)",
+    "Construction d'un r\u00e9seau de prescripteurs : partenariats CCI Dr\u00f4me, CAPEB, experts-comptables locaux + certification France Num Activateur",
+    "Productisation des offres : 'Pack Devis Automatique pour Artisans', 'Assistant IA Service Client PME' + offre de maintenance/supervision en abonnement mensuel"
+  ],
+  "competitors": [
+    {
+      "name": "Hyperstack",
+      "positioning": "Agence No-Code + Data + IA ciblant scale-ups et ETI (Paris, Nantes)",
+      "pricing": "Non affich\u00e9 - positionnement premium agence",
+      "social_proof": "3-4 clients nomm\u00e9s (Valiuz, Homelior), m\u00e9triques ROI publi\u00e9es",
+      "content": "Blog technique, \u00e9tudes de cas d\u00e9taill\u00e9es, stack complet document\u00e9"
+    },
+    {
+      "name": "Utilia AI",
+      "positioning": "n8n + agents IA PME avec ROI mesurable (La Rochelle)",
+      "pricing": "800-18 000\u20ac affich\u00e9s par service, exploite subventions r\u00e9gionales",
+      "social_proof": "M\u00e9triques ROI : 40h/mois \u00e9conomis\u00e9es, 5+ KPIs publi\u00e9s",
+      "content": "Tagline 'Sans bullshit', tarification p\u00e9dagogique, ciblage startups/SaaS"
+    },
+    {
+      "name": "Synapze",
+      "positioning": "Automatisation no-code + IA pour artisans et PME (Var, Provence)",
+      "pricing": "500-15 000\u20ac affich\u00e9s, KPIs : 15h/semaine \u00e9conomis\u00e9es",
+      "social_proof": "Claims KPI sans t\u00e9moignages nomm\u00e9s, 40% r\u00e9duction co\u00fbts en 3 mois",
+      "content": "Cible artisans explicite, cas d'usage m\u00e9tier, mais hors zone Dr\u00f4me"
+    }
+  ]
+}

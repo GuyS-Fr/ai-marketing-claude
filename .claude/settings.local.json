@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git clone:*)"
+      "Bash(*)",
+      "WebFetch(*)",
+      "WebSearch(*)",
+      "Read(*)",
+      "Write(marketing-output/**)",
+      "mcp__*"
     ]
   }
 }
