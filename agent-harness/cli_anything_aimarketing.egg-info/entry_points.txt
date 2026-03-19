@@ -1,0 +1,2 @@
+[console_scripts]
+cli-anything-aimarketing = cli_anything.aimarketing.aimarketing_cli:cli
