@@ -1,0 +1,160 @@
+{
+  "url": "https://mechahelp-ai.com",
+  "date": "19 mars 2026",
+  "brand_name": "MechaHelp",
+  "overall_score": 53,
+  "executive_summary": "MechaHelp obtient un score marketing de 53/100 (Grade D), révélant des faiblesses structurelles majeures malgré un positionnement concurrentiel solide. Le catalogue de 24 services couvrant 12+ domaines IA/automatisation est unique sur le marché francophone, mais les prix cachés derrière un login (-60-75% de visiteurs), l'absence totale de preuves sociales, et un site SPA invisible pour 50% des crawlers freinent considérablement la conversion. L'implémentation de l'ensemble des recommandations pourrait générer +12 800 à +34 000€/mois de revenus supplémentaires.",
+  "categories": {
+    "Content & Messaging": {
+      "score": 63,
+      "weight": "25%"
+    },
+    "Conversion Optimization": {
+      "score": 38,
+      "weight": "20%"
+    },
+    "SEO & Discoverability": {
+      "score": 53,
+      "weight": "20%"
+    },
+    "Competitive Positioning": {
+      "score": 67,
+      "weight": "15%"
+    },
+    "Brand & Trust": {
+      "score": 32,
+      "weight": "10%"
+    },
+    "Growth & Strategy": {
+      "score": 58,
+      "weight": "10%"
+    }
+  },
+  "findings": [
+    {
+      "severity": "Critical",
+      "finding": "Tous les prix sont cachés derrière un login obligatoire. Chaque carte de service affiche 'Prix : Connectez-vous' — perte estimée de 60-75% des visiteurs en phase de découverte. Aucun concurrent (LiveMentor, Malt, Lilian Sevoumian) ne cache ses tarifs."
+    },
+    {
+      "severity": "Critical",
+      "finding": "Le site est une SPA JavaScript pure (Vite/React) sans Server-Side Rendering. Le contenu est invisible pour Bing, DuckDuckGo, LinkedIn, WhatsApp et ~50% des crawlers. Risque majeur d'absence totale d'indexation organique."
+    },
+    {
+      "severity": "Critical",
+      "finding": "Zéro témoignage client, zéro étude de cas, zéro avis tiers (Trustpilot, Google). Les badges '98% satisfaction' et 'Résultats garantis' sont affirmés sans aucune preuve — potentiellement contre-productifs auprès de prospects avertis."
+    },
+    {
+      "severity": "High",
+      "finding": "Double identité de marque confusante : 'MechaHelp' (marketplace professionnelle) vs 'MechaPizzAI' (communauté Skool/YouTube/TikTok). Le suffixe 'PizzAI' est ludique et informel, en rupture avec l'image de sérieux attendue d'une marketplace B2B."
+    },
+    {
+      "severity": "High",
+      "finding": "Incohérence critique d'URL : la navigation pointe vers /services, le sitemap référence /accompagnements, le SearchAction JSON-LD pointe vers /services?search=. Risque de 404 ou contenu dupliqué."
+    },
+    {
+      "severity": "High",
+      "finding": "Title tag faible : '<title>Accueil | MechaHelp</title>' — aucun mot-clé stratégique. Meta description trop longue (177 vs 155 caractères recommandés). OG/Twitter héritent du title faible."
+    },
+    {
+      "severity": "High",
+      "finding": "Deux CTAs concurrents dans le hero ('Découvrir les services' et 'Rejoignez-nous') créent une paralysie du choix, réduisant les clics de 20-30%."
+    },
+    {
+      "severity": "Medium",
+      "finding": "Le lien 'Communauté' dans la navigation principale pointe vers skool.com (site externe) — fuite de visiteurs dès l'arrivée sur le site."
+    },
+    {
+      "severity": "Medium",
+      "finding": "Aucun contenu éducatif (blog, articles, guides, FAQ). Pas de stratégie SEO longue traîne. MechaHelp n'apparaît dans aucun comparatif de référence (Impli.fr, Jedha.co)."
+    },
+    {
+      "severity": "Medium",
+      "finding": "Les URLs d'accompagnement utilisent des UUIDs (/accompagnement/ed3e8b6a-691e-...) — non sémantiques, pas dans le sitemap, zéro valeur SEO."
+    },
+    {
+      "severity": "Medium",
+      "finding": "Contradiction entre '50+ experts certifiés' affiché et seulement 7 experts nommés visibles. Aucun processus de certification documenté. Le chiffre '500+ membres' ne correspond pas aux 384 confirmés sur Skool."
+    },
+    {
+      "severity": "Low",
+      "finding": "Faute de frappe dans le titre de service : 'Développement de SaaS su rmesure' au lieu de 'sur mesure'."
+    },
+    {
+      "severity": "Low",
+      "finding": "Page /auth incluse dans le sitemap.xml avec priorité 0.7 — gaspillage de crawl budget sur une page non-monétisable SEO."
+    },
+    {
+      "severity": "Low",
+      "finding": "Hiérarchie des titres incorrecte : H3 'MechaHelp' apparaît avant le premier H2, H4 orphelins dans le footer sans H3 parent."
+    }
+  ],
+  "quick_wins": [
+    "Afficher les fourchettes de prix sur chaque carte de service sans login (impact: +40-60% de clics vers inscription)",
+    "Corriger le title tag en 'MechaHelp — Accompagnements IA & Automatisation | Coaching Personnalisé' (impact: +15-25% CTR SERP)",
+    "Remplacer les 2 CTAs hero par un seul CTA primaire 'Découvrir les services' (impact: +15-20% clics)",
+    "Retirer le lien 'Communauté' de la navbar et le déplacer dans le footer (impact: -30% rebond estimé)",
+    "Corriger la faute 'su rmesure' → 'sur mesure' sur la page services",
+    "Aligner og:title et twitter:title sur le nouveau title tag optimisé (impact: +10-15% CTR partages sociaux)",
+    "Retirer /auth du sitemap.xml et ajouter Disallow: /auth dans robots.txt"
+  ],
+  "medium_term": [
+    "Collecter et afficher 10 témoignages clients avec prénom, photo, secteur et résultat chiffré (impact: +25-40% conversion)",
+    "Créer une page 'Notre équipe' avec le fondateur Julien Bergé en avant, process de certification des experts détaillé",
+    "Résoudre l'incohérence /services vs /accompagnements avec URL canonique et redirection 301",
+    "Implémenter des URLs sémantiques (/accompagnement/audit-strategie-360-ia) remplaçant les UUIDs",
+    "S'inscrire sur Trustpilot et Google Reviews — solliciter 20-30 avis clients",
+    "Clarifier la relation MechaHelp / MechaPizzAI dans la communication",
+    "Ajouter une section FAQ sur la homepage (10 questions/réponses)"
+  ],
+  "strategic": [
+    "Migrer vers un framework SSR (Next.js, Nuxt.js ou SvelteKit) pour résoudre le problème d'invisibilité crawler (impact: +100-300% trafic organique en 6 mois)",
+    "Lancer une stratégie de contenu SEO : 2 articles/semaine sur des sujets ciblés (tutoriels n8n, cas d'usage agents IA, comparatifs) — impact: +500-2000 visiteurs/mois en 3-6 mois",
+    "Développer une offre B2B packagée 'Audit + intégration IA pour PME' à partir de 1 500€ (impact: +5 000-15 000€/mois)",
+    "Explorer l'éligibilité Qualiopi/CPF pour accéder au budget de formation institutionnel",
+    "Lancer un programme de parrainage dans la communauté Skool pour accélérer l'acquisition"
+  ],
+  "competitors": [
+    {
+      "name": "LiveMentor",
+      "positioning": "Formation IA généraliste pour entrepreneurs et freelances, label Qualiopi",
+      "pricing": "1 980€ forfait 3 mois, 59 cours vidéo + mentor personnalisé",
+      "social_proof": "Centaines d'avis vérifiés, marque établie en France",
+      "content": "Blog actif, SEO optimisé, formations structurées"
+    },
+    {
+      "name": "Malt",
+      "positioning": "Marketplace de freelances généraliste avec 8 382+ profils IA",
+      "pricing": "TJM 169-800€/jour, commission plateforme",
+      "social_proof": "Avis vérifiés, sécurité financière, marque forte",
+      "content": "Blog, guides, contenus SEO nombreux"
+    },
+    {
+      "name": "Lilian Sevoumian",
+      "positioning": "Référence francophone formation n8n, certifié Make niveau 5 (1er Français)",
+      "pricing": "299-399€ accès à vie, 77 leçons, 12 modules",
+      "social_proof": "Avis positifs Discord, expertise reconnue 5 ans",
+      "content": "Formation structurée, Discord privé"
+    },
+    {
+      "name": "Paname Automatisé",
+      "positioning": "Communauté Skool spécialisée agents IA et n8n",
+      "pricing": "$69/mois, ~3 lives/semaine, masterclasses",
+      "social_proof": "Communauté active mais petite (~30-80 membres)",
+      "content": "Lives hebdomadaires, contenu communautaire"
+    },
+    {
+      "name": "Le Labo IA",
+      "positioning": "Communauté Skool Premium avec 120 membres, 70+ heures de contenu",
+      "pricing": "$97/mois, version gratuite disponible",
+      "social_proof": "Templates prêts à l'emploi, support personnalisé",
+      "content": "70+ heures, contenu débloqué sur 6 mois"
+    },
+    {
+      "name": "OpenClassrooms",
+      "positioning": "Plateforme de formation certifiante IA, titre RNCP niveau 7, partenariat Microsoft",
+      "pricing": "300€/mois, cursus 12 mois",
+      "social_proof": "Marque très forte, centaines d'avis, certification reconnue",
+      "content": "Cursus structurés, mentorat hebdomadaire, blog SEO"
+    }
+  ]
+}

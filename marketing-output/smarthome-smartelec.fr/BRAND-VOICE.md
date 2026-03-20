@@ -1,223 +1,371 @@
-# Analyse de Marque — SMARTHOME SMARTELEC
+# Guide de Voix de Marque — SMARTHOME SMARTELEC
 **URL :** https://smarthome-smartelec.fr
-**Date :** 19 mars 2026
-**Score Brand & Trust : 38/100**
-**Score Growth & Strategy : 42/100**
+**Date :** 20 mars 2026
+**Version :** 2.0 — Refonte complète post-audit
 
 ---
 
-## Synthèse
+## Table des matières
 
-SMARTHOME SMARTELEC est une entreprise avec un excellent potentiel de repositionnement mais qui souffre d'un décalage significatif entre la vision du fondateur et la perception externe. Guy SALVATORE dispose de tous les ingrédients pour devenir un acteur reconnu de l'automatisation IA pour PME en Drôme-Ardèche. Le problème n'est pas la compétence — c'est la mise en scène de cette compétence.
-
----
-
-## Brand & Trust — 38/100
-
-### 1. Cohérence Identité de Marque (4/20)
-
-Le nom **SMARTHOME SMARTELEC** est un handicap structurel majeur. Il évoque l'électricité résidentielle et la domotique grand public — deux marchés que l'entreprise cherche à quitter.
-
-**Éléments en conflit :**
-- Nom de domaine : `smarthome-smartelec.fr` → domotique résidentielle
-- Logo : créé en 2018 pour la domotique
-- Tagline : "Assistants IA pour PME et Associations | Électricité, Domotique"
-- Navigation : alarme, domotique, électricité, maintien à domicile
-- Certifications affichées : Jeedom, Delta Dore, Loxone (domotique)
-
-**vs. Nouveau positionnement revendiqué :**
-- Automatisation des processus métier
-- Assistants IA pour PME
-- Fiabilisation des données
-- n8n, Airtable, Supabase
-
-**Verdict :** Le nom nuit activement au repositionnement. La marque communique l'opposé de ce qu'elle vend.
-
-### 2. Qualité Visuelle (5/20)
-
-- Logo datant de 2018, conçu pour la domotique
-- Thème WordPress Sydney : générique, non différenciant
-- Aucun système de design cohérent (palette, typographie propriétaire, iconographie)
-- Email Gmail : signal fort d'amateurisme en B2B
-- Facebook avec ancienne identité
-
-### 3. Profondeur Signaux de Confiance (8/20)
-
-**Présent :**
-- Certifications électriques (H0V, B2V, BR, BC, IRVE/Apave)
-- RGPD + DPO déclaré (CNIL DPO-50061)
-- Logos partenaires tech (n8n, Airtable, Supabase, etc.)
-- Projet européen Activage
-
-**Absent :**
-- Zéro témoignage client
-- Zéro étude de cas
-- Aucun chiffre (clients, heures économisées, ROI)
-- Aucune page "À propos" avec photo professionnelle IA-contextualisée
-
-### 4. Crédibilité Professionnelle (12/20)
-
-**Point le plus solide.** L'historique de consultant SI/CRM en grand compte télécom est un actif différenciant réel. Mais :
-- Expérience non suffisamment mise en avant
-- Statut micro-entreprise peut être perçu comme "très petite structure"
-- Aucune certification IA récente visible
-
-### 5. Preuve Sociale et Réputation (9/20)
-
-- Facebook ancienne et peu active
-- Twitter/X sans stratégie visible
-- Blog actif depuis 2025 (signal positif mais récent)
-- Aucun avis Google My Business
-- Aucune présence LinkedIn (canal décisif B2B PME)
-- Pas de newsletter, pas de communauté
+1. [Analyse de l'ADN de marque actuel](#1-analyse-de-ladn-de-marque-actuel)
+2. [Archétype de marque recommandé](#2-archétype-de-marque-recommandé)
+3. [Voix de marque cible](#3-voix-de-marque-cible)
+4. [Guide du "Dire / Ne pas dire"](#4-guide-du-dire--ne-pas-dire)
+5. [Proposition de taglines alternatives](#5-proposition-de-taglines-alternatives)
+6. [Recommandations pour la transition de marque](#6-recommandations-pour-la-transition-de-marque)
+7. [Exemples de reformulation (avant/après)](#7-exemples-de-reformulation-avantaprès)
 
 ---
 
-## Growth & Strategy — 42/100
+## 1. Analyse de l'ADN de marque actuel
 
-### 1. Clarté du Modèle Économique (8/20)
+### 1.1 Les fondations authentiques
 
-Intellectuellement cohérent, opérationnellement flou :
-- Transition audacieuse et pertinente
-- Mais aucune offre packagée visible
-- Seul point d'entrée : audit gratuit 30 min
-- Micro-entreprise = plafond CA 77 700€/an en prestations
-- Modèle repose entièrement sur la capacité commerciale personnelle
+| Pilier | Preuve concrète | Valeur stratégique |
+|--------|----------------|--------------------|
+| **Parcours terrain** | Electricien certifié, habilitations H0V/B2V/BR/BC/IRVE, installations Delta Dore/Jeedom/Loxone | Comprend physiquement le quotidien d'un artisan |
+| **Expertise SI/CRM grand groupe** | Consultant chez opérateur télécom international, gestion de projets CRM/SI à grande échelle | Sait structurer des données, piloter un projet IT |
+| **Virage IA maîtrisé** | Stack n8n/Airtable/Supabase/NocoDB/Softr, blog technique actif depuis 2025 | Exécute réellement ce qu'il propose |
+| **Ancrage local + RGPD** | Portes-lès-Valence (Drôme), DPO déclaré CNIL DPO-50061, hébergement EU, Projet Activage | Proximité + conformité = double argument de confiance |
 
-### 2. Stratégie de Pricing (3/20)
+**Verdict ADN :** Triple légitimité (artisan + consultant SI + expert IA) qu'aucun concurrent ne réplique. Le problème n'est pas l'ADN — c'est sa mise en mots.
 
-- Absence totale de pricing visible
-- Les artisans ont besoin de repères budgétaires
-- Aucune offre d'entrée de gamme
-- Aucun modèle récurrent (SaaS, retainer mensuel)
-- Les outils utilisés (n8n, Airtable) se prêtent naturellement à l'abonnement
+### 1.2 Forces de la marque actuelle
 
-### 3. Boucles de Croissance (6/20)
+- Crédibilité technique réelle (certifications, projet Activage, parcours SI)
+- Positionnement de niche pertinent ("automatisation IA pour artisans")
+- Stack open-source (argument souveraineté et coût)
+- Offre d'entrée bien calibrée (audit gratuit 30 min)
+- Problèmes clients bien identifiés (données éparpillées, saisie manuelle)
 
-**Canaux actifs :** Blog (SEO potentiel) + Cal.com (conversion) + Facebook (résiduel)
+### 1.3 Faiblesses identifiées
 
-**Canaux manquants :**
-- LinkedIn (canal n°1 B2B PME)
-- Google My Business optimisé
-- Partenariats prescripteurs (experts-comptables, CCI Drôme, CAPEB)
-- Email marketing (zéro capture)
-- Webinaires/ateliers locaux
+#### Faiblesse n°1 — Crise d'identité de marque
 
-**Aucune boucle de croissance identifiable :** chaque client est acquis indépendamment.
+Le nom **SMARTHOME SMARTELEC** est un boulet stratégique :
+- "SMARTHOME" = maison intelligente, domotique résidentielle, B2C
+- "SMARTELEC" = électricité, artisan du bâtiment, intervention physique
 
-### 4. Rétention et Expansion (4/20)
+Le cerveau du visiteur assemble : **"C'est un électricien qui fait de la domotique."** Or l'offre réelle est : **"Automatisation IA pour PME artisanales."**
 
-- Pas de programme de fidélisation
-- Pas de revenus récurrents documentés
-- Pas d'upsell structuré (audit → mise en œuvre → maintenance → formation)
-- Pas de programme de parrainage
+#### Faiblesse n°2 — Quatre voix sans chef d'orchestre
 
-### 5. Alignement Tendances de Marché (14/20)
+| Voix | Quand elle apparaît | Problème |
+|------|---------------------|----------|
+| **L'électricien terrain** | Pages domotique, certifications | Ancre dans un métier quitté |
+| **Le consultant corporate** | "Consultant SI/CRM", "SLA" | Trop éloigné d'un artisan |
+| **Le startup founder** | "Exit l'électricité", "pivot" | Parle tech, pas PME |
+| **Le prestataire local** | Micro-entreprise, email Gmail | Signal très petite structure |
 
-**Point fort stratégique majeur :**
-- L'automatisation PME par IA est une tendance massive en 2025-2026
-- La cible artisans est sous-digitalisée avec des problèmes réels
-- Le profil hybride est quasiment unique en Drôme-Ardèche
-- L'approche open-source = argument souveraineté et coût
-- Aides France Num/BPI créent un contexte favorable
+#### Faiblesse n°3 — Contenu centré entreprise, pas client
+Le "nous" domine le "vous". Le site raconte l'histoire de SHSE au lieu de celle du client.
 
-### 6. Signaux de Scalabilité (7/20)
+#### Faiblesse n°4 — Absence d'empreinte linguistique
+Aucune expression ne rend la marque reconnaissable.
 
-- Stack technique permet des solutions réplicables
-- Capacité remote élargit le marché
-- Mais : micro-entreprise avec plafond légal
-- Mais : aucun réseau de partenaires/sous-traitants
-- Mais : aucune productisation
+#### Faiblesse n°5 — Signaux de confiance manquants
+Email Gmail, zéro témoignage, zéro étude de cas, aucun pricing, pas d'avis Google.
 
 ---
 
-## 4 Registres de Voix Identifiés
+## 2. Archétype de marque recommandé
 
-Le site mélange actuellement 4 registres incompatibles :
+### 2.1 Archétype retenu : Le Guide (Mentor)
 
-| Registre | Exemples | Public naturel |
-|---|---|---|
-| Transformation tech / startup | "Nous changeons de cap", "exit l'électricité", "focus total" | Investisseurs, startups |
-| Expert technique | Certifications Jeedom/Loxone, article n8n en anglais | Développeurs, intégrateurs |
-| Artisan local de confiance | Micro-entreprise, Portes-lès-Valence, habilitations | Particuliers, voisins |
-| Consultant B2B | "consultant SI/CRM chez opérateur télécom international" | Dirigeants PME/ETI |
+**Définition :** Le Guide est celui qui a fait le chemin avant vous. Il connaît le terrain, maîtrise les outils, et met cette double compétence au service de votre réussite.
 
-**Recommandation :** Choisir un positionnement vocal unique. Suggestion : *"L'expert de terrain qui parle le langage des artisans et déploie des outils IA sans jargon."*
+**Pourquoi cet archétype est parfait :**
+1. **Parcours de transformation vécu** : Guy est passé d'artisan terrain à expert digital
+2. **Double légitimité** : connaît le point de départ (métier artisan) et le point d'arrivée (automatisation IA)
+3. **Ton naturel** : assurance sans condescendance, simplicité sans infantiliser
+4. **Résonance cible** : un artisan cherche quelqu'un qui comprend son quotidien
+
+**Phrase-clé :** *"Je suis passé par là. Laissez-moi vous montrer le chemin."*
+
+### 2.2 Personnalité de marque en 5 traits
+
+| Trait | Intensité | Manifestation |
+|-------|-----------|---------------|
+| **Expert** | Forte | Affirme, cite des chiffres et des résultats |
+| **Pragmatique** | Très forte | Résultats concrets, jamais technologie pour la technologie |
+| **Accessible** | Forte | Langage simple, exemples du quotidien, zéro jargon gratuit |
+| **Franc** | Modérée | Dit ce qui marche et ce qui ne marche pas |
+| **Local** | Modérée | Ancré en Drôme, capable de travailler en remote |
 
 ---
 
-## Brand Voice Guidelines Recommandées
+## 3. Voix de marque cible
 
-### Ton
-- **Direct et concret** : pas de jargon tech inutile
-- **Expert accessible** : autorité sans condescendance
-- **Pragmatique** : résultats avant méthodologie
-- **Local et humain** : proximité, pas corporate
+### 3.1 Les 5 dimensions
 
-### Vocabulaire à privilégier
+| Dimension | Actuel | Cible | Explication |
+|-----------|:------:|:-----:|-------------|
+| **Formalité** | 3/5 | **2,5/5** | Professionnel mais pas corporate. Vouvoiement naturel. |
+| **Émotion** | 1,5/5 | **3/5** | Nommer la frustration, célébrer le résultat. |
+| **Complexité** | 3,5/5 | **2/5** | Zéro acronyme non expliqué. |
+| **Humour** | 1/5 | **2/5** | Franchise, formulations justes qui font sourire. |
+| **Autorité** | 3/5 | **4/5** | Expert affirmé, au service du client. |
+
+### 3.2 Le ton en une phrase
+
+> **"Un expert qui parle comme un voisin compétent, pas comme un commercial ni comme un ingénieur."**
+
+### 3.3 Vocabulaire-clé
+
+**Famille "Résultats concrets" (toujours privilégiée) :**
+- heures gagnées, temps libéré, devis envoyés automatiquement
+- clients qui ne passent plus entre les mailles, relances automatiques
+- moins d'erreurs, moins de ressaisie, moins d'oublis
+- plus de chantiers, plus de revenus, plus de week-ends
+
+**Famille "Simplicité" :**
+- on configure, on met en place, on branche
+- ça tourne tout seul, c'est automatique, sans y penser
+- vos outils existants, pas besoin de tout changer
+
+**Famille "Confiance" :**
+- vos données restent en France, hébergement européen
+- conformité RGPD intégrée, pas en option
+- audit gratuit, sans engagement, 30 minutes
+
+**Famille "Terrain" :**
+- ancien électricien, je connais le métier
+- je sais ce que c'est, un devis sur un coin de table
+
+### 3.4 Registre d'écriture
+
+- **Phrases courtes.** Max 20 mots en accroches
+- **Voix active.** "On automatise vos devis" pas "Vos devis sont automatisés"
+- **Structure problème-solution-preuve** pour chaque bloc
+- **Le "je" est autorisé.** Guy SALVATORE est la marque
+- **Chiffres en arabes** (pas "trois heures" mais "3 heures")
+- **Émojis : aucun** sur les pages principales du site
+- **Points d'exclamation : max 1 par page**
+
+---
+
+## 4. Guide du "Dire / Ne pas dire"
+
+### 4.1 Vocabulaire technique
+
+| Ne pas dire | Dire | Pourquoi |
+|-------------|------|----------|
+| "Intelligence artificielle" (en accroche) | "Assistant automatique" ou "automatisation intelligente" | "IA" est un mot-valise qui fait peur ou promet trop |
+| "Workflow automation" | "Tâches qui se font toutes seules" | L'artisan ne sait pas ce qu'est un workflow |
+| "Pipeline de données" | "Vos infos clients bien organisées" | Jargon data incompréhensible |
+| "RAG" | "Un assistant qui connaît vos documents" | Le bénéfice, pas l'acronyme |
+| "Stack technique" | "Les outils qu'on utilise" | Jargon développeur |
+| "Déploiement" | "Mise en place" ou "installation" | Sonne complexe et militaire |
+| "Solution SaaS" | "Service en ligne" | SaaS n'existe pas pour un chauffagiste |
+| "API" | "Connexion entre vos outils" | Le bénéfice, pas le mécanisme |
+| "Chatbot" | "Assistant disponible 24h/24" | Connotation négative (robotique) |
+
+### 4.2 Vocabulaire commercial
+
+| Ne pas dire | Dire | Pourquoi |
+|-------------|------|----------|
+| "Disruption" / "Révolutionner" | "Simplifier" / "Améliorer" | Les artisans veulent du fiable |
+| "Solution innovante" | "Méthode éprouvée" | Fiable > innovant |
+| "Leader" / "N°1" | "Spécialisé" / "Expert" | Prétention invérifiable vs positionnement |
+| "Transformation digitale" | "Automatisation de votre administratif" | Sonne comme un projet à 500 000€ |
+| "ROI" | "Ce que ça vous rapporte" | Terme financier, pas artisanal |
+| "Scalable" | "Qui grandit avec vous" | Anglicisme startup inutile |
+
+### 4.3 Vocabulaire identitaire
+
+| Ne pas dire | Dire | Pourquoi |
+|-------------|------|----------|
+| "Nous sommes une startup" | "Je suis un expert indépendant" | La vérité est un atout |
+| "Exit l'électricité" | "Fort de 7 ans d'expérience terrain" | Transformer en force |
+| "Micro-entreprise" | *(Ne pas mentionner)* | Le client achète une compétence |
+| "Pivot" | "Évolution naturelle" | "Pivot" implique un échec |
+| "On change de cap" | "On va plus loin" | Le passé nourrit le présent |
+
+### 4.4 Ton et posture
+
+| Ne pas faire | Faire | Pourquoi |
+|--------------|-------|----------|
+| S'excuser d'être petit | "Un seul interlocuteur, du début à la fin" | La taille = proximité |
+| Lister des outils sans contexte | Chaque outil = un bénéfice concret | "n8n" ne dit rien seul |
+| Anglicismes inutiles | Tout en français sauf noms propres | Distance avec la cible |
+| Parler de soi en premier | Commencer par "vous" | Client d'abord |
+| Promettre sans prouver | Chiffrer ou ne rien dire | "10h gagnées" > "gain de temps" |
+
+---
+
+## 5. Proposition de taglines alternatives
+
+### 5.1 Centrées sur le résultat client
+
+| Tagline | Usage recommandé |
+|---------|-----------------|
+| **"Moins d'administratif. Plus de chantiers."** | Homepage hero, LinkedIn headline |
+| **"Vos devis, relances et factures. En pilote automatique."** | Homepage sous-titre, publicités |
+| **"L'IA qui travaille pendant que vous êtes sur le chantier."** | Page services, réseaux sociaux |
+
+### 5.2 Centrées sur l'expertise du fondateur
+
+| Tagline | Usage recommandé |
+|---------|-----------------|
+| **"Ancien artisan. Expert en automatisation. À votre service."** | Page À propos, signature email |
+| **"Je connais votre métier. Je connais la technologie. On en parle ?"** | CTA, posts LinkedIn |
+
+### 5.3 Centrées sur le positionnement
+
+| Tagline | Usage recommandé |
+|---------|-----------------|
+| **"L'expert IA qui parle artisan."** | Logo, réseaux sociaux, carte de visite |
+| **"Automatisation sur mesure pour artisans et PME. Drôme et partout en France."** | Meta description, Google Business |
+
+### 5.4 Recommandation finale
+
+**Tagline principale :** *"Moins d'administratif. Plus de chantiers."*
+**Tagline secondaire :** *"L'expert IA qui parle artisan."*
+
+---
+
+## 6. Recommandations pour la transition de marque
+
+### 6.1 Le problème du nom
+
+**SMARTHOME SMARTELEC est un nom toxique pour le positionnement cible.** Trois options :
+
+#### Option A — Sous-marque (recommandée, court terme)
+Créer une marque-fille pour l'activité IA : SmartPilot, AtelierIA, GS Automatisation, ProPilote...
+Pas de changement juridique, transition progressive.
+
+#### Option B — Rebrand complet (moyen terme)
+Si la domotique est définitivement abandonnée. Quand le CA IA > 70% du total.
+
+#### Option C — Conserver et repositionner (déconseillée)
+Le poids sémantique de "HOME" et "ELEC" est trop fort.
+
+### 6.2 Transition du site (par phases)
+
+**Phase 1 — Nettoyage (semaine 1) :**
+- Supprimer/archiver les pages domotique/électricité non utiles
+- Retirer "Électricité, Domotique" de la tagline
+- Remplacer le H1 par un titre orienté bénéfice
+- Passer à contact@smarthome-smartelec.fr
+
+**Phase 2 — Reconstruction (semaines 2-4) :**
+- Réécrire les pages services avec la voix cible
+- Créer une page "À propos" centrée sur le parcours-preuve
+- Ajouter études de cas + FAQ + pricing
+
+**Phase 3 — Expansion (mois 2-3) :**
+- LinkedIn actif (3-5 posts/semaine)
+- Séquence email de bienvenue
+- Google Business optimisé
+- Blog 2 articles/mois
+
+### 6.3 Gestion de l'héritage domotique
+
+**Règle :** ne jamais renier le passé, le transformer en preuve.
+
 | Au lieu de... | Dire... |
-|---|---|
-| "Intelligence artificielle" | "Assistant automatique" |
-| "Pipeline de données" | "Vos infos clients bien rangées" |
-| "Workflow automation" | "Tâches qui se font toutes seules" |
-| "RAG" | "Un assistant qui connaît vos documents" |
-| "Stack technique" | "Les outils qu'on utilise" |
-
-### Vocabulaire à bannir
-- Termes anglais inutiles (sauf noms propres d'outils)
-- Jargon consulting : "paradigme", "synergies", "disruption"
-- Superlatifs vides : "leader", "meilleur", "révolutionnaire"
-- Termes liés à l'ancien métier dans les pages IA
-
-### Structure type d'un message
-1. **Problème reconnaissable** : "Vous passez 3h par semaine à faire vos devis à la main ?"
-2. **Solution concrète** : "On configure un système qui les génère en 2 clics"
-3. **Preuve** : "Un artisan plombier de la Drôme a réduit son temps de 60%"
-4. **Action** : "Réservez 30 min pour qu'on regarde ensemble"
+|---------------|---------|
+| "On ne fait plus de domotique" | "Fort de 7 ans d'expérience terrain, j'aide aujourd'hui les artisans à automatiser leur administratif" |
+| "Exit l'électricité" | "Mon parcours d'électricien m'a appris une chose : un artisan n'a pas le temps pour l'administratif" |
 
 ---
 
-## Recommandations Prioritaires
+## 7. Exemples de reformulation (avant/après)
 
-### Court terme (0-3 mois)
+### 7.1 Homepage — Hero
 
-| Priorité | Action | Impact |
-|---|---|---|
-| CRITIQUE | Email pro `contact@smarthome-smartelec.fr` | Crédibilité immédiate |
-| CRITIQUE | Profil LinkedIn actif et repositionné IA | Canal B2B n°1 |
-| CRITIQUE | 2-3 études de cas (même anonymisées) | Preuve sociale |
-| HAUTE | 3 offres packagées avec fourchettes de prix | Réduction friction vente |
-| HAUTE | Google My Business optimisé | Acquisition locale |
+**AVANT :**
+> SMARTHOME SMARTELEC
+> Assistants IA pour PME et Associations | Electricité, Domotique
 
-### Moyen terme (3-6 mois)
+**APRÈS :**
+> Moins d'administratif. Plus de chantiers.
+> Automatisez vos devis, relances et factures grâce à un expert qui connaît votre métier.
+> [Réserver mon audit gratuit — 30 min, sans engagement]
 
-| Priorité | Action | Impact |
-|---|---|---|
-| IMPORTANTE | Repositionnement de marque (nouveau nom ou sous-marque) | Cohérence long terme |
-| IMPORTANTE | Capture email + séquence nurturing automatisée | Démonstration d'expertise |
-| IMPORTANTE | Partenariats prescripteurs (CCI, CAPEB, experts-comptables) | Canal croissance durable |
-| IMPORTANTE | 2-3 offres productisées réplicables | Scalabilité |
+### 7.2 Section "Problèmes clients"
 
-### Long terme (6-12 mois)
+**AVANT :**
+> Données éparpillées entre emails, SMS, carnets. Ressaisie manuelle chronophage. Demandes sans réponse le week-end.
 
-| Priorité | Action | Impact |
-|---|---|---|
-| STRATÉGIQUE | Passage en société (SASU/EURL) si CA le justifie | Scalabilité structurelle |
-| STRATÉGIQUE | Offre SaaS légère / abonnement maintenance IA | Revenus récurrents |
-| STRATÉGIQUE | Autorité SEO "automatisation PME" en région | Acquisition organique |
-| STRATÉGIQUE | Certifications France Num + Ambassadeur IA | Crédibilité institutionnelle |
+**APRÈS :**
+> Vous passez vos soirées à taper des devis au lieu de profiter de votre famille ?
+> Vos infos clients sont dispersées entre votre téléphone, votre boîte mail et un carnet à spirale ?
+> Un prospect vous a appelé samedi — vous l'avez rappelé lundi, mais il avait déjà signé ailleurs ?
+>
+> **C'est exactement pour ça que je fais ce métier.**
+
+### 7.3 Section "Services"
+
+**AVANT :**
+> Ingénierie d'automatisation et IA. Nous déployons des workflows n8n connectés à vos outils métier...
+
+**APRÈS :**
+> **Vos tâches répétitives, en pilote automatique.**
+>
+> Je configure un système qui :
+> - **Génère vos devis** à partir d'un simple formulaire
+> - **Relance vos clients** automatiquement quand un devis n'a pas été signé
+> - **Répond à vos prospects** 24h/24, même sur le chantier
+> - **Range vos données** au bon endroit, sans que vous y pensiez
+>
+> Tout ça avec des outils hébergés en France, conformes au RGPD.
+
+### 7.4 Section "À propos"
+
+**AVANT :**
+> SMARTHOME SMARTELEC est une micro-entreprise basée à Portes-lès-Valence...
+
+**APRÈS :**
+> **D'électricien à expert IA : un parcours au service des artisans.**
+>
+> Je m'appelle Guy SALVATORE. Pendant des années, j'ai été sur le terrain — câblage, domotique, interventions. Je sais ce que c'est, un planning qui déborde et une compta qui prend du retard.
+>
+> Aujourd'hui, je combine cette expérience terrain avec mes années de consultant SI pour aider les artisans à automatiser leur administratif grâce à l'IA. Pas de jargon, pas de projet à rallonge : des outils concrets qui vous font gagner du temps dès la première semaine.
+
+### 7.5 Post LinkedIn
+
+**AVANT :**
+> SMARTHOME SMARTELEC accompagne les PME dans leur transformation digitale grâce à des solutions d'automatisation...
+
+**APRÈS :**
+> Un menuisier m'a dit cette phrase la semaine dernière :
+> "Je passe plus de temps devant mon ordi que devant mon établi."
+>
+> En 2 semaines, on a mis en place un système simple :
+> - Ses devis se génèrent en 2 clics
+> - Ses relances partent toutes seules après 5 jours
+> - Ses clients reçoivent une réponse même le dimanche
+>
+> Résultat : 8 heures gagnées par semaine. Il a repris un chantier de plus.
+
+### 7.6 CTA (appels à l'action)
+
+| Contexte | AVANT | APRÈS |
+|----------|-------|-------|
+| Homepage | "Réserver un Audit gratuit (30 minutes)" | "Réserver mon audit gratuit — 30 min, sans engagement" |
+| Blog | *(absent)* | "Vous voulez voir ce que ça donnerait chez vous ? Réservez 30 min avec moi." |
+| LinkedIn | "Découvrez nos services" | "On en parle ? Lien dans le premier commentaire." |
+| Email | "Contactez-nous" | "Répondez à cet email, je vous rappelle dans la journée." |
 
 ---
 
-## Les 3 Chantiers Non-Négociables
+## Checklist d'auto-vérification
 
-1. **Identité de marque** alignée avec le nouveau positionnement
-2. **Preuve sociale** construite et visible (cas clients, résultats, témoignages)
-3. **Présence LinkedIn** active et stratégique
+Avant de publier tout contenu, vérifier :
 
-Sans ces trois fondations, même la meilleure stratégie de croissance restera inefficace.
+- [ ] Le contenu commence-t-il par "vous" et non par "nous/je" ?
+- [ ] Chaque terme technique est-il traduit en bénéfice concret ?
+- [ ] Y a-t-il au moins un chiffre ou une preuve ?
+- [ ] Le ton est-il celui du Guide (expert + accessible + pragmatique) ?
+- [ ] Aucun anglicisme inutile ?
+- [ ] Les phrases font-elles moins de 20 mots en moyenne ?
+- [ ] Le CTA est-il clair et à la première personne du client ?
+- [ ] Le contenu parle-t-il de résultats plutôt que d'outils ?
+- [ ] L'historique terrain est-il présenté comme une force ?
 
 ---
 
-*Analyse Brand Voice — AI Marketing Suite `/market brand`*
-*Date : 19 mars 2026*
+*Guide de Voix de Marque v2.0 — SMARTHOME SMARTELEC*
+*Généré par AI Marketing Suite — `/market brand`*
+*Date : 20 mars 2026*

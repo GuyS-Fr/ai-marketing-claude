@@ -1,0 +1,122 @@
+{
+  "url": "https://www.la-fenetriere.fr/",
+  "date": "20 mars 2026",
+  "brand_name": "La Fenêtrière",
+  "overall_score": 38,
+  "executive_summary": "La Fenêtrière obtient un score marketing de 38/100, révélant un décalage majeur entre un positionnement stratégique exceptionnel (seul fabricant artisanal certifié OFG en IDF, Lauréate Fabriqué en France 2025) et une vitrine digitale défaillante. Le blog en erreur 404, les pages produits vides et un formulaire à 11 champs sabotent activement la conversion. L'implémentation des recommandations prioritaires pourrait multiplier les contacts par 5 à 10, passant de 3-8 à 30-50 devis qualifiés par mois.",
+  "categories": {
+    "Content & Messaging": {
+      "score": 34,
+      "weight": "25%"
+    },
+    "Conversion Optimization": {
+      "score": 20,
+      "weight": "20%"
+    },
+    "SEO & Discoverability": {
+      "score": 22,
+      "weight": "20%"
+    },
+    "Competitive Positioning": {
+      "score": 67,
+      "weight": "15%"
+    },
+    "Brand & Trust": {
+      "score": 68,
+      "weight": "10%"
+    },
+    "Growth & Strategy": {
+      "score": 41,
+      "weight": "10%"
+    }
+  },
+  "findings": [
+    {
+      "severity": "Critical",
+      "finding": "Blog 'Le Mag' en erreur 404 — perte totale de trafic SEO organique et d'autorité thématique. Chaque jour de 404 dégrade le positionnement Google."
+    },
+    {
+      "severity": "Critical",
+      "finding": "Pages produits quasi vides — aucun visuel, aucune description, aucun prix, aucune fiche technique. Taux d'abandon estimé : 85-95%. Impossible de vendre sans décrire les produits."
+    },
+    {
+      "severity": "Critical",
+      "finding": "Formulaire de contact à 11 champs — taux de complétion estimé 2-5% (benchmark : 15-25% pour 4-5 champs). 6 champs sont inutiles au premier contact (Siret, Adresse pro, Tél bureau, CP, Ville, Pays)."
+    },
+    {
+      "severity": "Critical",
+      "finding": "Aucun CTA 'Demander un devis' sur la homepage ni les pages produits. Le visiteur doit naviguer jusqu'à l'onglet Contact pour trouver un moyen de convertir."
+    },
+    {
+      "severity": "High",
+      "finding": "Absence totale de schema markup (0 type détecté) — pas de LocalBusiness, pas d'Organization. Pour un artisan local, c'est une perte de visibilité critique dans le pack local Google Maps."
+    },
+    {
+      "severity": "High",
+      "finding": "Sitemap XML absent (404) et robots.txt sans référence au sitemap. Google découvre les pages par hasard, sans priorisation d'indexation."
+    },
+    {
+      "severity": "High",
+      "finding": "20 images sur 21 sans attribut alt (95%). Coquille dans le title HTML : 'Fenêtière' au lieu de 'Fenêtrière'. Meta description de 274 caractères (limite : 155)."
+    },
+    {
+      "severity": "High",
+      "finding": "Zéro témoignage client visible sur le site. Aucune étude de cas, aucun avis Google intégré, aucun logo partenaire. Le capital certifications (OFG, Élysée) est sous-exploité."
+    },
+    {
+      "severity": "Medium",
+      "finding": "Proposition de valeur fabricant-centrique — 'Fabriquer localement et durablement...' parle de 'nous', pas des bénéfices client. Le H1 'La Fenêtrière' est générique et sans mot-clé SEO."
+    },
+    {
+      "severity": "Medium",
+      "finding": "Aucune segmentation B2B/B2C — les professionnels du bâtiment (95% de la cible) et les particuliers ont des besoins radicalement différents, mais le site ne différencie pas les parcours."
+    },
+    {
+      "severity": "Low",
+      "finding": "Catherine Guerniou (Prix Madame Engagée, 20 ans de direction) est invisible sur le site. C'est un actif de marque inexploité — le storytelling fondateur manque cruellement."
+    }
+  ],
+  "quick_wins": [
+    "Corriger le blog 'Le Mag' en erreur 404 — redirection ou réactivation immédiate pour stopper la dégradation SEO",
+    "Ajouter un bouton 'Demander un devis gratuit' en hero de la homepage — impact estimé : +20-30% de conversions",
+    "Supprimer 6 champs du formulaire contact (Siret, Adresse, Tél bureau, CP, Ville, Pays) — taux de complétion x3 à x5",
+    "Afficher les badges OFG et 'Fabriqué en France 2025' en hero section, pas enfouis dans la navigation",
+    "Corriger la coquille 'Fenêtière' → 'Fenêtrière' dans le title HTML et raccourcir la meta description à 155 caractères"
+  ],
+  "medium_term": [
+    "Construire 6 pages produits riches (Fenêtres PVC/ALU/Bois, Portes, Volets, Portails) avec photos, descriptions, CTA devis par gamme",
+    "Collecter et publier 5-8 témoignages clients (installateurs, architectes, particuliers) en homepage et pages produits",
+    "Implémenter le schema LocalBusiness en JSON-LD, le sitemap XML, les balises canonical et les alt sur les 20 images",
+    "Publier 3 articles SEO prioritaires : guide MaPrimeRénov' 2026, comparatif PVC/ALU/Bois, RE2020 et menuiseries",
+    "Créer deux parcours segmentés depuis la homepage : 'Professionnel du bâtiment' et 'Particulier'"
+  ],
+  "strategic": [
+    "Relancer Le Mag avec un calendrier éditorial (2 articles/mois) pour construire l'autorité SEO et capter le trafic longue traîne",
+    "Déployer un programme prescripteurs B2B (architectes, maîtres d'œuvre, conducteurs de travaux IDF) avec commission ou avantages",
+    "Développer une stratégie LinkedIn B2B (2 posts/semaine : coulisses, chantiers, normes) pour toucher les prescripteurs IDF",
+    "Créer un calculateur bilan carbone en ligne comparant menuiseries La Fenêtrière vs menuiseries importées — argument marchés publics"
+  ],
+  "competitors": [
+    {
+      "name": "Tryba",
+      "positioning": "Leader industriel national, réseau de 200+ magasins. Élu Meilleure Enseigne 7 années consécutives.",
+      "pricing": "600-1 500 €/fenêtre, positionnement milieu-haut de gamme grand public",
+      "social_proof": "Forte notoriété TV, avis clients massifs, garantie 30 ans, label Meilleure Enseigne",
+      "content": "Site très riche, blog actif, guides d'achat, configurateur en ligne, vidéos produits"
+    },
+    {
+      "name": "Lorenove",
+      "positioning": "Réseau de 70 concessionnaires, 8 usines en France, 100% Made in France revendiqué",
+      "pricing": "300-700 €/fenêtre pose incluse, positionnement accessible",
+      "social_proof": "Avis Batiadvisor, présence annuaires BTP, témoignages chantiers",
+      "content": "Site moderne, pages produits complètes, contenu SEO actif, landing pages MaPrimeRénov'"
+    },
+    {
+      "name": "Atulam",
+      "positioning": "Fabricant artisanal bois premium (Creuse), marque préférée des Français 2025, rénovation haut de gamme",
+      "pricing": "Haut de gamme premium, sur devis uniquement, cible architectes et rénovation patrimoine",
+      "social_proof": "Label 'Marque préférée des Français', presse architecture, références chantiers patrimoine",
+      "content": "Site épuré premium, galerie projets, présence presse architecture et design"
+    }
+  ]
+}

@@ -1,834 +1,1327 @@
 #!/usr/bin/env python3
 """
-Marketing Report PDF Generator — AI Marketing Claude Code Skills
-Generates professional, client-ready PDF marketing reports with charts,
-score visualizations, and prioritized action plans.
+merge_full_report.py — Consolidated Marketing Report Generator
+Converts all Markdown analysis files to a single professional PDF.
 
-Requires: reportlab (pip install reportlab)
+Pipeline:
+1. Generate cover PDF with scores/gauges (via existing generate_pdf_report.py)
+2. Convert all .md files to styled HTML
+3. Render HTML to PDF via Chrome headless
+4. Merge cover + detail PDFs into one final document
+
+Requirements: reportlab, pypdf, Chrome browser
+Usage: python merge_full_report.py <report_dir> [output.pdf]
+  <report_dir>  = folder containing .md files (e.g. ./marketing-output/onpulse.fr/)
+  [output.pdf]  = optional output filename (default: RAPPORT-COMPLET-<domain>.pdf)
 """
 
 import sys
-import json
 import os
+import re
+import subprocess
+import tempfile
+import json
+import glob
 from datetime import datetime
+from pathlib import Path
 
 try:
-    from reportlab.lib.pagesizes import letter
-    from reportlab.lib.units import inch, mm
-    from reportlab.lib.colors import HexColor, white, black, Color
-    from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-    from reportlab.lib.enums import TA_LEFT, TA_CENTER, TA_RIGHT
-    from reportlab.platypus import (SimpleDocTemplate, Paragraph, Spacer, Table,
-                                     TableStyle, PageBreak, KeepTogether, HRFlowable)
-    from reportlab.graphics.shapes import (Drawing, Rect, Circle, String, Line,
-                                            Wedge, ArcPath, Group, PolyLine)
-    from reportlab.graphics import renderPDF
-    from reportlab.pdfgen import canvas as pdfcanvas
-    from reportlab.platypus.flowables import Flowable
+    from pypdf import PdfWriter, PdfReader
 except ImportError:
-    print("Error: reportlab is required. Install with: pip install reportlab")
+    print("Erreur: pypdf requis. Installer avec: pip install pypdf")
     sys.exit(1)
 
 
 # ---------------------------------------------------------------------------
-# Color palette
+# Configuration
 # ---------------------------------------------------------------------------
+CHROME_PATHS = [
+    r"C:\Program Files\Google\Chrome\Application\chrome.exe",
+    r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
+    os.path.expandvars(r"%LOCALAPPDATA%\Google\Chrome\Application\chrome.exe"),
+    "/usr/bin/google-chrome",
+    "/usr/bin/chromium-browser",
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+]
+
+# Order of sections in the final report, organized by phase
+# Tuples: (filename, title) for sections, or (None, phase_name) for phase headers
+SECTION_ORDER = [
+    # Phase 1 — Diagnostic
+    (None,                    "Phase 1 — Diagnostic"),
+    ("MARKETING-AUDIT.md",    "Audit Marketing Complet"),
+    ("QUICK-AUDIT.md",        "Évaluation Flash"),
+    ("SEO-AUDIT.md",          "Audit SEO — Visibilité Google"),
+    ("GEO-AUDIT.md",          "Audit GEO — Visibilité IA"),
+    ("BRAND-VOICE.md",        "Voix de Marque"),
+    # Phase 2 — Stratégie
+    (None,                    "Phase 2 — Stratégie"),
+    ("COMPETITOR-REPORT.md",  "Analyse Concurrentielle"),
+    ("FUNNEL-ANALYSIS.md",    "Analyse du Tunnel de Vente"),
+    ("LANDING-CRO.md",        "Optimisation Landing Page"),
+    # Phase 3 — Production
+    (None,                    "Phase 3 — Production"),
+    ("COPY-SUGGESTIONS.md",   "Suggestions Copywriting"),
+    ("EMAIL-SEQUENCES.md",    "Séquences Email"),
+    ("SOCIAL-CALENDAR.md",    "Calendrier Social Media"),
+    ("AD-CAMPAIGNS.md",       "Campagnes Publicitaires"),
+    # Phase 4 — Livrables
+    (None,                    "Phase 4 — Livrables"),
+    ("LAUNCH-PLAYBOOK.md",    "Plan de Lancement"),
+    ("CLIENT-PROPOSAL.md",    "Proposition Commerciale"),
+    ("MARKETING-REPORT.md",   "Rapport Marketing Détaillé"),
+]
+
 COLORS = {
-    "primary":    HexColor("#1B2A4A"),
-    "accent":     HexColor("#2D5BFF"),
-    "highlight":  HexColor("#FF6B35"),
-    "success":    HexColor("#00C853"),
-    "warning":    HexColor("#FFB300"),
-    "danger":     HexColor("#FF1744"),
-    "light_bg":   HexColor("#F5F7FA"),
-    "mid_bg":     HexColor("#EDF0F5"),
-    "text":       HexColor("#2C3E50"),
-    "text_light": HexColor("#7F8C9B"),
-    "border":     HexColor("#E0E6ED"),
-    "white":      white,
-    "black":      black,
+    "primary":    "#1B2A4A",
+    "accent":     "#2D5BFF",
+    "highlight":  "#FF6B35",
+    "success":    "#00C853",
+    "warning":    "#FFB300",
+    "danger":     "#FF1744",
+    "light_bg":   "#F5F7FA",
+    "text":       "#2C3E50",
+    "text_light": "#7F8C9B",
+    "border":     "#E0E6ED",
+    "white":      "#FFFFFF",
 }
 
-PAGE_W, PAGE_H = letter   # 612 x 792 pts
-MARGIN = 48               # pts
-CONTENT_W = PAGE_W - 2 * MARGIN
+
+# ---------------------------------------------------------------------------
+# Find Chrome
+# ---------------------------------------------------------------------------
+def find_chrome():
+    for path in CHROME_PATHS:
+        if os.path.isfile(path):
+            return path
+    print("Erreur: Chrome non trouvé. Vérifiez l'installation.")
+    sys.exit(1)
 
 
 # ---------------------------------------------------------------------------
-# Helpers
+# Markdown to HTML conversion
 # ---------------------------------------------------------------------------
-def score_color(score):
-    if score >= 80:  return COLORS["success"]
-    if score >= 60:  return COLORS["accent"]
-    if score >= 40:  return COLORS["warning"]
-    return COLORS["danger"]
+def md_to_html(md_text):
+    """Convert Markdown to HTML with basic formatting support."""
+    lines = md_text.split('\n')
+    html_lines = []
+    in_table = False
+    in_list = False
+    in_code = False
+    table_rows = []
+    
+    for line in lines:
+        stripped = line.strip()
+        
+        # Code blocks
+        if stripped.startswith('```'):
+            if in_code:
+                html_lines.append('</code></pre>')
+                in_code = False
+            else:
+                lang = stripped[3:].strip()
+                html_lines.append(f'<pre class="code-block"><code>')
+                in_code = True
+            continue
+        
+        if in_code:
+            html_lines.append(escape_html(line))
+            continue
+        
+        # Empty line
+        if not stripped:
+            if in_table:
+                html_lines.append(render_table(table_rows))
+                table_rows = []
+                in_table = False
+            if in_list:
+                tag = 'ul' if in_list == 'ul' else 'ol'
+                html_lines.append(f'</{tag}>')
+                in_list = False
+            html_lines.append('')
+            continue
+        
+        # Table rows
+        if '|' in stripped and stripped.startswith('|'):
+            # Skip separator rows
+            if re.match(r'^\|[\s\-:|]+\|$', stripped):
+                in_table = True
+                continue
+            cells = [c.strip() for c in stripped.split('|')[1:-1]]
+            if not in_table:
+                in_table = True
+                table_rows.append(('header', cells))
+            else:
+                table_rows.append(('row', cells))
+            continue
+        
+        # Close table if we were in one
+        if in_table:
+            html_lines.append(render_table(table_rows))
+            table_rows = []
+            in_table = False
+        
+        # Headers
+        if stripped.startswith('######'):
+            html_lines.append(f'<h6>{format_inline(stripped[6:].strip())}</h6>')
+            continue
+        if stripped.startswith('#####'):
+            html_lines.append(f'<h5>{format_inline(stripped[5:].strip())}</h5>')
+            continue
+        if stripped.startswith('####'):
+            html_lines.append(f'<h4>{format_inline(stripped[4:].strip())}</h4>')
+            continue
+        if stripped.startswith('###'):
+            html_lines.append(f'<h3>{format_inline(stripped[3:].strip())}</h3>')
+            continue
+        if stripped.startswith('##'):
+            html_lines.append(f'<h2>{format_inline(stripped[2:].strip())}</h2>')
+            continue
+        if stripped.startswith('#'):
+            html_lines.append(f'<h1>{format_inline(stripped[1:].strip())}</h1>')
+            continue
+        
+        # Horizontal rule
+        if re.match(r'^[-*_]{3,}$', stripped):
+            html_lines.append('<hr>')
+            continue
+        
+        # Unordered list
+        if re.match(r'^[-*+]\s', stripped):
+            if not in_list:
+                html_lines.append('<ul>')
+                in_list = 'ul'
+            elif in_list == 'ol':
+                # Close previous ordered list, open unordered
+                html_lines.append('</ol>')
+                html_lines.append('<ul>')
+                in_list = 'ul'
+            content = re.sub(r'^[-*+]\s', '', stripped)
+            html_lines.append(f'<li>{format_inline(content)}</li>')
+            continue
+        
+        # Ordered list
+        if re.match(r'^\d+\.\s', stripped):
+            if not in_list:
+                html_lines.append('<ol>')
+                in_list = 'ol'
+            elif in_list == 'ul':
+                # Close previous unordered list, open ordered
+                html_lines.append('</ul>')
+                html_lines.append('<ol>')
+                in_list = 'ol'
+            content = re.sub(r'^\d+\.\s', '', stripped)
+            html_lines.append(f'<li>{format_inline(content)}</li>')
+            continue
+        
+        # Close list if we hit any non-list content
+        if in_list:
+            tag = 'ul' if in_list == 'ul' else 'ol'
+            html_lines.append(f'</{tag}>')
+            in_list = False
+        
+        # Blockquote
+        if stripped.startswith('>'):
+            content = stripped[1:].strip()
+            html_lines.append(f'<blockquote>{format_inline(content)}</blockquote>')
+            continue
+        
+        # Regular paragraph
+        html_lines.append(f'<p>{format_inline(stripped)}</p>')
+    
+    # Close any open elements
+    if in_table:
+        html_lines.append(render_table(table_rows))
+    if in_list:
+        tag = 'ul' if in_list == 'ul' else 'ol'
+        html_lines.append(f'</{tag}>')
+    if in_code:
+        html_lines.append('</code></pre>')
+    
+    return '\n'.join(html_lines)
 
 
-def score_grade(score):
-    if score >= 90: return "A+"
-    if score >= 80: return "A"
-    if score >= 70: return "B"
-    if score >= 60: return "C"
-    if score >= 50: return "D"
-    return "F"
+def escape_html(text):
+    """Escape HTML special characters."""
+    return text.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
 
 
-def score_status(score):
-    if score >= 75: return "Fort"
-    if score >= 60: return "Solide"
-    if score >= 45: return "À améliorer"
-    return "Critique"
+def format_inline(text):
+    """Apply inline Markdown formatting."""
+    # Bold + italic
+    text = re.sub(r'\*\*\*(.+?)\*\*\*', r'<strong><em>\1</em></strong>', text)
+    # Bold
+    text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', text)
+    # Italic
+    text = re.sub(r'\*(.+?)\*', r'<em>\1</em>', text)
+    # Inline code
+    text = re.sub(r'`(.+?)`', r'<code class="inline-code">\1</code>', text)
+    # Links
+    text = re.sub(r'\[(.+?)\]\((.+?)\)', r'<a href="\2">\1</a>', text)
+    # Strikethrough
+    text = re.sub(r'~~(.+?)~~', r'<del>\1</del>', text)
+    return text
 
 
-# ---------------------------------------------------------------------------
-# Custom Flowables
-# ---------------------------------------------------------------------------
-class ColorBand(Flowable):
-    """Full-width colored horizontal band (used as section header background)."""
-    def __init__(self, height=36, color=None, text="", text_color=None, font_size=14):
-        super().__init__()
-        self.band_height = height
-        self.color = color or COLORS["primary"]
-        self.text = text
-        self.text_color = text_color or COLORS["white"]
-        self.font_size = font_size
-        self.width = CONTENT_W
-        self.height = height
-
-    def draw(self):
-        self.canv.setFillColor(self.color)
-        self.canv.rect(0, 0, self.width, self.band_height, fill=1, stroke=0)
-        if self.text:
-            self.canv.setFillColor(self.text_color)
-            self.canv.setFont("Helvetica-Bold", self.font_size)
-            self.canv.drawString(12, self.band_height / 2 - self.font_size / 3, self.text)
-
-
-class GaugeFlowable(Flowable):
-    """Ring-style score gauge."""
-    def __init__(self, score, size=120):
-        super().__init__()
-        self.score = int(score)
-        self.size = size
-        self.width = size
-        self.height = size
-
-    def draw(self):
-        cx = self.size / 2
-        cy = self.size / 2
-        r_outer = self.size / 2 - 4
-        r_inner = r_outer - 18
-        color = score_color(self.score)
-        bg = COLORS["light_bg"]
-
-        # Background ring
-        self.canv.setFillColor(bg)
-        self.canv.setStrokeColor(COLORS["border"])
-        self.canv.setLineWidth(1)
-        self.canv.circle(cx, cy, r_outer, fill=1, stroke=1)
-        self.canv.setFillColor(COLORS["white"])
-        self.canv.circle(cx, cy, r_inner, fill=1, stroke=0)
-
-        # Score arc (drawn as filled wedge segments)
-        angle = 360 * self.score / 100
-        start_deg = 90  # top
-        # Draw arc band using thin wedges
-        import math
-        steps = max(1, int(angle))
-        for i in range(steps):
-            a_start = math.radians(start_deg - i)
-            a_end = math.radians(start_deg - i - 1)
-            # outer arc point
-            ox1 = cx + r_outer * math.cos(a_start)
-            oy1 = cy + r_outer * math.sin(a_start)
-            ox2 = cx + r_outer * math.cos(a_end)
-            oy2 = cy + r_outer * math.sin(a_end)
-            ix1 = cx + r_inner * math.cos(a_start)
-            iy1 = cy + r_inner * math.sin(a_start)
-            ix2 = cx + r_inner * math.cos(a_end)
-            iy2 = cy + r_inner * math.sin(a_end)
-            p = self.canv.beginPath()
-            p.moveTo(ox1, oy1)
-            p.lineTo(ox2, oy2)
-            p.lineTo(ix2, iy2)
-            p.lineTo(ix1, iy1)
-            p.close()
-            self.canv.setFillColor(color)
-            self.canv.setStrokeColor(color)
-            self.canv.setLineWidth(0.3)
-            self.canv.drawPath(p, fill=1, stroke=1)
-
-        # Center score text
-        self.canv.setFillColor(COLORS["primary"])
-        self.canv.setFont("Helvetica-Bold", 26)
-        self.canv.drawCentredString(cx, cy + 4, str(self.score))
-        self.canv.setFont("Helvetica", 9)
-        self.canv.setFillColor(COLORS["text_light"])
-        self.canv.drawCentredString(cx, cy - 12, "/ 100")
-
-
-class BarChartFlowable(Flowable):
-    """Horizontal bar chart with full labels."""
-    def __init__(self, categories, scores, width=None, row_h=24, gap=8):
-        super().__init__()
-        self.categories = categories
-        self.scores = [int(s) for s in scores]
-        self.row_h = row_h
-        self.gap = gap
-        self.label_w = 195   # room for longest label
-        self.score_w = 36
-        self.bar_w = (width or CONTENT_W) - self.label_w - self.score_w - 8
-        self.width = width or CONTENT_W
-        self.height = len(categories) * (row_h + gap) + gap
-
-    def draw(self):
-        n = len(self.categories)
-        for i, (cat, score) in enumerate(zip(self.categories, self.scores)):
-            y = self.height - (i + 1) * (self.row_h + self.gap)
-            # Label
-            self.canv.setFillColor(COLORS["text"])
-            self.canv.setFont("Helvetica", 9)
-            self.canv.drawString(0, y + self.row_h / 2 - 4, cat)
-            # Background bar
-            bar_x = self.label_w
-            self.canv.setFillColor(COLORS["light_bg"])
-            self.canv.roundRect(bar_x, y, self.bar_w, self.row_h, 4, fill=1, stroke=0)
-            # Score bar
-            fill_w = max(4, (score / 100) * self.bar_w)
-            color = score_color(score)
-            self.canv.setFillColor(color)
-            self.canv.roundRect(bar_x, y, fill_w, self.row_h, 4, fill=1, stroke=0)
-            # Score label
-            self.canv.setFillColor(COLORS["primary"])
-            self.canv.setFont("Helvetica-Bold", 10)
-            self.canv.drawString(bar_x + self.bar_w + 6, y + self.row_h / 2 - 4,
-                                 f"{score}")
-
-
-class SeverityBadge(Flowable):
-    """Colored pill badge for severity labels."""
-    SEV_COLORS = {
-        "Critical": HexColor("#FF1744"),
-        "High":     HexColor("#FF6B35"),
-        "Medium":   HexColor("#FFB300"),
-        "Low":      HexColor("#2D5BFF"),
-    }
-
-    def __init__(self, severity):
-        super().__init__()
-        self.severity = severity
-        self.width = 58
-        self.height = 18
-
-    def draw(self):
-        color = self.SEV_COLORS.get(self.severity, COLORS["text_light"])
-        self.canv.setFillColor(color)
-        self.canv.roundRect(0, 0, self.width, self.height, 5, fill=1, stroke=0)
-        self.canv.setFillColor(COLORS["white"])
-        self.canv.setFont("Helvetica-Bold", 8)
-        self.canv.drawCentredString(self.width / 2, 5, self.severity.upper())
-
-
-# ---------------------------------------------------------------------------
-# Page template with header stripe + page numbers
-# ---------------------------------------------------------------------------
-class ReportCanvas(pdfcanvas.Canvas):
-    def __init__(self, filename, brand_name="", **kwargs):
-        super().__init__(filename, **kwargs)
-        self._saved_page_states = []
-        self.brand_name = brand_name
-
-    def showPage(self):
-        self._saved_page_states.append(dict(self.__dict__))
-        self._startPage()
-
-    def save(self):
-        num_pages = len(self._saved_page_states)
-        for state in self._saved_page_states:
-            self.__dict__.update(state)
-            self._draw_page_decoration(num_pages)
-            super().showPage()
-        super().save()
-
-    def _draw_page_decoration(self, total_pages):
-        page_num = self._saved_page_states.index(
-            {k: v for k, v in self.__dict__.items() if k in self._saved_page_states[0]}
-        ) if False else None  # skip index — use _pageNumber instead
-
-        # Top accent stripe
-        self.setFillColor(COLORS["primary"])
-        self.rect(0, PAGE_H - 6, PAGE_W, 6, fill=1, stroke=0)
-
-        # Bottom bar
-        self.setFillColor(COLORS["light_bg"])
-        self.rect(0, 0, PAGE_W, 28, fill=1, stroke=0)
-        self.setFillColor(COLORS["text_light"])
-        self.setFont("Helvetica", 7.5)
-        self.drawString(MARGIN, 10, "AI Marketing Suite — Confidential")
-        self.drawRightString(PAGE_W - MARGIN, 10, f"{self.brand_name}  ·  Marketing Audit Report")
-
-
-class NumberedCanvas(pdfcanvas.Canvas):
-    """Canvas that adds page numbers and branding on every page."""
-    def __init__(self, filename, **kwargs):
-        super().__init__(filename, **kwargs)
-        self._saved_page_states = []
-        self.brand_name = ""
-
-    def showPage(self):
-        self._saved_page_states.append(dict(self.__dict__))
-        self._startPage()
-
-    def save(self):
-        num_pages = len(self._saved_page_states)
-        for i, state in enumerate(self._saved_page_states):
-            self.__dict__.update(state)
-            self._draw_decoration(i + 1, num_pages)
-            pdfcanvas.Canvas.showPage(self)
-        pdfcanvas.Canvas.save(self)
-
-    def _draw_decoration(self, page_num, total_pages):
-        # Top stripe
-        self.setFillColor(COLORS["primary"])
-        self.rect(0, PAGE_H - 5, PAGE_W, 5, fill=1, stroke=0)
-
-        # Bottom footer bar
-        self.setFillColor(COLORS["light_bg"])
-        self.rect(0, 0, PAGE_W, 26, fill=1, stroke=0)
-        self.setStrokeColor(COLORS["border"])
-        self.setLineWidth(0.5)
-        self.line(MARGIN, 26, PAGE_W - MARGIN, 26)
-
-        self.setFillColor(COLORS["text_light"])
-        self.setFont("Helvetica", 7.5)
-        self.drawString(MARGIN, 9, "AI Marketing Suite — Confidentiel")
-        if page_num > 1:
-            self.drawCentredString(PAGE_W / 2, 9, f"{page_num} / {total_pages}")
-        brand = getattr(self, "brand_name", "")
-        if brand:
-            self.drawRightString(PAGE_W - MARGIN, 9, brand)
+def render_table(rows):
+    """Render table rows as HTML with intelligent column widths."""
+    if not rows:
+        return ''
+    
+    # Determine number of columns
+    num_cols = max(len(cells) for _, cells in rows)
+    
+    # Calculate average content length per column to detect "heavy" columns
+    col_lengths = [0] * num_cols
+    col_counts = [0] * num_cols
+    for _, cells in rows:
+        for j, cell in enumerate(cells):
+            if j < num_cols:
+                col_lengths[j] += len(cell)
+                col_counts[j] += 1
+    
+    avg_lengths = [col_lengths[j] / max(col_counts[j], 1) for j in range(num_cols)]
+    total_avg = sum(avg_lengths) or 1
+    
+    # Compute proportional widths based on content
+    if num_cols == 2:
+        # 2 columns: label / description
+        widths = [35, 65]
+    elif num_cols == 3:
+        # 3 columns: label / status / description
+        # Give more space to the column with most content
+        raw = [avg_lengths[j] / total_avg * 100 for j in range(num_cols)]
+        widths = [max(w, 15) for w in raw]  # minimum 15%
+        # Normalize
+        total_w = sum(widths)
+        widths = [w / total_w * 100 for w in widths]
+    elif num_cols == 4:
+        # 4 columns: common in audit tables
+        raw = [avg_lengths[j] / total_avg * 100 for j in range(num_cols)]
+        widths = [max(w, 12) for w in raw]  # minimum 12%
+        total_w = sum(widths)
+        widths = [w / total_w * 100 for w in widths]
+    else:
+        # 5+ columns: proportional with minimum
+        raw = [avg_lengths[j] / total_avg * 100 for j in range(num_cols)]
+        widths = [max(w, 10) for w in raw]  # minimum 10%
+        total_w = sum(widths)
+        widths = [w / total_w * 100 for w in widths]
+    
+    # Build colgroup for explicit widths
+    html = '<div class="table-wrapper"><table>'
+    html += '<colgroup>'
+    for w in widths:
+        html += f'<col style="width:{w:.1f}%">'
+    html += '</colgroup>'
+    
+    for i, (row_type, cells) in enumerate(rows):
+        if i == 0 and row_type == 'header':
+            html += '<thead><tr>'
+            for cell in cells:
+                html += f'<th>{format_inline(cell)}</th>'
+            html += '</tr></thead><tbody>'
+        else:
+            row_class = 'even' if i % 2 == 0 else 'odd'
+            html += f'<tr class="{row_class}">'
+            for cell in cells:
+                html += f'<td>{format_inline(cell)}</td>'
+            html += '</tr>'
+    
+    html += '</tbody></table></div>'
+    return html
 
 
 # ---------------------------------------------------------------------------
-# Styles factory
+# HTML template with professional CSS
 # ---------------------------------------------------------------------------
-def make_styles():
-    styles = getSampleStyleSheet()
+def build_html_document(body_html, title, brand_name="", section_number=0):
+    """Wrap HTML body in a complete styled document."""
+    
+    return f"""<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{title}</title>
+<style>
+  @page {{
+    size: A4;
+    margin: 15mm 0 20mm 0;
+  }}
 
-    def ps(name, **kw):
-        base = kw.pop("parent", styles["Normal"])
-        return ParagraphStyle(name, parent=base, **kw)
+  @page:first {{
+    margin-top: 0;
+  }}
 
-    return {
-        "title": ps("Ttl",
-            fontSize=32, textColor=COLORS["white"],
-            fontName="Helvetica-Bold", leading=38,
-            alignment=TA_CENTER, spaceAfter=4),
-        "subtitle": ps("Sub",
-            fontSize=12, textColor=HexColor("#B8C8E8"),
-            fontName="Helvetica", leading=16,
-            alignment=TA_CENTER, spaceAfter=6),
-        "heading": ps("H1",
-            fontSize=16, textColor=COLORS["primary"],
-            fontName="Helvetica-Bold", spaceBefore=4, spaceAfter=10),
-        "subheading": ps("H2",
-            fontSize=12, textColor=COLORS["accent"],
-            fontName="Helvetica-Bold", spaceBefore=10, spaceAfter=6),
-        "body": ps("Bd",
-            fontSize=9.5, textColor=COLORS["text"],
-            fontName="Helvetica", leading=14, spaceAfter=5),
-        "body_sm": ps("BdSm",
-            fontSize=8.5, textColor=COLORS["text"],
-            fontName="Helvetica", leading=13, spaceAfter=4),
-        "label": ps("Lbl",
-            fontSize=8, textColor=COLORS["text_light"],
-            fontName="Helvetica", leading=11),
-        "footer": ps("Ftr",
-            fontSize=7.5, textColor=COLORS["text_light"],
-            fontName="Helvetica", alignment=TA_CENTER),
-        "grade": ps("Grd",
-            fontSize=13, textColor=COLORS["text"],
-            fontName="Helvetica-Bold", alignment=TA_CENTER, spaceAfter=4),
-        "action_item": ps("Act",
-            fontSize=9.5, textColor=COLORS["text"],
-            fontName="Helvetica", leading=14, spaceAfter=4,
-            leftIndent=14, firstLineIndent=-14),
-        # White bold style for table header cells (Paragraph overrides TableStyle TEXTCOLOR)
-        "th": ps("TH",
-            fontSize=9, textColor=COLORS["white"],
-            fontName="Helvetica-Bold", leading=12),
-    }
+  * {{ margin: 0; padding: 0; box-sizing: border-box; }}
 
+  body {{
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.6;
+    color: {COLORS['text']};
+    background: {COLORS['white']};
+    margin: 0;
+    padding: 0;
+  }}
 
-# ---------------------------------------------------------------------------
-# Section header helper
-# ---------------------------------------------------------------------------
-def section_header(text, S):
-    """Returns a band + spacer for a section title."""
-    return [
-        Spacer(1, 0.15 * inch),
-        ColorBand(height=34, color=COLORS["primary"], text=text, font_size=13),
-        Spacer(1, 0.12 * inch),
-    ]
+  .content {{
+    padding: 0 18mm;
+  }}
 
+  /* --- Section cover --- */
+  .section-cover {{
+    background: linear-gradient(135deg, {COLORS['primary']} 0%, #2a4070 100%);
+    color: white;
+    padding: 35px 18mm;
+    margin: 0 0 25px 0;
+    page-break-after: avoid;
+  }}
 
-# ---------------------------------------------------------------------------
-# Cover page builder
-# ---------------------------------------------------------------------------
-def build_cover(data, S, elements):
-    # Dark header block
-    url = data.get("url", "")
-    brand = data.get("brand_name", url.replace("https://", "").split("/")[0])
-    date_str = data.get("date", datetime.now().strftime("%B %d, %Y"))
-    overall = int(data.get("overall_score", 0))
-    grade = score_grade(overall)
+  .section-cover h1 {{
+    font-size: 26pt;
+    font-weight: 800;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.5px;
+  }}
 
-    # Hero band
-    cover_band = ColorBand(height=200, color=COLORS["primary"],
-                           text="", font_size=0)
-    # We'll use a Table to position text inside the dark band
-    cover_table = Table(
-        [[Paragraph("Rapport d'Audit Marketing", S["title"])],
-         [Paragraph(url, S["subtitle"])],
-         [Paragraph(f"Généré le : {date_str}", S["subtitle"])]],
-        colWidths=[CONTENT_W]
-    )
-    cover_table.setStyle(TableStyle([
-        ("BACKGROUND", (0, 0), (-1, -1), COLORS["primary"]),
-        ("TOPPADDING", (0, 0), (-1, 0), 28),
-        ("TOPPADDING", (0, 1), (-1, 1), 6),
-        ("TOPPADDING", (0, 2), (-1, 2), 4),
-        ("BOTTOMPADDING", (0, -1), (-1, -1), 28),
-        ("LEFTPADDING", (0, 0), (-1, -1), 16),
-        ("RIGHTPADDING", (0, 0), (-1, -1), 16),
-    ]))
-    elements.append(cover_table)
-    elements.append(Spacer(1, 0.35 * inch))
+  .section-cover .section-number {{
+    font-size: 13pt;
+    font-weight: 300;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+  }}
 
-    # Score gauge centred
-    gauge_table = Table([[GaugeFlowable(overall, size=130)]], colWidths=[CONTENT_W])
-    gauge_table.setStyle(TableStyle([
-        ("ALIGN", (0, 0), (-1, -1), "CENTER"),
-        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
-    ]))
-    elements.append(gauge_table)
-    elements.append(Spacer(1, 0.15 * inch))
+  .section-cover .brand {{
+    font-size: 12pt;
+    opacity: 0.6;
+    margin-top: 10px;
+  }}
 
-    # Grade + score line
-    color = score_color(overall)
-    grade_para = Paragraph(
-        f'<font color="#{color.hexval()[2:]}" size="18"><b>{overall}/100</b></font>'
-        f'  <font color="#7F8C9B" size="12">— Note <b>{grade}</b></font>',
-        S["grade"]
-    )
-    elements.append(grade_para)
-    elements.append(Spacer(1, 0.2 * inch))
+  /* --- Headings --- */
+  h1 {{
+    font-size: 22pt;
+    font-weight: 800;
+    color: {COLORS['primary']};
+    margin: 35px 0 15px 0;
+    padding-bottom: 8px;
+    border-bottom: 3px solid {COLORS['accent']};
+  }}
 
-    # Divider
-    elements.append(HRFlowable(width=CONTENT_W, thickness=1,
-                                color=COLORS["border"], spaceAfter=12))
+  h2 {{
+    font-size: 16pt;
+    font-weight: 700;
+    color: {COLORS['primary']};
+    margin: 28px 0 12px 0;
+    padding-bottom: 5px;
+    border-bottom: 2px solid {COLORS['border']};
+  }}
 
-    # Executive summary
-    exec_summary = data.get("executive_summary", "")
-    if exec_summary:
-        elements.append(Paragraph(exec_summary, S["body"]))
+  h3 {{
+    font-size: 13pt;
+    font-weight: 700;
+    color: {COLORS['accent']};
+    margin: 22px 0 10px 0;
+  }}
 
-    elements.append(PageBreak())
+  h4 {{
+    font-size: 11.5pt;
+    font-weight: 700;
+    color: {COLORS['text']};
+    margin: 18px 0 8px 0;
+  }}
 
+  h5, h6 {{
+    font-size: 11pt;
+    font-weight: 600;
+    color: {COLORS['text_light']};
+    margin: 14px 0 6px 0;
+  }}
 
-# ---------------------------------------------------------------------------
-# Score breakdown page
-# ---------------------------------------------------------------------------
-def build_scores(data, S, elements):
-    elements += section_header("Analyse des Scores", S)
+  /* --- Text --- */
+  p {{
+    margin: 8px 0;
+    text-align: justify;
+  }}
 
-    categories = data.get("categories", {})
-    cat_names = list(categories.keys()) if categories else [
-        "Content & Messaging", "Conversion Optimization", "SEO & Discoverability",
-        "Competitive Positioning", "Brand & Trust", "Growth & Strategy"
-    ]
-    cat_scores = [categories.get(c, {}).get("score", 50) for c in cat_names] if categories else [65]*6
+  strong {{
+    color: {COLORS['primary']};
+    font-weight: 700;
+  }}
 
-    # Bar chart
-    chart = BarChartFlowable(cat_names, cat_scores, width=CONTENT_W)
-    elements.append(chart)
-    elements.append(Spacer(1, 0.25 * inch))
+  em {{
+    font-style: italic;
+    color: {COLORS['text']};
+  }}
 
-    # Score table
-    score_data = [[
-        Paragraph("<b>Catégorie</b>", S["th"]),
-        Paragraph("<b>Score</b>", S["th"]),
-        Paragraph("<b>Poids</b>", S["th"]),
-        Paragraph("<b>Statut</b>", S["th"]),
-    ]]
-    weights = ["25%", "20%", "20%", "15%", "10%", "10%"]
-    for i, (name, score) in enumerate(zip(cat_names, cat_scores)):
-        score = int(score)
-        status = score_status(score)
-        color = score_color(score)
-        hex_c = color.hexval()[2:]
-        score_data.append([
-            Paragraph(name, S["body_sm"]),
-            Paragraph(f'<font color="#{hex_c}"><b>{score}/100</b></font>', S["body_sm"]),
-            Paragraph(weights[i] if i < len(weights) else "—", S["body_sm"]),
-            Paragraph(status, S["body_sm"]),
-        ])
+  a {{
+    color: {COLORS['accent']};
+    text-decoration: none;
+  }}
 
-    col_w = [CONTENT_W * f for f in [0.42, 0.18, 0.16, 0.24]]
-    score_table = Table(score_data, colWidths=col_w, repeatRows=1)
-    score_table.setStyle(TableStyle([
-        ("BACKGROUND", (0, 0), (-1, 0), COLORS["primary"]),
-        ("TEXTCOLOR", (0, 0), (-1, 0), COLORS["white"]),
-        ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
-        ("FONTSIZE", (0, 0), (-1, -1), 9),
-        ("ALIGN", (1, 0), (-1, -1), "CENTER"),
-        ("ALIGN", (0, 0), (0, -1), "LEFT"),
-        ("GRID", (0, 0), (-1, -1), 0.4, COLORS["border"]),
-        ("ROWBACKGROUNDS", (0, 1), (-1, -1), [COLORS["white"], COLORS["light_bg"]]),
-        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
-        ("TOPPADDING", (0, 0), (-1, -1), 7),
-        ("BOTTOMPADDING", (0, 0), (-1, -1), 7),
-        ("LEFTPADDING", (0, 0), (-1, -1), 8),
-        ("RIGHTPADDING", (0, 0), (-1, -1), 8),
-    ]))
-    elements.append(score_table)
-    elements.append(PageBreak())
+  blockquote {{
+    border-left: 4px solid {COLORS['highlight']};
+    padding: 12px 18px;
+    margin: 15px 0;
+    background: {COLORS['light_bg']};
+    border-radius: 0 6px 6px 0;
+    font-style: italic;
+    color: {COLORS['text_light']};
+  }}
 
+  hr {{
+    border: none;
+    border-top: 2px solid {COLORS['border']};
+    margin: 25px 0;
+  }}
 
-# ---------------------------------------------------------------------------
-# Findings page
-# ---------------------------------------------------------------------------
-def build_findings(data, S, elements):
-    elements += section_header("Constats Clés", S)
+  /* --- Lists --- */
+  ul, ol {{
+    margin: 8px 0 8px 20px;
+    padding-left: 0;
+  }}
 
-    findings = data.get("findings", [])
+  /* Empêcher l'indentation croissante des listes imbriquées */
+  ul ul, ol ol, ul ol, ol ul {{
+    margin-left: 15px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }}
 
-    SEV_HEX = {
-        "Critical": "#FF1744",
-        "High":     "#FF6B35",
-        "Medium":   "#FFB300",
-        "Low":      "#2D5BFF",
-    }
-    SEV_FR = {
-        "Critical": "Critique",
-        "High":     "Élevé",
-        "Medium":   "Moyen",
-        "Low":      "Faible",
-    }
+  ul ul ul, ol ol ol {{
+    margin-left: 10px;
+  }}
 
-    findings_data = [[
-        Paragraph("<b>Sévérité</b>", S["th"]),
-        Paragraph("<b>Constat</b>", S["th"]),
-    ]]
-    for f in findings:
-        sev = f.get("severity", "Medium")
-        hex_c = SEV_HEX.get(sev, "#7F8C9B")
-        sev_fr = SEV_FR.get(sev, sev)
-        findings_data.append([
-            Paragraph(f'<font color="{hex_c}"><b>{sev_fr}</b></font>', S["body_sm"]),
-            Paragraph(f.get("finding", ""), S["body_sm"]),
-        ])
+  li {{
+    margin: 4px 0;
+    padding-left: 3px;
+  }}
 
-    col_w = [CONTENT_W * 0.16, CONTENT_W * 0.84]
-    findings_table = Table(findings_data, colWidths=col_w, repeatRows=1)
-    findings_table.setStyle(TableStyle([
-        ("BACKGROUND", (0, 0), (-1, 0), COLORS["primary"]),
-        ("TEXTCOLOR", (0, 0), (-1, 0), COLORS["white"]),
-        ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
-        ("FONTSIZE", (0, 0), (-1, -1), 9),
-        ("ALIGN", (0, 0), (0, -1), "CENTER"),
-        ("ALIGN", (1, 0), (1, -1), "LEFT"),
-        ("GRID", (0, 0), (-1, -1), 0.4, COLORS["border"]),
-        ("ROWBACKGROUNDS", (0, 1), (-1, -1), [COLORS["white"], COLORS["light_bg"]]),
-        ("VALIGN", (0, 0), (-1, -1), "TOP"),
-        ("TOPPADDING", (0, 0), (-1, -1), 8),
-        ("BOTTOMPADDING", (0, 0), (-1, -1), 8),
-        ("LEFTPADDING", (0, 0), (-1, -1), 8),
-        ("RIGHTPADDING", (0, 0), (-1, -1), 8),
-    ]))
-    elements.append(findings_table)
-    elements.append(PageBreak())
+  li::marker {{
+    color: {COLORS['accent']};
+    font-weight: 700;
+  }}
 
+  /* --- Tables --- */
+  .table-wrapper {{
+    margin: 15px 0;
+    overflow-x: auto;
+    page-break-inside: auto;
+  }}
 
-# ---------------------------------------------------------------------------
-# Action plan page
-# ---------------------------------------------------------------------------
-def _action_block(title, items, color, S, elements):
-    # Colored sub-header
-    sub_band = ColorBand(height=26, color=color, text=title, font_size=11)
-    elements.append(sub_band)
-    elements.append(Spacer(1, 6))
-    for i, item in enumerate(items, 1):
-        elements.append(Paragraph(f"{i}.  {item}", S["action_item"]))
-    elements.append(Spacer(1, 0.12 * inch))
+  table {{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9.5pt;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    table-layout: fixed;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }}
 
+  thead {{
+    background: {COLORS['primary']};
+    color: white;
+  }}
 
-def build_action_plan(data, S, elements):
-    elements += section_header("Plan d'Action Priorisé", S)
+  th {{
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 8.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }}
 
-    quick_wins = data.get("quick_wins", [])
-    medium_term = data.get("medium_term", [])
-    strategic = data.get("strategic", [])
+  td {{
+    padding: 7px 10px;
+    border-bottom: 1px solid {COLORS['border']};
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    vertical-align: top;
+    font-size: 9pt;
+    line-height: 1.4;
+  }}
 
-    _action_block("Gains Rapides — Cette Semaine", quick_wins,
-                  COLORS["success"], S, elements)
-    _action_block("Moyen Terme — 1 à 3 Mois", medium_term,
-                  COLORS["accent"], S, elements)
-    _action_block("Stratégique — 3 à 6 Mois", strategic,
-                  COLORS["highlight"], S, elements)
+  tr {{
+    page-break-inside: avoid;
+  }}
 
-    elements.append(PageBreak())
+  tr.even {{
+    background: {COLORS['light_bg']};
+  }}
 
+  tr.odd {{
+    background: {COLORS['white']};
+  }}
 
-# ---------------------------------------------------------------------------
-# Competitive landscape
-# ---------------------------------------------------------------------------
-def build_competitive(data, S, elements):
-    competitors = data.get("competitors", [])
-    if not competitors:
-        return
+  tbody tr:hover {{
+    background: #e8ecf4;
+  }}
 
-    elements += section_header("Paysage Concurrentiel", S)
+  /* --- Code --- */
+  .inline-code {{
+    background: {COLORS['light_bg']};
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+    font-size: 9.5pt;
+    color: {COLORS['highlight']};
+  }}
 
-    brand = data.get("brand_name", "Cible")
-    client_data = data.get("client", {})  # optional client row data
+  .code-block {{
+    background: {COLORS['primary']};
+    color: #e2e8f0;
+    padding: 16px 20px;
+    border-radius: 8px;
+    font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+    font-size: 9pt;
+    line-height: 1.5;
+    overflow-x: auto;
+    margin: 15px 0;
+  }}
 
-    comps = competitors[:3]
-    col_labels = [brand] + [c.get("name", f"Concurrent {i+1}") for i, c in enumerate(comps)]
-    n_cols = len(col_labels)
+  /* --- Footer --- */
+  .page-footer {{
+    margin-top: 30px;
+    padding: 10px 0;
+    font-size: 8pt;
+    color: {COLORS['text_light']};
+    border-top: 1px solid {COLORS['border']};
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }}
 
-    rows_def = [
-        ("Positionnement", "positioning"),
-        ("Tarifs",         "pricing"),
-        ("Preuve Sociale", "social_proof"),
-        ("Contenu",        "content"),
-    ]
+  .page-footer .confidential {{
+    color: {COLORS['danger']};
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 7.5pt;
+  }}
 
-    # Header row
-    header = [Paragraph("", S["th"])] + [
-        Paragraph(f"<b>{lbl}</b>", S["th"]) for lbl in col_labels
-    ]
-    table_data = [header]
+  /* --- Print --- */
+  @media print {{
+    body {{ -webkit-print-color-adjust: exact; print-color-adjust: exact; }}
+    .section-cover {{ -webkit-print-color-adjust: exact; print-color-adjust: exact; }}
+    thead {{ -webkit-print-color-adjust: exact; print-color-adjust: exact; }}
+  }}
+</style>
+</head>
+<body>
 
-    for row_label, key in rows_def:
-        client_val = client_data.get(key, "—") if client_data else "—"
-        row = [Paragraph(f"<b>{row_label}</b>", S["body_sm"])]
-        row.append(Paragraph(client_val, S["body_sm"]))
-        for comp in comps:
-            row.append(Paragraph(comp.get(key, "—"), S["body_sm"]))
-        # Pad if fewer than 3 competitors
-        while len(row) < n_cols + 1:
-            row.append(Paragraph("—", S["body_sm"]))
-        table_data.append(row)
+<div class="section-cover">
+  <div class="section-number">Section {section_number:02d}</div>
+  <h1 style="border:none; color:white; margin:0; padding:0; font-size:26pt;">{title}</h1>
+  <div class="brand">{brand_name} — AI Marketing Suite</div>
+</div>
 
-    # Column widths: row label + equal share for each brand/comp
-    row_label_w = 90
-    col_share = (CONTENT_W - row_label_w) / (n_cols)
-    col_widths = [row_label_w] + [col_share] * n_cols
+<div class="content">
+{body_html}
 
-    comp_table = Table(table_data, colWidths=col_widths, repeatRows=1)
-    comp_table.setStyle(TableStyle([
-        ("BACKGROUND", (0, 0), (-1, 0), COLORS["primary"]),
-        ("TEXTCOLOR", (0, 0), (-1, 0), COLORS["white"]),
-        ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
-        # Highlight client column header
-        ("BACKGROUND", (1, 0), (1, 0), COLORS["accent"]),
-        ("BACKGROUND", (0, 1), (0, -1), COLORS["mid_bg"]),
-        ("FONTNAME", (0, 1), (0, -1), "Helvetica-Bold"),
-        ("FONTSIZE", (0, 0), (-1, -1), 8.5),
-        ("GRID", (0, 0), (-1, -1), 0.4, COLORS["border"]),
-        ("ROWBACKGROUNDS", (1, 1), (-1, -1), [COLORS["white"], COLORS["light_bg"]]),
-        ("VALIGN", (0, 0), (-1, -1), "TOP"),
-        ("TOPPADDING", (0, 0), (-1, -1), 7),
-        ("BOTTOMPADDING", (0, 0), (-1, -1), 7),
-        ("LEFTPADDING", (0, 0), (-1, -1), 7),
-        ("RIGHTPADDING", (0, 0), (-1, -1), 7),
-        ("ALIGN", (0, 0), (-1, 0), "CENTER"),
-    ]))
-    elements.append(comp_table)
-    elements.append(PageBreak())
+<div class="page-footer">
+  <span class="confidential">Confidentiel</span>
+  <span>{brand_name} — {datetime.now().strftime('%d/%m/%Y')}</span>
+  <span>AI Marketing Suite</span>
+</div>
+</div>
+
+</body>
+</html>"""
 
 
 # ---------------------------------------------------------------------------
-# Methodology page
+# HTML to PDF via Chrome headless
 # ---------------------------------------------------------------------------
-def build_methodology(data, S, elements):
-    elements += section_header("Méthodologie", S)
-
-    elements.append(Paragraph(
-        "Cet audit évalue six dimensions clés de l'efficacité marketing. "
-        "Chaque catégorie est notée de 0 à 100 selon les meilleures pratiques du secteur et des benchmarks concurrentiels.",
-        S["body"]
-    ))
-    elements.append(Spacer(1, 0.1 * inch))
-
-    method_data = [[
-        Paragraph("<b>Catégorie</b>", S["th"]),
-        Paragraph("<b>Poids</b>", S["th"]),
-        Paragraph("<b>Ce que nous évaluons</b>", S["th"]),
-    ]]
-    rows = [
-        ("Content & Messaging",      "25%", "Qualité du contenu, proposition de valeur, clarté des CTA"),
-        ("Conversion Optimization",  "20%", "Conception du funnel, formulaires, preuve sociale, réduction des frictions"),
-        ("SEO & Discoverability",    "20%", "SEO on-page, SEO technique, schémas, structure de contenu"),
-        ("Competitive Positioning",  "15%", "Différenciation, tarification, stratégie face aux alternatives"),
-        ("Brand & Trust",            "10%", "Qualité du design, signaux de confiance, indicateurs d'autorité"),
-        ("Growth & Strategy",        "10%", "Canaux d'acquisition, email, stratégie contenu, fidélisation"),
-    ]
-    for cat, w, what in rows:
-        method_data.append([
-            Paragraph(cat, S["body_sm"]),
-            Paragraph(w, S["body_sm"]),
-            Paragraph(what, S["body_sm"]),
-        ])
-
-    col_w = [CONTENT_W * f for f in [0.35, 0.12, 0.53]]
-    method_table = Table(method_data, colWidths=col_w, repeatRows=1)
-    method_table.setStyle(TableStyle([
-        ("BACKGROUND", (0, 0), (-1, 0), COLORS["primary"]),
-        ("TEXTCOLOR", (0, 0), (-1, 0), COLORS["white"]),
-        ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
-        ("FONTSIZE", (0, 0), (-1, -1), 9),
-        ("GRID", (0, 0), (-1, -1), 0.4, COLORS["border"]),
-        ("ROWBACKGROUNDS", (0, 1), (-1, -1), [COLORS["white"], COLORS["light_bg"]]),
-        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
-        ("TOPPADDING", (0, 0), (-1, -1), 7),
-        ("BOTTOMPADDING", (0, 0), (-1, -1), 7),
-        ("LEFTPADDING", (0, 0), (-1, -1), 8),
-        ("RIGHTPADDING", (0, 0), (-1, -1), 8),
-        ("ALIGN", (1, 0), (1, -1), "CENTER"),
-    ]))
-    elements.append(method_table)
-
-    elements.append(Spacer(1, 0.4 * inch))
-    elements.append(HRFlowable(width=CONTENT_W, thickness=0.5,
-                                color=COLORS["border"], spaceAfter=10))
-    elements.append(Paragraph(
-        "Généré par AI Marketing Suite pour Claude Code",
-        S["footer"]
-    ))
+def html_to_pdf(html_content, output_pdf, chrome_path):
+    """Convert HTML string to PDF using Chrome headless."""
+    
+    with tempfile.NamedTemporaryFile(mode='w', suffix='.html', delete=False, encoding='utf-8') as f:
+        f.write(html_content)
+        html_path = f.name
+    
+    try:
+        cmd = [
+            chrome_path,
+            '--headless=new',
+            '--disable-gpu',
+            '--no-sandbox',
+            '--disable-software-rasterizer',
+            f'--print-to-pdf={output_pdf}',
+            '--print-to-pdf-no-header',
+            '--no-pdf-header-footer',
+            f'file:///{html_path.replace(os.sep, "/")}'
+        ]
+        
+        result = subprocess.run(cmd, capture_output=True, timeout=60)
+        
+        if not os.path.exists(output_pdf):
+            print(f"  ERREUR: Chrome n'a pas généré {output_pdf}")
+            if result.stderr:
+                print(f"  Chrome stderr: {result.stderr.decode('utf-8', errors='ignore')[:200]}")
+            return False
+        
+        return True
+    
+    except subprocess.TimeoutExpired:
+        print(f"  ERREUR: Timeout Chrome pour {output_pdf}")
+        return False
+    except Exception as e:
+        print(f"  ERREUR: {e}")
+        return False
+    finally:
+        try:
+            os.unlink(html_path)
+        except:
+            pass
 
 
 # ---------------------------------------------------------------------------
-# Main entry point
+# Merge PDFs
 # ---------------------------------------------------------------------------
-def generate_report(data, output_path):
-    """Generate a professional marketing PDF report."""
-
-    brand = data.get("brand_name",
-                     data.get("url", "").replace("https://", "").split("/")[0])
-
-    class BrandedCanvas(NumberedCanvas):
-        pass
-
-    # Patch brand name into canvas class
-    _brand = brand
-    _orig_draw = NumberedCanvas._draw_decoration
-    def _patched_draw(self, page_num, total):
-        self.brand_name = _brand
-        _orig_draw(self, page_num, total)
-    BrandedCanvas._draw_decoration = _patched_draw
-
-    doc = SimpleDocTemplate(
-        output_path,
-        pagesize=letter,
-        rightMargin=MARGIN,
-        leftMargin=MARGIN,
-        topMargin=MARGIN + 10,
-        bottomMargin=MARGIN + 10,
-    )
-
-    S = make_styles()
-    elements = []
-
-    build_cover(data, S, elements)
-    build_scores(data, S, elements)
-    build_findings(data, S, elements)
-    build_action_plan(data, S, elements)
-    build_competitive(data, S, elements)
-    build_methodology(data, S, elements)
-
-    doc.build(elements, canvasmaker=BrandedCanvas)
+def merge_pdfs(pdf_files, output_path, brand_name="", section_map=None):
+    """Merge multiple PDF files into one and add global page numbers with section names.
+    
+    section_map: list of (pdf_path, section_number, section_name) tuples.
+    """
+    # Remove existing output file if it exists
+    if os.path.exists(output_path):
+        try:
+            os.unlink(output_path)
+        except PermissionError:
+            print(f"  ERREUR: Le fichier '{output_path}' est ouvert dans un autre programme.")
+            print(f"  Fermez le PDF et relancez le script.")
+            sys.exit(1)
+    
+    writer = PdfWriter()
+    
+    # Build page-to-section mapping
+    page_sections = []  # list of (section_number, section_name) for each page
+    
+    for pdf_file in pdf_files:
+        if os.path.exists(pdf_file) and os.path.getsize(pdf_file) > 0:
+            try:
+                reader = PdfReader(pdf_file)
+                # Find section info for this file
+                sec_num = 0
+                sec_name = ""
+                if section_map:
+                    for entry in section_map:
+                        path, num, name = entry
+                        if os.path.normpath(path) == os.path.normpath(pdf_file):
+                            sec_num = num
+                            sec_name = name
+                            break
+                
+                for page in reader.pages:
+                    writer.add_page(page)
+                    page_sections.append((sec_num, sec_name))
+            except Exception as e:
+                print(f"  Avertissement: impossible de lire {pdf_file}: {e}")
+    
+    # Write intermediate file
+    temp_merged = output_path + ".tmp"
+    with open(temp_merged, "wb") as output:
+        writer.write(output)
+    
+    # Add global page numbers + section names using ReportLab overlay
+    try:
+        from reportlab.pdfgen import canvas as rl_canvas
+        from reportlab.lib.colors import HexColor
+        
+        reader = PdfReader(temp_merged)
+        final_writer = PdfWriter()
+        total_pages = len(reader.pages)
+        
+        for i, page in enumerate(reader.pages):
+            page_num = i + 1
+            sec_num, section_name = page_sections[i] if i < len(page_sections) else (0, "")
+            
+            # Skip cover page (page 1) — it has its own footer
+            if i == 0 and section_name == "" and sec_num == 0:
+                final_writer.add_page(page)
+                continue
+            
+            # Get page dimensions
+            media_box = page.mediabox
+            page_width = float(media_box.width)
+            page_height = float(media_box.height)
+            
+            # Create overlay with page number
+            overlay_path = output_path + f".overlay_{i}.pdf"
+            c = rl_canvas.Canvas(overlay_path, pagesize=(page_width, page_height))
+            
+            # Footer line
+            c.setStrokeColor(HexColor("#E0E6ED"))
+            c.setLineWidth(0.5)
+            c.line(50, 32, page_width - 50, 32)
+            
+            # Section number + name (left)
+            if section_name:
+                c.setFont("Helvetica-Bold", 6.5)
+                c.setFillColor(HexColor("#1B2A4A"))
+                if sec_num > 0:
+                    section_label = f"Section {sec_num:02d} — {section_name}"
+                else:
+                    section_label = section_name
+                c.drawString(50, 20, section_label)
+            
+            # "Confidentiel" + brand (center)
+            c.setFont("Helvetica", 6.5)
+            c.setFillColor(HexColor("#7F8C9B"))
+            center_text = f"CONFIDENTIEL — {brand_name}"
+            c.drawCentredString(page_width / 2, 20, center_text)
+            
+            # Page number (right)
+            c.setFont("Helvetica-Bold", 7.5)
+            c.setFillColor(HexColor("#2C3E50"))
+            c.drawRightString(page_width - 50, 20, f"{page_num} / {total_pages}")
+            
+            c.save()
+            
+            # Merge overlay onto page
+            overlay_reader = PdfReader(overlay_path)
+            page.merge_page(overlay_reader.pages[0])
+            final_writer.add_page(page)
+            
+            # Cleanup overlay
+            try:
+                os.unlink(overlay_path)
+            except:
+                pass
+        
+        with open(output_path, "wb") as output:
+            final_writer.write(output)
+        
+        # Cleanup temp
+        try:
+            os.unlink(temp_merged)
+        except:
+            pass
+            
+    except Exception as e:
+        print(f"  Avertissement: numérotation globale impossible ({e}), utilisation du PDF sans numérotation")
+        import shutil
+        if os.path.exists(output_path):
+            try:
+                os.unlink(output_path)
+            except:
+                pass
+        try:
+            shutil.copy2(temp_merged, output_path)
+        except Exception as e2:
+            print(f"  ERREUR fallback: {e2}")
+        try:
+            os.unlink(temp_merged)
+        except:
+            pass
+    
     return output_path
 
 
 # ---------------------------------------------------------------------------
-# CLI entry point
+# Generate Cover Page HTML
+# ---------------------------------------------------------------------------
+def build_cover_page_html(brand_name, url=""):
+    """Build a premium cover page."""
+    
+    date_str = datetime.now().strftime('%d %B %Y')
+    # French month names
+    months_fr = {
+        'January': 'janvier', 'February': 'février', 'March': 'mars',
+        'April': 'avril', 'May': 'mai', 'June': 'juin',
+        'July': 'juillet', 'August': 'août', 'September': 'septembre',
+        'October': 'octobre', 'November': 'novembre', 'December': 'décembre'
+    }
+    for en, fr in months_fr.items():
+        date_str = date_str.replace(en, fr)
+    
+    return f"""<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Page de garde</title>
+<style>
+  @page {{
+    size: A4;
+    margin: 0;
+  }}
+  * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+  body {{
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+    background: {COLORS['white']};
+    width: 210mm;
+    height: 297mm;
+    position: relative;
+    overflow: hidden;
+  }}
+  @media print {{
+    body {{ -webkit-print-color-adjust: exact; print-color-adjust: exact; }}
+  }}
+
+  .cover {{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }}
+
+  /* Top bar */
+  .top-bar {{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: linear-gradient(90deg, {COLORS['accent']} 0%, {COLORS['highlight']} 100%);
+  }}
+
+  /* Decorative side stripe */
+  .side-stripe {{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 12mm;
+    background: linear-gradient(180deg, {COLORS['primary']} 0%, #2a4070 100%);
+  }}
+
+  /* Main content */
+  .cover-content {{
+    text-align: center;
+    padding: 0 25mm 0 30mm;
+    max-width: 85%;
+  }}
+
+  .cover-label {{
+    font-size: 11pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: {COLORS['accent']};
+    margin-bottom: 25px;
+  }}
+
+  .cover-title {{
+    font-size: 36pt;
+    font-weight: 800;
+    color: {COLORS['primary']};
+    line-height: 1.15;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+  }}
+
+  .cover-subtitle {{
+    font-size: 14pt;
+    font-weight: 400;
+    color: {COLORS['text_light']};
+    margin-bottom: 40px;
+    line-height: 1.5;
+  }}
+
+  .cover-brand {{
+    display: inline-block;
+    background: linear-gradient(135deg, {COLORS['primary']} 0%, #2a4070 100%);
+    color: white;
+    font-size: 20pt;
+    font-weight: 700;
+    padding: 18px 45px;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+    margin-bottom: 30px;
+  }}
+
+  .cover-url {{
+    font-size: 12pt;
+    color: {COLORS['accent']};
+    font-weight: 500;
+    margin-bottom: 50px;
+  }}
+
+  .cover-divider {{
+    width: 80px;
+    height: 3px;
+    background: {COLORS['highlight']};
+    margin: 0 auto 35px auto;
+    border-radius: 2px;
+  }}
+
+  .cover-meta {{
+    font-size: 10pt;
+    color: {COLORS['text_light']};
+    line-height: 2;
+  }}
+
+  .cover-meta strong {{
+    color: {COLORS['text']};
+  }}
+
+  /* Bottom bar */
+  .bottom-section {{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 25mm;
+    background: {COLORS['light_bg']};
+    border-top: 1px solid {COLORS['border']};
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }}
+
+  .bottom-section .powered {{
+    font-size: 8.5pt;
+    color: {COLORS['text_light']};
+  }}
+
+  .bottom-section .confidential {{
+    font-size: 8pt;
+    color: {COLORS['danger']};
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }}
+</style>
+</head>
+<body>
+<div class="cover">
+  <div class="top-bar"></div>
+  <div class="side-stripe"></div>
+  
+  <div class="cover-content">
+    <div class="cover-label">Analyse Marketing Digitale</div>
+    <div class="cover-title">Audit Marketing<br>Complet & Stratégie</div>
+    <div class="cover-subtitle">Diagnostic, recommandations actionnables<br>et plan de croissance priorisé</div>
+    
+    <div class="cover-brand">{brand_name}</div>
+    <div class="cover-url">{url}</div>
+    
+    <div class="cover-divider"></div>
+    
+    <div class="cover-meta">
+      <strong>Date :</strong> {date_str}<br>
+      <strong>Réalisé par :</strong> AI Marketing Suite<br>
+      <strong>Classification :</strong> Confidentiel
+    </div>
+  </div>
+
+  <div class="bottom-section">
+    <span class="powered">Propulsé par AI Marketing Suite pour Claude Code</span>
+    <span class="confidential">Document confidentiel</span>
+  </div>
+</div>
+</body>
+</html>"""
+
+
+# ---------------------------------------------------------------------------
+# Generate Table of Contents HTML
+# ---------------------------------------------------------------------------
+def build_toc_html(sections, brand_name):
+    """Build a Table of Contents page organized by phase."""
+    
+    # Map sections to their phase
+    phases = []
+    current_phase = None
+    section_num = 0
+    
+    for filename, title in SECTION_ORDER:
+        if filename is None:
+            # Phase header
+            current_phase = {"name": title, "sections": []}
+            phases.append(current_phase)
+            continue
+        # Check if this section exists in available sections
+        found = False
+        for fn, sec_title in sections:
+            if fn == filename:
+                found = True
+                section_num += 1
+                if current_phase:
+                    current_phase["sections"].append((section_num, sec_title, filename, True))
+                break
+        if not found and current_phase:
+            section_num += 1
+            current_phase["sections"].append((section_num, title, filename, False))
+    
+    # Build HTML
+    toc_body = ""
+    for phase in phases:
+        if not any(s[3] for s in phase["sections"]):
+            continue  # Skip phases with no available sections
+        
+        phase_color = COLORS['accent']
+        toc_body += f"""
+        <tr>
+          <td colspan="3" style="
+            background: linear-gradient(135deg, {COLORS['primary']} 0%, #2a4070 100%);
+            color: white;
+            padding: 10px 14px;
+            font-weight: 700;
+            font-size: 10.5pt;
+            letter-spacing: 1px;
+            border: none;
+          ">{phase['name']}</td>
+        </tr>"""
+        
+        for num, title, filename, available in phase["sections"]:
+            if available:
+                row_class = 'even' if num % 2 == 0 else 'odd'
+                toc_body += f"""
+        <tr class="{row_class}">
+          <td style="width:40px; text-align:center; font-weight:700; color:{COLORS['accent']};">{num:02d}</td>
+          <td style="font-weight:600;">{title}</td>
+          <td style="width:180px; color:{COLORS['text_light']}; font-size:9pt;">{filename}</td>
+        </tr>"""
+            else:
+                toc_body += f"""
+        <tr style="opacity:0.4;">
+          <td style="width:40px; text-align:center; color:{COLORS['text_light']};">{num:02d}</td>
+          <td style="color:{COLORS['text_light']}; font-style:italic;">{title} (non généré)</td>
+          <td style="width:180px; color:{COLORS['text_light']}; font-size:9pt;">{filename}</td>
+        </tr>"""
+    
+    body = f"""
+    <h2 style="margin-top:10px;">Sommaire</h2>
+    <p style="color:{COLORS['text_light']}; margin-bottom:25px;">
+      Ce rapport compile l'ensemble des analyses marketing réalisées pour <strong>{brand_name}</strong>.
+      Les {len([s for s in sections])} sections sont organisées en 4 phases : diagnostic, stratégie, production et livrables.
+    </p>
+    <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:40px;">N°</th>
+          <th>Section</th>
+          <th style="width:180px;">Fichier source</th>
+        </tr>
+      </thead>
+      <tbody>
+        {toc_body}
+      </tbody>
+    </table>
+    </div>
+    
+    <div style="margin-top:30px; padding:20px; background:{COLORS['light_bg']}; border-radius:8px; border-left:4px solid {COLORS['accent']};">
+      <p style="margin:0; font-size:10pt; color:{COLORS['text_light']};">
+        <strong style="color:{COLORS['primary']};">Méthodologie</strong><br>
+        Chaque catégorie est évaluée sur 100 points selon les meilleures pratiques du secteur et des benchmarks concurrentiels.
+        Le score global est la moyenne pondérée des 6 dimensions principales. L'audit GEO évalue en plus la visibilité dans les réponses des IA génératives (ChatGPT, Gemini, Perplexity, Claude).
+        Les recommandations sont priorisées par impact estimé sur le revenu.
+      </p>
+    </div>
+    """
+    
+    return build_html_document(body, "Table des Matières", brand_name, 0)
+
+
+# ---------------------------------------------------------------------------
+# Main
 # ---------------------------------------------------------------------------
 def main():
     if len(sys.argv) < 2:
-        sample_data = {
-            "url": "https://example.com",
-            "date": datetime.now().strftime("%B %d, %Y"),
-            "brand_name": "Example Co",
-            "overall_score": 62,
-            "executive_summary": (
-                "This marketing audit reveals several high-impact opportunities to improve "
-                "conversion rates and strengthen competitive positioning. The website has solid "
-                "content foundations but is underperforming in conversion optimization and "
-                "competitive awareness. Implementing the quick wins below can yield a 15–25% "
-                "increase in qualified leads within 30 days."
-            ),
-            "categories": {
-                "Content & Messaging":     {"score": 68, "weight": "25%"},
-                "Conversion Optimization": {"score": 52, "weight": "20%"},
-                "SEO & Discoverability":   {"score": 74, "weight": "20%"},
-                "Competitive Positioning": {"score": 48, "weight": "15%"},
-                "Brand & Trust":           {"score": 70, "weight": "10%"},
-                "Growth & Strategy":       {"score": 55, "weight": "10%"},
-            },
-            "findings": [
-                {"severity": "Critical", "finding": "Homepage headline is generic — doesn't communicate specific value to target audience"},
-                {"severity": "Critical", "finding": "No social proof visible above the fold on the homepage"},
-                {"severity": "High",     "finding": "Primary CTA button says 'Submit' — should use value-driven text"},
-                {"severity": "High",     "finding": "Pricing page lacks comparison features and doesn't address objections"},
-                {"severity": "Medium",   "finding": "Missing competitor comparison pages — losing high-intent search traffic"},
-                {"severity": "Medium",   "finding": "Blog posts have no internal links to product pages"},
-                {"severity": "Low",      "finding": "Social media links in footer but no social proof integration"},
-            ],
-            "quick_wins": [
-                "Rewrite homepage headline: 'We help businesses grow' → 'Get 3x more qualified leads in 30 days — without cold calling'",
-                "Add 5 client logos above the fold with 'Trusted by 500+ companies' text",
-                "Change form button from 'Submit' to 'Get My Free Marketing Audit'",
-                "Add testimonial section with name, photo, company, and specific results",
-            ],
-            "medium_term": [
-                "Build '[Competitor] Alternative' landing pages for top 3 competitors",
-                "Create 3 video case studies showing measurable client results",
-                "Implement exit-intent popup with lead magnet offer",
-                "Launch email nurture sequence for leads who don't convert immediately",
-            ],
-            "strategic": [
-                "Develop content authority hub with 10 pillar pages targeting high-volume keywords",
-                "Build referral program with double-sided incentives",
-                "Launch retargeting campaigns across Meta and Google with funnel-based messaging",
-                "Create free tool or assessment to capture leads at top of funnel",
-            ],
-            "client": {
-                "positioning": "SaaS growth analytics",
-                "pricing":     "$99–499/mo",
-                "social_proof":"250+ customers",
-                "content":     "Blog + landing pages",
-            },
-            "competitors": [
-                {"name": "Comp A", "positioning": "All-in-one platform", "pricing": "$49–199/mo", "social_proof": "10K+ users", "content": "Active blog + YouTube"},
-                {"name": "Comp B", "positioning": "Enterprise focus",    "pricing": "Custom",      "social_proof": "Fortune 500 logos", "content": "Whitepapers + webinars"},
-                {"name": "Comp C", "positioning": "Budget-friendly",     "pricing": "Free–$29/mo", "social_proof": "4.8★ G2",          "content": "YouTube + community"},
-            ],
-        }
-        output = "MARKETING-REPORT-sample.pdf"
-        generate_report(sample_data, output)
-        print(f"Sample report generated: {output}")
-        return
-
-    input_file = sys.argv[1]
-    output_file = sys.argv[2] if len(sys.argv) > 2 else "MARKETING-REPORT.pdf"
-
-    with open(input_file, "r", encoding="utf-8") as f:
-        data = json.load(f)
-
-    generate_report(data, output_file)
-    print(f"Report generated: {output_file}")
+        print("Usage: python merge_full_report.py <report_dir> [output.pdf]")
+        print("  <report_dir>  = dossier contenant les fichiers .md")
+        print("  [output.pdf]  = nom du fichier de sortie (optionnel)")
+        sys.exit(1)
+    
+    report_dir = sys.argv[1]
+    
+    if not os.path.isdir(report_dir):
+        print(f"Erreur: Le dossier '{report_dir}' n'existe pas.")
+        sys.exit(1)
+    
+    # Detect brand name from directory
+    brand_name = os.path.basename(os.path.normpath(report_dir))
+    
+    # Output filename
+    if len(sys.argv) > 2:
+        output_file = sys.argv[2]
+    else:
+        safe_name = brand_name.replace('.', '-')
+        output_file = os.path.join(report_dir, f"RAPPORT-COMPLET-{safe_name}.pdf")
+    
+    print(f"")
+    print(f"╔══════════════════════════════════════════════════╗")
+    print(f"║   Rapport Marketing Consolidé — Génération PDF  ║")
+    print(f"╚══════════════════════════════════════════════════╝")
+    print(f"")
+    print(f"  Dossier : {report_dir}")
+    print(f"  Marque  : {brand_name}")
+    print(f"  Sortie  : {output_file}")
+    print(f"")
+    
+    # Find Chrome
+    chrome = find_chrome()
+    print(f"  Chrome  : {chrome}")
+    print(f"")
+    
+    # Find available sections (skip phase headers where filename is None)
+    available_sections = []
+    total_real_sections = 0
+    for filename, title in SECTION_ORDER:
+        if filename is None:
+            continue  # Phase header, skip
+        total_real_sections += 1
+        filepath = os.path.join(report_dir, filename)
+        if os.path.exists(filepath):
+            available_sections.append((filename, title, filepath))
+    
+    if not available_sections:
+        print("Erreur: Aucun fichier .md trouvé dans le dossier.")
+        sys.exit(1)
+    
+    print(f"  Sections trouvées : {len(available_sections)}/{total_real_sections}")
+    for fn, title, _ in available_sections:
+        print(f"    ✓ {fn}")
+    print(f"")
+    
+    # Create temp directory for intermediate PDFs
+    temp_dir = tempfile.mkdtemp(prefix="marketing_report_")
+    pdf_parts = []
+    section_map = []  # (pdf_path, section_name) for footer
+    
+    # Detect URL from files
+    url = ""
+    for fn, _, fp in available_sections:
+        try:
+            with open(fp, 'r', encoding='utf-8') as f:
+                first_lines = f.read(500)
+            import re as re_mod
+            url_match = re_mod.search(r'https?://[^\s\)]+', first_lines)
+            if url_match:
+                url = url_match.group(0).rstrip('/')
+                break
+        except:
+            pass
+    if not url:
+        url = f"https://{brand_name}"
+    
+    try:
+        # --- Step 1: Cover page ---
+        print(f"  [1/4] Génération de la page de garde...")
+        cover_html = build_cover_page_html(brand_name, url)
+        cover_pdf = os.path.join(temp_dir, "00-cover.pdf")
+        
+        if html_to_pdf(cover_html, cover_pdf, chrome):
+            pdf_parts.append(cover_pdf)
+            section_map.append((cover_pdf, 0, ""))
+            print(f"         ✓ Page de garde générée")
+        else:
+            print(f"         ✗ Erreur page de garde")
+        
+        # --- Step 2: Check for existing score cover PDF ---
+        cover_candidates = glob.glob(os.path.join(report_dir, "MARKETING-REPORT-*.pdf"))
+        cover_candidates = [c for c in cover_candidates if "COMPLET" not in c and "FINAL" not in c]
+        
+        if cover_candidates:
+            cover_score_pdf = cover_candidates[0]
+            print(f"  [2/4] Couverture scores : {os.path.basename(cover_score_pdf)}")
+            pdf_parts.append(cover_score_pdf)
+            section_map.append((cover_score_pdf, 0, "Scores & Synthèse"))
+        else:
+            print(f"  [2/4] Pas de couverture scores existante")
+        
+        # --- Step 3: Generate Table of Contents ---
+        print(f"  [3/4] Génération du sommaire...")
+        toc_sections = [(fn, title) for fn, title, _ in available_sections]
+        toc_html = build_toc_html(toc_sections, brand_name)
+        toc_pdf = os.path.join(temp_dir, "01-toc.pdf")
+        
+        if html_to_pdf(toc_html, toc_pdf, chrome):
+            pdf_parts.append(toc_pdf)
+            section_map.append((toc_pdf, 0, "Table des Matières"))
+            print(f"         ✓ Sommaire généré")
+        else:
+            print(f"         ✗ Erreur sommaire")
+        
+        # --- Step 4: Convert each section ---
+        print(f"  [4/4] Conversion des sections...")
+        
+        for i, (filename, title, filepath) in enumerate(available_sections, 1):
+            print(f"         [{i}/{len(available_sections)}] {title}...", end="", flush=True)
+            
+            try:
+                with open(filepath, 'r', encoding='utf-8') as f:
+                    md_content = f.read()
+                
+                # Convert MD to HTML
+                body_html = md_to_html(md_content)
+                
+                # Wrap in styled template
+                full_html = build_html_document(body_html, title, brand_name, i)
+                
+                # Convert to PDF
+                section_pdf = os.path.join(temp_dir, f"{i+1:02d}-{filename.replace('.md', '.pdf')}")
+                
+                if html_to_pdf(full_html, section_pdf, chrome):
+                    pdf_parts.append(section_pdf)
+                    section_map.append((section_pdf, i, title))
+                    size_kb = os.path.getsize(section_pdf) // 1024
+                    print(f" ✓ ({size_kb} Ko)")
+                else:
+                    print(f" ✗ ERREUR")
+            
+            except Exception as e:
+                print(f" ✗ {e}")
+        
+        # --- Step 5: Merge all PDFs ---
+        print(f"")
+        print(f"  Fusion de {len(pdf_parts)} PDF...")
+        
+        if len(pdf_parts) > 0:
+            merge_pdfs(pdf_parts, output_file, brand_name, section_map)
+            
+            if os.path.exists(output_file):
+                size_mb = os.path.getsize(output_file) / (1024 * 1024)
+                
+                # Count pages
+                try:
+                    reader = PdfReader(output_file)
+                    total_pages = len(reader.pages)
+                except:
+                    total_pages = "?"
+                
+                print(f"")
+                print(f"╔══════════════════════════════════════════════════╗")
+                print(f"║              Rapport généré avec succès !        ║")
+                print(f"╚══════════════════════════════════════════════════╝")
+                print(f"")
+                print(f"  Fichier : {output_file}")
+                print(f"  Taille  : {size_mb:.1f} Mo")
+                print(f"  Pages   : {total_pages}")
+                print(f"  Sections: {len(available_sections)}")
+                print(f"")
+            else:
+                print(f"  ERREUR: Le fichier de sortie n'a pas été créé.")
+                sys.exit(1)
+        else:
+            print(f"  ERREUR: Aucun PDF intermédiaire généré.")
+            sys.exit(1)
+    
+    finally:
+        # Cleanup temp files
+        for f in glob.glob(os.path.join(temp_dir, "*.pdf")):
+            try:
+                os.unlink(f)
+            except:
+                pass
+        try:
+            os.rmdir(temp_dir)
+        except:
+            pass
 
 
 if __name__ == "__main__":
