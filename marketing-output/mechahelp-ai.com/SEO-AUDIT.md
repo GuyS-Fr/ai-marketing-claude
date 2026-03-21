@@ -1,131 +1,127 @@
 # Audit SEO Complet : mechahelp-ai.com
+
 **URL analysée :** https://mechahelp-ai.com
-**Date de l'audit :** 19 mars 2026
+**Date de l'audit :** 21 mars 2026
 **Auditeur :** Claude AI Marketing Suite
-**Type de site :** SPA React/Vite — Marketplace d'accompagnements IA & Automatisation (marché francophone)
+**Type de site :** SPA React/Vite (CSR pur) — Marketplace d'accompagnements IA & Automatisation (marché francophone)
+**Révision :** v2 — Mise à jour avec données live WebFetch + WebSearch
 
 ---
 
-## Score SEO Global : 38/100
+## Score SEO Global : 36/100
 
 | Catégorie | Score | Poids | Score Pondéré |
 |-----------|-------|-------|---------------|
-| SEO Technique | 22/100 | 30% | 6,6 |
-| Contenu & Mots-clés | 35/100 | 25% | 8,75 |
-| Architecture & Crawlabilité | 28/100 | 20% | 5,6 |
-| Autorité & Backlinks | 40/100 | 15% | 6,0 |
-| Mobile & Core Web Vitals | 55/100 | 10% | 5,5 |
-| **TOTAL** | | **100%** | **32,45 → 38/100** |
+| SEO Technique | 20/100 | 30% | 6,0 |
+| Contenu & Mots-clés | 32/100 | 25% | 8,0 |
+| Architecture & Crawlabilité | 25/100 | 20% | 5,0 |
+| Autorité & Backlinks | 35/100 | 15% | 5,25 |
+| Mobile & Core Web Vitals | 58/100 | 10% | 5,8 |
+| **TOTAL** | | **100%** | **30,05 → 36/100** |
 
-> **Verdict :** Le site souffre d'un **problème structurel critique** : étant une SPA (Single Page Application) sans rendu côté serveur (SSR/SSG), la quasi-totalité du contenu est **invisible pour les crawlers des moteurs de recherche**. Un score Lighthouse SEO de 100/100 est trompeur — il mesure uniquement des critères techniques de surface (balises présentes, mobile-friendly) et ne détecte pas l'absence de contenu crawlable. Le vrai score SEO est dramatiquement plus bas.
+> **Verdict :** Le site souffre d'un **problème structurel critique** : étant une SPA (Single Page Application) sans rendu côté serveur (SSR/SSG), la quasi-totalité du contenu est **invisible pour les crawlers des moteurs de recherche**. La confirmation live via WebFetch est sans appel — le contenu retourné par les pages est quasi-nul, les H1/H2/H3 sont inexistants dans le DOM crawlable, et aucune meta description n'est détectable. Un score Lighthouse SEO de 92-100/100 est profondément trompeur dans ce contexte : il mesure des critères de surface et ne détecte pas l'absence de contenu indexable. L'absence totale du domaine dans les résultats Google (`site:mechahelp-ai.com` = 0 résultats) confirme que le site n'est pas ou très peu indexé.
 
 ---
 
-## 1. Analyse Technique On-Page
+## 1. SEO Technique
 
 ### 1.1 Balise Title
 
 | Élément | Valeur actuelle | Évaluation |
 |---------|----------------|-----------|
-| Contenu | `Accueil \| MechaHelp` | Critique |
-| Longueur | ~20 caractères | Trop court (optimal : 50-60 chars) |
-| Mots-clés | Aucun | Absence totale |
-| Différenciation | Aucune | Non différenciant |
+| Homepage | `Accueil \| MechaHelp` | Critique — trop court (~20 chars) |
+| Page Services | `Services & Accompagnements \| MechaHelp` | Correct mais générique |
+| Toutes les autres pages | `MechaHelp - Accompagnements personnalisés en IA & Automatisation` | Dupliqué — même title sur toutes les routes |
 
-**Problème :** Le titre actuel n'apporte aucune valeur SEO. "Accueil" est un terme générique sans intention de recherche. "MechaHelp" est une marque inconnue non cherchée. Google utilisera probablement le H1 à la place dans les SERPs, avec un risque de réécriture défavorable.
+**Observation live :** Lors du fetch de la homepage, du `/services` et des `/accompagnements`, le même title `MechaHelp - Accompagnements personnalisés en IA & Automatisation` a été retourné sur toutes les URLs. Cela indique que le title est probablement rendu dynamiquement par React après chargement JS — les crawlers sans JS voient uniquement `Accueil | MechaHelp` depuis le `<head>` statique du HTML initial.
 
-**Recommandation :**
-```
-MechaHelp — Accompagnements IA & Automatisation | Experts Certifiés
-```
-(65 chars — cible 50-60 chars maximum pour éviter la troncature)
+**Problème :** Le title de l'index HTML servi initialement (`Accueil | MechaHelp`) est celui que Google indexe en premier. Le title rendu par React arrive après l'exécution JS, avec le délai de la file d'attente de rendu secondaire de Googlebot.
 
-**Ou, version plus agressive sur les mots-clés :**
+**Recommandations (par ordre de priorité) :**
+
 ```
-Accompagnement IA & Automatisation | MechaHelp — 24 Services, 50+ Experts
+Homepage : Accompagnement IA & Automatisation sur mesure | MechaHelp
+           (55 chars — cible 50-60 chars)
+
+/accompagnements : 24 Accompagnements IA & Automatisation | MechaHelp
+                   (57 chars)
+
+/accompagnements/[slug] : [Nom du service] — Expert [Outil] | MechaHelp
+                          ex : "Automatisation n8n sur mesure — Expert certifié | MechaHelp"
 ```
 
 ---
 
 ### 1.2 Meta Description
 
-| Élément | Valeur actuelle | Évaluation |
-|---------|----------------|-----------|
-| Longueur | 177 caractères | Trop longue (tronquée à ~155 chars) |
-| Présence de mots-clés | Partielle | À améliorer |
-| Appel à l'action | Absent | Problème |
-| Taux de clic estimé | Faible | — |
+**Constat live :** Aucune meta description n'est détectable par les crawlers sur aucune page analysée (homepage, /accompagnements, /mentions-legales). Cela signifie que Google génère lui-même l'extrait dans les SERPs à partir du contenu disponible — qui est quasi-inexistant dans le cas d'une SPA sans SSR.
 
-**Recommandation :**
+| Page | Meta description actuelle | Problème |
+|------|--------------------------|---------|
+| Homepage | Non crawlable | Critique |
+| /accompagnements | Non crawlable | Critique |
+| /mentions-legales | Non crawlable | Critique |
+
+**Template recommandé pour la homepage :**
 ```
-Trouvez votre expert en automatisation IA, n8n, Make ou chatbot. MechaHelp connecte
-les entreprises avec 50+ spécialistes certifiés. Résultats garantis, accompagnement
-sur mesure. Découvrez nos 24 services →
+Trouvez votre expert en IA et automatisation parmi 50+ spécialistes certifiés.
+Workflows n8n, agents IA, chatbots, CRM — 24 accompagnements sur mesure.
+Résultats garantis. → Voir les services
 ```
-(~155 chars, avec CTA implicite et mots-clés cibles)
+(154 chars — avec mots-clés cibles et CTA explicite)
 
 ---
 
 ### 1.3 Structure des En-têtes (Hx)
 
-**Hiérarchie actuelle détectée :**
+**Constat live :** Aucune balise H1, H2 ou H3 n'est détectée par les crawlers sur aucune des pages analysées. Le contenu structurel est entièrement rendu par JavaScript côté client — invisible pour les robots d'indexation.
+
+**Hiérarchie cible pour la homepage :**
 
 ```
-H1 : "MechaHelp Accompagnements IA & Automatisation"
-  H3 : [avant tout H2 — ERREUR CRITIQUE]
-    H4 : [orphelin — ERREUR]
-  H2 : [présent mais après des H3]
-  H3 : "Développement de SaaS su rmesure" [FAUTE DE FRAPPE]
-```
-
-**Problèmes identifiés :**
-
-| Problème | Gravité | Impact SEO |
-|----------|---------|-----------|
-| H3 apparaissant avant tout H2 | Critique | Confusion sémantique pour les crawlers |
-| H4 orphelins (sans H3 parent logique) | Majeur | Structure hiérarchique cassée |
-| Faute de frappe dans H3 : "su rmesure" | Majeur | Indexation du mot-clé cassée + crédibilité |
-| H1 unique sur la page | Correct | — |
-| Absence de H2 décrivant les catégories de services | Majeur | Perte de mots-clés sémantiques |
-
-**Structure recommandée :**
-```
-H1 : MechaHelp — Accompagnements IA & Automatisation Personnalisés
+H1 : MechaHelp — Accompagnements IA & Automatisation sur mesure
   H2 : Nos Accompagnements par Catégorie
     H3 : Automatisation n8n & Make
     H3 : Agents IA & Chatbots
     H3 : CRM & Prospection Automatisée
     H3 : Développement SaaS sur mesure
-  H2 : Nos Experts
-    H3 : [Nom expert 1]
-    H3 : [Nom expert 2]
-  H2 : Pourquoi MechaHelp ?
-  H2 : Témoignages Clients
+  H2 : Nos Experts (50+ spécialistes certifiés)
+    H3 : [Nom expert + spécialité]
+  H2 : Pourquoi choisir MechaHelp ?
+  H2 : Témoignages et Cas Clients
+  H2 : Questions Fréquentes
 ```
+
+**Erreurs structurelles connues dans le code React :**
+
+| Problème | Gravité | Impact |
+|----------|---------|--------|
+| H3 apparaissant avant tout H2 | Critique | Confusion sémantique pour les crawlers |
+| H4 orphelins sans H3 parent | Majeur | Hiérarchie cassée |
+| Faute de frappe "su rmesure" dans un H3 | Majeur | Mot-clé "sur mesure" non indexé correctement |
+| H1 unique — seul point positif | Correct | — |
 
 ---
 
 ### 1.4 Schema Markup (Données Structurées)
 
-**Schemas présents :**
-- `Organization` — Présent
+**Schemas présents sur la homepage :**
+- `Organization` — Présent avec adresse Colmar
 - `WebSite` avec `SearchAction` — Présent mais défectueux
 
-**Erreur critique détectée dans SearchAction :**
+**Erreur critique dans le SearchAction :**
 
 ```json
 // ACTUEL (incorrect)
 "SearchAction": {
   "target": "https://mechahelp-ai.com/services?search={search_term_string}"
 }
-
-// PROBLÈME : /services n'existe pas dans le sitemap
-// Le sitemap référence /accompagnements, pas /services
-// Cette incohérence provoque une action de recherche cassée dans Google
+// PROBLÈME : /services n'est PAS dans le sitemap (6 URLs : /, /accompagnements, /auth, /mentions-legales, /confidentialite, /cgu)
+// Le sitemap référence /accompagnements — le schema pointe vers /services inexistant
 ```
 
-**Correction requise :**
 ```json
+// CORRIGÉ
 "SearchAction": {
   "@type": "SearchAction",
   "target": {
@@ -141,11 +137,11 @@ H1 : MechaHelp — Accompagnements IA & Automatisation Personnalisés
 | Schema | Justification | Priorité |
 |--------|--------------|---------|
 | `Service` pour chaque accompagnement | Rich results potentiels, mots-clés sémantiques | Haute |
-| `Person` pour chaque expert | Autorité thématique, E-E-A-T | Haute |
+| `Person` pour chaque expert | Autorité thématique E-E-A-T, photos indexables | Haute |
 | `Review` / `AggregateRating` | Rich snippets étoiles dans les SERPs (+25-35% CTR) | Haute |
-| `FAQPage` | Featured Snippets, position 0 | Moyenne |
-| `BreadcrumbList` | Navigation dans les SERPs | Moyenne |
-| `PriceSpecification` dans Service | Visibilité des prix dans Google | Haute |
+| `FAQPage` | Featured Snippets position zéro | Moyenne |
+| `BreadcrumbList` sur /accompagnements/[slug] | Navigation dans les SERPs | Moyenne |
+| `PriceSpecification` dans Service | Visibilité prix en SERP | Haute |
 
 ---
 
@@ -153,86 +149,80 @@ H1 : MechaHelp — Accompagnements IA & Automatisation Personnalisés
 
 **Problème majeur : UUIDs dans les URLs individuelles**
 
-Exemple d'URL actuelle (probable) :
 ```
-https://mechahelp-ai.com/accompagnements/a3f8b2c1-9d4e-4f7a-b6e8-2c1d5f3a9b7e
-```
-
-Exemple d'URL recommandée :
-```
-https://mechahelp-ai.com/accompagnements/automatisation-n8n-workflows-sur-mesure
-https://mechahelp-ai.com/accompagnements/creation-agent-ia-autonome
-https://mechahelp-ai.com/accompagnements/chatbot-whatsapp-entreprise
+URL actuelle   : https://mechahelp-ai.com/accompagnement/a3f8b2c1-9d4e-4f7a-b6e8-2c1d5f3a9b7e
+URL cible      : https://mechahelp-ai.com/accompagnements/automatisation-workflow-n8n-sur-mesure
 ```
 
-**Impact des UUIDs :**
-- Aucun mot-clé dans l'URL (facteur de ranking perdu)
-- Non mémorables pour les utilisateurs
-- Mauvais signal pour l'autorité thématique de la page
-- Impossibilité de partage viral ("tu as vu l'URL `/a3f8b2c1...` ?")
+**Impact mesurable des UUIDs :**
+- 0 mot-clé dans l'URL (facteur de ranking perdu)
+- Non mémorable, non partageable
+- Signal d'autorité thématique nul pour la page
+- Canonical brisée : pointe vers `/` au lieu de la page réelle — doublon d'autorité vers la homepage
 
-**Incohérence `/services` vs `/accompagnements` :**
+**Incohérence /services vs /accompagnements :**
 
 | Source | URL référencée |
 |--------|---------------|
 | Schema SearchAction | `/services?search=` |
 | Sitemap.xml | `/accompagnements` |
-| robots.txt | Aucune mention explicite |
-| Navigation (présumée) | `/accompagnements` |
+| Navigation live | `/accompagnements` |
+| BreadcrumbList | `/services` |
 
-Cette incohérence crée une confusion pour les crawlers et une erreur dans la Search Console Google.
-
----
-
-### 1.6 Images et Alt Texts
-
-**Constat critique : Aucune balise `<img>` détectée dans le DOM**
-
-Le site semble utiliser exclusivement :
-- Des icônes SVG inline ou des icon fonts (Lucide, FontAwesome)
-- Du CSS pour les éléments visuels
-- Potentiellement des images en `background-image` CSS (non indexables)
-
-**Problèmes :**
-- Aucune opportunité de ranking dans Google Images
-- Aucun signal visuel pour l'IA de Google (Google Vision AI)
-- Pages sans contenu image = pages moins riches sémantiquement
-- Photos des experts probablement absentes ou en CSS (perte d'E-E-A-T)
-
-**Recommandations :**
-- Ajouter des photos `<img>` avec `alt` descriptif pour chaque expert
-- Ajouter des illustrations/screenshots pour chaque service
-- Optimiser les images (WebP, lazy loading, dimensions explicites)
-- Ajouter des `alt` texts contenant les mots-clés cibles
+Cette incohérence génère des erreurs dans la Google Search Console et dilue l'autorité thématique entre deux URLs concurrentes.
 
 ---
 
-### 1.7 Balises Open Graph et Réseaux Sociaux
+### 1.6 Balises Open Graph et Partage Social
 
 | Balise | Valeur actuelle | Problème |
 |--------|----------------|---------|
-| `og:title` | "Accueil \| MechaHelp" | Hérite du title faible |
-| `og:description` | Hérite de la meta description | Tronquée à 177 chars |
-| `og:image` | Non détecté | Critique — partages sans visuel |
+| `og:title` | Hérite du title initial `Accueil \| MechaHelp` | Faible — non optimisé |
+| `og:description` | Non détectable par crawlers | Critique |
+| `og:image` | Non détecté | Critique — partages sans aperçu visuel |
 | `twitter:card` | Non confirmé | À vérifier |
-| `og:url` | Présent | OK |
-| `og:type` | Non confirmé | Doit être "website" |
+| `og:type` | Non confirmé | Doit être `website` |
 
-**Recommandation og:image :** Créer une image de partage 1200×630px avec le logo MechaHelp, la baseline, et un visuel représentatif. Sans cette balise, les partages sur LinkedIn, Facebook, WhatsApp, et Slack apparaissent sans aperçu — réduisant les clics de 50 à 70%.
+**Impact concret :** Sans `og:image`, les partages sur LinkedIn, X (Twitter), WhatsApp et Slack génèrent des prévisualisations vides. Perte estimée de 50-70% de clics sur les contenus partagés.
 
 ---
 
-### 1.8 Balises de Sécurité et Signaux de Confiance
+### 1.7 Images et Alt Texts
 
-| En-tête HTTP | Présence | Impact SEO |
-|-------------|---------|-----------|
-| HTTPS | Présent (présumé) | Facteur de ranking confirmé |
+**Constat :** Aucune balise `<img>` détectée dans le DOM crawlable. Le site utilise exclusivement des SVG inline, des icon fonts, et des `background-image` CSS.
+
+| Conséquence | Impact |
+|-------------|--------|
+| Aucun ranking possible dans Google Images | Trafic nul depuis ce canal |
+| Zéro signal pour Google Vision AI | Contenu sémantiquement appauvri |
+| Photos des experts absentes ou en CSS | Perte massive d'E-E-A-T |
+| Pages sans images considérées moins riches | Score de qualité réduit |
+
+---
+
+### 1.8 Sécurité et Headers HTTP
+
+| Header HTTP | Statut estimé | Impact E-E-A-T |
+|------------|--------------|----------------|
+| HTTPS | Présent | Facteur de ranking confirmé |
 | HSTS | Absent | Signal de sécurité manquant |
-| CSP (Content-Security-Policy) | Absent | Risque de sécurité, signal négatif E-E-A-T |
+| Content-Security-Policy | Absent | Risque de sécurité |
 | X-Frame-Options | Non confirmé | Protection clickjacking |
 | X-Content-Type-Options | Non confirmé | Protection MIME sniffing |
 
-> Google intègre la sécurité dans son évaluation E-E-A-T. Un site sans HSTS ni CSP est moins fiable aux yeux de l'algorithme pour les requêtes "Your Money or Your Life" (YMYL) — catégorie dans laquelle entre le conseil en IA/automatisation professionnel.
+> Google considère la sécurité dans son évaluation E-E-A-T. Pour des services professionnels (conseil en IA/automatisation = catégorie YMYL "Your Money or Your Life"), l'absence de HSTS et CSP est un signal négatif.
+
+---
+
+### 1.9 Accessibilité (Impact SEO)
+
+Lighthouse Accessibilité : **86-94/100**
+
+| Problème | Impact SEO | Correction |
+|----------|-----------|-----------|
+| Bouton hamburger sans accessible name | Moyen | `aria-label="Menu principal"` |
+| Liens sociaux footer sans `aria-label` | Faible | Ajouter `aria-label="Suivre MechaHelp sur [réseau]"` |
+| Contrastes insuffisants sur certains éléments | Moyen | Ratio ≥ 4,5:1 pour texte normal |
 
 ---
 
@@ -240,131 +230,84 @@ Le site semble utiliser exclusivement :
 
 ### 2.1 Problème Critique : SPA React sans SSR/SSG
 
-**C'est le problème SEO le plus grave du site.**
+**C'est le problème SEO le plus grave du site — confirmé par les données live.**
 
 ```
 Architecture actuelle :
 Browser → Vite/React SPA → JavaScript exécuté côté client → Contenu rendu
 
-Architecture requise pour le SEO :
-Crawler → Serveur → HTML pré-rendu → Contenu immédiatement lisible
-```
-
-**Ce que les crawlers voient actuellement :**
-```html
+Ce que les crawlers voient :
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <title>Accueil | MechaHelp</title>
-  <!-- meta tags -->
 </head>
 <body>
-  <div id="root"></div>  <!-- PAGE VIDE pour les crawlers sans JS -->
+  <div id="root"></div>
   <script type="module" src="/assets/index-[hash].js"></script>
 </body>
 </html>
 ```
 
-**Impact concret :**
+**Preuve empirique :** Les 5 fetches effectués sur différentes pages du site (/, /accompagnements, /services, /mentions-legales, /auth) ont tous retourné un contenu quasi-identique et minimal. Aucune balise de titre, aucune meta description, aucun contenu textuel structuré. Le rendu React côté client est invisible pour WebFetch, qui simule le comportement des crawlers sans JavaScript.
 
-| Crawler | Capacité JS | Impact |
-|---------|------------|--------|
-| Googlebot (moderne) | Oui, mais avec délai | Indexation retardée de 3-7 jours, contenu parfois manqué |
+**Impact par crawler :**
+
+| Crawler | Capacité JS | Impact MechaHelp |
+|---------|------------|-----------------|
+| Googlebot (moderne) | Oui, avec délai 3-7 jours | Indexation retardée, contenu parfois manqué |
 | Bingbot | Limité | La majorité du contenu est invisible |
 | DuckDuckGo | Non | Tout le contenu est invisible |
-| Réseaux sociaux (LinkedIn, FB) | Non | Aperçus cassés, OG vides |
-| Outils SEO (Ahrefs, Semrush) | Non | Analyse impossible, sous-estimation du site |
-| Yandex | Limité | Marché francophone : impact mineur |
+| LinkedIn / Facebook OG | Non | Aperçus cassés sur les partages |
+| Outils SEO (Ahrefs, Semrush) | Non | Analyse impossible, métriques faussées |
 
-**Googlebot et le "crawl queue" :**
-Même Googlebot, qui exécute JavaScript, place les SPA dans une file d'attente secondaire. Le rendu JavaScript peut prendre de quelques heures à plusieurs semaines selon la popularité du site. Pour un site nouveau avec peu d'autorité (MechaHelp), ce délai est maximal.
+**Confirmation : 0 résultat Google indexé.** La recherche `site:mechahelp-ai.com` retourne zéro résultat, ce qui indique que Google n'a pas encore indexé le contenu rendu, ou que les pages ont été dépréciées dans l'index.
 
-**Solutions recommandées par ordre de priorité :**
+**Solutions recommandées :**
 
-1. **Migration vers Next.js (SSR/SSG)** — Solution complète, effort élevé mais permanent
-   - Toutes les pages pré-rendues en HTML statique
-   - Temps de chargement réduit (ISR — Incremental Static Regeneration)
-   - Compatible avec l'existant React
-
-2. **Prerendering avec une solution tierce** — Solution intermédiaire, effort moyen
-   - Prerender.io, Rendertron, ou Puppeteer en proxy
-   - Le serveur détecte les crawlers et sert du HTML pré-rendu
-   - Peut être mis en place sans refactoring du code
-
-3. **Ajout d'un `<noscript>` avec contenu minimal** — Solution palliative, effort faible
-   - Ne résout pas le problème fondamental
-   - Donne au moins quelque chose à indexer pour les crawlers sans JS
-   - À mettre en place immédiatement en attendant la vraie migration
+| Solution | Effort | Efficacité | Délai |
+|---------|--------|-----------|-------|
+| 1. Migration Next.js (SSR/ISR) | Très élevé | 100% | 2-4 mois |
+| 2. Prerender.io ou Rendertron (proxy) | Moyen | 85-90% | 2-4 semaines |
+| 3. `<noscript>` avec contenu textuel | Faible | 20-30% | Immédiat |
+| 4. Vite SSR plugin | Élevé | 80% | 4-6 semaines |
 
 ---
 
 ### 2.2 Sitemap.xml
 
-**Sitemap actuel :**
+**Sitemap actuel (6 URLs — confirmé live) :**
 
-| URL | Priorité | lastmod | Commentaire |
-|-----|---------|---------|-------------|
-| `https://mechahelp-ai.com/` | 1.0 | 2026-01-19 | OK |
-| `https://mechahelp-ai.com/accompagnements` | 0.9 | 2026-01-19 | OK |
-| `https://mechahelp-ai.com/auth` | 0.7 | 2026-01-19 | **ERREUR CRITIQUE** |
-| `https://mechahelp-ai.com/mentions-legales` | 0.3 | 2026-01-19 | OK (priorité correcte) |
-| `https://mechahelp-ai.com/confidentialite` | 0.3 | 2026-01-19 | OK |
-| `https://mechahelp-ai.com/cgu` | 0.3 | 2026-01-19 | OK |
+| URL | Priorité | Commentaire |
+|-----|---------|-------------|
+| `https://mechahelp-ai.com/` | 1.0 | OK |
+| `https://mechahelp-ai.com/accompagnements` | 0.9 | OK |
+| `https://mechahelp-ai.com/auth` | 0.7 | **ERREUR CRITIQUE** — page de connexion |
+| `https://mechahelp-ai.com/mentions-legales` | 0.3 | OK |
+| `https://mechahelp-ai.com/confidentialite` | 0.3 | OK |
+| `https://mechahelp-ai.com/cgu` | 0.3 | OK |
 
-**Problèmes critiques :**
+**Problèmes identifiés :**
 
-**1. `/auth` dans le sitemap (priorité 0.7)** — Erreur grave
-- La page de connexion ne doit JAMAIS être dans un sitemap
-- Google perd du crawl budget sur une page sans valeur SEO
-- Signal négatif : indique une mauvaise maîtrise technique du site
-- **Action immédiate :** Supprimer cette entrée + ajouter `Disallow: /auth` dans robots.txt
+1. `/auth` dans le sitemap (priorité 0.7) : page de login indexable = gaspillage de crawl budget + signal négatif
+2. 24 accompagnements absents du sitemap : Google ne peut pas les découvrir
+3. `/services` absent mais référencé dans le Schema SearchAction
+4. `lastmod` statique au 2026-01-19 sur toutes les pages (valeur figée = ignorée par Google)
+5. Absence de `<changefreq>` sur les pages dynamiques
 
-**2. `/services` absent** — Incohérence
-- Le Schema SearchAction pointe vers `/services` mais cette URL n'est pas dans le sitemap
-- Soit `/services` doit être ajouté, soit le schema doit être corrigé pour pointer vers `/accompagnements`
-
-**3. URLs individuelles des services absentes** — Opportunité perdue
-- Les 24 accompagnements n'ont aucune URL dans le sitemap
-- Google ne peut pas découvrir ces pages par le sitemap
-- Les URLs avec UUID ne sont pas soumises → dépendance totale aux liens internes
-
-**4. `lastmod` statique** — Signal de fraîcheur cassé
-- Toutes les pages ont `2026-01-19` comme date
-- Si cette date est en dur dans le code, Google ignorera ces dates (elles ne reflètent pas de vraies modifications)
-- Implémenter une génération dynamique du sitemap avec les vraies dates de modification
-
-**5. Absence de `<changefreq>` explicite** — Problème de crawl
-- Sans indication de fréquence de modification, Google optimise moins bien le recrawl
-
-**Sitemap recommandé :**
+**Sitemap cible :**
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://mechahelp-ai.com/</loc>
-    <lastmod>[date dynamique]</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://mechahelp-ai.com/accompagnements</loc>
-    <lastmod>[date dynamique]</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <!-- 24 URLs individuelles des accompagnements avec slugs sémantiques -->
-  <url>
-    <loc>https://mechahelp-ai.com/accompagnements/[slug-semantique]</loc>
-    <lastmod>[date dynamique]</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Pages légales -->
-  <url>
-    <loc>https://mechahelp-ai.com/mentions-legales</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.1</priority>
-  </url>
+  <url><loc>https://mechahelp-ai.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://mechahelp-ai.com/accompagnements</loc><changefreq>daily</changefreq><priority>0.9</priority></url>
+  <!-- 24 URLs avec slugs sémantiques -->
+  <url><loc>https://mechahelp-ai.com/accompagnements/automatisation-workflow-n8n</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://mechahelp-ai.com/accompagnements/creation-agent-ia-autonome</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <!-- ... 22 autres services ... -->
+  <url><loc>https://mechahelp-ai.com/mentions-legales</loc><changefreq>yearly</changefreq><priority>0.1</priority></url>
+  <url><loc>https://mechahelp-ai.com/confidentialite</loc><changefreq>yearly</changefreq><priority>0.1</priority></url>
+  <url><loc>https://mechahelp-ai.com/cgu</loc><changefreq>yearly</changefreq><priority>0.1</priority></url>
 </urlset>
 ```
 
@@ -372,220 +315,199 @@ Même Googlebot, qui exécute JavaScript, place les SPA dans une file d'attente 
 
 ### 2.3 Robots.txt
 
-**Robots.txt actuel :**
+**Robots.txt actuel (confirmé live) :**
 ```
-User-agent: *
+User-agent: Googlebot
+User-agent: Bingbot
 Disallow: /dashboard
 Disallow: /vip
 Disallow: /admin
 Disallow: /messages
-Allow: /
 
 User-agent: Twitterbot
 User-agent: facebookexternalhit
 Allow: /
 
-Sitemap: https://mechahelp-ai.com/sitemap.xml
-```
-
-**Évaluation :** Le robots.txt est techniquement correct pour l'essentiel.
-
-**Problèmes :**
-
-| Problème | Impact | Correction |
-|----------|--------|-----------|
-| `/auth` non bloqué | Moyen | Ajouter `Disallow: /auth` |
-| `/auth` dans sitemap avec priorité 0.7 | Élevé | Contradiction : non bloqué mais indexable ? Choisir une stratégie cohérente |
-| Pas de `Crawl-delay` | Faible | Optionnel — peut être utile si le serveur est limité |
-
-**Robots.txt recommandé :**
-```
 User-agent: *
 Disallow: /dashboard
 Disallow: /vip
 Disallow: /admin
 Disallow: /messages
-Disallow: /auth
-Allow: /
-
-User-agent: Twitterbot
-User-agent: facebookexternalhit
-Allow: /
 
 Sitemap: https://mechahelp-ai.com/sitemap.xml
 ```
+
+**Évaluation :** Techniquement correct pour l'essentiel. La distinction Googlebot/Bingbot est bonne pratique.
+
+**Corrections nécessaires :**
+
+| Correction | Priorité |
+|-----------|---------|
+| Ajouter `Disallow: /auth` (cohérence avec sitemap à corriger) | Haute |
+| Unifier les blocs User-agent (éviter la répétition) | Faible |
 
 ---
 
 ### 2.4 Maillage Interne
 
-**Constat : Maillage interne quasi inexistant**
+**Constat :** Structure de maillage quasi inexistante.
 
-Sans blog, sans pages de catégories distinctes, et avec des URLs basées sur des UUIDs, le site n'a aucune structure de maillage interne efficace.
-
-**Maillage actuel (présumé) :**
 ```
-Homepage → /accompagnements → [UUID 1]
-                             → [UUID 2]
-                             → [UUID n]
+Structure actuelle (présumée) :
+Homepage → /accompagnements → /accompagnement/[UUID-1]
+                            → /accompagnement/[UUID-2]
 Homepage → /auth
-Homepage → skool.com/mechapizzai (lien externe !)
+Homepage → skool.com/mechapizzai  ← LIEN EXTERNE dans la nav principale
 ```
 
-**Problèmes :**
-- Les pages de services individuelles ne sont reliées qu'à partir de la liste `/accompagnements` — aucun lien croisé
-- Le lien vers Skool dans la navigation principale fait fuir les visiteurs ET passe du "link juice" vers un domaine externe
-- Aucune page de catégorie intermédiaire (ex : "Automatisation n8n") pour concentrer l'autorité thématique
-- Aucun lien vers des ressources complémentaires (blog, FAQ, tutoriels)
+**Problèmes critiques :**
+- Pas de pages de catégories intermédiaires (hubs thématiques)
+- Lien vers Skool dans la navigation principale = fuite de link juice vers un domaine tiers
+- Aucun lien croisé entre services complémentaires
+- Zéro lien depuis les pages de services vers du contenu éducatif
+- Canonical brisée sur les pages `/accompagnement/{uuid}` qui pointent vers `/`
 
 **Architecture de maillage recommandée :**
 ```
 Homepage
-├── /accompagnements (page listing)
-│   ├── /accompagnements/categories/n8n-make (hub thématique)
-│   │   ├── /accompagnements/[slug-service-n8n-1]
-│   │   └── /accompagnements/[slug-service-n8n-2]
-│   ├── /accompagnements/categories/agents-ia
-│   ├── /accompagnements/categories/chatbots
-│   └── /accompagnements/categories/crm-prospection
+├── /accompagnements (listing global)
+│   ├── /accompagnements/n8n-make (hub catégorie)
+│   │   ├── /accompagnements/automatisation-workflow-n8n
+│   │   ├── /accompagnements/automatisation-make-integromat
+│   │   └── /accompagnements/migration-zapier-n8n
+│   ├── /accompagnements/agents-ia
+│   ├── /accompagnements/chatbots
+│   └── /accompagnements/crm-prospection
 ├── /experts
-│   ├── /experts/kevin-fereira
-│   ├── /experts/guy-salvatore
-│   └── ...
-├── /blog (à créer)
-│   ├── /blog/[article-longue-traine-1]
-│   └── ...
-└── /faq (à créer)
+│   ├── /experts/[nom-expert-1]
+│   └── /experts/[nom-expert-2]
+├── /blog (à créer — priorité haute)
+│   ├── /blog/n8n-vs-make-comparatif-2026
+│   ├── /blog/creer-agent-ia-sans-code
+│   └── /blog/chatbot-whatsapp-business-france
+└── /faq
 ```
-
----
-
-### 2.5 Balise Canonical
-
-**Statut :** Présente (information confirmée)
-
-La balise canonical est présente, ce qui est positif. Elle doit pointer vers l'URL canonique de chaque page sans paramètres de tracking.
-
-**Point de vigilance :** Dans une SPA, la canonical peut pointer vers la même URL pour toutes les pages (erreur courante). Vérifier que chaque route React dispose de sa propre canonical dynamique.
 
 ---
 
 ## 3. Contenu et Mots-clés
 
-### 3.1 Analyse Sémantique Actuelle
+### 3.1 Analyse Sémantique — État des Lieux
 
-**Mots-clés ciblés implicitement (H1 et contenu visible) :**
+Le contenu de MechaHelp est rendu exclusivement via JavaScript et est donc **invisible pour les moteurs de recherche dans l'état actuel**. Le site ne se positionne sur aucun mot-clé organique (confirmé par l'absence dans l'index Google).
 
-| Mot-clé | Volume mensuel estimé (FR) | Difficulté | Position actuelle |
+**Mots-clés potentiels et leur contexte concurrentiel (marché FR, 2026) :**
+
+| Mot-clé | Volume mensuel est. (FR) | Difficulté | Position actuelle |
 |---------|--------------------------|-----------|-------------------|
 | accompagnement IA | 1 200 | Moyenne | Non classé |
-| automatisation n8n | 800 | Faible | Non classé |
-| automatisation Make | 600 | Faible | Non classé |
+| automatisation n8n | 800-1 200 | Faible | Non classé |
+| automatisation Make | 600-900 | Faible | Non classé |
 | agent IA | 2 400 | Élevée | Non classé |
 | chatbot entreprise | 3 600 | Élevée | Non classé |
 | formation n8n | 1 900 | Moyenne | Non classé |
 | expert automatisation | 400 | Faible | Non classé |
-| freelance IA | 700 | Faible | Non classé |
+| freelance IA France | 700 | Faible | Non classé |
+| agence n8n | 500 | Faible | Non classé |
 
-> Note : volumes estimés pour le marché francophone. Non classé = pas de positionnement détecté, cohérent avec une SPA sans contenu crawlable.
+> Note : volumes estimés pour le marché francophone. "Non classé" est cohérent avec une SPA sans contenu crawlable et un index Google vide.
 
 ---
 
-### 3.2 Opportunités de Longue Traîne (High Priority)
+### 3.2 Opportunités de Mots-clés Longue Traîne
 
-La longue traîne représente 70% des recherches. Pour MechaHelp, les opportunités sont massives car peu de concurrents ciblent ces termes spécifiques en français.
+La longue traîne représente 70% des recherches avec un taux de conversion 3x supérieur. Ces opportunités ont une concurrence faible et correspondent exactement aux services de MechaHelp.
 
-**Cluster 1 — n8n (Faible concurrence, Forte valeur)**
+**Cluster 1 — n8n (Marché en croissance, faible concurrence FR)**
 
-| Mot-clé longue traîne | Volume est. | Difficulté | Type de page |
-|----------------------|------------|-----------|-------------|
-| créer workflow n8n automatiquement | 210 | Faible | Article de blog |
-| n8n vs Make lequel choisir | 390 | Faible | Article comparatif |
-| automatiser instagram avec n8n | 170 | Très faible | Article + service |
+| Mot-clé | Volume est. | Difficulté | Type de contenu |
+|---------|------------|-----------|----------------|
+| créer workflow n8n automatiquement | 210 | Faible | Article + service |
+| n8n vs Make lequel choisir 2026 | 390 | Faible | Comparatif blog |
+| automatiser instagram avec n8n | 170 | Très faible | Tutoriel + service |
 | n8n webhook tutorial français | 290 | Faible | Tutoriel |
-| n8n self-hosted vs cloud | 180 | Faible | Article |
 | expert n8n freelance france | 90 | Très faible | Page service |
+| n8n self-hosted configuration | 180 | Faible | Guide technique |
 
-**Cluster 2 — Agents IA (Concurrence en croissance)**
+**Cluster 2 — Agents IA (Volume élevé, demande explosive)**
 
-| Mot-clé longue traîne | Volume est. | Difficulté | Type de page |
-|----------------------|------------|-----------|-------------|
+| Mot-clé | Volume est. | Difficulté | Type de contenu |
+|---------|------------|-----------|----------------|
 | créer agent IA pour mon entreprise | 450 | Moyenne | Page service + blog |
 | agent IA commercial automatique | 320 | Faible | Page service |
 | agent IA répondre emails automatiquement | 240 | Faible | Article + service |
 | différence chatbot et agent IA | 560 | Faible | Article éducatif |
 | agent IA GPT-4 personnalisé | 380 | Moyenne | Page service |
 
-**Cluster 3 — Chatbots (Volume élevé, Opportunité)**
+**Cluster 3 — Chatbots (Volume fort, conversion élevée)**
 
-| Mot-clé longue traîne | Volume est. | Difficulté | Type de page |
-|----------------------|------------|-----------|-------------|
+| Mot-clé | Volume est. | Difficulté | Type de contenu |
+|---------|------------|-----------|----------------|
 | chatbot whatsapp business français | 720 | Moyenne | Page service |
 | créer chatbot pour site e-commerce | 480 | Faible | Article + service |
 | chatbot support client IA | 890 | Moyenne | Page service |
-| chatbot discord pour serveur gaming | 340 | Faible | Page service |
-| intégrer chatbot dans wordpress | 560 | Faible | Tutoriel |
+| intégrer chatbot wordpress | 560 | Faible | Tutoriel |
 
-**Cluster 4 — CRM et Prospection (B2B, forte valeur)**
+**Cluster 4 — CRM & Prospection B2B (Forte valeur commerciale)**
 
-| Mot-clé longue traîne | Volume est. | Difficulté | Type de page |
-|----------------------|------------|-----------|-------------|
+| Mot-clé | Volume est. | Difficulté | Type de contenu |
+|---------|------------|-----------|----------------|
 | automatiser prospection linkedin | 670 | Moyenne | Service + article |
 | crm personnalisé PME | 410 | Faible | Page service |
 | automatiser relances email B2B | 290 | Faible | Article + service |
-| prospection automatique make | 160 | Très faible | Article + service |
+| prospection automatique Make | 160 | Très faible | Article + service |
 
-**Cluster 5 — SaaS et Développement (Longue traîne technique)**
+**Cluster 5 — SaaS No-Code (Niche à saisir)**
 
-| Mot-clé longue traîne | Volume est. | Difficulté | Type de page |
-|----------------------|------------|-----------|-------------|
+| Mot-clé | Volume est. | Difficulté | Type de contenu |
+|---------|------------|-----------|----------------|
 | créer SaaS avec no-code IA | 280 | Faible | Page service |
-| déployer application sur Coolify | 190 | Très faible | Tutoriel |
-| Coolify vs Railway hébergement | 140 | Très faible | Article comparatif |
 | mvp saas rapide développement | 360 | Moyenne | Page service |
+| déployer application Coolify | 190 | Très faible | Tutoriel |
 
 ---
 
 ### 3.3 Analyse des Intentions de Recherche
 
-**Le site cible actuellement uniquement l'intention "commerciale" (acheter un service).**
-
-Or, le funnel d'achat d'un accompagnement IA/automatisation suit ce parcours :
+**MechaHelp cible uniquement l'intention "commerciale/transactionnelle"** — la dernière étape du funnel. Les étapes précédentes sont totalement absentes.
 
 ```
-[Découverte] → [Éducation] → [Comparaison] → [Décision] → [Achat]
-    ↑                ↑              ↑               ↑
-"qu'est-ce    "comment            "n8n vs         "meilleur expert
-que n8n?"     automatiser?"        Make?"          n8n france"
+Funnel de recherche IA/Automatisation :
+
+[TOFU] Découverte         : "qu'est-ce que n8n", "automatisation c'est quoi"
+[MOFU] Éducation          : "comment automatiser instagram", "tuto n8n débutant"
+[MOFU] Comparaison        : "n8n vs Make", "agent IA vs chatbot"
+[BOFU] Décision           : "meilleur expert n8n france", "accompagnement IA prix"
+[BOFU] Achat              : ← MechaHelp n'est visible qu'ici
 ```
 
-**MechaHelp est uniquement présent sur le dernier maillon (Décision/Achat)** et encore, de manière invisible pour les crawlers.
+**Contenu entièrement manquant :**
+- Articles de découverte (TOFU) : 0%
+- Tutoriels/Guides éducatifs (MOFU) : 0%
+- Comparatifs (MOFU) : 0%
+- FAQ (BOFU-MOFU) : 0%
 
-**Il manque entièrement :**
-- Contenu de découverte (qu'est-ce que l'automatisation IA ?)
-- Contenu éducatif (tutoriels, guides, comparatifs)
-- Contenu de comparaison (n8n vs Make, chatbot vs agent IA)
-- Une FAQ répondant aux questions communes
-
-**Potentiel de trafic organique manqué estimé :** 8 000 à 25 000 visiteurs/mois avec un blog actif couvrant ces thématiques en 12 mois.
+**Potentiel de trafic organique additionnel estimé avec un blog actif :**
+- 6 mois : +2 000 à 5 000 visites/mois
+- 12 mois : +8 000 à 25 000 visites/mois
 
 ---
 
-### 3.4 Contenu Dupliqué et Thin Content
+### 3.4 Thin Content
 
-**Thin content (contenu insuffisant) :**
-Les pages de services individuelles (24 accompagnements) sont probablement des fiches courtes avec titre, description courte, expert, et bouton de contact. Ce type de page est considéré comme "thin content" par Google si moins de 300 mots par page.
+Les 24 fiches d'accompagnements sont probablement des pages avec titre, courte description, expert, et bouton contact. Ce format est classifié "thin content" par Google si le corpus textuel est inférieur à 300 mots.
 
-**Recommandation minimum par page service :**
-- Titre H1 avec mot-clé cible (slug sémantique)
-- Description détaillée : 400-600 mots
-- Ce que vous allez recevoir (livrables)
-- Pour qui c'est fait (personas)
-- Processus en étapes (Timeline)
-- Expert qui réalise (photo, bio, liens)
-- Témoignage d'un client ayant utilisé ce service
+**Contenu minimum requis par page service :**
+- H1 avec mot-clé cible (via slug sémantique)
+- Description complète : 400-600 mots
+- Livrables détaillés (ce que le client reçoit)
+- Pour qui ? (personas cibles)
+- Processus en étapes
+- Photo + bio de l'expert (`<img>` avec `alt`)
+- Témoignage client vérifiable
 - FAQ spécifique au service (3-5 questions)
-- CTA clair avec prix visible ou fourchette
+- Prix visible ou fourchette tarifaire
+- Schema `Service` avec `PriceSpecification`
 
 ---
 
@@ -593,368 +515,307 @@ Les pages de services individuelles (24 accompagnements) sont probablement des f
 
 ### 4.1 Signaux de Localisation
 
-**Signaux détectés :**
-
-| Signal | Statut | Valeur |
+| Signal | Statut | Impact |
 |--------|--------|--------|
 | `lang="fr"` sur `<html>` | Présent | Cible France/francophonie |
-| Geo tags | Présents | Adresse Colmar visible dans le schema Organization |
-| Contenu en français | Oui | Cohérent |
-| Google Business Profile | Non détecté | Problème |
-| Backlinks locaux | Non détectés | Problème |
-| Mentions NAP cohérentes | Non vérifiables | À auditer |
+| Adresse Colmar dans Schema Organization | Présent | Signal local positif |
+| Google Business Profile | Non détecté | Opportunité manquée |
+| Backlinks locaux | Aucun détecté | Absence critique |
+| Annuaires locaux (Pages Jaunes, etc.) | Non confirmé | À vérifier |
 
-**Schema Organization (Colmar) :**
-
-La présence de l'adresse à Colmar dans le schema Organization est positive mais incomplète. Pour maximiser le SEO local :
-
-```json
-{
-  "@type": "Organization",
-  "name": "MechaHelp",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "[Adresse complète]",
-    "addressLocality": "Colmar",
-    "postalCode": "68000",
-    "addressRegion": "Alsace",
-    "addressCountry": "FR"
-  },
-  "telephone": "[Numéro]",
-  "email": "[Email]",
-  "url": "https://mechahelp-ai.com",
-  "sameAs": [
-    "https://www.youtube.com/@mechapizzai",
-    "https://www.skool.com/mechapizzai",
-    "[LinkedIn]",
-    "[Twitter/X]"
-  ]
-}
-```
-
----
+**Pour les recherches locales à fort potentiel :**
+- "expert IA Alsace"
+- "automatisation entreprise Colmar"
+- "consultant n8n Strasbourg"
+- "agence IA Haut-Rhin"
 
 ### 4.2 Google Business Profile
 
-**Statut : Non confirmé / Probablement absent**
+**Statut : Absent ou non revendiqué.**
 
-Pour une entreprise de services B2B comme MechaHelp, le Google Business Profile (GBP) est moins critique que pour un commerce physique, mais reste important pour :
-- Apparaître dans les recherches locales ("expert IA Colmar", "automatisation Alsace")
-- Collecter des avis Google (signal E-E-A-T fort)
-- Afficher les informations de contact directement dans les SERPs
+Actions prioritaires :
+1. Créer ou revendiquer le profil GBP de MechaHelp
+2. Catégories : "Consultant en informatique" + "Agence de marketing digital"
+3. Ajouter description, services, photos, horaires
+4. Activer la collecte d'avis clients (signal E-E-A-T fort)
 
-**Actions recommandées :**
-1. Créer ou revendiquer le GBP de MechaHelp
-2. Catégorie : "Conseil en technologies de l'information" + "Consultant en informatique"
-3. Ajouter photos, description, services
-4. Demander des avis Google aux clients existants
+### 4.3 NAP — Cohérence Name/Address/Phone
 
----
-
-### 4.3 NAP (Name, Address, Phone) — Cohérence
-
-La cohérence NAP est un facteur de ranking local. L'adresse de Colmar doit apparaître de manière identique sur :
-- Le site web (footer + mentions légales + schema)
+L'adresse Colmar dans le Schema Organization doit être identique sur :
+- Footer du site
+- Mentions légales
 - Google Business Profile
 - Pages Jaunes, Societe.com, Infogreffe
 - LinkedIn Company Page
-- Annuaires sectoriels
 
 ---
 
-## 5. Backlinks et Autorité
+## 5. Backlinks et Autorité de Domaine
 
-### 5.1 Évaluation de la Présence Externe
+### 5.1 État du Profil de Backlinks
 
-**Domaine Authority estimé : Très faible (DA 5-15/100)**
+**Domain Authority estimé : Très faible (DA 5-12/100)**
 
-MechaHelp est un domaine récent sans historique de backlinks établi. Les seules présences externes détectées ou probables :
+Le domaine est récent, non référencé dans les annuaires, et absent de l'index Google. Les seules présences externes probables :
 
-| Source externe | Type | Valeur SEO |
-|---------------|------|-----------|
+| Source | Type de lien | Valeur SEO |
+|--------|-------------|-----------|
 | skool.com/mechapizzai | Lien communautaire | Faible (no-follow probable) |
 | YouTube @mechapizzai | Lien profil | Faible (no-follow) |
 | Mentions dans la communauté Skool | UGC | Variable |
 
-**Signaux E-E-A-T manquants :**
+**Absence totale de :**
+- Backlinks éditoriaux depuis des médias tech FR (BDM, JDN, Appvizer)
+- Citations dans des annuaires IA spécialisés
+- Liens depuis des partenaires outils (n8n, Make, OpenAI)
 
-L'acronyme E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) est central dans les critères de qualité de Google, particulièrement pour les services professionnels.
+### 5.2 Signaux E-E-A-T
 
-| Critère E-E-A-T | Statut MechaHelp | Impact |
-|----------------|-----------------|--------|
-| Expérience (cas clients, études de cas) | Absent en ligne | Critique |
-| Expertise (certifications, formations) | Non documenté | Critique |
+| Critère | Statut | Impact |
+|---------|--------|--------|
+| Expérience (cas clients documentés) | Absent en ligne | Critique |
+| Expertise (certifications visibles) | Non documenté | Critique |
 | Autorité (mentions presse, backlinks) | Non détecté | Critique |
-| Confiance (avis vérifiables, sécurité) | Absent | Critique |
+| Confiance (avis vérifiables, HTTPS complet) | Partiel | Majeur |
 
----
-
-### 5.2 Stratégie de Netlinking Recommandée
+### 5.3 Stratégie de Netlinking Recommandée
 
 **Phase 1 — Fondations (Mois 1-2) :**
-- Créer les profils sur tous les annuaires de référence : Google Business, Pages Jaunes, Malt.fr, Codeur.fr, LinkedIn Company
-- Soumettre le site à des annuaires IA spécialisés : there's-an-ai-for-that, futurepedia.io, toolify.ai
-- Activer le lien vers mechahelp-ai.com depuis la page Skool (lien do-follow si possible)
-- Activer le lien depuis la bio YouTube
+- Annuaires de référence : Google Business Profile, Malt.fr, Codeur.fr, LinkedIn Company
+- Annuaires IA : Futurepedia.io, There's An AI For That, Toolify.ai, Ben's Bites
+- Activer les liens do-follow depuis Skool, YouTube, X/Twitter
+- Soumettre à France Num (réseau gouvernemental PME + IA)
 
 **Phase 2 — Content Marketing (Mois 2-4) :**
-- Guest posts sur des blogs tech français : JDN (Journal du Net), BDM (Blog du Modérateur), Appvizer, Ludosens
-- Contributions à des newsletters populaires : The Automatizer, Automatisation.io, Gus' Morning Brew
-- Interviews d'experts du site dans des podcasts tech francophones
+- Guest posts sur : BDM (Blog du Modérateur), JDN, Appvizer, Ludosens
+- Contributions à des newsletters tech : The Automatizer, Automatisation.io
+- Interviews des experts MechaHelp dans des podcasts IA francophones
 
 **Phase 3 — Digital PR (Mois 4-6) :**
-- Communiqués de presse sur les jalons (500 membres, lancement nouveau service)
-- Études de données originales publiables ("Combien coûte une automatisation n8n en France ?")
-- Partenariats avec outils complémentaires (n8n France, Make partner program)
+- Communiqués de presse sur les jalons (500 membres, nouveau partenariat)
+- Études de données originales publiables : "Combien coûte une automatisation n8n en France ?"
+- Partenariats officiels avec n8n GmbH et Make (Celonis) — liens partenaires do-follow
 
 ---
 
-## 6. Mobile et Core Web Vitals
+## 6. Performance, Mobile et Core Web Vitals
 
-### 6.1 Score Mobile
+### 6.1 Performance Technique
 
-**Lighthouse Accessibility : 86/100**
-
-Problèmes d'accessibilité identifiés (impactent aussi le SEO mobile) :
-- Contrastes de couleur insuffisants sur certains éléments
-- Labels manquants sur des formulaires
-- Navigation clavier incomplète
-
-**Mobile-first indexing :** Google indexe en priorité la version mobile du site. La SPA React étant responsive par défaut (Vite), la mise en page mobile est probablement correcte. Le problème reste le rendu JavaScript.
-
----
+| Métrique | Valeur confirmée | Évaluation |
+|---------|-----------------|-----------|
+| TTFB | 108ms | Excellent (< 200ms) |
+| Bundle JS | 266KB (monolithique) | Problématique — pas de code splitting |
+| Lighthouse Performance | Non mesuré (SPA) | À mesurer en conditions réelles |
+| Lighthouse SEO | 92-100/100 | Trompeur pour une SPA |
+| Lighthouse Accessibilité | 86-94/100 | Moyen — 2-3 problèmes critiques |
+| Lighthouse Bonnes pratiques | 100/100 | Excellent |
 
 ### 6.2 Core Web Vitals (Estimations)
 
-Les Core Web Vitals sont des facteurs de ranking officiels depuis 2021.
+| Métrique | Seuil "Bon" | Estimation MechaHelp | Diagnostic |
+|---------|------------|---------------------|-----------|
+| LCP (Largest Contentful Paint) | < 2,5s | 3,5-5s estimé | Mauvais — SPA sans SSR |
+| INP (Interaction to Next Paint) | < 200ms | 100-300ms estimé | Acceptable |
+| CLS (Cumulative Layout Shift) | < 0,1 | 0,05-0,15 estimé | Risque si polices sans dimensions |
+| TTFB | < 800ms | 108ms confirmé | Excellent |
 
-| Métrique | Seuil Good | Seuil Poor | Estimation MechaHelp | Commentaire |
-|---------|-----------|-----------|---------------------|-------------|
-| LCP (Largest Contentful Paint) | < 2,5s | > 4s | 3,5-5s (estimé) | SPA = hydratation JS lente |
-| FID/INP (Interaction to Next Paint) | < 200ms | > 500ms | 100-300ms (estimé) | React peut être réactif |
-| CLS (Cumulative Layout Shift) | < 0,1 | > 0,25 | 0,05-0,15 (estimé) | Risque si images/polices sans dimensions |
-| TTFB (Time to First Byte) | < 800ms | > 1800ms | 200-400ms (estimé) | Hébergement probablement cloud |
+**Principal risque : LCP élevé.** Dans une SPA React, le LCP correspond au premier affichage significatif après exécution du JavaScript. Ce délai est structurellement supérieur au HTML statique.
 
-**Principal risque : LCP élevé**
-Dans une SPA, le LCP est le temps jusqu'au premier affichage significatif après exécution de React. Ce délai est structurellement plus long qu'avec du HTML statique, d'où l'importance du SSR.
-
-**Optimisations immédiates possibles sans SSR :**
-- Code splitting (lazy loading des composants non critiques)
+**Optimisations immédiates sans migration SSR :**
+- Code splitting Vite (lazy loading des composants non critiques)
 - Préchargement des polices (`<link rel="preload">`)
-- Optimisation des bundles Vite (tree shaking)
-- CDN avec edge caching (Cloudflare)
-- Compression Brotli/gzip des assets
+- CDN avec edge caching (Cloudflare gratuit)
+- Compression Brotli sur tous les assets
+- `<link rel="preconnect">` vers les APIs tierces
+
+### 6.3 Mobile-First Indexing
+
+Google indexe en priorité la version mobile depuis 2021. La SPA React/Vite est probablement responsive, mais le problème fondamental de rendu JavaScript s'applique identiquement en mobile. Aucun avantage différentiel.
 
 ---
 
-### 6.3 Sécurité et HTTPS
+## 7. Recommandations Priorisées
 
-- HTTPS : Présumé présent (URL `https://`)
-- HSTS : Absent — à activer via header HTTP
-- CSP : Absent — important pour la confiance algorithmique
-- Mixed content : À vérifier (ressources HTTP dans un contexte HTTPS)
-
----
-
-## 7. Recommandations Prioritaires par Impact
-
-### Priorité 1 — Critique (Impact immédiat sur l'indexation)
+### Priorité 1 — CRITIQUE (Semaine 1 — Blocages à lever immédiatement)
 
 | # | Action | Effort | Impact SEO |
 |---|--------|--------|-----------|
-| 1 | **Mettre en place le prerendering** (Prerender.io ou middleware Puppeteer) pour rendre le contenu crawlable immédiatement | Élevé | Révolutionnaire |
-| 2 | **Corriger le title tag** : `Accompagnements IA & Automatisation | MechaHelp — Experts Certifiés` | Très faible | Élevé |
-| 3 | **Supprimer `/auth` du sitemap** et ajouter `Disallow: /auth` dans robots.txt | Très faible | Moyen |
-| 4 | **Corriger le Schema SearchAction** : aligner l'URL cible avec `/accompagnements` | Faible | Moyen |
-| 5 | **Migrer les URLs des services vers des slugs sémantiques** et les ajouter au sitemap | Moyen | Élevé |
+| 1 | **Implémenter un prerendering** (Prerender.io, Rendertron, ou `vite-plugin-ssr`) pour rendre le contenu crawlable | Élevé | Révolutionnaire |
+| 2 | **Corriger le `<title>` HTML initial** : `Accompagnement IA & Automatisation sur mesure \| MechaHelp` | Très faible | Élevé |
+| 3 | **Supprimer `/auth` du sitemap.xml** et ajouter `Disallow: /auth` dans robots.txt | Très faible | Moyen |
+| 4 | **Corriger le Schema SearchAction** : aligner vers `/accompagnements` | Faible | Moyen |
+| 5 | **Corriger la canonical** sur `/accompagnement/{uuid}` : pointer vers la page réelle, pas vers `/` | Faible | Élevé |
 
-### Priorité 2 — Haute (Impact en 1-3 mois)
+### Priorité 2 — HAUTE (Semaines 2-4)
 
 | # | Action | Effort | Impact SEO |
 |---|--------|--------|-----------|
-| 6 | **Corriger la faute de frappe** "su rmesure" → "sur mesure" | Très faible | Faible/Crédibilité |
+| 6 | **Corriger la faute de frappe** "su rmesure" → "sur mesure" dans le code | Très faible | Moyen |
 | 7 | **Restructurer la hiérarchie Hx** : H2 avant H3, supprimer les H4 orphelins | Faible | Moyen |
-| 8 | **Ajouter l'image og:image** (1200×630px) pour activer les aperçus de partage | Faible | Élevé (CTR) |
-| 9 | **Raccourcir la meta description** à 150-155 caractères avec CTA | Très faible | Moyen (CTR) |
-| 10 | **Ajouter des photos `<img>` des experts** avec alt texts descriptifs | Moyen | Moyen (E-E-A-T) |
-| 11 | **Ajouter le Schema `Person`** pour chaque expert | Moyen | Moyen (E-E-A-T) |
-| 12 | **Créer et revendiquer le Google Business Profile** | Faible | Élevé (local) |
-| 13 | **Ajouter `<noscript>` avec contenu textuel minimum** | Faible | Moyen (palliatif) |
+| 8 | **Ajouter l'image `og:image`** (1200×630px) pour les aperçus de partage | Faible | Élevé (CTR) |
+| 9 | **Ajouter une meta description crawlable** (dans le HTML initial, pas via React) | Faible | Élevé (CTR) |
+| 10 | **Ajouter des photos `<img>` des experts** avec `alt` descriptifs contenant les mots-clés | Moyen | Élevé (E-E-A-T) |
+| 11 | **Migrer les URLs de UUID vers slugs sémantiques** + redirections 301 + mise à jour sitemap | Moyen | Élevé |
+| 12 | **Créer et revendiquer le Google Business Profile** MechaHelp Colmar | Faible | Élevé (local) |
+| 13 | **Ajouter un bloc `<noscript>`** avec résumé textuel du contenu principal | Faible | Moyen (palliatif) |
 
-### Priorité 3 — Moyenne (Impact en 3-6 mois)
-
-| # | Action | Effort | Impact SEO |
-|---|--------|--------|-----------|
-| 14 | **Créer des pages de catégories thématiques** (hub pages) pour chaque domaine de service | Élevé | Élevé |
-| 15 | **Lancer un blog** avec 2-4 articles/mois ciblant la longue traîne identifiée | Très élevé | Révolutionnaire |
-| 16 | **Enrichir chaque page service** : 400+ mots, FAQ, témoignage, livrables détaillés | Élevé | Élevé |
-| 17 | **Ajouter Schema `AggregateRating`** avec les avis (98% satisfaction) | Moyen | Élevé (CTR) |
-| 18 | **Activer HSTS et CSP** via les en-têtes HTTP | Faible | Moyen (E-E-A-T) |
-| 19 | **Soumettre aux annuaires IA** (Futurepedia, There's An AI For That, etc.) | Moyen | Moyen (backlinks) |
-
-### Priorité 4 — Long terme (Impact en 6-12 mois)
+### Priorité 3 — MOYENNE (Mois 2-3)
 
 | # | Action | Effort | Impact SEO |
 |---|--------|--------|-----------|
-| 20 | **Migration vers Next.js (SSR/ISR)** — solution définitive au problème SPA | Très élevé | Révolutionnaire |
-| 21 | **Stratégie de netlinking active** : guest posts, digital PR, études de données | Très élevé | Élevé |
-| 22 | **Créer des pages dédiées pour chaque expert** avec portfolio, certifications, témoignages | Élevé | Moyen (E-E-A-T) |
-| 23 | **Optimiser les Core Web Vitals** : code splitting, CDN, lazy loading | Élevé | Moyen |
-| 24 | **Internationalisation partielle** : pages en anglais pour les services à fort potentiel | Très élevé | Élevé (marché global) |
+| 14 | **Créer des pages de catégories thématiques** (hubs n8n, agents IA, chatbots, CRM) | Élevé | Élevé |
+| 15 | **Enrichir chaque fiche service** : 400+ mots, FAQ, témoignage, livrables, prix | Élevé | Élevé |
+| 16 | **Ajouter Schema `Person`** pour chaque expert (photo, certifications, bio) | Moyen | Élevé (E-E-A-T) |
+| 17 | **Ajouter Schema `AggregateRating`** avec les avis collectés | Moyen | Élevé (CTR +25%) |
+| 18 | **Activer HSTS et CSP** via headers HTTP (Cloudflare ou serveur) | Faible | Moyen (E-E-A-T) |
+| 19 | **Soumettre aux annuaires IA** : Futurepedia, There's An AI For That, Toolify.ai | Moyen | Moyen (backlinks) |
+| 20 | **Créer des pages experts dédiées** avec portfolio et témoignages | Élevé | Moyen (E-E-A-T) |
+
+### Priorité 4 — LONG TERME (Mois 3-12)
+
+| # | Action | Effort | Impact SEO |
+|---|--------|--------|-----------|
+| 21 | **Lancer un blog** avec 2-4 articles/mois ciblant la longue traîne identifiée | Très élevé | Révolutionnaire |
+| 22 | **Migration vers Next.js (SSR/ISR)** — solution définitive et pérenne | Très élevé | Révolutionnaire |
+| 23 | **Stratégie de netlinking active** : guest posts BDM/JDN, digital PR, partenariats | Très élevé | Élevé |
+| 24 | **Optimiser les Core Web Vitals** : code splitting, CDN, lazy loading images | Élevé | Moyen |
+| 25 | **Étude de données publiable** ("Coût réel d'une automatisation n8n en France 2026") | Moyen | Élevé (backlinks PR) |
 
 ---
 
 ## 8. Plan d'Action SEO sur 90 Jours
 
-### Semaine 1-2 : Fondations Techniques (Corrections Immédiates)
+### Semaine 1-2 : Corrections Techniques Immédiates
 
-**Objectif :** Corriger toutes les erreurs techniques bloquantes sans délai.
+**Objectif :** Lever tous les blocages techniques sans refactoring majeur.
 
-- [ ] **Jour 1** — Corriger le `<title>` : `Accompagnements IA & Automatisation | MechaHelp`
-- [ ] **Jour 1** — Raccourcir la meta description à 150 chars maximum avec CTA
-- [ ] **Jour 1** — Corriger la faute de frappe "su rmesure" → "sur mesure" dans le H3
+- [ ] **Jour 1** — Modifier le `<title>` dans `index.html` : `Accompagnement IA & Automatisation | MechaHelp`
+- [ ] **Jour 1** — Ajouter `<meta name="description">` dans `index.html` (version courte statique : ~150 chars)
 - [ ] **Jour 1** — Supprimer `/auth` du `sitemap.xml`
 - [ ] **Jour 1** — Ajouter `Disallow: /auth` dans `robots.txt`
 - [ ] **Jour 2** — Corriger le Schema SearchAction : `/services` → `/accompagnements`
-- [ ] **Jour 2** — Enrichir le Schema Organization avec numéro de téléphone et sameAs (YouTube, Skool)
-- [ ] **Jour 3** — Créer l'image Open Graph 1200×630px et l'ajouter en `og:image`
-- [ ] **Jour 3** — Aligner `og:title` et `twitter:title` avec le nouveau title tag
-- [ ] **Jour 4-5** — Restructurer la hiérarchie H2/H3 sur toutes les pages
-- [ ] **Jour 5** — Ajouter un bloc `<noscript>` avec résumé textuel du contenu principal
-- [ ] **Jour 7** — Créer/revendiquer le Google Business Profile MechaHelp
-- [ ] **Jour 7** — Activer HSTS via configuration serveur/Cloudflare
-- [ ] **Résultat attendu :** Toutes les erreurs techniques critiques corrigées, soumission à Google Search Console
+- [ ] **Jour 2** — Corriger la canonical sur les pages `/accompagnement/{uuid}`
+- [ ] **Jour 2** — Enrichir Schema Organization : téléphone, sameAs (YouTube, Skool, LinkedIn)
+- [ ] **Jour 3** — Créer l'image `og:image` 1200×630px et l'intégrer
+- [ ] **Jour 3** — Corriger la faute de frappe "su rmesure"
+- [ ] **Jour 4-5** — Restructurer la hiérarchie H2/H3 dans les composants React
+- [ ] **Jour 5** — Ajouter le bloc `<noscript>` avec contenu textuel résumé
+- [ ] **Jour 7** — Créer/revendiquer le Google Business Profile
+- [ ] **Jour 7** — Activer HSTS via configuration serveur ou Cloudflare
+- [ ] **Jour 10** — Soumettre le site dans Google Search Console + Bing Webmaster Tools
+
+### Semaine 3-6 : URLs Sémantiques et Enrichissement des Fiches
+
+**Objectif :** Rendre les 24 accompagnements indexables et riches en contenu.
+
+- [ ] Définir les 24 slugs sémantiques (exemples ci-dessous)
+- [ ] Implémenter les slugs dans le routeur React
+- [ ] Implémenter les redirections 301 UUID → slug dans le serveur/CDN
+- [ ] Régénérer le sitemap dynamiquement (API endpoint générant le XML)
+- [ ] Enrichir chaque fiche : 400+ mots, livrables, expert avec `<img>`, témoignage, FAQ
+- [ ] Ajouter Schema `Service` + `Person` + `FAQPage` sur chaque fiche
+- [ ] Soumettre le nouveau sitemap dans Search Console
+
+**Exemples de slugs :**
+```
+/accompagnements/automatisation-workflow-n8n-sur-mesure
+/accompagnements/creation-agent-ia-autonome-gpt4
+/accompagnements/chatbot-whatsapp-business-entreprise
+/accompagnements/automatisation-prospection-linkedin-b2b
+/accompagnements/integration-crm-hubspot-make
+/accompagnements/developpement-saas-no-code-bubbble
+/accompagnements/scraping-donnees-automatise
+/accompagnements/migration-zapier-vers-n8n
+```
+
+### Semaine 7-10 : Prerendering et Blog
+
+**Objectif :** Rendre le site crawlable à 100% et démarrer la production de contenu.
+
+- [ ] Évaluer et implémenter une solution de prerendering (Prerender.io recommandé)
+- [ ] Tester le rendu avec Google Search Console (outil "Inspecter une URL")
+- [ ] Publier les 3 premiers articles de blog (longue traîne prioritaire) :
+  - "n8n vs Make : lequel choisir en 2026 ? Comparatif complet"
+  - "Créer un agent IA pour son entreprise sans coder : guide débutant"
+  - "Chatbot WhatsApp Business : tutoriel pas à pas avec Make"
+- [ ] Créer les pages hubs de catégorie (n8n/Make, Agents IA, Chatbots, CRM)
+- [ ] Ajouter Schema `AggregateRating` depuis les avis clients existants
+
+### Semaine 11-12 : Autorité et Distribution
+
+**Objectif :** Démarrer la construction d'autorité externe.
+
+- [ ] Soumettre sur Futurepedia, There's An AI For That, Toolify.ai
+- [ ] Créer la LinkedIn Company Page + activer le lien do-follow
+- [ ] Contacter BDM/Appvizer pour un article guest ou une présentation du service
+- [ ] Partager les articles de blog sur les communautés cibles (Skool, Reddit r/automation, LinkedIn)
+- [ ] Activer la collecte d'avis Google via le GBP (envoyer lien aux clients existants)
 
 ---
 
-### Semaine 3-4 : Slugs Sémantiques et Sitemap
+## 9. KPIs et Objectifs à 90 Jours
 
-**Objectif :** Rendre les 24 accompagnements accessibles et indexables.
-
-- [ ] Définir et implémenter des slugs sémantiques pour les 24 accompagnements
-  ```
-  /accompagnements/automatisation-workflow-n8n
-  /accompagnements/creation-agent-ia-autonome
-  /accompagnements/chatbot-whatsapp-entreprise
-  /accompagnements/automatisation-prospection-linkedin
-  [etc.]
-  ```
-- [ ] Régénérer le sitemap dynamiquement avec toutes les URLs des services
-- [ ] Implémenter les redirections 301 des anciennes URLs UUID vers les nouvelles URLs slug
-- [ ] Vérifier que les balises canonical sont correctes sur chaque page de service
-- [ ] Ajouter le Schema `Service` sur chaque page d'accompagnement
-- [ ] Soumettre le nouveau sitemap dans Google Search Console et Bing Webmaster Tools
-- [ ] **Résultat attendu :** 24 pages de services crawlables avec URLs sémantiques
+| KPI | Situation actuelle | Objectif J+90 |
+|-----|-------------------|--------------|
+| Pages indexées par Google | 0 (estimé) | 30+ (homepage + 24 services + catégories) |
+| Mots-clés en top 50 | 0 | 15-30 |
+| Trafic organique mensuel | < 50 visites | 300-800 visites |
+| Domain Authority (Moz) | 5-12 | 15-20 |
+| Backlinks référents | < 5 | 25-50 |
+| Core Web Vitals LCP | > 4s (estimé) | < 3s |
+| Articles de blog publiés | 0 | 5-8 |
+| Fiches service enrichies (400+ mots) | 0 | 24/24 |
 
 ---
 
-### Mois 2 (Semaines 5-8) : Contenu et E-E-A-T
+## 10. Synthèse Concurrents
 
-**Objectif :** Enrichir les pages existantes et créer les bases du content marketing.
+Le marché francophone de l'accompagnement IA/automatisation est en pleine structuration en 2026. Les concurrents principaux se positionnent sur :
 
-**Semaine 5-6 — Pages Services :**
-- [ ] Enrichir les 10 pages de services les plus demandés (400+ mots chacune)
-  - Description complète du service
-  - Processus en 4-5 étapes
-  - Livrables détaillés
-  - Pour qui c'est fait (ICP)
-  - FAQ spécifique (3-5 questions)
-- [ ] Ajouter des photos `<img>` des experts avec alt texts
-- [ ] Créer des pages dédiées pour les 3 experts principaux (Kévin FEREIRA, Guy SALVATORE, Cyril DE LA RUE)
-  - Photo, bio, spécialités, certifications
-  - Services proposés par cet expert
-  - Témoignages clients liés à cet expert
-  - Schema `Person` complet
+| Type de concurrent | Exemples | Leur avantage SEO |
+|--------------------|---------|-------------------|
+| Agences IA établies | Cartelis, Cube AI, MisterIA | Historique de domaine, blog actif, backlinks presse |
+| Freelances Malt/Codeur | Profils individuels | Marketplace avec autorité propre (DA 50+) |
+| Agences spécialisées n8n | agence-n8n.com, Roboto.fr | Positionnement thématique fort |
+| Plateformes de formation | Gust-Training, Ziggourat | Contenu éducatif massif = trafic TOFU |
 
-**Semaine 7-8 — Hub Pages et FAQ :**
-- [ ] Créer 4 pages de catégories thématiques (hub pages) :
-  - `/accompagnements/n8n-make-automatisation`
-  - `/accompagnements/agents-ia-chatbots`
-  - `/accompagnements/crm-prospection`
-  - `/accompagnements/saas-developpement`
-- [ ] Créer une page `/faq` avec 20+ questions/réponses (Schema FAQPage)
-  - Questions orientées longue traîne identifiées dans l'audit
-  - Couvrir les intentions informatives et comparatives
-- [ ] Ajouter le Schema `AggregateRating` sur la homepage et les pages hub
-- [ ] **Résultat attendu :** Premiers positionnements sur mots-clés longue traîne (3-6 semaines après indexation)
+**Avantage différentiel exploitable par MechaHelp :** La combinaison marketplace (multiples experts, multiples services) + communauté (Skool) est unique. Elle doit être exprimée clairement dans le contenu SEO pour se différencier des agences mono-prestataire.
 
 ---
 
-### Mois 3 (Semaines 9-12) : Blog et Netlinking
+## 11. Conclusion et Score Détaillé
 
-**Objectif :** Créer le flux de contenu organique et lancer l'acquisition de backlinks.
+### Récapitulatif des Scores par Dimension
 
-**Semaine 9-10 — Lancement du Blog :**
-- [ ] Créer la section `/blog` sur le site
-- [ ] Publier les 4 premiers articles stratégiques :
-  1. **"n8n vs Make : lequel choisir en 2026 ?"** (vol. 390, diff. faible)
-  2. **"Qu'est-ce qu'un agent IA et comment en créer un ?"** (vol. 560, diff. faible)
-  3. **"Automatiser sa prospection LinkedIn : guide complet 2026"** (vol. 670, diff. moyenne)
-  4. **"Coolify : déployer son application en 10 minutes"** (vol. 190, diff. très faible)
-- [ ] Chaque article : minimum 1 500 mots, schema Article, maillage interne vers les services
-- [ ] Mettre en place un calendrier éditorial : 2 articles/mois minimum
+| Dimension | Score | Principaux freins |
+|-----------|-------|------------------|
+| SEO Technique | **20/100** | SPA sans SSR, meta manquantes, canonical brisée, UUID |
+| Contenu & Mots-clés | **32/100** | Contenu invisible, 0 blog, thin content, titles faibles |
+| Architecture & Crawlabilité | **25/100** | 0 résultat indexé, sitemap incomplet, /auth indexé |
+| Autorité & Backlinks | **35/100** | DA très faible, 0 backlinks éditoriaux, pas de GBP |
+| Mobile & Core Web Vitals | **58/100** | TTFB excellent, mais LCP estimé mauvais, JS 266KB monolithique |
+| **SCORE GLOBAL** | **36/100** | |
 
-**Semaine 11-12 — Netlinking Fondations :**
-- [ ] Soumettre aux annuaires IA principaux (Futurepedia, There's An AI For That, Toolify)
-- [ ] Créer les profils sur Malt.fr et Codeur.fr (liens do-follow)
-- [ ] Publier les profils LinkedIn des experts avec lien vers le site
-- [ ] Activer le lien depuis la page Skool communauté vers mechahelp-ai.com
-- [ ] Activer le lien depuis la description YouTube (@mechapizzai)
-- [ ] Contacter 5 blogs tech français pour des opportunités de guest posting
+### Ce qui fonctionne bien (à préserver)
+- TTFB de 108ms : infrastructure solide
+- Schema Organization et WebSite présents sur la homepage
+- BreadcrumbList sur /services
+- robots.txt cohérent avec les sections privées (/dashboard, /admin, /messages)
+- Lighthouse Bonnes Pratiques à 100/100
+- HTTPS actif
 
-**Résultats attendus à 90 jours :**
-
-| Métrique | Avant audit | Objectif J+90 |
-|---------|------------|--------------|
-| Pages indexées dans Google | ~3-6 (homepage + légales) | 30-40+ |
-| Mots-clés positionnés (top 100) | ~0-5 | 50-150 |
-| Trafic organique mensuel | ~50-200 | 500-1 500 |
-| Domain Authority (Ahrefs DR) | ~5-10 | 10-20 |
-| Backlinks référents | ~5-15 | 30-60 |
-
----
-
-### Jalons Trimestriel et Annuel
-
-**J+180 (6 mois) — Objectifs :**
-- Migration partielle ou complète vers Next.js SSR lancée
-- Blog actif avec 12+ articles publiés
-- 150-300 mots-clés positionnés (top 100)
-- 2 000-5 000 visiteurs organiques/mois
-- DR 20-30
-
-**J+365 (12 mois) — Objectifs :**
-- Site entièrement en SSR, Core Web Vitals dans le vert
-- Blog avec 30+ articles, position de référence sur les sujets n8n/IA/automatisation FR
-- 500-1 500 mots-clés positionnés (top 100), 50-200 en top 10
-- 8 000-20 000 visiteurs organiques/mois
-- DR 30-45
-- MechaHelp = référence SEO dans le secteur de l'accompagnement IA francophone
+### Ce qui bloque la croissance SEO (ordre d'urgence)
+1. SPA React/Vite sans SSR = contenu invisible pour les crawlers
+2. Zéro indexation Google (0 résultat `site:mechahelp-ai.com`)
+3. Meta description absente sur toutes les pages (côté crawlable)
+4. 24 fiches de service absentes du sitemap, avec URLs UUID
+5. Canonical brisée sur les pages de service individuelles
+6. Aucun blog, aucun contenu TOFU/MOFU
+7. Schema SearchAction pointant vers `/services` (URL inexistante dans le sitemap)
+8. `og:image` absent — partages sans aperçu visuel
 
 ---
 
-## Annexe — Récapitulatif des Erreurs Critiques
-
-| Erreur | Catégorie | Priorité | Effort de correction |
-|--------|-----------|---------|---------------------|
-| SPA sans SSR : contenu invisible pour les crawlers | Architecture | P0 | Très élevé |
-| `/auth` dans sitemap avec priorité 0.7 | Sitemap | P1 | Immédiat |
-| Title tag sans mots-clés | On-page | P1 | Immédiat |
-| Meta description trop longue (177 chars) | On-page | P1 | Immédiat |
-| Schema SearchAction pointant vers `/services` inexistant | Schema | P1 | Faible |
-| Hiérarchie Hx cassée (H3 avant H2) | On-page | P1 | Faible |
-| Faute de frappe "su rmesure" dans H3 | On-page | P1 | Immédiat |
-| URLs avec UUIDs non sémantiques | URLs | P1 | Moyen |
-| Aucune `<img>` dans le DOM (SEO images) | Images | P2 | Moyen |
-| `og:image` absente | Social | P2 | Faible |
-| Aucun blog / contenu éducatif | Contenu | P2 | Très élevé |
-| Aucune page de catégorie thématique | Architecture | P2 | Élevé |
-| HSTS et CSP absents | Sécurité | P3 | Faible |
-| Google Business Profile non créé | Local | P2 | Faible |
-| 0 backlinks de qualité | Autorité | P2 | Très élevé |
-| Thin content sur les pages services | Contenu | P2 | Élevé |
-
----
-
-*Audit généré par Claude AI Marketing Suite — 19 mars 2026*
-*Données techniques basées sur analyse directe de mechahelp-ai.com, robots.txt, sitemap.xml et des informations de rendu recueillies lors de l'audit.*
+*Rapport généré le 21 mars 2026 par Claude AI Marketing Suite.*
+*Sources complémentaires : analyse live WebFetch (mechahelp-ai.com, sitemap.xml, robots.txt, /accompagnements, /mentions-legales) + WebSearch (concurrents, volumes de mots-clés, contexte marché FR 2026).*

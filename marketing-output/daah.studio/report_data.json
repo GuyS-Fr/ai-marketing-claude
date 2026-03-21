@@ -1,0 +1,82 @@
+{
+  "business_name": "DAAH STUDIO",
+  "url": "https://daah.studio",
+  "audit_date": "21 mars 2026",
+  "business_type": "Agence de design digital & stratégie",
+  "overall_score": 55,
+  "overall_grade": "C",
+  "scores": {
+    "content_messaging": {
+      "score": 58,
+      "label": "Contenu & Messaging",
+      "weight": 0.25,
+      "finding": "Voix de marque engageante mais proposition de valeur interchangeable"
+    },
+    "conversion": {
+      "score": 54,
+      "label": "Optimisation Conversion",
+      "weight": 0.20,
+      "finding": "CTAs mal hiérarchisés, absence totale de preuve sociale"
+    },
+    "seo": {
+      "score": 42,
+      "label": "SEO & Découvrabilité",
+      "weight": 0.20,
+      "finding": "Zéro méta-description, 14 H1, schema LocalBusiness vide"
+    },
+    "competitive": {
+      "score": 50,
+      "label": "Positionnement Concurrentiel",
+      "weight": 0.15,
+      "finding": "Offre unique sur le marché local mais non communiquée"
+    },
+    "brand_trust": {
+      "score": 58,
+      "label": "Marque & Confiance",
+      "weight": 0.10,
+      "finding": "Identité cohérente mais signaux de confiance insuffisants"
+    },
+    "growth_strategy": {
+      "score": 63,
+      "label": "Croissance & Stratégie",
+      "weight": 0.10,
+      "finding": "Modèle hybride solide, boucles de croissance non activées"
+    }
+  },
+  "additional_scores": {
+    "geo": {
+      "score": 15,
+      "label": "Visibilité IA (GEO)",
+      "grade": "F",
+      "finding": "Invisible pour les IA — robots.txt bloque tous les crawlers"
+    },
+    "funnel": {
+      "score": 34,
+      "label": "Tunnel de Vente",
+      "finding": "Aucune capture email, saut direct vers Calendly"
+    },
+    "landing_cro": {
+      "score": 38,
+      "label": "Landing Page CRO",
+      "finding": "Pas de preuve sociale, meilleur CTA caché en bas de page"
+    }
+  },
+  "top_strengths": [
+    "Modèle hybride unique combinant projets one-shot et abonnements récurrents (web 99€/mois + graphique 190-680€/mois)",
+    "Transparence tarifaire courageuse — prix affichés publiquement, rare dans le secteur des agences",
+    "Voix de marque cohérente et distinctive — tutoiement systématique, CTAs en première personne"
+  ],
+  "top_weaknesses": [
+    "Preuve sociale quasi inexistante — 0 témoignage, 0 avis Google, portfolio de 5 projets sans résultats chiffrés",
+    "SEO on-page absent — 0 méta-description, 14 balises H1 sur la homepage, schema LocalBusiness invalide",
+    "Invisibilité totale pour les IA — robots.txt bloque GPTBot, ClaudeBot, Google-Extended (score GEO 15/100)"
+  ],
+  "quick_wins": [
+    "Collecter 3-5 témoignages clients avec résultats chiffrés",
+    "Rédiger les méta-descriptions de toutes les pages",
+    "Débloquer les crawlers IA dans les paramètres Squarespace",
+    "Remplacer 'Je prends rendez-vous' par 'Je fais un bilan gratuit' partout",
+    "Compléter le schema LocalBusiness avec adresse complète"
+  ],
+  "executive_summary": "DAAH STUDIO dispose d'un positionnement unique sur le marché local de la Drôme : seul studio combinant design premium, abonnements flexibles et stratégie digitale. Le modèle économique hybride (one-shot + récurrence) est structurellement sain. Cependant, trois failles critiques plombent la performance marketing : l'absence quasi totale de preuve sociale (0 témoignage, 0 avis), un SEO on-page inexistant (0 méta-description, 14 H1, schema vide), et une invisibilité complète dans l'écosystème IA (score GEO 15/100). Le background comptabilité/gestion de la fondatrice représente un différenciateur unique non exploité. L'implémentation des recommandations prioritaires peut améliorer le score à 72-82/100 et doubler le taux de conversion en 90 jours."
+}

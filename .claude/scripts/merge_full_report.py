@@ -47,6 +47,9 @@ CHROME_PATHS = [
 # Order of sections in the final report, organized by phase
 # Tuples: (filename, title) for sections, or (None, phase_name) for phase headers
 SECTION_ORDER = [
+    # Synthèse
+    (None,                    "Synthèse"),
+    ("MARKETING-REPORT.md",   "Rapport Marketing — Synthèse"),
     # Phase 1 — Diagnostic
     (None,                    "Phase 1 — Diagnostic"),
     ("MARKETING-AUDIT.md",    "Audit Marketing Complet"),
@@ -69,7 +72,6 @@ SECTION_ORDER = [
     (None,                    "Phase 4 — Livrables"),
     ("LAUNCH-PLAYBOOK.md",    "Plan de Lancement"),
     ("CLIENT-PROPOSAL.md",    "Proposition Commerciale"),
-    ("MARKETING-REPORT.md",   "Rapport Marketing Détaillé"),
 ]
 
 COLORS = {

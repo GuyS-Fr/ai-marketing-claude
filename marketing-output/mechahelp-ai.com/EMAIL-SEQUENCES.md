@@ -1,30 +1,39 @@
-# EMAIL SEQUENCES — MechaHelp-AI.com
-**Marketplace d'accompagnements personnalisés en IA & automatisation**
-*Julien Bergé — mechahelp-ai.com*
+# EMAIL-SEQUENCES.md — MechaHelp AI
+**Séquences email prêtes à envoyer — Marketplace IA & Automatisation**
+**Site :** mechahelp-ai.com
+**Date :** 21 mars 2026
+**Langue :** Français | **Ton :** Professionnel, direct, orienté résultats
 
 ---
 
-> **Guide d'utilisation**
-> Ce document contient 27 emails complets répartis en 6 séquences automatisées.
-> Chaque email inclut : objet principal, objet alternatif (A/B test), pré-header, corps complet, CTA principal et timing d'envoi.
-> Langue : Français. Ton : professionnel, chaleureux, orienté résultats.
+## GUIDE D'UTILISATION
+
+Ce document contient **14 emails complets** répartis en **4 séquences automatisées**.
+Chaque email inclut : objet principal, objet A/B test, pré-header, corps complet, CTA et timing.
+
+| Séquence | Emails | Durée | Déclencheur |
+|----------|--------|-------|-------------|
+| 1 — Bienvenue | 5 emails | 14 jours | Inscription gratuite |
+| 2 — Relance post-visite | 3 emails | 5 jours | Visite sans achat |
+| 3 — Post-accompagnement | 3 emails | 10 jours | Session terminée |
+| 4 — Réactivation | 3 emails | 7 jours | 45+ jours d'inactivité |
 
 ---
 
-## SÉQUENCE 1 — Bienvenue & Activation
-**Objectif :** Guider le nouvel inscrit vers son premier accompagnement payant
-**Durée :** 14 jours — 7 emails
-**Déclencheur :** Inscription gratuite sur mechahelp-ai.com ou rejoindre la communauté Skool
+## SÉQUENCE 1 — BIENVENUE (5 emails sur 14 jours)
+
+**Objectif :** Transformer un inscrit en premier client payant
+**Déclencheur :** Inscription gratuite sur mechahelp-ai.com ou communauté Skool
 
 ---
 
-### EMAIL 1/7 — Bienvenue immédiat
-**Timing :** Immédiatement après l'inscription (J+0)
+### EMAIL 1/5 — Bienvenue immédiat
 
-**Objet principal :** Bienvenue chez MechaHelp — votre accès à l'IA commence maintenant
-**Objet alternatif (A/B) :** [Prénom], voici ce que 384 membres ont déjà compris sur l'IA
+**Timing :** J+0 — Immédiatement après l'inscription
 
-**Pré-header :** Découvrez les 24 accompagnements qui vont transformer votre activité.
+**Objet principal :** Bienvenue chez MechaHelp — votre premier expert vous attend
+**Objet A/B :** [Prénom], 384 entrepreneurs ont déjà pris de l'avance. Vous aussi.
+**Pré-header :** Découvrez les 24 accompagnements disponibles dès aujourd'hui.
 
 ---
 
@@ -32,1385 +41,617 @@ Bonjour [Prénom],
 
 Bienvenue dans la seule marketplace francophone dédiée à l'IA et à l'automatisation pour entrepreneurs.
 
-Vous venez de rejoindre une communauté de **384 membres actifs** qui ont décidé de ne plus subir l'IA — mais de s'en servir pour gagner du temps, automatiser leurs tâches et développer leur activité.
-
 Je suis Julien Bergé, fondateur de MechaHelp.
 
-**Voici exactement ce que vous avez maintenant entre les mains :**
+Vous venez de rejoindre **384 membres actifs** qui ont décidé de ne plus subir l'IA — mais de s'en servir pour gagner du temps, automatiser leurs tâches et développer leur activité.
 
-- **24 accompagnements personnalisés** couvrant n8n, Make, agents IA, chatbots, CRM, prospection automatisée, vidéo IA, dropshipping, SaaS et bien plus encore
-- **7+ experts certifiés** disponibles pour travailler avec vous en tête-à-tête (Kévin FEREIRA, Cyril DE LA RUE, Nicolas Llavall, Julien MechaPizzAI, et d'autres)
-- **Une communauté Skool** où poser vos questions, partager vos avancées et vous connecter avec des entrepreneurs qui pensent comme vous
-- **Des ressources gratuites** sur YouTube et TikTok pour commencer à apprendre dès aujourd'hui
+**Voici ce que vous avez maintenant entre les mains :**
 
-**Mais d'abord, une question simple :**
+- **24 accompagnements personnalisés** — de l'automatisation n8n à la prospection IA, en passant par les chatbots, le CRM et la création de contenu
+- **7+ experts certifiés** disponibles cette semaine (Kévin FEREIRA, Cyril DE LA RUE, Nicolas Llavall et d'autres)
+- **Une communauté Skool** pour poser vos questions, partager vos avancées et apprendre des autres membres
+- **Des ressources gratuites** sur YouTube pour commencer à comprendre les bases
 
-Quel est le problème n°1 que l'IA ou l'automatisation pourrait résoudre dans votre activité aujourd'hui ?
+**Une question directe, [Prénom] :**
+
+Quel est le problème n°1 que l'IA ou l'automatisation pourrait résoudre dans votre activité cette semaine ?
 
 - Vous perdez des heures sur des tâches répétitives ?
-- Votre prospection commerciale est chronophage et peu efficace ?
-- Vous voulez créer un chatbot ou un agent IA mais vous ne savez pas par où commencer ?
-- Vous cherchez à automatiser votre CRM ou vos workflows ?
+- Votre prospection est trop manuelle et trop chronophage ?
+- Vous voulez lancer un chatbot ou un agent IA mais vous ne savez pas par où commencer ?
 
-La réponse à cette question va déterminer quel accompagnement vous convient le mieux — et je veux vous aider à trouver le bon dès maintenant.
-
-👉 **[Découvrir les 24 accompagnements disponibles](https://mechahelp-ai.com)**
-
-À très vite,
-
-**Julien Bergé**
-Fondateur, MechaHelp
-*La marketplace IA & automatisation made in France*
-
----
-*Vous recevez cet email car vous vous êtes inscrit sur mechahelp-ai.com. Pour vous désabonner : [lien de désinscription]*
-
----
-
-### EMAIL 2/7 — Présentation des experts
-**Timing :** J+1 (le lendemain de l'inscription)
-
-**Objet principal :** Les 7 experts qui vont changer votre rapport à l'IA
-**Objet alternatif (A/B) :** Kévin, Cyril, Nicolas... Voici qui va vous accompagner
-
-**Pré-header :** Des praticiens, pas des théoriciens. Des résultats, pas des slides.
-
----
-
-Bonjour [Prénom],
-
-Hier, je vous ai parlé de MechaHelp. Aujourd'hui, je veux vous présenter les personnes qui font vraiment la différence sur notre plateforme : nos experts.
-
-**Pourquoi nos experts sont différents ?**
-
-Ils ne sont pas des consultants qui parlent de l'IA en théorie. Ce sont des praticiens qui l'utilisent tous les jours dans leur propre activité — et qui transmettent ce qu'ils savent faire concrètement.
-
-**Voici quelques-uns des experts qui vous attendent :**
-
-**Kévin FEREIRA**
-Spécialiste n8n et automatisation avancée. Kévin a aidé des dizaines d'entrepreneurs à construire des workflows qui tournent en autonomie 24h/24. Si vous entendez parler de n8n pour la première fois, il est votre interlocuteur idéal.
-
-**Cyril DE LA RUE**
-Expert Make (ex-Integromat) et intégrations SaaS. Cyril connecte vos outils entre eux pour que tout fonctionne de façon fluide — sans coder, sans technicité particulière requise.
-
-**Nicolas Llavall**
-Spécialiste agents IA et chatbots. Nicolas crée des assistants IA personnalisés qui répondent à vos clients, qualifient vos leads et automatisent votre support.
-
-**Julien MechaPizzAI**
-Expert IA appliquée à la création de contenu vidéo et à la prospection automatisée. Si vous voulez produire plus de contenu en moins de temps, il a les solutions.
-
-**Et 3+ autres experts** couvrant le dropshipping IA, la gestion de communautés Discord, et la création de SaaS no-code.
-
-**Ce qui rend chaque accompagnement unique :**
-
-Chaque session est personnalisée à votre activité, votre niveau et vos objectifs. Vous ne payez pas pour regarder des vidéos — vous payez pour que quelqu'un travaille avec vous sur votre problème spécifique.
-
-👉 **[Voir tous les experts et leurs accompagnements](https://mechahelp-ai.com)**
-
-Demain, je vous parlerai des accompagnements les plus populaires cette semaine.
-
-**Julien Bergé**
-Fondateur, MechaHelp
-
----
-
-### EMAIL 3/7 — Les accompagnements les plus populaires
-**Timing :** J+3
-
-**Objet principal :** Les 3 accompagnements les plus demandés en ce moment sur MechaHelp
-**Objet alternatif (A/B) :** Ce que vos concurrents apprennent pendant que vous lisez cet email
-
-**Pré-header :** Ces 3 accompagnements transforment des activités entières. Lequel vous correspond ?
-
----
-
-Bonjour [Prénom],
-
-Trois jours que vous avez rejoint MechaHelp. Je voudrais vous montrer ce que les membres les plus actifs de notre communauté sont en train d'apprendre.
-
-**Les 3 accompagnements les plus demandés cette semaine :**
-
----
-
-**#1 — Automatisation avec n8n**
-*L'outil qui automatise tout — sans coder*
-
-n8n est l'outil d'automatisation open source qui permet de connecter plus de 400 applications et créer des workflows entièrement automatiques. Relancer vos prospects, envoyer des factures, mettre à jour votre CRM, publier sur les réseaux sociaux... tout ça sans bouton à cliquer.
-
-**Pour qui ?** Entrepreneurs et freelances qui passent trop de temps sur des tâches répétitives.
-**Ce que vous repartez avec :** Un workflow opérationnel sur votre activité, installé et testé pendant la session.
-
----
-
-**#2 — Création d'agents IA personnalisés**
-*Votre assistant IA qui travaille à votre place*
-
-Un agent IA n'est pas un simple chatbot. C'est un programme qui prend des décisions, réalise des actions et apprend de vos préférences. Il peut qualifier vos leads, répondre à vos clients, faire de la veille ou même rédiger du contenu en votre style.
-
-**Pour qui ?** TPE/PME et freelances qui veulent déléguer des tâches intellectuelles à l'IA.
-**Ce que vous repartez avec :** Un agent IA configuré pour votre cas d'usage précis.
-
----
-
-**#3 — Prospection automatisée**
-*Trouver des clients sans prospecter manuellement*
-
-Imaginez avoir un système qui identifie vos prospects idéaux, leur envoie des messages personnalisés et vous alerte quand ils répondent — le tout automatiquement. C'est exactement ce que cet accompagnement met en place.
-
-**Pour qui ?** Freelances et TPE/PME qui cherchent à développer leur clientèle sans y passer leurs journées.
-**Ce que vous repartez avec :** Un système de prospection automatisé actif dès la fin de la session.
-
----
-
-Lequel de ces trois accompagnements résonne le plus avec votre situation actuelle ?
-
-👉 **[Choisir mon accompagnement et démarrer](https://mechahelp-ai.com)**
-
-Le paiement se fait via Stripe — sécurisé, simple, immédiat.
-
-À très vite,
-
-**Julien Bergé**
-MechaHelp
-
----
-
-### EMAIL 4/7 — Témoignage / Preuve sociale
-**Timing :** J+5
-
-**Objet principal :** "J'ai automatisé 15h de travail par semaine en une seule session"
-**Objet alternatif (A/B) :** Ce membre a transformé son activité en 90 minutes. Voici comment.
-
-**Pré-header :** Un témoignage concret, des chiffres réels, une méthode reproductible.
-
----
-
-Bonjour [Prénom],
-
-Aujourd'hui, je veux vous partager quelque chose de concret.
-
-Plutôt que de vous parler de ce que MechaHelp peut faire pour vous en théorie, laissez-moi vous montrer ce qu'il fait en pratique.
-
----
-
-**L'histoire de Thomas, consultant indépendant**
-
-Thomas travaillait 60 heures par semaine. Dont 15 heures passées sur des tâches qu'il détestait : relances clients, mise à jour de son CRM, envoi de propositions commerciales, publication sur LinkedIn.
-
-Il avait entendu parler de l'automatisation. Il avait regardé des tutoriels YouTube. Mais à chaque fois, il se retrouvait bloqué sur des détails techniques et abandonnait.
-
-En rejoignant MechaHelp, il a réservé une session d'accompagnement n8n avec Kévin FEREIRA.
-
-**En 90 minutes de session :**
-- Son CRM se met à jour automatiquement après chaque appel client
-- Ses propositions commerciales sont générées et envoyées automatiquement
-- Ses relances LinkedIn partent toutes seules selon son planning
-- Ses factures sont créées et transmises sans qu'il touche à rien
-
-**Résultat : 15 heures récupérées chaque semaine.**
-
-Aujourd'hui, Thomas utilise ces heures pour faire du business development — des tâches qui, elles, rapportent vraiment.
-
----
-
-Votre situation est différente de celle de Thomas. Mais le principe est le même : l'IA et l'automatisation peuvent libérer des heures significatives dans votre activité — à condition d'être guidé par quelqu'un qui sait exactement quoi faire.
-
-C'est pour ça que MechaHelp existe.
-
-👉 **[Réserver mon accompagnement personnalisé](https://mechahelp-ai.com)**
-
-La session est adaptée à votre niveau, votre outil et votre cas d'usage. Pas de prérequis techniques.
-
-**Julien Bergé**
-MechaHelp
-
----
-
-### EMAIL 5/7 — Lever les objections
-**Timing :** J+7
-
-**Objet principal :** "Je ne suis pas assez technique pour l'IA" — On va démystifier ça
-**Objet alternatif (A/B) :** Les 3 idées reçues sur l'IA qui freinent les entrepreneurs
-
-**Pré-header :** Vous n'avez pas besoin de savoir coder. Voici pourquoi.
-
----
-
-Bonjour [Prénom],
-
-Je vais vous dire quelque chose que j'entends souvent de la part de nouveaux membres avant qu'ils réservent leur premier accompagnement.
-
-*"Je suis intéressé, mais je ne suis pas assez technique."*
-
-Permettez-moi de répondre à cette objection directement.
-
----
-
-**Mythe #1 : "Il faut savoir coder pour utiliser l'IA."**
-
-Faux. Des outils comme n8n, Make, et la plupart des plateformes d'agents IA fonctionnent en glisser-déposer et en langage naturel. Nos experts vous montrent comment les utiliser — pas comment programmer.
-
-**Mythe #2 : "L'IA, c'est pour les grandes entreprises avec des budgets conséquents."**
-
-Faux. La majorité de nos membres sont des freelances, des solopreneurs ou des TPE/PME avec moins de 10 employés. Les outils utilisés lors des accompagnements sont souvent gratuits ou très abordables (moins de 50€/mois).
-
-**Mythe #3 : "J'ai pas le temps d'apprendre une nouvelle technologie."**
-
-C'est précisément pour ça que les accompagnements MechaHelp existent. Vous n'apprenez pas l'outil de A à Z — vous apprenez comment résoudre votre problème spécifique avec l'outil approprié. En une session, vous repartez avec quelque chose d'opérationnel.
-
----
-
-**La vraie question n'est pas "est-ce que je suis assez technique ?"**
-
-La vraie question est : **"Quel problème concret est-ce que je veux résoudre ?"**
-
-Dès que vous avez répondu à ça, nos experts savent quoi faire.
-
-👉 **[Trouver l'accompagnement fait pour moi](https://mechahelp-ai.com)**
-
-Si vous n'êtes pas sûr de quel accompagnement choisir, les détails de chaque service sur notre site vous aideront à vous orienter.
-
-**Julien Bergé**
-MechaHelp
-
-*PS : La communauté Skool est aussi là pour répondre à vos questions gratuitement. 384 membres actifs, des experts présents régulièrement.*
-
----
-
-### EMAIL 6/7 — Urgence douce & Valeur
-**Timing :** J+10
-
-**Objet principal :** Ce que vous perdez chaque semaine sans automatisation (calcul concret)
-**Objet alternatif (A/B) :** Combien valent vraiment vos tâches répétitives ?
-
-**Pré-header :** Un calcul simple qui va vous faire réfléchir.
-
----
-
-Bonjour [Prénom],
-
-Je vais vous proposer un exercice rapide — 2 minutes, pas plus.
-
-**Faites ce calcul :**
-
-1. Combien d'heures par semaine passez-vous sur des tâches répétitives (relances, reporting, mise à jour d'outils, publication sur les réseaux, traitement d'emails...) ?
-
-2. Quel est votre taux horaire ? (si vous ne vous êtes pas fixé de taux, prenez votre chiffre d'affaires mensuel divisé par vos heures travaillées)
-
-3. Multipliez les deux.
-
----
-
-**Pour un freelance facturant 500€/jour (soit ~62€/h) qui passe 10h/semaine sur des tâches automatisables :**
-
-10h × 62€ = **620€ par semaine**
-Soit **2 480€ par mois**
-Soit **29 760€ par an**
-
-Ces heures ne sont pas "gratuites". Elles ont un coût réel — soit en chiffre d'affaires que vous ne faites pas, soit en temps personnel que vous sacrifiez.
-
----
-
-Un accompagnement MechaHelp, c'est une fraction de ce montant.
-
-Et contrairement à une formation vidéo que vous ne regarderez jamais jusqu'au bout, ici vous repartez avec quelque chose d'opérationnel à la fin de la session.
-
-Le retour sur investissement est mesurable en semaines, pas en années.
-
-👉 **[Calculer mon ROI et réserver ma session](https://mechahelp-ai.com)**
-
-**Julien Bergé**
-MechaHelp
-
-*PS : Si vous avez des questions sur un accompagnement spécifique avant de vous lancer, vous pouvez aussi poser vos questions directement dans notre communauté Skool.*
-
----
-
-### EMAIL 7/7 — Dernière chance & CTA fort
-**Timing :** J+14
-
-**Objet principal :** [Prénom], c'est le bon moment de vous lancer (voici pourquoi)
-**Objet alternatif (A/B) :** 14 jours. Toujours pas décidé ? Voici ce que je vous propose.
-
-**Pré-header :** Un dernier mot de Julien avant de vous laisser tranquille.
-
----
-
-Bonjour [Prénom],
-
-Voilà 14 jours que vous avez rejoint MechaHelp.
-
-Je ne sais pas ce qui vous a retenu jusqu'ici — le manque de temps, l'hésitation sur quel accompagnement choisir, ou simplement la vie qui s'est mise en travers.
-
-Je vais être direct avec vous.
-
-**Si vous attendez le "moment parfait" pour vous lancer dans l'IA et l'automatisation, ce moment n'arrivera pas.**
-
-L'IA n'attend pas. Vos concurrents qui l'utilisent déjà, non plus.
-
-La bonne nouvelle : vous n'avez pas besoin de tout comprendre avant de commencer. Vous avez besoin d'un premier pas concret. Une session. Un problème résolu. Un workflow qui tourne.
-
-**Voici ma proposition :**
-
-Choisissez un accompagnement sur mechahelp-ai.com. Pas celui qui est parfait pour votre vision à 5 ans. Celui qui résout le problème le plus douloureux de votre activité aujourd'hui.
-
-Réservez. Payez via Stripe en 30 secondes. Et dans les prochains jours, travaillez avec un expert qui connaît votre outil mieux que vous.
-
-C'est aussi simple que ça.
-
-👉 **[Je choisis mon premier accompagnement maintenant](https://mechahelp-ai.com)**
-
-Si vous avez la moindre hésitation, notre communauté Skool (384 membres) est ouverte pour répondre à vos questions gratuitement.
-
-À très bientôt,
-
-**Julien Bergé**
-Fondateur, MechaHelp
-
-*PS : Si vous décidez que MechaHelp n'est pas fait pour vous, c'est tout à fait normal. Mais si l'IA et l'automatisation font partie de votre avenir professionnel — et je pense sincèrement que oui — alors la question n'est pas "si" mais "quand". Autant que ce soit maintenant.*
-
----
----
-
-## SÉQUENCE 2 — Nurturing & Éducation
-**Objectif :** Éduquer les inscrits non-acheteurs, construire la confiance, déclencher le premier achat
-**Durée :** 30 jours — 5 emails
-**Déclencheur :** Membre inscrit depuis 14+ jours sans avoir effectué d'achat (suite à la séquence Bienvenue)
-
----
-
-### EMAIL 1/5 — Éducation : Comprendre l'IA sans jargon
-**Timing :** J+14 après la fin de la séquence Bienvenue
-
-**Objet principal :** L'IA en 2026 : ce que tout entrepreneur devrait savoir (sans jargon)
-**Objet alternatif (A/B) :** Voici ce que l'IA peut vraiment faire pour une petite entreprise
-
-**Pré-header :** Pas de buzzwords. Juste ce qui compte pour votre activité.
-
----
-
-Bonjour [Prénom],
-
-Je veux vous parler de l'IA — mais différemment de ce que vous lisez partout.
-
-Pas de "révolution", pas de "disruption", pas de slides avec des graphiques compliqués. Juste ce que l'IA peut concrètement faire pour un entrepreneur, un freelance ou une TPE/PME en France en 2026.
-
-**Ce que l'IA sait vraiment bien faire :**
-
-**1. Traiter des volumes d'information impossibles à gérer manuellement**
-Analyser 200 candidatures, résumer 50 emails, extraire les données importantes d'un rapport de 80 pages — en quelques secondes.
-
-**2. Générer du contenu de qualité à partir de vos instructions**
-Rédiger des propositions commerciales, des emails de relance, des posts LinkedIn, des scripts vidéo — avec votre ton, votre style, vos arguments.
-
-**3. Automatiser des séquences d'actions répétitives**
-Quand X se passe → faire Y puis Z. Sans intervention humaine. En continu. 24h/24.
-
-**4. Répondre à des questions complexes sur votre activité**
-Un agent IA entraîné sur votre catalogue peut répondre à vos clients à votre place. Un autre peut analyser vos données et vous recommander des actions.
-
-**Ce que l'IA ne sait pas encore faire (soyons honnêtes) :**
-Prendre des décisions stratégiques à votre place. Comprendre les subtilités humaines de vos relations clients. Remplacer votre expertise métier.
-
----
-
-La vraie question n'est donc pas "est-ce que l'IA va tout changer ?" mais **"comment est-ce que j'utilise l'IA pour me concentrer sur ce que je fais vraiment mieux que n'importe quelle machine ?"**
-
-C'est exactement ce qu'on construit ensemble chez MechaHelp.
-
-👉 **[Voir comment l'IA s'applique à mon métier](https://mechahelp-ai.com)**
-
-**Julien Bergé**
-MechaHelp
-
----
-
-### EMAIL 2/5 — Étude de cas sectorielle
-**Timing :** J+20
-
-**Objet principal :** Comment une TPE de 3 personnes a divisé ses coûts opérationnels par 2 avec l'IA
-**Objet alternatif (A/B) :** Automatisation réelle : avant / après pour une petite entreprise
-
-**Pré-header :** Des chiffres concrets. Un cas réel. Une méthode applicable.
-
----
-
-Bonjour [Prénom],
-
-Permettez-moi de vous raconter l'histoire d'une TPE fictive — construite à partir de cas réels que nous voyons régulièrement chez MechaHelp.
-
----
-
-**Avant :** Une agence de communication digitale de 3 personnes
-
-Situation typique :
-- 1 gérant qui fait à la fois la prospection, le suivi client et la stratégie
-- 2 créatifs qui passent 20% de leur temps sur des tâches administratives
-- Aucun CRM digne de ce nom — tout est dans la boîte mail et les notes iPhone
-- La prospection se fait manuellement sur LinkedIn — 2-3 heures par semaine pour 5-10 contacts
-- Le reporting client est fait à la main dans Excel chaque mois — 4 heures par rapport
-
-**Après 3 accompagnements MechaHelp (sur 3 mois) :**
-
-**Accompagnement #1 — CRM automatisé (Make)**
-Le CRM se remplit automatiquement à partir des emails, des formulaires de contact et des appels Zoom. Plus de saisie manuelle.
-
-**Accompagnement #2 — Prospection automatisée**
-Un système identifie les prospects qualifiés sur LinkedIn, envoie des messages personnalisés et relance automatiquement. 50+ contacts par semaine au lieu de 10 — pour moins de 30 minutes de supervision.
-
-**Accompagnement #3 — Reporting client automatique (n8n)**
-Les données de chaque client sont agrégées automatiquement. Le rapport mensuel est généré et envoyé en un clic. 4 heures → 15 minutes.
-
-**Résultats mesurables :**
-- 8 heures/semaine récupérées sur les tâches administratives
-- Pipeline commercial multiplié par 5
-- Satisfaction client améliorée (réponses plus rapides, suivi plus régulier)
-
----
-
-Ce scénario est reproductible. Pas parfaitement identique pour tout le monde — mais le principe s'applique à la grande majorité des petites entreprises.
-
-👉 **[Identifier quels accompagnements correspondent à ma situation](https://mechahelp-ai.com)**
-
-**Julien Bergé**
-MechaHelp
-
----
-
-### EMAIL 3/5 — Zoom sur un outil : n8n
-**Timing :** J+24
-
-**Objet principal :** n8n : l'outil d'automatisation que 80% de nos membres utilisent (et pourquoi)
-**Objet alternatif (A/B) :** Vous avez entendu parler de n8n ? Voici ce qu'il fait vraiment
-
-**Pré-header :** L'outil le plus puissant de l'automatisation, expliqué en 5 minutes.
-
----
-
-Bonjour [Prénom],
-
-Je veux vous parler d'un outil que la majorité de nos membres découvrent lors de leurs premiers accompagnements : **n8n**.
-
-**Qu'est-ce que n8n ?**
-
-n8n (prononcé "nodemation") est une plateforme d'automatisation open source. En langage simple : c'est un chef d'orchestre qui fait communiquer vos outils entre eux et automatise des séquences de tâches.
-
-Il se connecte à plus de 400 applications : Gmail, Notion, HubSpot, Slack, Stripe, Google Sheets, Airtable, WhatsApp, LinkedIn, WordPress, Shopify... et des centaines d'autres.
-
-**Ce que vous pouvez faire avec n8n :**
-
-- Quand un formulaire est rempli → créer une fiche CRM + envoyer un email de bienvenue + notifier votre équipe sur Slack
-- Quand une commande arrive sur votre boutique → créer la facture + mettre à jour votre stock + envoyer un SMS de confirmation au client
-- Chaque lundi matin → scraper les offres de vos concurrents + générer un résumé IA + vous l'envoyer par email
-- Quand un prospect vous répond sur LinkedIn → l'ajouter dans votre CRM + déclencher une séquence d'emails personnalisée
-
-**Pourquoi nos membres préfèrent n8n à d'autres outils ?**
-
-Contrairement à Zapier (qui peut devenir très coûteux à grande échelle), n8n peut être hébergé sur votre propre serveur — ce qui signifie zéro coût d'abonnement pour un usage intensif.
-
-Et contrairement à Make, n8n offre plus de flexibilité pour les automatisations avancées impliquant de l'IA.
-
-**Faut-il savoir coder pour utiliser n8n ?**
-
-Pour 80% des cas d'usage : non. L'interface est visuelle. Nos experts vous guident pas à pas pendant la session et vous configurent le workflow en direct.
-
-👉 **[Découvrir l'accompagnement n8n sur MechaHelp](https://mechahelp-ai.com)**
-
-**Julien Bergé**
-MechaHelp
-
-*PS : Si vous préférez Make à n8n, nous avons des experts sur Make également. Et si vous n'êtes pas sûr duquel choisir, nos experts peuvent vous aider à décider.*
-
----
-
-### EMAIL 4/5 — Preuve sociale : avis communauté
-**Timing :** J+27
-
-**Objet principal :** Ce que 384 membres actifs pensent de MechaHelp (ils ne mâchent pas leurs mots)
-**Objet alternatif (A/B) :** Retours bruts de notre communauté Skool — le bon et le moins bon
-
-**Pré-header :** De vrais avis, sans filtre. Parce que vous méritez la transparence.
-
----
-
-Bonjour [Prénom],
-
-Aujourd'hui, je cède la parole à notre communauté.
-
-Notre groupe Skool rassemble 384 membres actifs — des freelances, des gérants de TPE/PME, des porteurs de projets, des auto-entrepreneurs. Des gens comme vous.
-
-Voici ce qu'ils disent de MechaHelp — les retours positifs, mais aussi les limites honnêtes :
-
----
-
-**Ce qui revient systématiquement dans les retours positifs :**
-
-*"Pour la première fois, j'ai eu quelqu'un qui s'est vraiment adapté à mon niveau et à mon cas, pas une formation générique."*
-
-*"J'avais essayé de configurer n8n seul pendant 3 semaines. En 2 heures avec Kévin, on avait mon workflow opérationnel. J'aurais dû le faire avant."*
-
-*"La communauté Skool est vraiment active. Je pose une question, j'ai une réponse en quelques heures — souvent d'un expert."*
-
-*"Le paiement en ligne via Stripe est simple et sécurisé. Réservation faite en moins de 5 minutes."*
-
----
-
-**Ce que les membres disent avec honnêteté :**
-
-*"Si vous cherchez une formation complète avec des heures de contenu vidéo, ce n'est pas ça. C'est une session de travail ciblée — il faut arriver avec une idée précise de ce qu'on veut accomplir."*
-
-*"Les tarifs varient selon les experts et les accompagnements. Il faut vérifier sur le site pour avoir le prix exact de chaque service."*
-
----
-
-**Notre réponse à ces remarques :**
-
-Elles sont justes. MechaHelp n'est pas une école en ligne. C'est un espace de travail guidé et personnalisé. Vous venez avec un problème précis, vous repartez avec une solution opérationnelle.
-
-Si vous attendez 20 heures de cours magistraux, ce n'est pas nous. Si vous voulez résoudre un problème réel sur votre activité avec l'aide d'un expert qui connaît son sujet, vous êtes au bon endroit.
-
-👉 **[Rejoindre les 384 membres et réserver ma session](https://mechahelp-ai.com)**
-
-**Julien Bergé**
-MechaHelp
-
----
-
-### EMAIL 5/5 — Offre finale Nurturing
-**Timing :** J+30
-
-**Objet principal :** Dernier email de cette série — et une question directe pour vous, [Prénom]
-**Objet alternatif (A/B) :** [Prénom], je veux comprendre ce qui vous retient
-
-**Pré-header :** Pas de pression. Juste une conversation honnête.
-
----
-
-Bonjour [Prénom],
-
-Voilà 30 jours que vous avez découvert MechaHelp. C'est le dernier email de cette série.
-
-Je ne vais pas vous relancer avec un argument de plus ou une promesse supplémentaire. Je veux juste vous poser une question directe :
-
-**Qu'est-ce qui vous retient ?**
-
-Parce qu'il y a forcément quelque chose. Sinon vous auriez déjà réservé.
-
-Est-ce que c'est :
-
-**A) Le budget ?**
-Les accompagnements sur MechaHelp ont des tarifs variables. Certains sont très accessibles. Vérifiez les prix sur le site — vous pourriez être surpris.
-
-**B) Vous ne savez pas quel accompagnement choisir ?**
-Notre communauté Skool est gratuite. Rejoignez-la, posez votre question, et nos experts (ou les autres membres) vous aideront à identifier le bon point de départ.
-
-**C) Vous n'êtes pas convaincu que ça marchera pour votre activité spécifique ?**
-C'est la réponse la plus honnête que vous puissiez avoir. Et c'est exactement pour ça que chaque session est personnalisée — pas une formation générique, mais un travail sur votre cas concret.
-
-**D) Autre chose ?**
-Répondez à cet email. Vraiment. Je lis les réponses et je réponds personnellement.
-
----
-
-Si vous n'êtes pas prêt aujourd'hui, ce n'est pas grave. L'IA sera encore là demain — et MechaHelp aussi.
-
-Mais si quelque chose dans ces 5 emails a allumé une étincelle sur ce que l'automatisation pourrait faire pour votre activité, alors maintenant est le bon moment.
-
-👉 **[Choisir mon accompagnement sur MechaHelp](https://mechahelp-ai.com)**
-
-Merci de m'avoir lu,
-
-**Julien Bergé**
-Fondateur, MechaHelp
-
-*PS : Même si vous ne réservez pas aujourd'hui, notre communauté Skool reste ouverte et gratuite. 384 membres qui parlent d'IA et d'automatisation tous les jours. C'est déjà une ressource précieuse.*
-
----
----
-
-## SÉQUENCE 3 — Abandon de candidature
-**Objectif :** Récupérer les prospects qui ont commencé une démarche (formulaire, page checkout) sans finaliser
-**Durée :** 7 jours — 3 emails
-**Déclencheur :** Début d'une candidature ou d'un processus de réservation non finalisé dans les 24h
-
----
-
-### EMAIL 1/3 — Rappel immédiat
-**Timing :** 2-4 heures après l'abandon
-
-**Objet principal :** Vous avez oublié quelque chose sur MechaHelp
-**Objet alternatif (A/B) :** Votre place avec [Nom de l'expert] est encore disponible
-
-**Pré-header :** Votre demande n'est pas finalisée. Il reste quelques étapes.
-
----
-
-Bonjour [Prénom],
-
-Nous avons remarqué que vous avez commencé votre demande d'accompagnement sur MechaHelp mais que vous n'avez pas finalisé.
-
-Il arrive que la vie s'en mêle — un appel inattendu, une réunion, un enfant qui demande quelque chose. Aucun problème.
-
-**Votre demande est toujours en attente :**
-
-- Accompagnement sélectionné : **[Nom de l'accompagnement]**
-- Expert : **[Nom de l'expert]**
-- Durée estimée : **[Durée]**
-
-Il vous suffit de reprendre là où vous vous êtes arrêté pour finaliser votre réservation.
-
-👉 **[Finaliser ma demande d'accompagnement](https://mechahelp-ai.com)**
-
-Le paiement se fait via Stripe — sécurisé, en moins d'une minute.
-
-Si vous avez eu une question ou un doute en cours de route, répondez à cet email. Je suis disponible pour vous aider à choisir.
-
-**Julien Bergé**
-MechaHelp
-
----
-
-### EMAIL 2/3 — Lever les derniers freins
-**Timing :** J+3 après l'abandon
-
-**Objet principal :** Une question sur votre demande MechaHelp — je peux vous aider
-**Objet alternatif (A/B) :** Qu'est-ce qui vous a arrêté ? (réponse honnête attendue)
-
-**Pré-header :** Votre accompagnement vous attend. Voici comment je peux vous aider à décider.
-
----
-
-Bonjour [Prénom],
-
-Il y a 3 jours, vous avez commencé une demande d'accompagnement sur MechaHelp. Vous ne l'avez pas finalisée.
-
-Je ne vais pas vous harceler — mais je veux vous donner une dernière chance de savoir ce qui vous a arrêté.
-
-**Est-ce que l'une de ces situations vous correspond ?**
-
-**"Je n'étais pas sûr que cet accompagnement corresponde à mon niveau."**
-Nos sessions sont adaptées à tous les niveaux — débutant complet à utilisateur avancé. L'expert s'ajuste à vous lors de la session.
-
-**"J'avais des questions sur le format de la session."**
-La plupart des sessions se font en visioconférence (Zoom ou équivalent). L'expert partage son écran, vous guidez, vous pratiquez. À la fin, vous avez quelque chose d'opérationnel.
-
-**"Je n'étais pas sûr du prix par rapport à ce que j'allais obtenir."**
-Les tarifs sont affichés sur le site pour chaque accompagnement. Si le budget est une préoccupation, certains accompagnements sont disponibles à des prix plus accessibles. N'hésitez pas à explorer toutes les options.
-
-**"J'avais un doute sur la légitimité de la plateforme."**
-Totalement compréhensible. MechaHelp est une marketplace française. Le paiement se fait via Stripe (la référence mondiale du paiement en ligne sécurisé). Notre communauté Skool (384 membres actifs) est publiquement accessible.
-
----
-
-Si aucune de ces situations ne correspond à votre cas, répondez à cet email en me disant ce qui vous a arrêté. Je lis tous les messages personnellement.
-
-👉 **[Reprendre ma demande d'accompagnement](https://mechahelp-ai.com)**
-
-**Julien Bergé**
-MechaHelp
-
----
-
-### EMAIL 3/3 — Dernière chance + Alternative
-**Timing :** J+7 après l'abandon
-
-**Objet principal :** Votre demande va expirer — et une alternative gratuite pour vous
-**Objet alternatif (A/B) :** Pas prêt à vous lancer ? Voici comment rester dans la boucle
-
-**Pré-header :** Finaliser ou rejoindre gratuitement — les deux options sont ouvertes.
-
----
-
-Bonjour [Prénom],
-
-C'est mon dernier message concernant votre demande d'accompagnement MechaHelp non finalisée.
-
-**Option 1 : Finaliser votre demande maintenant**
-
-Si vous êtes prêt à vous lancer, votre demande est toujours accessible. Finalisez-la en moins de 5 minutes.
-
-👉 **[Finaliser ma demande d'accompagnement](https://mechahelp-ai.com)**
-
----
-
-**Option 2 : Rejoindre notre communauté Skool gratuitement**
-
-Si vous n'êtes pas encore prêt à investir dans un accompagnement payant, c'est tout à fait normal.
-
-Notre communauté Skool est **gratuite et ouverte**. Rejoignez les 384 membres qui :
-
-- Partagent leurs expériences avec l'IA et l'automatisation
-- Posent leurs questions aux experts (qui répondent régulièrement)
-- Découvrent des ressources, des tutoriels et des cas pratiques
-- S'entraident dans leurs projets d'automatisation
-
-C'est une façon de rester connecté à l'écosystème MechaHelp, de vous former progressivement, et de décider de réserver un accompagnement quand vous vous sentez prêt.
-
-👉 **[Rejoindre la communauté Skool gratuitement](https://mechahelp-ai.com)**
-
----
-
-Quoi que vous décidiez, merci de l'intérêt que vous avez porté à MechaHelp.
-
-L'IA et l'automatisation vont continuer à transformer les activités professionnelles. Vous avez le bon réflexe d'explorer ce sujet. La question n'est que de timing.
-
-**Julien Bergé**
-Fondateur, MechaHelp
-
-*PS : Si vous avez des questions avant de décider — sur un outil, sur un accompagnement, sur notre communauté — répondez simplement à cet email. Je lis et réponds personnellement.*
-
----
----
-
-## SÉQUENCE 4 — Post-accompagnement
-**Objectif :** Collecter des avis, encourager l'upsell vers d'autres accompagnements, activer le parrainage
-**Durée :** 30 jours — 4 emails
-**Déclencheur :** Fin d'un accompagnement confirmé par l'expert
-
----
-
-### EMAIL 1/4 — Satisfaction immédiate + Avis
-**Timing :** J+1 après la fin de l'accompagnement
-
-**Objet principal :** Comment s'est passée votre session avec [Nom de l'expert] ?
-**Objet alternatif (A/B) :** [Prénom], un mot rapide sur votre accompagnement d'hier
-
-**Pré-header :** Votre retour compte. Il prend 2 minutes et aide toute la communauté.
-
----
-
-Bonjour [Prénom],
-
-Votre session d'accompagnement avec **[Nom de l'expert]** est terminée depuis hier.
-
-J'espère que ça s'est passé exactement comme vous l'espériez — et j'ai une faveur à vous demander.
-
-**Pouvez-vous nous laisser un retour en 2 minutes ?**
-
-Votre avis est précieux pour deux raisons :
-
-1. Il aide les futurs membres à faire le bon choix d'accompagnement et d'expert
-2. Il nous aide à améliorer continuellement la qualité de nos sessions
-
-👉 **[Laisser mon avis sur l'accompagnement](https://mechahelp-ai.com)**
-
-**Quelques questions auxquelles vous pouvez répondre :**
-- Est-ce que la session a répondu à vos attentes ?
-- Qu'avez-vous accompli concrètement pendant la session ?
-- Recommanderiez-vous cet expert et cet accompagnement ?
-
----
-
-Et si la session ne s'est pas passée comme prévu — si quelque chose vous a déçu ou si vous avez une question sur ce qui a été mis en place — répondez directement à cet email. Je veux le savoir et trouver une solution avec vous.
-
-**Julien Bergé**
-MechaHelp
-
----
-
-### EMAIL 2/4 — Suivi & Consolidation
-**Timing :** J+7
-
-**Objet principal :** Une semaine après votre session — est-ce que ça tourne ?
-**Objet alternatif (A/B) :** [Prénom], votre workflow fonctionne-t-il comme prévu ?
-
-**Pré-header :** Un point de situation après 7 jours. Et la suite logique si vous êtes prêt.
-
----
-
-Bonjour [Prénom],
-
-Une semaine s'est écoulée depuis votre session avec [Nom de l'expert].
-
-**Comment ça se passe ?**
-
-- Votre workflow / votre automatisation fonctionne-t-il comme prévu ?
-- Avez-vous eu des questions ou des blocages depuis la session ?
-- Est-ce que les résultats attendus commencent à se manifester ?
-
-Si vous avez le moindre doute sur ce qui a été mis en place lors de votre session, n'hésitez pas à :
-
-1. **Poser votre question dans notre communauté Skool** — 384 membres actifs + experts présents régulièrement
-2. **Répondre directement à cet email** — on vous orientera vers la meilleure solution
-
----
-
-**Et si ça fonctionne bien...**
-
-Vous avez résolu un problème. C'est excellent.
-
-Mais il y a de fortes chances que ce problème résolu en ait révélé un autre. C'est souvent le cas avec l'automatisation : une fois qu'on automatise une tâche, on voit toutes les autres qui pourraient l'être aussi.
-
-Si vous êtes dans ce cas, voici quelques accompagnements complémentaires fréquemment pris après une première session :
-
-- Si vous avez fait **n8n** → Vous pourriez bénéficier d'un accompagnement **Agents IA** pour aller encore plus loin dans l'automatisation intelligente
-- Si vous avez fait **automatisation prospection** → Un accompagnement **CRM automatisé** viendrait compléter le système
-- Si vous avez fait **chatbot** → Un accompagnement **Make / n8n** pour connecter votre chatbot à vos autres outils
-
-👉 **[Voir tous les accompagnements disponibles](https://mechahelp-ai.com)**
-
-**Julien Bergé**
-MechaHelp
-
----
-
-### EMAIL 3/4 — Upsell ciblé
-**Timing :** J+14
-
-**Objet principal :** L'étape suivante naturelle après votre accompagnement [Type d'accompagnement]
-**Objet alternatif (A/B) :** [Prénom], voici comment aller encore plus loin dans l'automatisation
-
-**Pré-header :** Ce que nos membres font en deuxième — et pourquoi ça change tout.
-
----
-
-Bonjour [Prénom],
-
-Il y a deux semaines, vous avez terminé votre accompagnement **[Type d'accompagnement]** avec **[Nom de l'expert]**.
-
-J'espère que les résultats sont là et que vous constatez déjà des gains en temps ou en efficacité.
-
-Aujourd'hui, je veux vous parler de la suite.
-
-**Pourquoi les membres les plus avancés de MechaHelp ne s'arrêtent pas à un seul accompagnement :**
-
-L'automatisation fonctionne par couches. Chaque couche que vous ajoutez multiplie les bénéfices de la précédente.
-
-**Exemple concret :**
-
-1. Vous avez automatisé votre prospection (couche 1) → vous avez plus de leads entrants
-2. Vous automatisez votre CRM pour qualifier et suivre ces leads (couche 2) → vous ne perdez plus aucun prospect
-3. Vous créez un agent IA qui répond aux questions fréquentes de vos prospects (couche 3) → vous convertissez plus sans effort supplémentaire
-4. Vous automatisez votre reporting pour mesurer tout ça (couche 4) → vous optimisez en continu
-
-Chaque couche s'appuie sur la précédente. Et chaque couche débloque des résultats exponentiellement plus importants.
-
-**Quelle est la prochaine couche pour vous ?**
-
-Basé sur votre accompagnement **[Type d'accompagnement]**, l'étape suivante la plus impactante pour votre activité serait probablement :
-
-→ **[Accompagnement recommandé basé sur le type]**
-
-👉 **[Découvrir cet accompagnement et réserver](https://mechahelp-ai.com)**
-
-**Julien Bergé**
-MechaHelp
-
-*PS : Nos membres qui ont fait 2+ accompagnements rapportent des gains significativement plus importants que ceux qui s'en tiennent à un seul. La combinaison fait la différence.*
-
----
-
-### EMAIL 4/4 — Programme de parrainage
-**Timing :** J+30
-
-**Objet principal :** Vous avez aidé votre activité avec MechaHelp — et si vous aidiez un ami ?
-**Objet alternatif (A/B) :** [Prénom], parrainez un entrepreneur et soyez récompensé
-
-**Pré-header :** Notre programme de parrainage — simple, honnête, mutuellement bénéfique.
-
----
-
-Bonjour [Prénom],
-
-Il y a un mois, vous avez terminé votre accompagnement chez MechaHelp.
-
-Si les résultats sont là — si vous avez gagné du temps, automatisé des tâches, ou découvert de nouvelles possibilités — alors vous avez sûrement parlé de MechaHelp à quelqu'un dans votre entourage professionnel.
-
-Je veux vous proposer de formaliser ça.
-
-**Le programme de parrainage MechaHelp :**
-
-Si vous parrainez un entrepreneur, freelance ou TPE/PME qui réserve son premier accompagnement sur MechaHelp, vous bénéficiez tous les deux d'avantages exclusifs.
-
-**Pour vous (le parrain) :** Un avoir sur votre prochain accompagnement
-**Pour votre filleul :** Une réduction sur son premier accompagnement
-
-Simple. Transparent. Mutuellement bénéfique.
-
-**Comment ça fonctionne :**
-
-1. Partagez le lien de parrainage ci-dessous avec un entrepreneur de votre réseau
-2. Ils s'inscrivent et réservent un accompagnement
-3. Vous recevez votre récompense automatiquement
-
-👉 **[Obtenir mon lien de parrainage et parrainer maintenant](https://mechahelp-ai.com)**
-
----
-
-**Qui parrainer ?**
-
-Pensez aux entrepreneurs, freelances ou responsables de TPE/PME de votre réseau qui :
-- Passent trop de temps sur des tâches répétitives
-- Ont entendu parler de l'IA mais ne savent pas par où commencer
-- Veulent développer leur activité sans embaucher
-
-Ce sont exactement les personnes pour qui MechaHelp a été conçu.
-
-Merci de votre confiance,
-
-**Julien Bergé**
-Fondateur, MechaHelp
-
-*PS : Si vous avez envie de nous laisser un témoignage plus détaillé sur votre expérience (utilisé sur notre site et nos réseaux sociaux), répondez à cet email. Nous serions ravis de partager votre histoire.*
-
----
----
-
-## SÉQUENCE 5 — Réactivation
-**Objectif :** Reconnecter avec les membres inactifs depuis 30+ jours et les ramener vers la plateforme
-**Durée :** 14 jours — 3 emails
-**Déclencheur :** Aucune connexion, visite ou interaction depuis 30+ jours
-
----
-
-### EMAIL 1/3 — Reconnexion douce
-**Timing :** J+0 (déclenchement après 30 jours d'inactivité)
-
-**Objet principal :** Vous nous avez manqué, [Prénom] — voici ce qui s'est passé chez MechaHelp
-**Objet alternatif (A/B) :** On ne s'est pas parlé depuis un moment... Voici du nouveau
-
-**Pré-header :** Nouveaux experts, nouveaux accompagnements, nouvelle énergie dans la communauté.
-
----
-
-Bonjour [Prénom],
-
-Ça fait un moment qu'on ne s'est pas parlé.
-
-Je voulais prendre deux minutes pour vous donner des nouvelles de MechaHelp — parce que les choses bougent vite et je ne voudrais pas que vous passiez à côté.
-
-**Ce qui a changé depuis votre dernière visite :**
-
-**Nouveaux accompagnements disponibles :**
-Notre catalogue s'est enrichi. De nouveaux experts ont rejoint la plateforme avec des spécialités qui couvrent des besoins que nous n'adressons pas encore entièrement — notamment sur les agents IA multi-tâches, la création de contenu automatisée, et les intégrations CRM avancées.
-
-**La communauté Skool dépasse maintenant les 380 membres actifs :**
-Les discussions sont vivantes, les partages de cas concrets se multiplient, et les experts sont de plus en plus présents pour répondre aux questions en direct.
-
-**De nouvelles ressources gratuites :**
-Sur notre chaîne YouTube et nos TikToks, nos experts partagent régulièrement des tutoriels, des démonstrations et des cas pratiques — tout ça gratuitement, avant même de réserver un accompagnement.
-
----
-
-**Ce qui n'a pas changé :**
-
-Notre engagement à vous proposer des accompagnements personnalisés, adaptés à votre niveau et votre cas d'usage, avec des experts qui pratiquent ce qu'ils enseignent.
-
-Ça, c'est le coeur de MechaHelp — et ça ne changera pas.
-
-👉 **[Revenir sur MechaHelp et explorer les nouveautés](https://mechahelp-ai.com)**
+Répondez directement à cet email — je lis chaque réponse personnellement et je vous oriente vers le bon accompagnement.
 
 À bientôt,
-
 **Julien Bergé**
-MechaHelp
+Fondateur, MechaHelp
+mechahelp-ai.com
+
+---
+**[BOUTON CTA]** Voir les 24 accompagnements disponibles →
+
+*P.S. : Conseil rapide pour bien démarrer — commencez par parcourir nos accompagnements classés par "cas d'usage". Vous trouverez en 2 minutes ce qui correspond à votre situation.*
 
 ---
 
-### EMAIL 2/3 — Valeur + Urgence douce
-**Timing :** J+7
+### EMAIL 2/5 — La valeur immédiate (J+2)
 
-**Objet principal :** [Prénom], pendant que vous étiez absent — vos concurrents, eux, avançaient
-**Objet alternatif (A/B) :** L'IA en 2026 : ce que vous avez peut-être raté en 30 jours
+**Timing :** J+2
 
-**Pré-header :** L'IA évolue vite. Voici ce que vous devez savoir pour ne pas vous laisser distancer.
+**Objet principal :** 3 automatisations que vous pouvez mettre en place cette semaine
+**Objet A/B :** [Prénom], voici comment économiser 5h par semaine avec l'IA
+**Pré-header :** Concret, rapide, sans code — lisez ça en 3 minutes.
 
 ---
 
 Bonjour [Prénom],
 
-Je vais vous dire quelque chose d'un peu direct.
+Il y a 2 jours, vous avez rejoint MechaHelp. J'espère que vous avez eu le temps d'explorer la plateforme.
 
-L'IA et l'automatisation évoluent à une vitesse que la plupart des gens sous-estiment. Ce qui était "avancé" il y a 6 mois est maintenant la norme. Ce qui est "avancé" aujourd'hui sera la norme dans 6 mois.
+Aujourd'hui, je vous partage quelque chose de concret : **3 automatisations que la plupart de nos membres mettent en place dès la première semaine.**
 
-Ce n'est pas une prophétie de malheur. C'est juste la réalité du terrain que nous observons tous les jours chez MechaHelp.
-
-**Ce que cela signifie concrètement pour vous :**
-
-Les entrepreneurs qui ont commencé à automatiser leur prospection il y a 6 mois ont maintenant un pipeline rempli automatiquement pendant que leurs concurrents prospectent encore manuellement.
-
-Ceux qui ont créé des agents IA il y a 6 mois répondent à leurs clients 24h/24 pendant que les autres perdent des leads la nuit et le week-end.
-
-Ceux qui ont automatisé leur reporting passent 15 minutes là où leurs concurrents passent encore 4 heures.
-
-L'avantage concurrentiel de l'IA et de l'automatisation se mesure en semaines et en mois — pas en années.
-
-**La bonne nouvelle :**
-
-Il n'est jamais trop tard pour commencer. Mais commencer demain est toujours mieux que commencer dans un mois.
-
-👉 **[Reprendre là où j'en étais sur MechaHelp](https://mechahelp-ai.com)**
-
-**Julien Bergé**
-MechaHelp
-
-*PS : Si vous avez des contraintes spécifiques (budget, temps, niveau technique) qui vous ont empêché d'avancer, répondez à cet email. On trouvera le bon point de départ pour votre situation.*
+Pas de théorie. Juste des cas réels.
 
 ---
 
-### EMAIL 3/3 — Dernière tentative + Porte de sortie
+**Automatisation #1 — Le répondeur email intelligent**
+
+Chaque fois qu'un prospect remplit votre formulaire de contact, il reçoit dans les 60 secondes un email personnalisé avec des informations sur votre service, un lien de prise de rendez-vous et une ressource gratuite. Sans que vous interveniez.
+
+*Temps de mise en place avec un expert MechaHelp : 60 minutes. Outil : n8n ou Make.*
+
+---
+
+**Automatisation #2 — La prospection LinkedIn en pilote automatique**
+
+Identifiez vos cibles, personnalisez vos messages à partir de données publiques LinkedIn, envoyez et relancez automatiquement. 15 à 30 nouveaux contacts qualifiés par semaine, sans copier-coller.
+
+*Temps de mise en place avec un expert : 2h. Outils : Clay + n8n + LinkedIn.*
+
+---
+
+**Automatisation #3 — Le pipeline CRM auto-alimenté**
+
+Chaque nouveau contact (site, LinkedIn, formulaire) entre automatiquement dans votre CRM avec son statut, sa source et une tâche de suivi assignée. Plus jamais de lead qui tombe dans l'oubli.
+
+*Temps de mise en place avec un expert : 90 minutes. Outils : Airtable ou Notion + n8n.*
+
+---
+
+Ces trois automatisations font gagner en moyenne **7 à 12 heures par semaine** à nos membres.
+
+La question n'est pas "est-ce que ça vaut le coup ?"
+La question est : "par laquelle je commence ?"
+
+**[BOUTON CTA]** Choisir mon premier accompagnement →
+
+À très vite,
+**Julien**
+
+*P.S. : Toutes les sessions sont enregistrées. Vous repartez avec la vidéo complète, les fichiers de configuration et l'accès à la communauté pour les questions de suivi.*
+
+---
+
+### EMAIL 3/5 — La preuve sociale (J+5)
+
+**Timing :** J+5
+
+**Objet principal :** Comment Thomas a automatisé 80% de sa prospection en 2 heures
+**Objet A/B :** Résultat concret : de 3h/jour à 20 min de prospection manuelle
+**Pré-header :** Un freelance, 2 heures avec un expert, un système qui tourne seul.
+
+---
+
+Bonjour [Prénom],
+
+Je vais vous parler de Thomas.
+
+Thomas est consultant en stratégie digitale, indépendant depuis 3 ans. Il passait **3 heures par jour** à prospecter manuellement sur LinkedIn — identifier des profils, copier-coller des messages "personnalisés", relancer à la main.
+
+Il n'avait plus de temps pour le cœur de son métier.
+
+En janvier, Thomas a réservé un accompagnement MechaHelp "Prospection automatisée" avec Kévin. Durée : 2 heures.
+
+**Voici ce qu'ils ont construit ensemble :**
+- Un scraper LinkedIn qui extrait 50 profils qualifiés par jour selon ses critères
+- Un enrichisseur de données qui récupère email professionnel, poste et secteur
+- Des séquences de messages en 3 étapes, personnalisées automatiquement selon le profil
+- Un tableau de bord Notion qui consolide tout
+
+**Résultat 30 jours plus tard :**
+- Temps de prospection manuelle : 3h → 20 minutes/jour
+- Taux de réponse : +40% (les messages automatiques sont mieux ciblés que les anciens manuels)
+- 6 nouveaux clients signés en un mois
+
+Thomas a payé 400€ pour cet accompagnement.
+Il a calculé : si un seul de ces 6 clients lui rapporte 2 000€, le ROI est de 500%.
+
+**[BOUTON CTA]** Réserver l'accompagnement Prospection IA →
+
+À bientôt,
+**Julien**
+
+*P.S. : Vous avez un cas d'usage différent de la prospection ? Parcourez nos 24 accompagnements — il y en a forcément un taillé pour votre situation.*
+
+---
+
+### EMAIL 4/5 — L'objection principale (J+9)
+
+**Timing :** J+9
+
+**Objet principal :** "Je ne suis pas technique" — on entend ça souvent. Voici la vérité.
+**Objet A/B :** Pas besoin de coder pour automatiser. Voici pourquoi.
+**Pré-header :** L'objection n°1 que nos membres avaient avant leur première session.
+
+---
+
+Bonjour [Prénom],
+
+Je veux parler d'une chose que j'entends presque tous les jours :
+
+*"Je suis intéressé par MechaHelp, mais je ne suis pas du tout technique. Est-ce que c'est vraiment pour moi ?"*
+
+Réponse courte : oui.
+
+Réponse longue : voici comment nos sessions fonctionnent réellement.
+
+---
+
+**Nos experts ne vous apprennent pas à coder.**
+
+Ils configurent AVEC vous, en partage d'écran, les outils dont vous avez besoin. Vous voyez exactement ce qui se passe, vous posez vos questions en temps réel, et à la fin de la session — votre automatisme tourne. Pour de vrai.
+
+Pas besoin de comprendre le JavaScript ou l'API. Vous avez besoin de comprendre votre business — c'est vous l'expert là-dessus.
+
+---
+
+**Nos membres les plus satisfaits ne sont pas des développeurs.**
+
+Ce sont des :
+- Consultants qui voulaient gagner du temps sur la prospection
+- E-commerçants qui voulaient automatiser leur SAV
+- Coachs qui voulaient créer du contenu IA en masse
+- Gérants de PME qui voulaient un CRM qui se remplit seul
+
+Aucun d'eux ne savait coder. Tous sont repartis avec un système opérationnel.
+
+---
+
+**Notre garantie est simple :**
+
+Si à la fin de votre session, le livrable ne fonctionne pas comme promis, vous êtes remboursé intégralement. Sans question posée.
+
+On n'a pas eu à rembourser souvent.
+
+**[BOUTON CTA]** Choisir mon accompagnement — même si je ne suis pas technique →
+
+Bonne semaine,
+**Julien**
+
+---
+
+### EMAIL 5/5 — L'urgence douce (J+14)
+
 **Timing :** J+14
 
-**Objet principal :** Mon dernier message — et une question sincère
-**Objet alternatif (A/B) :** [Prénom], dois-je vous retirer de notre liste ?
-
-**Pré-header :** Pas de pression. Juste de la clarté sur la suite.
+**Objet principal :** [Prénom], c'était il y a 2 semaines. Qu'est-ce qui a changé ?
+**Objet A/B :** Bilan honnête : êtes-vous plus avancé qu'il y a 14 jours ?
+**Pré-header :** Un dernier message avant que je vous laisse tranquille.
 
 ---
 
 Bonjour [Prénom],
 
-C'est mon dernier message de réactivation.
+Il y a deux semaines, vous avez rejoint MechaHelp.
 
-Je ne veux pas vous envoyer des emails dont vous ne voulez pas. Et je ne veux pas vous perdre si l'IA et l'automatisation sont encore dans votre radar.
+J'ai une question directe : **qu'est-ce qui a changé dans votre business depuis ?**
 
-Alors laissez-moi vous proposer trois options claires :
+Si la réponse est "pas grand-chose" — ce n'est pas un reproche. C'est souvent ce qu'on observe. L'information seule ne change rien. L'action, si.
 
----
-
-**Option A : Vous êtes prêt à revenir sur MechaHelp**
-
-Parfait. Choisissez un accompagnement, réservez, et reprenons là où nous en étions.
-
-👉 **[Retourner sur MechaHelp](https://mechahelp-ai.com)**
+Voici ce que je vous propose pour la suite :
 
 ---
 
-**Option B : Vous n'êtes pas encore prêt, mais vous voulez rester informé**
+**Option 1 — Vous n'avez pas encore trouvé le bon accompagnement**
 
-Cliquez ici pour rester sur notre liste avec des emails moins fréquents — une newsletter mensuelle avec les actualités IA et automatisation, des ressources gratuites et les nouveautés MechaHelp.
+Répondez à cet email avec votre situation en 3 lignes. Je vous réponds personnellement et vous oriente vers la session la plus adaptée. Gratuit, sans engagement.
 
-👉 **[Recevoir uniquement la newsletter mensuelle](https://mechahelp-ai.com)**
+**Option 2 — Vous savez ce que vous voulez faire mais vous repoussez**
 
----
+Réservez maintenant. Choisissez un créneau cette semaine. L'expert fera le reste. L'investissement minimum est de 50€ — le coût d'une heure passée à ne rien automatiser est bien supérieur.
 
-**Option C : Vous préférez vous désabonner complètement**
+**Option 3 — Ce n'est pas le bon moment**
 
-Aucun problème. Cliquez sur le lien de désinscription ci-dessous. Vous pouvez toujours revenir plus tard en vous réinscrivant sur mechahelp-ai.com.
+Pas de problème. Je continuerai à vous envoyer des ressources gratuites et des cas concrets par email — sans vous harceler.
 
-👉 **[Se désabonner de toutes les communications](lien de désinscription)**
+Quel que soit votre choix, je suis là si vous avez des questions.
 
----
+**[BOUTON CTA]** Voir les créneaux disponibles cette semaine →
 
-Quelle que soit votre décision, merci d'avoir accordé de l'attention à MechaHelp. L'IA et l'automatisation vont continuer à faire partie de votre quotidien professionnel — et si vous changez d'avis, vous savez où nous trouver.
-
+À bientôt,
 **Julien Bergé**
 Fondateur, MechaHelp
 
----
----
-
-## SÉQUENCE 6 — Lancement de nouveau service / Événement
-**Objectif :** Annoncer un nouveau service ou un événement communautaire et générer des réservations rapides
-**Durée :** 7 jours — 5 emails
-**Déclencheur :** Manuel — déclenché lors du lancement d'un nouveau service ou d'un événement
+*P.S. : Le prochain email que vous recevrez sera une ressource gratuite, sans appel à l'action commercial. Promis.*
 
 ---
 
-### EMAIL 1/5 — Teaser (J-7)
-**Timing :** 7 jours avant le lancement
+## SÉQUENCE 2 — RELANCE POST-VISITE (3 emails sur 5 jours)
 
-**Objet principal :** Quelque chose arrive chez MechaHelp — et vous allez l'aimer
-**Objet alternatif (A/B) :** [Prénom], on prépare quelque chose. Voici un indice.
+**Objectif :** Convertir un visiteur qui a consulté une page service sans acheter
+**Déclencheur :** Visite d'une page service + absence d'achat dans les 24h
+**Condition :** L'utilisateur est connu (cookie + email capturé)
 
-**Pré-header :** Une annonce importante arrive. Soyez les premiers à le savoir.
+---
+
+### EMAIL 1/3 — Relance douce (J+1)
+
+**Timing :** 24h après la visite non convertie
+
+**Objet principal :** Vous avez failli — on était si proches 😄
+**Objet A/B :** [Prénom], vous avez regardé [nom du service]. Une question ?
+**Pré-header :** Si quelque chose vous a retenu, je veux le savoir.
 
 ---
 
 Bonjour [Prénom],
 
-Je ne peux pas encore tout vous dire.
+Hier, vous avez consulté la page **[NOM DU SERVICE]** sur MechaHelp.
 
-Mais dans exactement 7 jours, nous allons lancer quelque chose que notre communauté attendait depuis un moment.
+Vous n'avez pas réservé — et c'est OK. Il y a souvent une bonne raison.
 
-**Ce que je peux vous dire :**
+Peut-être que :
+- Le prix vous a semblé élevé par rapport à ce que vous en attendez
+- Vous n'étiez pas sûr que ce service correspondait à votre situation
+- Vous vouliez en parler à quelqu'un avant de décider
+- Vous avez juste été interrompu et vous avez oublié de revenir
 
-- Ça concerne **[domaine général : ex. les agents IA / la création de contenu automatisée / la prospection avancée]**
-- Ça va être disponible en **quantité limitée** (nous voulons maintenir la qualité de l'accompagnement)
-- Les membres de notre liste auront **accès en priorité** — avant que ça soit annoncé publiquement
+**Si c'est une question technique ou une incertitude sur le contenu de la session**, je vous réponds en moins d'une heure. Répondez simplement à cet email.
 
-**Ce que vous pouvez faire maintenant :**
+**Si vous voulez voir le programme détaillé et les résultats attendus** avant de vous décider :
 
-Rien — sinon surveiller votre boîte mail dans les prochains jours.
+**[BOUTON CTA]** Voir le détail de [NOM DU SERVICE] →
 
-L'annonce officielle arrive dans 7 jours. Si vous êtes dans notre communauté Skool, vous aurez peut-être des indices avant.
+Bonne journée,
+**Julien**
 
-👉 **[Rejoindre la communauté Skool pour les avant-premières](https://mechahelp-ai.com)**
+---
+
+### EMAIL 2/3 — Argument ROI (J+3)
+
+**Timing :** J+3 après la visite
+
+**Objet principal :** Combien vous coûte réellement l'absence d'automatisation ?
+**Objet A/B :** Calcul rapide : le ROI d'une session MechaHelp à [prix]€
+**Pré-header :** Un calcul que nos membres regrettent de ne pas avoir fait avant.
+
+---
+
+Bonjour [Prénom],
+
+Voici un calcul rapide.
+
+**Si vous facturez 50€/h :**
+Une tâche manuelle qui prend 3h/semaine = 150€/semaine de temps perdu.
+Sur un an : 7 500€ de temps non facturé.
+
+**Une session MechaHelp pour l'automatiser : 150€ à 400€.**
+
+Le ROI est de plusieurs milliers de pourcents. En quelques semaines.
+
+Je ne vous dis pas ça pour vous culpabiliser. Je vous dis ça parce que c'est la réalité que voient nos membres après leur première session : ils réalisent qu'ils auraient dû agir plus tôt.
+
+---
+
+**Ce qui est inclus dans chaque session :**
+
+- Configuration en direct de votre automatisme (pas une démo, une vraie mise en place)
+- Enregistrement vidéo complet à conserver
+- Accès à la communauté Skool pour les questions de suivi
+- Garantie satisfaction — remboursement si non satisfait
+
+**[BOUTON CTA]** Réserver ma session [NOM DU SERVICE] à [PRIX]€ →
+
+*P.S. : Les créneaux de cette semaine sont limités. Si vous voulez un horaire précis, c'est maintenant qu'il faut réserver.*
+
+---
+
+### EMAIL 3/3 — Dernière chance + objection finale (J+5)
+
+**Timing :** J+5 — dernier email de la séquence
+
+**Objet principal :** Dernier message au sujet de [NOM DU SERVICE]
+**Objet A/B :** Je ferme ce dossier — sauf si vous voulez qu'on en parle
+**Pré-header :** Une offre, une question, et je vous laisse tranquille.
+
+---
+
+Bonjour [Prénom],
+
+C'est mon dernier email au sujet de **[NOM DU SERVICE]**.
+
+Je voulais juste vérifier une chose : est-ce que vous avez une objection spécifique à laquelle je pourrais répondre ?
+
+Par exemple :
+- "Je ne suis pas sûr que ce soit adapté à mon secteur" → Je peux vous dire si oui ou non on a des cas similaires.
+- "Le prix me semble élevé pour moi" → Je peux vous expliquer ce que vous obtenez concrètement et vous aider à estimer le ROI.
+- "Je veux d'abord essayer quelque chose de moins engageant" → Il existe peut-être un accompagnement d'entrée à 50€ qui vous convient mieux pour commencer.
+
+Répondez à cet email avec votre situation. Je vous réponds ce jour.
+
+Sinon, je vous souhaite une excellente continuation — et si jamais l'envie revient dans quelques semaines, je serai là.
+
+**[BOUTON CTA]** Réserver maintenant →
+
+**[LIEN TEXTE]** Ou me répondre avec mes questions →
+
+Bonne route,
+**Julien**
+
+---
+
+## SÉQUENCE 3 — POST-ACCOMPAGNEMENT (3 emails sur 10 jours)
+
+**Objectif :** Fidéliser, obtenir un avis, générer un upsell et des recommandations
+**Déclencheur :** Session terminée (statut "complétée" dans le système)
+
+---
+
+### EMAIL 1/3 — Suivi immédiat (J+1)
+
+**Timing :** 24h après la fin de la session
+
+**Objet principal :** Comment s'est passée votre session [NOM DU SERVICE] ?
+**Objet A/B :** [Prénom], votre enregistrement est disponible + une question
+**Pré-header :** Votre avis compte — et votre enregistrement aussi.
+
+---
+
+Bonjour [Prénom],
+
+Hier, vous avez terminé votre session **[NOM DU SERVICE]** avec **[PRÉNOM EXPERT]**.
+
+J'espère que ça s'est bien passé et que vous avez eu les réponses que vous cherchiez.
+
+**Votre enregistrement est disponible ici :** [LIEN]
+*Il restera accessible à vie dans votre espace membre.*
+
+---
+
+Une faveur ? Répondez à cet email avec **une note de 1 à 10** et une phrase sur ce qui vous a le plus aidé.
+
+Vos retours nous permettent d'améliorer les sessions — et ils permettent surtout aux autres membres de choisir le bon accompagnement en connaissance de cause.
+
+---
+
+**Et maintenant, quelle est la suite ?**
+
+Voici 3 accompagnements que nos membres choisissent souvent après **[NOM DU SERVICE]** :
+
+1. **[Service complémentaire 1]** — pour aller plus loin dans [domaine]
+2. **[Service complémentaire 2]** — pour automatiser [étape suivante]
+3. **[Service complémentaire 3]** — pour intégrer ce que vous venez d'apprendre dans un flux plus large
+
+**[BOUTON CTA]** Voir les prochaines étapes recommandées →
 
 À très bientôt,
-
-**Julien Bergé**
-MechaHelp
-
-*PS : Si vous avez une question ou une attente particulière sur ce qui pourrait vous aider dans votre activité en ce moment, répondez à cet email. Votre retour influence directement ce que nous développons.*
+**Julien**
 
 ---
 
-### EMAIL 2/5 — Révélation (J-3)
-**Timing :** 3 jours avant le lancement
+### EMAIL 2/3 — Résultats à 7 jours (J+7)
 
-**Objet principal :** Voici ce qu'on lance dans 3 jours chez MechaHelp
-**Objet alternatif (A/B) :** [Révélation] Le nouvel accompagnement / événement MechaHelp
+**Timing :** J+7 après la session
 
-**Pré-header :** L'annonce que vous attendiez. Tous les détails sont ici.
+**Objet principal :** [Prénom], une semaine après votre session — où en êtes-vous ?
+**Objet A/B :** Est-ce que votre automatisme tourne toujours ?
+**Pré-header :** Un point rapide — et une ressource pour aller plus loin.
 
 ---
 
 Bonjour [Prénom],
 
-Il y a 4 jours, je vous ai dit que quelque chose arrivait.
+Il y a une semaine, vous avez terminé votre session avec **[PRÉNOM EXPERT]**.
 
-Aujourd'hui, je peux tout vous révéler.
+Je voulais juste prendre des nouvelles.
 
----
+**Est-ce que votre [automatisme / chatbot / système] tourne comme prévu ?**
 
-**[NOM DU SERVICE / DE L'ÉVÉNEMENT]**
+Si oui — super ! La prochaine étape logique est souvent de [action suivante]. Si vous voulez explorer ça, j'ai quelque chose pour vous ci-dessous.
 
-*[Description courte et percutante — 1 à 2 phrases]*
+Si non — il se passe parfois des problèmes de configuration après quelques jours. C'est normal. Notre communauté Skool est là pour ça, et si c'est un bug important, votre expert peut faire une mini-session de 30 minutes de suivi gratuitement.
 
-**Ce que c'est :**
-[Description détaillée du nouveau service ou de l'événement : format, durée, ce que le participant en retire, qui anime, etc.]
-
-**Pourquoi maintenant :**
-[Contexte : pourquoi ce service est lancé maintenant, quelle demande il répond, pourquoi c'est le bon moment pour les membres]
-
-**Ce qui rend ça unique :**
-[USP du service / de l'événement : ce qui le différencie de ce qui existe déjà sur le marché ou dans notre catalogue]
-
-**Les détails pratiques :**
-- Date / période : [Date]
-- Format : [En ligne / présentiel / session individuelle / groupe]
-- Durée : [Durée]
-- Places disponibles : [Nombre] (limité volontairement pour maintenir la qualité)
-- Tarif : [Prix]
-- Paiement : Stripe — sécurisé, en moins d'une minute
+**[BOUTON CTA]** Rejoindre la communauté Skool pour poser vos questions →
 
 ---
 
-**Pourquoi les places sont limitées :**
+**Pour aller plus loin :**
 
-Chez MechaHelp, la qualité de l'accompagnement est notre priorité absolue. Nous ne voulons pas ouvrir à 200 personnes simultanément et diluer l'attention de nos experts. Le nombre de places est volontairement restreint pour que chaque participant reçoive la valeur qu'il mérite.
+Nos membres qui ont suivi **[NOM DU SERVICE]** passent souvent à l'étape suivante : **[NOM DU SERVICE SUIVANT]**.
 
-**Les inscriptions ouvrent dans 3 jours.**
+En moyenne, ils gagnent [X heures] supplémentaires par semaine après cette deuxième session.
 
-Mais les membres de notre liste ont accès à la liste d'attente prioritaire dès maintenant.
+**[BOUTON CTA secondaire]** Découvrir [NOM DU SERVICE SUIVANT] →
 
-👉 **[M'inscrire sur la liste d'attente prioritaire](https://mechahelp-ai.com)**
-
-À dans 3 jours pour l'ouverture officielle,
-
-**Julien Bergé**
-MechaHelp
+Bonne semaine,
+**Julien**
 
 ---
 
-### EMAIL 3/5 — Ouverture officielle (J-0)
-**Timing :** Jour du lancement (matin)
+### EMAIL 3/3 — Demande de recommandation (J+10)
 
-**Objet principal :** C'est ouvert ! [Nom du service] — réservez votre place maintenant
-**Objet alternatif (A/B) :** [Prénom], les inscriptions sont ouvertes (places limitées)
+**Timing :** J+10
 
-**Pré-header :** Les réservations sont ouvertes. Voici le lien direct pour sécuriser votre place.
+**Objet principal :** [Prénom], connaissez-vous quelqu'un qui gagnerait à automatiser ?
+**Objet A/B :** Un ami entrepreneur qui perdrait 5h/semaine en moins ?
+**Pré-header :** Un programme de recommandation simple — et généreux.
 
 ---
 
 Bonjour [Prénom],
 
-C'est le jour J.
+J'ai une faveur à vous demander.
 
-**[NOM DU SERVICE / DE L'ÉVÉNEMENT] est maintenant disponible sur MechaHelp.**
+Si votre session MechaHelp vous a apporté de la valeur — et j'espère que c'est le cas — est-ce que vous connaissez un autre entrepreneur, freelance ou dirigeant de PME qui gagnerait à faire la même chose ?
 
-Les inscriptions sont officiellement ouvertes.
+**Notre programme de recommandation :**
 
----
+- Vous partagez votre lien unique : [LIEN PARRAINAGE]
+- Votre contact s'inscrit et réserve sa première session
+- Vous recevez **50€ de crédit MechaHelp** que vous pouvez utiliser sur n'importe quelle session future
 
-**Rappel de ce que vous obtenez :**
+Pas de formulaire compliqué. Pas de conditions cachées.
 
-[Résumé en 3 bullet points des bénéfices principaux]
+Vous avez juste à transférer cet email ou partager le lien.
 
-- [Bénéfice 1]
-- [Bénéfice 2]
-- [Bénéfice 3]
+**[BOUTON CTA]** Obtenir mon lien de parrainage →
 
-**Pour qui c'est fait :**
+Merci d'avance,
+**Julien**
 
-[Description précise de la cible idéale — qui tirera le maximum de valeur de ce service]
-
-**Ce dont vous avez besoin pour commencer :**
-
-[Prérequis éventuels — niveau, outils, etc. Ou confirmation qu'il n'y en a pas]
+*P.S. : Vous pouvez parrainer autant de personnes que vous voulez. Les crédits s'accumulent.*
 
 ---
 
-**Places disponibles : [X] sur [Y] déjà réservées**
+## SÉQUENCE 4 — RÉACTIVATION (3 emails sur 7 jours)
 
-*(Ce chiffre est mis à jour en temps réel. Dépêchez-vous si vous êtes intéressé.)*
-
----
-
-👉 **[Réserver ma place pour [Nom du service]](https://mechahelp-ai.com)**
-
-Paiement sécurisé via Stripe. Confirmation immédiate par email.
-
-Si vous avez des questions avant de réserver, répondez à cet email ou posez-les directement dans notre communauté Skool.
-
-**Julien Bergé**
-MechaHelp
-
-*PS : Si vous avez été sur la liste d'attente prioritaire, vos informations ont été enregistrées. Mais la réservation doit être finalisée via le lien ci-dessus pour que votre place soit confirmée.*
+**Objectif :** Récupérer des membres inactifs depuis 45 jours ou plus
+**Déclencheur :** Dernière connexion ou dernier achat > 45 jours
+**Note :** Ton plus personnel, plus direct — ils nous connaissent déjà
 
 ---
 
-### EMAIL 4/5 — Relance mi-lancement (J+3)
-**Timing :** 3 jours après l'ouverture des inscriptions
+### EMAIL 1/3 — Réactivation douce (J+0)
 
-**Objet principal :** [X] places restantes pour [Nom du service] — quelques questions fréquentes
-**Objet alternatif (A/B) :** Vous hésitez encore ? Voici les réponses aux questions les plus posées
+**Timing :** Dès le déclenchement de la séquence
 
-**Pré-header :** Les places partent vite. Voici tout ce que vous devez savoir pour décider.
+**Objet principal :** [Prénom], on ne vous a pas vu depuis un moment
+**Objet A/B :** Tout va bien de votre côté ?
+**Pré-header :** Un message court — et une nouveauté qui pourrait vous intéresser.
 
 ---
 
 Bonjour [Prénom],
 
-Depuis l'ouverture des inscriptions il y a 3 jours, nous avons reçu beaucoup de questions.
+On ne s'est pas croisés depuis un moment sur MechaHelp.
 
-Je veux y répondre ici, pour que vous puissiez prendre votre décision en toute clarté.
+Pas de reproche — la vie d'entrepreneur, c'est pas de tout repos. Mais je voulais juste prendre des nouvelles et vous signaler que **quelques choses ont changé depuis votre dernière visite :**
 
----
+- **[Nouveauté 1]** — Nouveau service disponible : [NOM]
+- **[Nouveauté 2]** — 3 nouveaux experts ont rejoint la marketplace
+- **[Nouveauté 3]** — La communauté Skool a dépassé les 400 membres actifs
 
-**Questions fréquemment posées :**
+Est-ce qu'il y a un sujet IA ou automatisation qui vous tient à cœur en ce moment ?
 
-**"Est-ce que je dois avoir un niveau technique particulier ?"**
-Non. [Adapter selon le service — ex. : "Ce service est conçu pour les débutants complets. Aucune connaissance préalable en IA ou en automatisation n'est requise." OU "Un niveau intermédiaire sur [outil] est recommandé, mais nos experts s'adaptent à chaque participant."]
+Répondez à cet email — je suis curieux de savoir où vous en êtes.
 
-**"Que se passe-t-il si je ne peux pas être présent à la date prévue ?"**
-[Adapter selon le format — ex. : "La session est enregistrée et vous recevez le replay dans les 48h." OU "Contactez-nous avant la date pour trouver une solution adaptée."]
+**[BOUTON CTA]** Voir les nouveautés sur MechaHelp →
 
-**"Quelle est la politique de remboursement ?"**
-[Indiquer la politique — ex. : "Remboursement complet si demandé 48h avant la session. Pas de remboursement passé ce délai."]
-
-**"Est-ce que ça s'applique à mon secteur d'activité ?"**
-[Adapter — ex. : "Oui. Les principes et les outils abordés s'appliquent à tous les secteurs. Nos experts s'adaptent à votre contexte métier pendant la session."]
-
-**"Comment se passe le paiement ?"**
-Via Stripe — la référence mondiale du paiement sécurisé en ligne. Carte bancaire, Apple Pay, Google Pay — tout est disponible. Confirmation immédiate par email.
+À bientôt,
+**Julien**
 
 ---
 
-**Situation actuelle :**
-Places réservées : [X]
-Places restantes : [Y]
+### EMAIL 2/3 — Offre de réengagement (J+3)
 
-Si vous attendez encore, le risque est réel de ne plus trouver de place disponible.
+**Timing :** J+3
 
-👉 **[Sécuriser ma place maintenant](https://mechahelp-ai.com)**
-
-**Julien Bergé**
-MechaHelp
-
----
-
-### EMAIL 5/5 — Dernières heures (J+6)
-**Timing :** Dernier jour ou dernières 24 heures avant la clôture des inscriptions
-
-**Objet principal :** Dernières heures : [Nom du service] — les inscriptions ferment ce soir
-**Objet alternatif (A/B) :** [Prénom], il reste [X] places et elles partent vite
-
-**Pré-header :** Les inscriptions ferment dans quelques heures. Voici pourquoi c'est maintenant ou jamais.
+**Objet principal :** [Prénom], une session offerte pour vous revoir
+**Objet A/B :** 30 minutes gratuites — pour les membres qui reviennent
+**Pré-header :** Une attention pour les membres qui reprennent le chemin.
 
 ---
 
 Bonjour [Prénom],
 
-Je ne veux pas être alarmiste — mais les faits sont là.
+J'ai quelque chose de concret pour vous.
 
-Les inscriptions pour **[Nom du service / de l'événement]** ferment ce soir à [heure].
+Parce que vous faites partie des membres qui ont déjà choisi MechaHelp, je vous offre **une session découverte de 30 minutes offerte** avec l'un de nos experts.
 
-**Situation en temps réel :**
-- Places disponibles au lancement : [Nombre total]
-- Places déjà réservées : [Nombre]
-- Places restantes : [Nombre restant]
+Pas de pitch. Pas d'engagement. Juste 30 minutes pour :
+- Faire le point sur vos besoins actuels
+- Identifier l'automatisation qui aurait le plus d'impact immédiat
+- Poser toutes vos questions techniques
 
----
+**Cette offre est valable jusqu'au [DATE J+7]** — après ça, elle disparaît de votre profil.
 
-**Si vous êtes encore en train d'hésiter, voici la question que je vous pose :**
+**[BOUTON CTA]** Réserver ma session découverte gratuite →
 
-*"Dans 3 mois, est-ce que je regretterai de ne pas avoir sauté le pas ?"*
+À très vite,
+**Julien**
 
-Si la réponse est oui — ou même "peut-être" — alors réservez maintenant.
-
-Le risque de regretter d'avoir essayé quelque chose qui n'a pas fonctionné est bien moindre que le risque de ne jamais avoir essayé.
-
-Et basé sur les résultats de nos membres précédents, les chances que ça fonctionne pour vous sont élevées.
+*P.S. : Si votre situation a changé et que MechaHelp ne correspond plus à vos besoins actuels, répondez à cet email et dites-le moi. Je préfère le savoir.*
 
 ---
 
-**Ce que vous obtenez en réservant aujourd'hui :**
+### EMAIL 3/3 — Dernier contact (J+7)
 
-[Résumé des bénéfices clés — 2 à 3 bullet points maximum]
+**Timing :** J+7 — dernier email avant sortie de séquence
 
-- [Bénéfice 1]
-- [Bénéfice 2]
-- [Bénéfice 3]
-
-**Ce que vous perdez si vous n'agissez pas maintenant :**
-
-[Opportunity cost — ex. : "La prochaine session similaire n'est pas encore planifiée." OU "Le tarif de lancement ne sera plus disponible après ce soir."]
+**Objet principal :** C'est mon dernier message, [Prénom]
+**Objet A/B :** On se dit au revoir — ou on reprend là où on s'était arrêtés ?
+**Pré-header :** Un dernier mot avant de vous laisser tranquille.
 
 ---
 
-👉 **[Réserver ma place avant la fermeture des inscriptions](https://mechahelp-ai.com)**
+Bonjour [Prénom],
 
-Les inscriptions ferment ce soir à [heure précise]. Aucune exception.
+C'est mon dernier email dans cette série.
 
-Merci de votre confiance,
+Je ne vais pas vous relancer après celui-ci — sauf si vous revenez sur le site ou que vous m'écrivez.
 
+Avant de partir, j'ai juste une question :
+
+**Qu'est-ce qui vous a empêché de revenir sur MechaHelp ces dernières semaines ?**
+
+- Le prix ?
+- Le timing ?
+- Un manque de clarté sur ce qui vous correspondrait ?
+- Autre chose ?
+
+Votre réponse m'aide vraiment à améliorer la plateforme. Et si c'est une question à laquelle je peux répondre, je le fais.
+
+Si vous voulez repartir, la porte est ouverte :
+
+**[BOUTON CTA]** Revenir sur MechaHelp →
+
+Bonne continuation,
 **Julien Bergé**
 Fondateur, MechaHelp
 
-*PS : Si vous avez une question urgente avant de décider, répondez à cet email maintenant. Je lis et réponds personnellement — et rapidement, vu le timing.*
-
----
----
-
-## RÉCAPITULATIF — Tableau de bord des séquences
-
-| Séquence | Nombre d'emails | Durée | Déclencheur | Objectif principal |
-|----------|----------------|-------|-------------|-------------------|
-| 1 — Bienvenue | 7 | 14 jours | Inscription gratuite | Conversion vers premier achat |
-| 2 — Nurturing | 5 | 30 jours | Non-achat après séquence 1 | Éducation + conversion |
-| 3 — Abandon candidature | 3 | 7 jours | Formulaire non finalisé | Récupération de leads chauds |
-| 4 — Post-accompagnement | 4 | 30 jours | Fin d'accompagnement | Avis + upsell + parrainage |
-| 5 — Réactivation | 3 | 14 jours | Inactivité 30+ jours | Reconnecter les membres dormants |
-| 6 — Lancement | 5 | 7 jours | Déclenchement manuel | Réservations rapides |
-| **TOTAL** | **27 emails** | | | |
+*P.S. : Vous continuerez à recevoir nos contenus éducatifs par email — mais plus de messages de relance commerciale. Promis.*
 
 ---
 
-## NOTES D'IMPLÉMENTATION
+## ANNEXE — BONNES PRATIQUES D'ENVOI
 
-### Personnalisation recommandée
-- Remplacer tous les `[Prénom]` par la variable de merge de votre outil d'emailing
-- Les champs `[Nom de l'expert]`, `[Type d'accompagnement]`, `[Nom du service]` doivent être dynamiques selon les données de chaque contact
-- La Séquence 6 doit être adaptée manuellement à chaque nouveau lancement
+### Configuration technique recommandée
 
-### Outils d'emailing compatibles
-Ces séquences sont compatibles avec : ActiveCampaign, Mailchimp, Brevo (ex-Sendinblue), ConvertKit, MailerLite, HubSpot, ou tout outil d'automatisation email avec des workflows conditionnels.
+| Paramètre | Recommandation |
+|-----------|---------------|
+| Outil d'envoi | ActiveCampaign, Brevo ou Klaviyo |
+| Heure d'envoi | Mardi–jeudi, 9h00–10h30 (heure de Paris) |
+| Fréquence max | 2 emails/semaine par contact |
+| Désabonnement | 1 clic — conforme RGPD |
+| Personnalisation min. | [Prénom] obligatoire dans tous les objets |
 
-### Recommandations A/B test
-- Tester les objets pendant au moins 500 envois avant de conclure sur un gagnant
-- Priorité aux tests sur la Séquence 1 (volume le plus élevé) et la Séquence 6 (impact commercial immédiat)
-- Suivre les métriques : taux d'ouverture, taux de clic sur le CTA, taux de conversion vers l'achat
+### Règles de delivrabilité
 
-### Métriques cibles recommandées pour le secteur
-- Taux d'ouverture : 25-35% (liste chaude) / 15-25% (liste froide)
-- Taux de clic : 3-8%
-- Taux de conversion séquence Bienvenue → premier achat : 5-15%
-- Taux de récupération abandon de candidature : 10-25%
+- Ne jamais envoyer depuis une adresse noreply@
+- Utiliser une adresse personnelle : julien@mechahelp-ai.com
+- Texte/images ratio : minimum 70% texte
+- Éviter les mots spam : "gratuit", "offre exclusive", "cliquez ici", "100%"
+- Toujours inclure l'adresse physique en pied de mail (obligation RGPD)
+
+### KPIs cibles par séquence
+
+| Séquence | Taux d'ouverture cible | Taux de clic cible | Taux de conversion |
+|----------|----------------------|-------------------|-------------------|
+| Bienvenue | 45–55% | 15–20% | 8–12% |
+| Post-visite | 30–40% | 10–15% | 5–8% |
+| Post-accompagnement | 50–60% | 20–30% | 15–25% (upsell) |
+| Réactivation | 20–30% | 8–12% | 3–5% |
 
 ---
 
-*Document généré pour MechaHelp — mechahelp-ai.com*
-*Julien Bergé — Fondateur*
-*Mise à jour recommandée : tous les 6 mois pour maintenir la fraîcheur des références et des témoignages*
+*Rapport généré le 21 mars 2026 — MechaHelp-AI.com*
