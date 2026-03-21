@@ -161,24 +161,24 @@ def md_to_html(md_text):
             table_rows = []
             in_table = False
         
-        # Headers
-        if stripped.startswith('######'):
-            html_lines.append(f'<h6>{format_inline(stripped[6:].strip())}</h6>')
+        # Headers (require space after # per Markdown spec, avoids #hashtags)
+        if stripped.startswith('###### '):
+            html_lines.append(f'<h6>{format_inline(stripped[7:].strip())}</h6>')
             continue
-        if stripped.startswith('#####'):
-            html_lines.append(f'<h5>{format_inline(stripped[5:].strip())}</h5>')
+        if stripped.startswith('##### '):
+            html_lines.append(f'<h5>{format_inline(stripped[6:].strip())}</h5>')
             continue
-        if stripped.startswith('####'):
-            html_lines.append(f'<h4>{format_inline(stripped[4:].strip())}</h4>')
+        if stripped.startswith('#### '):
+            html_lines.append(f'<h4>{format_inline(stripped[5:].strip())}</h4>')
             continue
-        if stripped.startswith('###'):
-            html_lines.append(f'<h3>{format_inline(stripped[3:].strip())}</h3>')
+        if stripped.startswith('### '):
+            html_lines.append(f'<h3>{format_inline(stripped[4:].strip())}</h3>')
             continue
-        if stripped.startswith('##'):
-            html_lines.append(f'<h2>{format_inline(stripped[2:].strip())}</h2>')
+        if stripped.startswith('## '):
+            html_lines.append(f'<h2>{format_inline(stripped[3:].strip())}</h2>')
             continue
-        if stripped.startswith('#'):
-            html_lines.append(f'<h1>{format_inline(stripped[1:].strip())}</h1>')
+        if stripped.startswith('# '):
+            html_lines.append(f'<h1>{format_inline(stripped[2:].strip())}</h1>')
             continue
         
         # Horizontal rule
@@ -257,7 +257,7 @@ def format_inline(text):
     # Inline code
     text = re.sub(r'`(.+?)`', r'<code class="inline-code">\1</code>', text)
     # Links
-    text = re.sub(r'\[(.+?)\]\((.+?)\)', r'<a href="\2">\1</a>', text)
+    text = re.sub(r'\[(.+?)\]\((.+?)\)', r'\1', text)
     # Strikethrough
     text = re.sub(r'~~(.+?)~~', r'<del>\1</del>', text)
     return text
@@ -343,6 +343,7 @@ def build_html_document(body_html, title, brand_name="", section_number=0):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no, email=no, address=no">
 <title>{title}</title>
 <style>
   @page {{
@@ -687,10 +688,14 @@ def html_to_pdf(html_content, output_pdf, chrome_path):
 # ---------------------------------------------------------------------------
 # Merge PDFs
 # ---------------------------------------------------------------------------
-def merge_pdfs(pdf_files, output_path, brand_name="", section_map=None):
+def merge_pdfs(pdf_files, output_path, brand_name="", section_map=None,
+               toc_link_data=None, cover_pages=1):
     """Merge multiple PDF files into one and add global page numbers with section names.
-    
+
     section_map: list of (pdf_path, section_number, section_name) tuples.
+    toc_link_data: list of (filename, target_page, y_bottom, y_top, toc_page_index)
+                   from build_toc_pdf() for adding clickable links.
+    cover_pages: number of cover pages before the TOC.
     """
     # Remove existing output file if it exists
     if os.path.exists(output_path):
@@ -741,10 +746,45 @@ def merge_pdfs(pdf_files, output_path, brand_name="", section_map=None):
         final_writer = PdfWriter()
         total_pages = len(reader.pages)
         
+        # Identify TOC page indices (they keep their links)
+        toc_page_set = set()
+        _pg_offset = 0
+        for pdf_file in pdf_files:
+            if os.path.exists(pdf_file) and os.path.getsize(pdf_file) > 0:
+                try:
+                    _n = len(PdfReader(pdf_file).pages)
+                except:
+                    _n = 0
+                if section_map:
+                    for entry in section_map:
+                        path, num, name = entry
+                        if os.path.normpath(path) == os.path.normpath(pdf_file) and name == "Table des Matières":
+                            for _j in range(_n):
+                                toc_page_set.add(_pg_offset + _j)
+                            break
+                _pg_offset += _n
+
         for i, page in enumerate(reader.pages):
             page_num = i + 1
             sec_num, section_name = page_sections[i] if i < len(page_sections) else (0, "")
-            
+
+            # Strip link annotations from all pages except the TOC
+            if i not in toc_page_set and "/Annots" in page:
+                from pypdf.generic import NameObject, ArrayObject
+                annots = page["/Annots"]
+                filtered = ArrayObject()
+                for annot_ref in annots:
+                    try:
+                        annot = annot_ref.get_object()
+                        if annot.get("/Subtype") != "/Link":
+                            filtered.append(annot_ref)
+                    except:
+                        filtered.append(annot_ref)
+                if filtered:
+                    page[NameObject("/Annots")] = filtered
+                else:
+                    del page["/Annots"]
+
             # Skip cover page (page 1) — it has its own footer
             if i == 0 and section_name == "" and sec_num == 0:
                 final_writer.add_page(page)
@@ -798,9 +838,109 @@ def merge_pdfs(pdf_files, output_path, brand_name="", section_map=None):
             except:
                 pass
         
+        # Add clickable links to TOC pages
+        if toc_link_data:
+            from pypdf.generic import (
+                DictionaryObject, ArrayObject, NameObject,
+                NumberObject, FloatObject, NullObject
+            )
+            for filename, target_page, y_bottom, y_top, toc_pg_idx in toc_link_data:
+                # TOC pages start after cover pages
+                toc_absolute_page = cover_pages + toc_pg_idx
+                # target_page is 1-based from page_map, convert to 0-based
+                target_page_0 = target_page - 1
+
+                if toc_absolute_page < len(final_writer.pages) and target_page_0 < len(final_writer.pages):
+                    # Get page dimensions
+                    toc_page = final_writer.pages[toc_absolute_page]
+                    media_box = toc_page.mediabox
+                    page_width = float(media_box.width)
+
+                    # Create link annotation covering the full row width
+                    link_rect = ArrayObject([
+                        FloatObject(50),           # left margin
+                        FloatObject(y_bottom),
+                        FloatObject(page_width - 50),  # right margin
+                        FloatObject(y_top)
+                    ])
+
+                    # Build GoTo action pointing to target page
+                    dest_page = final_writer.pages[target_page_0]
+                    link_annotation = DictionaryObject({
+                        NameObject("/Type"): NameObject("/Annot"),
+                        NameObject("/Subtype"): NameObject("/Link"),
+                        NameObject("/Rect"): link_rect,
+                        NameObject("/Border"): ArrayObject([
+                            NumberObject(0), NumberObject(0), NumberObject(0)
+                        ]),
+                        NameObject("/Dest"): ArrayObject([
+                            dest_page.indirect_reference,
+                            NameObject("/XYZ"),
+                            NullObject(),
+                            NullObject(),
+                            NullObject()
+                        ])
+                    })
+
+                    # Add annotation to the TOC page
+                    if "/Annots" not in toc_page:
+                        toc_page[NameObject("/Annots")] = ArrayObject()
+                    toc_page[NameObject("/Annots")].append(
+                        final_writer._add_object(link_annotation)
+                    )
+
+        # Add PDF bookmarks (outline) for sidebar navigation
+        page_offset = 0
+        bookmark_entries = []  # (page_offset, sec_num, sec_name)
+
+        for pdf_file in pdf_files:
+            if os.path.exists(pdf_file) and os.path.getsize(pdf_file) > 0:
+                try:
+                    num_pages = len(PdfReader(pdf_file).pages)
+                except:
+                    num_pages = 0
+
+                if section_map:
+                    for entry in section_map:
+                        path, num, name = entry
+                        if os.path.normpath(path) == os.path.normpath(pdf_file) and name:
+                            bookmark_entries.append((page_offset, num, name))
+                            break
+
+                page_offset += num_pages
+
+        # Build phase-to-section mapping from SECTION_ORDER
+        section_to_phase = {}
+        current_phase_name = None
+        for filename, title in SECTION_ORDER:
+            if filename is None:
+                current_phase_name = title
+            elif current_phase_name:
+                section_to_phase[title] = current_phase_name
+
+        # Add non-section bookmarks first (Sommaire, Scores)
+        for pg, num, name in bookmark_entries:
+            if num == 0:
+                final_writer.add_outline_item(name, pg)
+
+        # Add phase-grouped section bookmarks
+        phases_seen = {}  # phase_name -> bookmark handle
+        for pg, num, name in bookmark_entries:
+            if num == 0:
+                continue
+            phase_name = section_to_phase.get(name, "")
+            if phase_name and phase_name not in phases_seen:
+                phases_seen[phase_name] = final_writer.add_outline_item(
+                    phase_name, pg, bold=True
+                )
+            parent = phases_seen.get(phase_name)
+            final_writer.add_outline_item(
+                f"{num:02d}. {name}", pg, parent=parent
+            )
+
         with open(output_path, "wb") as output:
             final_writer.write(output)
-        
+
         # Cleanup temp
         try:
             os.unlink(temp_merged)
@@ -1027,16 +1167,292 @@ def build_cover_page_html(brand_name, url=""):
 
 
 # ---------------------------------------------------------------------------
-# Generate Table of Contents HTML
+# Generate Table of Contents PDF with clickable links (reportlab)
 # ---------------------------------------------------------------------------
-def build_toc_html(sections, brand_name):
-    """Build a Table of Contents page organized by phase."""
-    
+def build_toc_pdf(output_path, sections, brand_name, page_map=None, scores_page=None):
+    """Generate a TOC PDF with clickable internal links using reportlab.
+
+    sections: list of (filename, title) tuples for available sections.
+    page_map: dict {filename: target_page_number} for link targets.
+    scores_page: page number (1-based) where the scores PDF starts.
+    Returns: list of (filename, target_page, y_bottom, y_top, toc_page_index)
+             for post-merge link resolution.
+    """
+    from reportlab.pdfgen import canvas as rl_canvas
+    from reportlab.lib.pagesizes import A4
+    from reportlab.lib.colors import HexColor
+
+    W, H = A4  # 595.27 × 841.89
+    MARGIN_X = 50
+    MARGIN_TOP = 55
+    MARGIN_BOTTOM = 50
+    CONTENT_W = W - 2 * MARGIN_X
+
+    c = rl_canvas.Canvas(output_path, pagesize=A4)
+    link_data = []  # collect link coords for post-merge resolution
+    toc_page_idx = 0
+
+    # --- Build phase structure ---
+    phases = []
+    current_phase = None
+    section_num = 0
+    for filename, title in SECTION_ORDER:
+        if filename is None:
+            current_phase = {"name": title, "sections": []}
+            phases.append(current_phase)
+            continue
+        found = False
+        for fn, sec_title in sections:
+            if fn == filename:
+                found = True
+                section_num += 1
+                if current_phase:
+                    current_phase["sections"].append((section_num, sec_title, filename, True))
+                break
+        if not found and current_phase:
+            section_num += 1
+            current_phase["sections"].append((section_num, title, filename, False))
+
+    # --- Colors ---
+    primary = HexColor(COLORS['primary'])
+    accent = HexColor(COLORS['accent'])
+    text_color = HexColor(COLORS['text'])
+    text_light = HexColor(COLORS['text_light'])
+    light_bg = HexColor(COLORS['light_bg'])
+    border_color = HexColor(COLORS['border'])
+    white_c = HexColor("#FFFFFF")
+
+    # --- Header bar (consistent with other pages) ---
+    def draw_header():
+        c.setFillColor(primary)
+        c.rect(0, H - 8, W, 8, fill=1, stroke=0)
+        c.setFillColor(accent)
+        c.rect(0, H - 10, W, 2, fill=1, stroke=0)
+
+    # --- Draw page ---
+    y = H - MARGIN_TOP
+    draw_header()
+
+    # Section number indicator
+    c.setFillColor(accent)
+    c.rect(MARGIN_X, y - 2, 4, 22, fill=1, stroke=0)
+
+    # Title
+    c.setFont("Helvetica-Bold", 18)
+    c.setFillColor(primary)
+    c.drawString(MARGIN_X + 12, y, "Table des Matières")
+    y -= 30
+
+    # Subtitle
+    n_sections = len([s for s in sections])
+    c.setFont("Helvetica", 9)
+    c.setFillColor(text_light)
+    c.drawString(MARGIN_X, y, f"Ce rapport compile l'ensemble des analyses marketing réalisées pour {brand_name}.")
+    y -= 13
+    c.drawString(MARGIN_X, y, f"Les {n_sections} sections sont organisées en 4 phases : diagnostic, stratégie, production et livrables.")
+    y -= 25
+
+    # Table header
+    ROW_H = 24
+    COL_NUM_X = MARGIN_X
+    COL_NUM_W = 35
+    COL_TITLE_X = COL_NUM_X + COL_NUM_W
+    COL_PAGE_W = 40
+    COL_FILE_W = 120
+    COL_FILE_X = W - MARGIN_X - COL_PAGE_W - COL_FILE_W
+    COL_PAGE_X = W - MARGIN_X - COL_PAGE_W
+    COL_TITLE_W = COL_FILE_X - COL_TITLE_X
+
+    def draw_table_header():
+        nonlocal y
+        c.setFillColor(HexColor("#F0F2F5"))
+        c.rect(MARGIN_X, y - ROW_H + 6, CONTENT_W, ROW_H, fill=1, stroke=0)
+        c.setStrokeColor(border_color)
+        c.setLineWidth(0.5)
+        c.line(MARGIN_X, y - ROW_H + 6, MARGIN_X + CONTENT_W, y - ROW_H + 6)
+
+        c.setFont("Helvetica-Bold", 8)
+        c.setFillColor(text_light)
+        c.drawString(COL_NUM_X + 8, y - 6, "N°")
+        c.drawString(COL_TITLE_X + 4, y - 6, "SECTION")
+        c.drawString(COL_FILE_X + 4, y - 6, "FICHIER SOURCE")
+        if page_map:
+            c.drawRightString(W - MARGIN_X - 4, y - 6, "PAGE")
+        y -= ROW_H
+
+    draw_table_header()
+
+    def new_page():
+        nonlocal y, toc_page_idx
+        # Footer
+        c.setFont("Helvetica", 6.5)
+        c.setFillColor(text_light)
+        c.drawCentredString(W / 2, 20, f"CONFIDENTIEL — {brand_name}")
+
+        c.showPage()
+        toc_page_idx += 1
+        y = H - MARGIN_TOP
+        draw_header()
+        draw_table_header()
+
+    # --- Section 0: Synthèse & Scores ---
+    if scores_page:
+        row_top = y + 6
+        row_bottom = y - ROW_H + 6
+
+        # Light accent background
+        c.setFillColor(HexColor("#EEF1FF"))
+        c.rect(MARGIN_X, row_bottom, CONTENT_W, ROW_H, fill=1, stroke=0)
+        c.setStrokeColor(HexColor("#F0F2F5"))
+        c.setLineWidth(0.3)
+        c.line(MARGIN_X, row_bottom, MARGIN_X + CONTENT_W, row_bottom)
+
+        text_y = y - 6
+        c.setFont("Helvetica-Bold", 9)
+        c.setFillColor(accent)
+        c.drawCentredString(COL_NUM_X + COL_NUM_W / 2, text_y, "00")
+        c.setFillColor(text_color)
+        c.drawString(COL_TITLE_X + 4, text_y, "Synthèse & Scores")
+        c.setFont("Helvetica-Bold", 9)
+        c.setFillColor(accent)
+        c.drawRightString(W - MARGIN_X - 4, text_y, str(scores_page))
+
+        link_data.append(("__SCORES__", scores_page, row_bottom, row_top, toc_page_idx))
+        y -= ROW_H
+
+        # Methodology description (compact, 2 lines)
+        method_y = y + 2
+        c.setFont("Helvetica-Oblique", 7)
+        c.setFillColor(text_light)
+        c.drawString(MARGIN_X + 8, method_y - 4,
+            "Ce rapport évalue 6 dimensions marketing (Content, Conversion, SEO, Concurrence, Marque, Croissance) sur 100 points.")
+        c.drawString(MARGIN_X + 8, method_y - 14,
+            "L'audit GEO mesure la visibilité IA. Le score global est la moyenne pondérée. Recommandations priorisées par impact revenu.")
+        y -= 22
+
+    # --- Render rows ---
+    for phase in phases:
+        if not any(s[3] for s in phase["sections"]):
+            continue
+
+        # Check space for phase header + at least 1 row
+        if y - ROW_H * 2 < MARGIN_BOTTOM:
+            new_page()
+
+        # Phase header row
+        c.setFillColor(primary)
+        c.rect(MARGIN_X, y - ROW_H + 6, CONTENT_W, ROW_H, fill=1, stroke=0)
+        c.setFont("Helvetica-Bold", 9)
+        c.setFillColor(white_c)
+        c.drawString(MARGIN_X + 10, y - 6, phase["name"])
+        y -= ROW_H
+
+        for num, title, filename, available in phase["sections"]:
+            if y - ROW_H < MARGIN_BOTTOM:
+                new_page()
+
+            row_top = y + 6
+            row_bottom = y - ROW_H + 6
+
+            # Alternating row background
+            if available and num % 2 == 0:
+                c.setFillColor(HexColor("#FAFBFC"))
+                c.rect(MARGIN_X, row_bottom, CONTENT_W, ROW_H, fill=1, stroke=0)
+
+            # Bottom border
+            c.setStrokeColor(HexColor("#F0F2F5"))
+            c.setLineWidth(0.3)
+            c.line(MARGIN_X, row_bottom, MARGIN_X + CONTENT_W, row_bottom)
+
+            text_y = y - 6
+
+            if available:
+                # Section number
+                c.setFont("Helvetica-Bold", 9)
+                c.setFillColor(accent)
+                c.drawCentredString(COL_NUM_X + COL_NUM_W / 2, text_y, f"{num:02d}")
+
+                # Section title
+                c.setFont("Helvetica-Bold", 9)
+                c.setFillColor(text_color)
+                # Truncate title if too long
+                display_title = title
+                while c.stringWidth(display_title, "Helvetica-Bold", 9) > COL_TITLE_W - 8:
+                    display_title = display_title[:-4] + "..."
+                c.drawString(COL_TITLE_X + 4, text_y, display_title)
+
+                # Filename
+                c.setFont("Helvetica", 7.5)
+                c.setFillColor(text_light)
+                c.drawString(COL_FILE_X + 4, text_y, filename)
+
+                # Page number
+                if page_map and filename in page_map:
+                    target_page = page_map[filename]
+                    c.setFont("Helvetica-Bold", 9)
+                    c.setFillColor(accent)
+                    c.drawRightString(W - MARGIN_X - 4, text_y, str(target_page))
+
+                    # Store link data for post-merge resolution
+                    link_data.append((filename, target_page, row_bottom, row_top, toc_page_idx))
+            else:
+                # Unavailable section (grayed out)
+                c.setFont("Helvetica", 8)
+                c.setFillColor(text_light)
+                c.drawCentredString(COL_NUM_X + COL_NUM_W / 2, text_y, f"{num:02d}")
+                c.drawString(COL_TITLE_X + 4, text_y, f"{title} (non généré)")
+                c.setFont("Helvetica", 7.5)
+                c.drawString(COL_FILE_X + 4, text_y, filename)
+                if page_map:
+                    c.drawRightString(W - MARGIN_X - 4, text_y, "—")
+
+            y -= ROW_H
+
+    # --- Methodology box ---
+    if y - 80 < MARGIN_BOTTOM:
+        new_page()
+    y -= 15
+    box_h = 60
+    c.setFillColor(light_bg)
+    c.roundRect(MARGIN_X, y - box_h, CONTENT_W, box_h, 6, fill=1, stroke=0)
+    c.setFillColor(accent)
+    c.rect(MARGIN_X, y - box_h, 3, box_h, fill=1, stroke=0)
+
+    c.setFont("Helvetica-Bold", 8.5)
+    c.setFillColor(primary)
+    c.drawString(MARGIN_X + 12, y - 14, "Méthodologie")
+    c.setFont("Helvetica", 7.5)
+    c.setFillColor(text_light)
+    c.drawString(MARGIN_X + 12, y - 27,
+        "Chaque catégorie est évaluée sur 100 points selon les meilleures pratiques du secteur et des benchmarks concurrentiels.")
+    c.drawString(MARGIN_X + 12, y - 39,
+        "Le score global est la moyenne pondérée des 6 dimensions principales. L'audit GEO évalue en plus la visibilité dans")
+    c.drawString(MARGIN_X + 12, y - 51,
+        "les réponses des IA génératives (ChatGPT, Gemini, Perplexity, Claude). Les recommandations sont priorisées par impact.")
+
+    # Footer
+    c.setFont("Helvetica", 6.5)
+    c.setFillColor(text_light)
+    c.drawCentredString(W / 2, 20, f"CONFIDENTIEL — {brand_name}")
+
+    c.save()
+    return link_data
+
+
+# ---------------------------------------------------------------------------
+# Generate Table of Contents HTML (legacy, kept for reference)
+# ---------------------------------------------------------------------------
+def build_toc_html(sections, brand_name, page_map=None):
+    """Build a Table of Contents page organized by phase.
+
+    page_map: optional dict {filename: page_number} for page references.
+    """
+
     # Map sections to their phase
     phases = []
     current_phase = None
     section_num = 0
-    
+
     for filename, title in SECTION_ORDER:
         if filename is None:
             # Phase header
@@ -1055,17 +1471,19 @@ def build_toc_html(sections, brand_name):
         if not found and current_phase:
             section_num += 1
             current_phase["sections"].append((section_num, title, filename, False))
-    
+
+    has_pages = page_map is not None and len(page_map) > 0
+    colspan = "4" if has_pages else "3"
+
     # Build HTML
     toc_body = ""
     for phase in phases:
         if not any(s[3] for s in phase["sections"]):
             continue  # Skip phases with no available sections
-        
-        phase_color = COLORS['accent']
+
         toc_body += f"""
         <tr>
-          <td colspan="3" style="
+          <td colspan="{colspan}" style="
             background: linear-gradient(135deg, {COLORS['primary']} 0%, #2a4070 100%);
             color: white;
             padding: 10px 14px;
@@ -1075,24 +1493,36 @@ def build_toc_html(sections, brand_name):
             border: none;
           ">{phase['name']}</td>
         </tr>"""
-        
+
         for num, title, filename, available in phase["sections"]:
+            page_col = ""
+            if has_pages:
+                page_num = page_map.get(filename, "")
+                if available and page_num:
+                    page_col = f'<td style="width:50px; text-align:right; font-weight:700; color:{COLORS["accent"]}; font-size:9.5pt;">{page_num}</td>'
+                else:
+                    page_col = f'<td style="width:50px; text-align:right; color:{COLORS["text_light"]}; font-size:9pt;">—</td>'
+
             if available:
                 row_class = 'even' if num % 2 == 0 else 'odd'
                 toc_body += f"""
         <tr class="{row_class}">
           <td style="width:40px; text-align:center; font-weight:700; color:{COLORS['accent']};">{num:02d}</td>
           <td style="font-weight:600;">{title}</td>
-          <td style="width:180px; color:{COLORS['text_light']}; font-size:9pt;">{filename}</td>
+          <td style="width:140px; color:{COLORS['text_light']}; font-size:9pt;">{filename}</td>
+          {page_col}
         </tr>"""
             else:
                 toc_body += f"""
         <tr style="opacity:0.4;">
           <td style="width:40px; text-align:center; color:{COLORS['text_light']};">{num:02d}</td>
           <td style="color:{COLORS['text_light']}; font-style:italic;">{title} (non généré)</td>
-          <td style="width:180px; color:{COLORS['text_light']}; font-size:9pt;">{filename}</td>
+          <td style="width:140px; color:{COLORS['text_light']}; font-size:9pt;">{filename}</td>
+          {page_col}
         </tr>"""
-    
+
+    page_header = '<th style="width:50px; text-align:right;">Page</th>' if has_pages else ""
+
     body = f"""
     <h2 style="margin-top:10px;">Sommaire</h2>
     <p style="color:{COLORS['text_light']}; margin-bottom:25px;">
@@ -1105,7 +1535,8 @@ def build_toc_html(sections, brand_name):
         <tr>
           <th style="width:40px;">N°</th>
           <th>Section</th>
-          <th style="width:180px;">Fichier source</th>
+          <th style="width:140px;">Fichier source</th>
+          {page_header}
         </tr>
       </thead>
       <tbody>
@@ -1211,78 +1642,121 @@ def main():
     
     try:
         # --- Step 1: Cover page ---
-        print(f"  [1/4] Génération de la page de garde...")
+        print(f"  [1/5] Génération de la page de garde...")
         cover_html = build_cover_page_html(brand_name, url)
         cover_pdf = os.path.join(temp_dir, "00-cover.pdf")
-        
+        cover_pages = 0
+
         if html_to_pdf(cover_html, cover_pdf, chrome):
-            pdf_parts.append(cover_pdf)
-            section_map.append((cover_pdf, 0, ""))
-            print(f"         ✓ Page de garde générée")
+            cover_pages = len(PdfReader(cover_pdf).pages)
+            print(f"         ✓ Page de garde générée ({cover_pages} p.)")
         else:
             print(f"         ✗ Erreur page de garde")
-        
+
         # --- Step 2: Check for existing score cover PDF ---
         cover_candidates = glob.glob(os.path.join(report_dir, "MARKETING-REPORT-*.pdf"))
         cover_candidates = [c for c in cover_candidates if "COMPLET" not in c and "FINAL" not in c]
-        
+        scores_pdf_path = None
+        scores_pages = 0
+
         if cover_candidates:
-            cover_score_pdf = cover_candidates[0]
-            print(f"  [2/4] Couverture scores : {os.path.basename(cover_score_pdf)}")
-            pdf_parts.append(cover_score_pdf)
-            section_map.append((cover_score_pdf, 0, "Scores & Synthèse"))
+            scores_pdf_path = cover_candidates[0]
+            scores_pages = len(PdfReader(scores_pdf_path).pages)
+            print(f"  [2/5] Couverture scores : {os.path.basename(scores_pdf_path)} ({scores_pages} p.)")
         else:
-            print(f"  [2/4] Pas de couverture scores existante")
-        
-        # --- Step 3: Generate Table of Contents ---
-        print(f"  [3/4] Génération du sommaire...")
-        toc_sections = [(fn, title) for fn, title, _ in available_sections]
-        toc_html = build_toc_html(toc_sections, brand_name)
-        toc_pdf = os.path.join(temp_dir, "01-toc.pdf")
-        
-        if html_to_pdf(toc_html, toc_pdf, chrome):
-            pdf_parts.append(toc_pdf)
-            section_map.append((toc_pdf, 0, "Table des Matières"))
-            print(f"         ✓ Sommaire généré")
-        else:
-            print(f"         ✗ Erreur sommaire")
-        
-        # --- Step 4: Convert each section ---
-        print(f"  [4/4] Conversion des sections...")
-        
+            print(f"  [2/5] Pas de couverture scores existante")
+
+        # --- Step 3: Convert each section (BEFORE TOC to count pages) ---
+        print(f"  [3/5] Conversion des sections...")
+        section_pdfs = []  # list of (filename, title, pdf_path, page_count)
+
         for i, (filename, title, filepath) in enumerate(available_sections, 1):
             print(f"         [{i}/{len(available_sections)}] {title}...", end="", flush=True)
-            
+
             try:
                 with open(filepath, 'r', encoding='utf-8') as f:
                     md_content = f.read()
-                
+
                 # Convert MD to HTML
                 body_html = md_to_html(md_content)
-                
+
                 # Wrap in styled template
                 full_html = build_html_document(body_html, title, brand_name, i)
-                
+
                 # Convert to PDF
                 section_pdf = os.path.join(temp_dir, f"{i+1:02d}-{filename.replace('.md', '.pdf')}")
-                
+
                 if html_to_pdf(full_html, section_pdf, chrome):
-                    pdf_parts.append(section_pdf)
-                    section_map.append((section_pdf, i, title))
+                    sec_pages = len(PdfReader(section_pdf).pages)
+                    section_pdfs.append((filename, title, section_pdf, sec_pages, i))
                     size_kb = os.path.getsize(section_pdf) // 1024
-                    print(f" ✓ ({size_kb} Ko)")
+                    print(f" ✓ ({size_kb} Ko, {sec_pages} p.)")
                 else:
                     print(f" ✗ ERREUR")
             
             except Exception as e:
                 print(f" ✗ {e}")
         
-        # --- Step 5: Merge all PDFs ---
+        # --- Step 4: Generate TOC with page numbers ---
         print(f"")
-        print(f"  Fusion de {len(pdf_parts)} PDF...")
-        
+        print(f"  [4/5] Génération du sommaire avec numéros de page...")
+
+        # Calculate page offsets: cover + TOC (estimate 2 pages) + scores + sections
+        toc_estimated_pages = 2
+        current_page = cover_pages + toc_estimated_pages + scores_pages + 1  # +1 for 1-based
+
+        page_map = {}
+        for sec_filename, sec_title, sec_pdf, sec_pages, sec_idx in section_pdfs:
+            page_map[sec_filename] = current_page
+            current_page += sec_pages
+
+        toc_sections = [(fn, title) for fn, title, _ in available_sections]
+        toc_pdf = os.path.join(temp_dir, "01-toc.pdf")
+
+        # Generate TOC with reportlab (gives exact control over link coordinates)
+        scores_page_num = cover_pages + toc_estimated_pages + 1  # 1-based
+        toc_link_data = build_toc_pdf(toc_pdf, toc_sections, brand_name, page_map,
+                                      scores_page=scores_page_num if scores_pages > 0 else None)
+        actual_toc_pages = len(PdfReader(toc_pdf).pages)
+
+        # Recalculate page_map if TOC pages differ from estimate
+        if actual_toc_pages != toc_estimated_pages:
+            current_page = cover_pages + actual_toc_pages + scores_pages + 1
+            page_map = {}
+            for sec_filename, sec_title, sec_pdf, sec_pages, sec_idx in section_pdfs:
+                page_map[sec_filename] = current_page
+                current_page += sec_pages
+            scores_page_num = cover_pages + actual_toc_pages + 1
+            toc_link_data = build_toc_pdf(toc_pdf, toc_sections, brand_name, page_map,
+                                          scores_page=scores_page_num if scores_pages > 0 else None)
+            actual_toc_pages = len(PdfReader(toc_pdf).pages)
+
+        print(f"         ✓ Sommaire généré ({actual_toc_pages} p.) avec liens cliquables")
+
+        # --- Step 5: Assemble all PDFs in order ---
+        # Cover
+        if os.path.exists(cover_pdf):
+            pdf_parts.append(cover_pdf)
+            section_map.append((cover_pdf, 0, ""))
+        # TOC
+        if os.path.exists(toc_pdf):
+            pdf_parts.append(toc_pdf)
+            section_map.append((toc_pdf, 0, "Table des Matières"))
+        # Scores
+        if scores_pdf_path:
+            pdf_parts.append(scores_pdf_path)
+            section_map.append((scores_pdf_path, 0, "Scores & Synthèse"))
+        # Sections
+        for sec_filename, sec_title, sec_pdf, sec_pages, sec_idx in section_pdfs:
+            pdf_parts.append(sec_pdf)
+            section_map.append((sec_pdf, sec_idx, sec_title))
+
+        # --- Step 6: Merge all PDFs ---
+        print(f"  [5/5] Fusion de {len(pdf_parts)} PDF...")
+
         if len(pdf_parts) > 0:
-            merge_pdfs(pdf_parts, output_file, brand_name, section_map)
+            merge_pdfs(pdf_parts, output_file, brand_name, section_map,
+                       toc_link_data=toc_link_data, cover_pages=cover_pages)
             
             if os.path.exists(output_file):
                 size_mb = os.path.getsize(output_file) / (1024 * 1024)

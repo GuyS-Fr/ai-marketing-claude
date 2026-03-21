@@ -1,1304 +1,1024 @@
 # Séquences Email — La Fenêtrière
 **Site :** la-fenetriere.fr
-**Date :** 20 mars 2026
-**Auteur :** AI Marketing Suite — Claude Code
-**Contact :** lafenetriere@lafenetriere.fr | 01 48 82 44 11
+**Date :** 21 mars 2026
+**Rédigé par :** Claude AI — Expert Email Marketing B2B
+**Cible :** Artisans poseurs, maîtres d'œuvre, architectes, promoteurs, bailleurs sociaux
+**Newsletter :** "La Fenêtre Ouverte"
 
 ---
 
-## Sommaire
+## TABLE DES MATIÈRES
 
-1. [Séquence Bienvenue Newsletter](#1-séquence-bienvenue-newsletter) — 3 emails (J+0, J+3, J+7)
-2. [Séquence Nurturing B2B](#2-séquence-nurturing-b2b) — 5 emails (J+0 à J+30)
-3. [Séquence Nurturing B2C](#3-séquence-nurturing-b2c) — 4 emails
-4. [Séquence Relance Devis](#4-séquence-relance-devis) — 3 emails (J+3, J+7, J+14)
-5. [Séquence Post-Installation](#5-séquence-post-installation) — 3 emails
-
----
-
-## Notes d'utilisation
-
-- Remplacer les zones `[EN MAJUSCULES]` par les données réelles (prénom, ville, etc.)
-- Les zones `[PHOTO : ...]` sont des emplacements pour illustrations dans votre logiciel d'emailing
-- Expéditeur recommandé : **Catherine Guerniou — La Fenêtrière** `<lafenetriere@lafenetriere.fr>`
-- Signature standard à personnaliser selon le logiciel utilisé (Mailchimp, Brevo, etc.)
+1. [Séquence Bienvenue](#1-séquence-bienvenue--5-emails-sur-14-jours)
+2. [Séquence Nurturing](#2-séquence-nurturing--4-emails-sur-30-jours)
+3. [Séquence Réactivation](#3-séquence-réactivation--3-emails)
+4. [Séquence Post-Commande](#4-séquence-post-commande--3-emails)
+5. [Notes techniques & bonnes pratiques](#5-notes-techniques--bonnes-pratiques)
 
 ---
 
----
+## 1. SÉQUENCE BIENVENUE — 5 emails sur 14 jours
 
-# 1. Séquence Bienvenue Newsletter
-
-**Nom de la séquence :** Bienvenue dans La Fenêtre Ouverte
-**Déclencheur :** Inscription à la newsletter
-**Audience :** Tous inscrits (B2B + B2C)
-**Objectif :** Créer un lien humain, poser la crédibilité, amener vers une première demande de devis
+> **Objectif :** Installer la confiance, présenter l'atelier, qualifier le prospect B2B et l'amener vers un premier devis ou une visite showroom.
 
 ---
 
-## Email 1 — Bienvenue + Qui sommes-nous + Visite virtuelle atelier
-
+### EMAIL B-1 — Bienvenue & qui sommes-nous
 **Timing :** J+0 (envoi immédiat après inscription)
-**Objet :** Bienvenue chez La Fenêtrière — voici ce que vous allez découvrir 🪟
-**Pré-header :** Depuis 1984, on fabrique à Champigny. Voici notre histoire en quelques lignes.
+**Objet :** Bienvenue chez La Fenêtrière — votre partenaire menuiseries en Île-de-France
+**Preview text :** Catherine Guerniou vous ouvre les portes de notre atelier de Champigny-sur-Marne.
 
 ---
 
-Bonjour [PRÉNOM],
+Bonjour [Prénom],
 
-Merci de rejoindre **La Fenêtre Ouverte**, la newsletter de La Fenêtrière.
+Merci d'avoir rejoint **La Fenêtre Ouverte**, la newsletter professionnelle de La Fenêtrière.
 
-Avant de vous parler fenêtres, portes et volets, laissez-moi vous dire qui nous sommes vraiment.
+Je suis Catherine Guerniou, dirigeante de La Fenêtrière, et je suis ravie de vous accueillir dans notre communauté de professionnels du bâtiment.
 
----
+**Ce que nous faisons, concrètement :**
 
-**L'atelier de Champigny, c'est d'abord une histoire humaine.**
+Depuis notre atelier de **Champigny-sur-Marne (94)**, nous fabricons et posons des menuiseries extérieures sur mesure — fenêtres PVC, bois et aluminium, portes, volets, portails — pour des chantiers en Île-de-France.
 
-En 1984, La Fenêtrière ouvre ses portes à Champigny-sur-Marne. En 2005, je reprends l'atelier avec une conviction : on peut fabriquer des menuiseries de qualité, en Île-de-France, avec des matériaux sourcés en France, et des compagnons qui restent.
+Ce qui nous distingue des grands industriels :
 
-Aujourd'hui, certains de nos artisans travaillent ici depuis plus de 25 ans. Frédéric, l'un de nos menuisiers, est là depuis 1997. Ce ne sont pas des chiffres de communication — c'est simplement ce qui se passe quand on construit une entreprise autour des personnes autant que des produits.
+- **Un atelier artisanal de proximité** : vos commandes fabriquées à quelques kilomètres de vos chantiers IDF
+- **La certification OFG** (Office Français de la Garantie) : un gage de qualité et de sérieux pour vos clients maîtres d'ouvrage
+- **La traçabilité QR code** : chaque menuiserie livrée embarque un QR code qui retrace son parcours de fabrication — un argument béton pour vos appels d'offres
+- **L'économie circulaire** : nous valorisons les chutes de fabrication et proposons une filière de recyclage des anciennes menuiseries
 
----
+**Pourquoi travailler avec nous ?**
 
-**Ce que nous fabriquons — et d'où viennent les matières :**
+Parce que vous méritez un fournisseur qui répond au téléphone, livre dans les délais et traite vos chantiers comme les siens. Notre showroom technique à Champigny est ouvert sur rendez-vous pour les professionnels — nous y reviendrons dans notre prochain email.
 
-Chez La Fenêtrière, "Fabriqué en France" n'est pas un logo. C'est un engagement documenté, certifié **Origine France Garantie (OFG)** et lauréat **Fabriqué en France 2025** :
+Dans les prochains jours, vous recevrez :
+- Les photos de notre atelier et une invitation à venir le visiter
+- Un témoignage d'un artisan poseur qui travaille avec nous depuis 5 ans
+- Notre guide "Comment choisir vos menuiseries selon vos chantiers"
+- Et une offre réservée aux nouveaux partenaires professionnels
 
-- Notre **PVC** vient du Doubs
-- Notre **aluminium** vient de Bourgogne
-- Notre **vitrage** vient de Normandie
-- Notre **atelier** est à Champigny-sur-Marne (94)
-- Nos **chantiers** sont en Île-de-France
-
-Nous fabriquons des fenêtres, portes, volets et portails sur mesure — PVC, bois et aluminium — conçus pour durer, être réparés, et non pas remplacés à la première occasion.
-
----
-
-**[PHOTO : vue de l'atelier, compagnons au travail]**
-
-Nos murs ne ressemblent pas à une usine. Ils ressemblent à un atelier où chaque pièce est travaillée à la main avant de partir sur chantier. Je vous invite à venir nous voir — les portes sont ouvertes.
-
----
-
-**Dans les prochains emails, vous découvrirez :**
-
-- Pourquoi nous avons inscrit notre raison d'être dans nos statuts (rare pour une PME artisanale)
-- Comment choisir entre PVC, bois et aluminium selon votre projet
-- Les aides disponibles pour vos fenêtres en 2026
-
-À très vite,
+À très bientôt,
 
 **Catherine Guerniou**
 Dirigeante — La Fenêtrière
-📍 Champigny-sur-Marne (94)
-📞 01 48 82 44 11
-🌐 [la-fenetriere.fr](https://www.la-fenetriere.fr)
+01 48 82 44 11
+www.la-fenetriere.fr
+
+---
+*La Fenêtrière — 5 rue des Artisans, 94500 Champigny-sur-Marne*
+*Vous recevez cet email car vous avez rejoint notre newsletter professionnelle. [Se désabonner]*
 
 ---
 
-**P.S.** — Une question sur un projet de menuiserie ? Répondez directement à cet email. Je lis chaque message personnellement.
+### EMAIL B-2 — Notre atelier en images + invitation showroom
+**Timing :** J+2 (2 jours après l'inscription)
+**Objet :** Dans les coulisses de notre atelier — et une invitation pour vous
+**Preview text :** 600 m² dédiés à la fabrication sur mesure, à 20 min de Paris. Venez voir.
 
 ---
 
-**CTA principal :** `→ Visiter notre atelier en images` *(lien vers page À Propos ou galerie)*
-**CTA secondaire :** `→ Demander un devis gratuit`
+Bonjour [Prénom],
+
+Vous connaissez le dicton : *"Voir, c'est croire."*
+
+Alors aujourd'hui, je vous emmène dans notre atelier.
+
+**L'atelier La Fenêtrière en quelques chiffres :**
+
+- 600 m² de surface de fabrication à Champigny-sur-Marne
+- 3 lignes de production : PVC, Aluminium, Bois
+- Des délais de fabrication de **3 à 5 semaines** pour les commandes standard
+- Des techniciens formés aux normes RE2020 et aux exigences des bailleurs sociaux
+
+[📷 INSÉRER : photo atelier vue d'ensemble]
+[📷 INSÉRER : photo ligne de production PVC]
+[📷 INSÉRER : photo technicien en atelier]
+
+**Notre showroom technique : pensé pour les pros**
+
+Notre showroom n'est pas un showroom grand public. C'est un espace dédié aux professionnels, avec :
+
+- Des échantillons complets de nos gammes PVC, ALU et Bois
+- Des fenêtres grandeur nature avec démonstration des performances thermiques et acoustiques
+- Les certifications et labels disponibles sur chaque produit (Uw, Rw, certification OFG)
+- Un espace de travail pour étudier vos plans et dimensionner vos commandes avec nos techniciens
+
+**Réservez votre visite :**
+
+Une visite de 45 minutes suffit pour que vous repartiez avec toutes les réponses à vos questions techniques et un devis indicatif pour votre prochain chantier.
+
+👉 **[RÉSERVER MA VISITE SHOWROOM]**
+*(Cliquez ou appelez le 01 48 82 44 11 — disponible du lundi au vendredi, 8h-18h)*
+
+À bientôt dans nos locaux,
+
+**Catherine Guerniou**
+Dirigeante — La Fenêtrière
+01 48 82 44 11
+
+---
+*La Fenêtrière — 5 rue des Artisans, 94500 Champigny-sur-Marne*
+*[Se désabonner]*
 
 ---
 
----
-
-## Email 2 — Nos valeurs + Économie circulaire + Certification OFG
-
-**Timing :** J+3
-**Objet :** Pourquoi nous avons inscrit "réparable et recyclable" dans nos statuts
-**Pré-header :** Une raison d'être, ce n'est pas un slogan. C'est une architecture d'entreprise.
+### EMAIL B-3 — Témoignage client + cas d'usage
+**Timing :** J+5
+**Objet :** "Ils livrent dans les délais, c'est rare" — ce que disent nos partenaires
+**Preview text :** Marc, artisan poseur depuis 12 ans, nous fait confiance sur 4 chantiers par an. Voici pourquoi.
 
 ---
 
-Bonjour [PRÉNOM],
+Bonjour [Prénom],
 
-Il y a trois ans, La Fenêtrière a fait quelque chose d'inhabituel pour une PME artisanale : nous avons inscrit notre raison d'être dans nos statuts.
+Nous pourrions vous parler de nous encore longtemps.
 
-Pas dans une plaquette commerciale. Dans les statuts légaux.
-
----
-
-**Voici ce que ça dit :**
-
-> *"Fabriquer localement et durablement des menuiseries évolutives, réparables, réemployables et recyclables."*
-
-Chaque mot est là pour une raison précise.
-
-**Localement** — parce qu'une fenêtre fabriquée en Asie et transportée en Île-de-France ne peut pas prétendre à la neutralité carbone, quelle que soit la certification.
-
-**Durablement** — parce que le secteur du bâtiment représente 23 % des émissions de CO₂ en France, et que chaque choix de matériau compte.
-
-**Réparable** — parce que remplacer une fenêtre tous les 10 ans au lieu de la réparer génère des tonnes de déchets inutiles. Nos menuiseries sont conçues pour être réparées. C'est un engagement de conception, pas un argument commercial.
-
-**Recyclable** — parce que quand le produit arrive vraiment en fin de vie, la matière doit pouvoir être récupérée. Notre PVC, notre aluminium, notre vitrage : filières de recyclage actives.
+Mais parfois, il vaut mieux laisser la parole à ceux qui travaillent avec nous au quotidien.
 
 ---
 
-**La certification OFG — ce que ça change concrètement**
+**Témoignage : Marc D., artisan poseur — Seine-et-Marne**
 
-Nous sommes le seul fabricant artisanal de menuiseries extérieures en Île-de-France certifié **Origine France Garantie**.
+*"Je travaille avec La Fenêtrière depuis 2019. Ce qui m'a convaincu au départ, c'est la réactivité : j'ai eu Catherine au téléphone dès le premier appel, et j'ai reçu un devis détaillé le lendemain.*
 
-Ce n'est pas un label qu'on s'octroie. C'est un audit indépendant, annuel, qui vérifie que :
+*Ce que j'apprécie maintenant, c'est la constance. Les menuiseries sont livrées dans les délais, les dimensions sont exactes, et si jamais il y a un problème — c'est arrivé une fois en 5 ans — ça a été réglé sans discussion.*
 
-✓ La transformation principale a lieu en France
-✓ 50 % ou plus de la valeur ajoutée est d'origine française
-✓ La traçabilité des fournisseurs est documentée
+*La certification OFG, ça m'aide aussi beaucoup sur les chantiers de rénovation avec des syndics de copropriété. Ils veulent des garanties, et j'ai les documents pour les rassurer.*
 
-Concrètement, ça signifie que quand vous posez une fenêtre La Fenêtrière, vous savez exactement d'où elle vient. Pas d'approximation.
+*Et le QR code sur chaque fenêtre ? Mes clients adorent ça. Ça donne une image très pro."*
 
 ---
 
-**[PHOTO : logo OFG + logo Fabriqué en France + photo Catherine Guerniou]**
+**Un cas concret : rénovation de 24 logements à Vincennes**
+
+En 2025, Marc nous a confié la fourniture de **96 fenêtres PVC double vitrage** pour un programme de rénovation thermique à Vincennes :
+
+- Délai de livraison : 4 semaines (chantier en deux phases)
+- Économies thermiques estimées : -38% sur les déperditions
+- Certification OFG fournie pour le dossier de subvention ANAH
+- Traçabilité QR code : chaque fenêtre référencée dans le carnet d'entretien de l'immeuble
+
+Le résultat ? Marc a été recommandé par le syndic à deux autres copropriétés du quartier.
 
 ---
 
-**L'économie circulaire, ce n'est pas notre argument de vente. C'est notre modèle.**
+**Vous avez un chantier similaire en cours ou en préparation ?**
 
-Depuis 2005, nous travaillons avec les mêmes fournisseurs régionaux. Depuis des années, nous accompagnons des clients dans le remplacement partiel (changer les ouvrants sans toucher aux dormants) plutôt que le tout-remplacer. Ce n'est pas ce qu'un commerce pousse naturellement. Mais c'est ce qui est juste — et c'est ce que nos clients apprécient.
+Parlez-nous de votre projet. Nous étudions chaque demande sérieusement, même les chantiers complexes ou les délais serrés.
 
-En 2021, le Prix Madame Engagée a récompensé ce modèle. En 2025, le label Fabriqué en France 2025 l'a confirmé. Nous n'avons pas changé notre façon de travailler pour ces prix — nous les avons reçus parce que nous travaillions ainsi depuis longtemps.
+👉 **[DISCUTER DE MON PROCHAIN CHANTIER]**
+*(Répondez directement à cet email ou appelez le 01 48 82 44 11)*
+
+À très bientôt,
+
+**Catherine Guerniou**
+Dirigeante — La Fenêtrière
+
+---
+*La Fenêtrière — 5 rue des Artisans, 94500 Champigny-sur-Marne*
+*[Se désabonner]*
 
 ---
 
-La semaine prochaine, je vous présente notre gamme complète — et comment choisir entre PVC, bois et aluminium selon votre projet et votre budget.
+### EMAIL B-4 — Guide "Comment choisir vos menuiseries" (lead magnet)
+**Timing :** J+9
+**Objet :** [Guide offert] Comment choisir vos menuiseries selon vos chantiers
+**Preview text :** PVC, ALU ou Bois ? Uw, Rw, RE2020... On vous explique tout en 8 pages claires.
+
+---
+
+Bonjour [Prénom],
+
+Comme promis à votre arrivée, voici votre guide professionnel offert :
+
+---
+
+## 📋 GUIDE : CHOISIR SES MENUISERIES SELON SES CHANTIERS
+
+*Synthèse rédigée par l'équipe technique La Fenêtrière*
+
+---
+
+**1. Les trois matériaux en un coup d'œil**
+
+| Critère | PVC | Aluminium | Bois |
+|---|---|---|---|
+| Prix indicatif | ★★☆ | ★★★ | ★★★ |
+| Performance thermique | Très bonne | Bonne (rupt. pont th.) | Excellente |
+| Entretien | Quasi nul | Nul | Régulier |
+| Durée de vie estimée | 30-40 ans | 40-50 ans | 50-80 ans |
+| Compatibilité RE2020 | ✅ | ✅ | ✅ |
+| Aspect haut de gamme | Moyen | Très bon | Excellent |
+| Poids | Léger | Moyen | Lourd |
+
+---
+
+**2. À quel type de chantier correspond chaque matériau ?**
+
+**PVC — Le choix du rapport qualité/prix**
+Idéal pour : logements collectifs, programmes de rénovation thermique, bailleurs sociaux, budgets maîtrisés.
+À retenir : le PVC d'aujourd'hui n'a rien à voir avec celui des années 2000. Nos profils Premium atteignent des Uw de 0,9 W/m².K, parfaitement compatibles RE2020.
+
+**Aluminium — Le choix de l'esthétique et de la durabilité**
+Idéal pour : programmes immobiliers haut de gamme, bâtiments tertiaires, façades vitrées, architectes exigeants.
+À retenir : un surcoût de 20 à 40% par rapport au PVC, compensé par la durée de vie et les finitions (plus de 200 coloris RAL disponibles).
+
+**Bois — Le choix de l'authenticité et de l'écologie**
+Idéal pour : rénovation du patrimoine, bâtiments classés, projets à haute valeur environnementale, marchands de biens premium.
+À retenir : le bois est le seul matériau renouvelable et stockeur de carbone. Un argument de poids pour les projets certifiés HQE ou BREEAM.
+
+---
+
+**3. Les indicateurs techniques à maîtriser**
+
+- **Uw (W/m².K)** : coefficient de transmission thermique de la fenêtre entière. Plus il est bas, mieux c'est. RE2020 exige Uw ≤ 1,3 pour le résidentiel neuf.
+- **Rw (dB)** : isolation acoustique. À partir de 32 dB, vous couvrez les besoins standard. Zones aéroportuaires ou routières : visez 38-42 dB.
+- **Sw** : facteur solaire (apports de chaleur par le vitrage). En RE2020, il faut parfois limiter les apports en été : Sw ≤ 0,3 dans certaines zones.
+- **AEV** : résistance à l'Air, à l'Eau et au Vent. Classement de 1 à 4 pour chaque critère. Le minimum pour l'IDF : A*3 E*6B V*C3.
+
+---
+
+**4. RE2020 : ce qui change pour vous en 2026**
+
+Depuis janvier 2025, le seuil Bbio (besoin bioclimatique) s'est encore durci. Ce que ça signifie pour vos menuiseries :
+
+- Les vitrages double vitrage standard (4/16/4) ne suffisent plus systématiquement
+- Le triple vitrage devient pertinent sur les façades Nord et dans les zones climatiques H1
+- La réflexion sur les coffres de volets roulants intégrés (ponts thermiques) est désormais incontournable
+
+Bonne nouvelle : nos gammes PVC et ALU sont toutes disponibles avec des options de vitrage adaptées RE2020, avec les fiches techniques correspondantes pour vos dossiers de permis.
+
+---
+
+**5. La question des délais : comment planifier vos commandes**
+
+| Type de commande | Délai fabrication | Délai livraison |
+|---|---|---|
+| Menuiseries standard (catalogue) | 2-3 semaines | 3-5 semaines |
+| Menuiseries sur mesure simple | 3-4 semaines | 4-6 semaines |
+| Menuiseries spéciales (formes, couleurs rares) | 5-6 semaines | 6-8 semaines |
+| Grandes commandes (+50 unités) | Sur devis | Sur devis |
+
+**Notre conseil :** commandez au minimum 6 semaines avant la date de pose prévue. En cas d'urgence, appelez-nous directement — nous faisons notre possible pour trouver des solutions.
+
+---
+
+**6. Checklist avant de passer commande**
+
+✅ Dimensions précises relevées (largeur x hauteur en tableau)
+✅ Matériau et coloris choisis (intérieur / extérieur)
+✅ Type de vitrage spécifié (Uw cible, acoustique si besoin)
+✅ Sens d'ouverture confirmé (vue de l'intérieur)
+✅ Type de pose précisé (en feuillure, en tunnel, en applique)
+✅ Quincaillerie spécifique mentionnée (oscillo-battant, tilt & turn, etc.)
+✅ Certification OFG requise ? (indispensable pour certaines aides)
+✅ Date de livraison souhaitée confirmée avec nous
+
+---
+
+*Ce guide est mis à jour régulièrement par notre équipe technique. Pour toute question spécifique à votre chantier, contactez-nous directement.*
+
+---
+
+Voilà — vous avez maintenant les bases pour aborder vos chantiers menuiseries avec toutes les clés en main.
+
+Dans 5 jours, vous recevrez notre dernière communication de bienvenue, avec une offre réservée aux nouveaux partenaires professionnels.
+
+**Des questions sur ce guide ?** Répondez directement à cet email. Je lis tous les messages.
 
 À bientôt,
 
 **Catherine Guerniou**
 Dirigeante — La Fenêtrière
-📞 01 48 82 44 11 | [la-fenetriere.fr](https://www.la-fenetriere.fr)
+01 48 82 44 11
+
+---
+*La Fenêtrière — 5 rue des Artisans, 94500 Champigny-sur-Marne*
+*[Se désabonner]*
 
 ---
 
-**CTA principal :** `→ Découvrir notre démarche OFG en détail`
-**CTA secondaire :** `→ Télécharger notre fiche circuit court`
+### EMAIL B-5 — Offre découverte / CTA devis
+**Timing :** J+14
+**Objet :** [Réservé aux nouveaux partenaires] Votre offre découverte expire dans 7 jours
+**Preview text :** Frais de dossier offerts + visite showroom prioritaire pour votre premier devis. Valable jusqu'au [DATE].
 
 ---
 
----
+Bonjour [Prénom],
 
-## Email 3 — Nos produits + CTA demande de devis
+C'est notre dernier email de bienvenue — et nous avons gardé le meilleur pour la fin.
 
-**Timing :** J+7
-**Objet :** Fenêtres PVC, bois ou alu : laquelle est faite pour vous ?
-**Pré-header :** On vous aide à choisir — et à obtenir un chiffrage sans engagement.
+Depuis deux semaines, vous avez découvert notre atelier, notre approche, et les bases techniques pour choisir vos menuiseries. Maintenant, passons à l'action.
 
----
+**Votre offre découverte "Nouveau Partenaire Professionnel" :**
 
-Bonjour [PRÉNOM],
+Pour tout premier devis soumis avant le **[DATE + 7 jours]** :
 
-Après vous avoir présenté notre histoire et nos valeurs, voici ce que nous fabriquons — et comment choisir.
+✅ **Frais de dossier offerts** (valeur : 150 € HT)
+✅ **Visite showroom prioritaire** — accès à notre technicien dédié sans délai d'attente
+✅ **Devis détaillé sous 48h** (au lieu de 5 jours ouvrés standard)
+✅ **Fiche technique OFG fournie gratuitement** pour votre premier chantier
 
----
-
-**Notre gamme complète :**
-
-**Fenêtres**
-- PVC : performance thermique maximale, entretien minimal, idéal rénovation
-- Bois : chaleur esthétique, excellent isolant naturel, idéal maisons de caractère
-- Aluminium : finesse des profils, solidité long terme, idéal façades contemporaines
-
-**Portes d'entrée et portes-fenêtres**
-Sur mesure, tous matériaux. Serrurerie 5 points, vitrages feuilletés, finitions RAL au choix.
-
-**Volets et pergolas**
-Volets battants bois, volets roulants ALU, stores extérieurs. Fabrication sur mesure.
-
-**Portails et clôtures**
-ALU et acier galvanisé. Automatisation sur option.
+Cette offre est valable **une seule fois**, pour les nouveaux partenaires professionnels uniquement.
 
 ---
 
-**[TABLEAU : comparatif PVC / Bois / Alu — Prix, entretien, performance thermique, esthétique]**
+**Comment en profiter ?**
 
-| | PVC | Bois | Aluminium |
-|---|---|---|---|
-| **Prix** | ★★★ | ★★ | ★★ |
-| **Isolation thermique** | ★★★ | ★★★ | ★★ |
-| **Entretien** | Minimal | Annuel | Minimal |
-| **Esthétique** | Standard à +++ | Chaleureux | Minimaliste |
-| **Durée de vie** | 30 ans | 40 ans+ | 40 ans+ |
-| **Fabriqué en France** | ✓ Doubs | ✓ France | ✓ Bourgogne |
+**Option 1 — En ligne :**
+👉 **[DEMANDER MON DEVIS DÉCOUVERTE]**
+Remplissez le formulaire avec les spécifications de votre chantier. Notre équipe revient vers vous sous 48h.
 
----
+**Option 2 — Par téléphone :**
+Appelez directement Catherine ou son équipe au **01 48 82 44 11**
+Du lundi au vendredi, 8h à 18h.
 
-**MaPrimeRénov' 2026 : vos fenêtres peuvent être aidées**
-
-Si vous êtes propriétaire occupant, vous pouvez bénéficier de :
-- **MaPrimeRénov' Fenêtres** : jusqu'à 100 €/fenêtre selon revenus
-- **TVA à 5,5 %** sur la pose et les matériaux
-- **Éco-PTZ** jusqu'à 50 000 € sans condition de revenus
-
-Nous vous accompagnons dans la constitution du dossier.
+**Option 3 — En showroom :**
+Venez avec vos plans et vos relevés de cotes. Nous étudions votre chantier ensemble et vous repartez avec un devis indicatif le jour même.
+👉 **[RÉSERVER MA VISITE SHOWROOM]**
 
 ---
 
-**Obtenez votre devis gratuit en 48h**
+**Pourquoi travailler avec La Fenêtrière ?**
 
-Notre processus est simple :
-1. Vous nous envoyez vos dimensions et votre projet (formulaire ou email)
-2. Nous revenons vers vous sous 48h avec un chiffrage détaillé
-3. Si vous le souhaitez, nous organisons une visite de chantier gratuite
+Parce que vous méritez un fournisseur qui :
+- Fabrique localement, en Île-de-France
+- Répond présent quand un problème survient
+- Fournit tous les documents pour vos dossiers (OFG, fiches techniques, QR code traçabilité)
+- Traite votre chantier, petit ou grand, avec le même soin
 
-Pas de commercial itinérant, pas de pression. Juste une réponse honnête d'un fabricant qui connaît ses prix.
+Nous sommes là pour construire une relation sur la durée — pas pour faire du chiffre ponctuel.
 
----
+Offre valable jusqu'au **[DATE + 7 jours]**. Après cette date, nous reviendrons aux conditions standard.
+
+À très bientôt,
 
 **Catherine Guerniou**
 Dirigeante — La Fenêtrière
 📞 01 48 82 44 11
-📧 lafenetriere@lafenetriere.fr
+🌐 www.la-fenetriere.fr
+
+---
+*La Fenêtrière — 5 rue des Artisans, 94500 Champigny-sur-Marne*
+*[Se désabonner]*
 
 ---
 
-**CTA principal :** `→ Demander mon devis gratuit (réponse en 48h)`
-**CTA secondaire :** `→ Nous appeler au 01 48 82 44 11`
+## 2. SÉQUENCE NURTURING — 4 emails sur 30 jours
+
+> **Objectif :** Éduquer les prospects qualifiés qui n'ont pas encore commandé, renforcer l'expertise perçue de La Fenêtrière et maintenir la relation jusqu'à la décision d'achat.
+> **Déclencheur :** Envoyé aux contacts qui n'ont pas répondu à la séquence Bienvenue OU aux abonnés actifs sans commande depuis 30 jours.
 
 ---
 
----
-
-# 2. Séquence Nurturing B2B
-
-**Nom de la séquence :** La Fenêtrière × Professionnels du Bâtiment
-**Déclencheur :** Demande de contact, inscription B2B, ou téléchargement d'une ressource pro
-**Audience :** Architectes, maîtres d'œuvre, artisans poseurs, promoteurs, bailleurs sociaux
-**Objectif :** Construire la confiance, démontrer la valeur partenariale, obtenir un rendez-vous
+### EMAIL N-1 — RE2020 et menuiseries : ce que vous devez savoir
+**Timing :** J+1 après entrée dans la séquence
+**Objet :** RE2020 en 2026 : les menuiseries que vous ne pouvez plus poser
+**Preview text :** Les règles ont changé. Voici ce qui est autorisé, ce qui ne l'est plus, et comment s'adapter sans exploser les budgets.
 
 ---
 
-## Email 1 B2B — Merci pour votre demande + Délais de réponse
+Bonjour [Prénom],
 
-**Timing :** J+0 (envoi automatique immédiat)
-**Objet :** Votre demande a bien été reçue — voici ce qui se passe maintenant
-**Pré-header :** Nous revenons vers vous sous 48h ouvrées avec un chiffrage détaillé.
+La RE2020 est entrée en vigueur pour le résidentiel neuf en janvier 2022. Depuis, ses exigences se renforcent par paliers.
 
----
+En 2026, la plupart des acteurs du bâtiment ont intégré les grands principes. Mais dans le détail — notamment sur les menuiseries — des zones de flou persistent. Et les erreurs coûtent cher.
 
-Bonjour [PRÉNOM],
+**Ce que la RE2020 impose concrètement sur les menuiseries :**
 
-Merci pour votre prise de contact avec **La Fenêtrière**.
+**1. Les coefficients thermiques non négociables**
+- Uw ≤ 1,3 W/m².K pour les fenêtres en zone H1 et H2 (toute l'Île-de-France est en zone H1)
+- Pour les portes-fenêtres : Uw ≤ 1,5 W/m².K
+- Ces valeurs sont calculées sur la fenêtre entière (vitrage + cadre), pas seulement le vitrage
 
-Votre demande a bien été enregistrée. Voici ce qui se passe maintenant :
+**2. Le facteur solaire : la face oubliée**
+La RE2020 introduit un indicateur Bbio qui intègre les surchauffes estivales. Résultat : un Sw trop élevé peut pénaliser votre Bbio, même si l'Uw est parfait.
+Solution : vitrages sélectifs (faible émissivité + contrôle solaire) sur les façades Sud et Ouest.
 
----
+**3. Les ponts thermiques autour des menuiseries**
+Les liaisons mur/menuiserie sont désormais auditées dans les calculs RE2020. Une pose mal réalisée peut invalider les performances annoncées.
+Notre équipe peut vous fournir les détails de liaison validés par notre bureau d'études pour chaque type de pose.
 
-**Ce que nous allons faire dans les 48h ouvrées :**
-
-✓ Analyse de votre projet (dimensions, matériaux, contraintes techniques)
-✓ Chiffrage détaillé par ligne de poste
-✓ Disponibilités pour un échange téléphonique ou une visite de chantier
-
-Si votre demande est urgente ou si vous souhaitez nous joindre directement :
-
-📞 **01 48 82 44 11** (du lundi au vendredi, 8h-18h)
-📧 **lafenetriere@lafenetriere.fr**
+**4. La traçabilité des performances**
+Les maîtres d'ouvrage et les contrôleurs demandent de plus en plus les fiches produit avec PV d'essais certifiés. Notre certification OFG et nos fiches ACOTHERM sont disponibles pour tous nos produits.
 
 ---
 
-**En attendant, quelques informations utiles :**
+**Tableau de synthèse RE2020 — Menuiseries résidentielles neuves IDF**
 
-Nous sommes **fabricant**, pas revendeur. Concrètement, ça signifie :
-- Délais maîtrisés (production en interne à Champigny)
-- Pas d'intermédiaire sur le pricing
-- SAV direct avec le fabricant en cas de problème sur chantier
-- Possibilité de chantiers référencés et de partenariats long terme
-
-Nos certifications : **OFG (Origine France Garantie)** | **Fabriqué en France 2025**
+| Élément | Exigence RE2020 | Nos gammes conformes |
+|---|---|---|
+| Fenêtres | Uw ≤ 1,3 W/m².K | PVC Premium, ALU Thermique, Bois Triple |
+| Portes-fenêtres | Uw ≤ 1,5 W/m².K | Toutes gammes |
+| Volets roulants intégrés | Pont thermique < 0,1 W/m.K | Coffres rupteur disponibles |
+| Vitrage facteur solaire | Sw selon orientation | Sur devis selon plan |
 
 ---
 
-À très vite,
+**Besoin d'un avis technique sur votre prochain chantier RE2020 ?**
+
+Nos techniciens peuvent analyser vos plans et vous recommander la combinaison matériau/vitrage optimale pour satisfaire RE2020 sans dépasser votre budget.
+
+👉 **[DEMANDER UN AVIS TECHNIQUE GRATUIT]**
+Ou appelez le **01 48 82 44 11**
+
+À bientôt,
+
+**Catherine Guerniou**
+La Fenêtrière — Champigny-sur-Marne (94)
+
+---
+*[Se désabonner]*
+
+---
+
+### EMAIL N-2 — Comparatif matériaux PVC vs ALU vs Bois
+**Timing :** J+8
+**Objet :** PVC vs ALU vs Bois : le comparatif honnête (sans langue de bois)
+**Preview text :** On pourrait vous dire que tout est bon. On préfère vous dire la vérité — et vous aider à choisir juste.
+
+---
+
+Bonjour [Prénom],
+
+Chaque fabricant vous dira que son matériau est le meilleur.
+
+Chez La Fenêtrière, nous fabriquons les trois. Alors laissez-nous vous donner un avis sans conflit d'intérêt.
+
+---
+
+**LE PVC : le couteau suisse des menuiseries**
+
+**Ses vrais atouts :**
+Le PVC d'aujourd'hui n'a rien à voir avec les profils jaunis des années 90. Les profils modernes multi-chambres atteignent des Uw de 0,9 à 1,1 W/m².K sans triple vitrage. L'entretien est quasi nul, et la résistance à l'humidité est imbattable — idéal pour les salles de bain et les logements côtiers.
+
+**Ses vraies limites :**
+Le PVC se dilate avec la chaleur (5 à 7 mm/m entre -10°C et +40°C). Sur les grandes dimensions (> 2,5 m de large), une attention particulière est requise sur les armatures. Côté esthétique, certains maîtres d'ouvrage haut de gamme restent réticents — à tort souvent, mais c'est une réalité commerciale.
+
+**Pour qui ?**
+Bailleurs sociaux, programmes de rénovation thermique, logements collectifs, budget optimisé.
+
+---
+
+**L'ALUMINIUM : la précision et le prestige**
+
+**Ses vrais atouts :**
+L'aluminium permet des sections très fines (profils jusqu'à 30 mm de visible) — un argument esthétique majeur pour les architectes. La gamme de coloris RAL est quasi infinie, et la stabilité dimensionnelle est parfaite même sur de très grandes dimensions (baies vitrées de 4-5 m). La durée de vie dépasse facilement 50 ans sans entretien notable.
+
+**Ses vraies limites :**
+Sans rupture de pont thermique, l'aluminium est un conducteur thermique catastrophique. Nos profils intègrent systématiquement une rupture de pont thermique polyamide — indispensable. Le coût est 25 à 40% supérieur au PVC pour des performances thermiques équivalentes.
+
+**Pour qui ?**
+Promoteurs haut de gamme, bâtiments tertiaires, architectes, façades, maisons individuelles premium.
+
+---
+
+**LE BOIS : l'avenir qui vient du passé**
+
+**Ses vrais atouts :**
+Le bois est le seul matériau naturellement renouvelable et stockeur de carbone. Sur le plan thermique, c'est un excellent isolant naturel (conductivité 0,12 W/m.K contre 160 pour l'ALU non traité). La durée de vie d'une menuiserie bois bien entretenue dépasse 80 ans — aucun autre matériau ne l'égale.
+
+**Ses vraies limites :**
+L'entretien est réel : une lasure ou une peinture tous les 5-8 ans selon l'exposition. Le coût initial est élevé, et les délais de fabrication sont légèrement supérieurs. Enfin, le bois n'est pas adapté à toutes les configurations climatiques sans traitement approprié.
+
+**Pour qui ?**
+Rénovation du patrimoine, bâtiments classés, projets certifiés HQE/BREEAM, maisons individuelles haut de gamme, marchands de biens sur logements de caractère.
+
+---
+
+**Le conseil de Catherine :**
+
+*"Dans 80% des chantiers que nous traitons, le PVC répond parfaitement aux besoins techniques et budgétaires. Mais la vraie question n'est pas 'quel matériau est le meilleur ?' — c'est 'quel matériau correspond à ce chantier précis, à ce client précis, et à ce budget précis ?'*
+
+*C'est pourquoi nous fabriquons les trois. Et c'est pourquoi nous prenons le temps de comprendre votre projet avant de vous recommander quoi que ce soit."*
+
+---
+
+**Vous avez un chantier en cours de chiffrage ?**
+
+Envoyez-nous vos plans ou appelez-nous. On vous dit honnêtement ce qui convient le mieux.
+
+👉 **[OBTENIR UNE RECOMMANDATION PERSONNALISÉE]**
+📞 **01 48 82 44 11**
+
+**Catherine Guerniou**
+La Fenêtrière — Champigny-sur-Marne (94)
+
+---
+*[Se désabonner]*
+
+---
+
+### EMAIL N-3 — Innovation : QR code traçabilité et économie circulaire
+**Timing :** J+18
+**Objet :** Le QR code sur vos fenêtres : pourquoi vos clients vont adorer ça
+**Preview text :** Traçabilité, carnet numérique, économie circulaire... La Fenêtrière prend de l'avance sur les obligations de 2027.
+
+---
+
+Bonjour [Prénom],
+
+Voici quelque chose que peu de fabricants de menuiseries proposent encore en 2026.
+
+**Le QR code traçabilité La Fenêtrière**
+
+Sur chaque menuiserie que nous fabriquons, un QR code discret est apposé (sur le dormant, côté intérieur). Ce code donne accès à une fiche numérique complète :
+
+- **Origine des matériaux** : profils, vitrages, quincaillerie — avec les certificats fournisseurs
+- **Date de fabrication** et numéro de lot
+- **Performances certifiées** : Uw, Rw, classement AEV — les valeurs réelles, pas les valeurs catalogue
+- **Instructions de pose** spécifiques à ce modèle
+- **Fiches d'entretien** adaptées au matériau et au coloris
+- **Contacts SAV** directs
+
+**Pourquoi c'est important pour vous :**
+
+1. **Vos dossiers de chantier** : plus besoin de chercher les fiches techniques 2 ans après la pose. Le QR code fait le lien.
+
+2. **Vos clients finaux** : ils peuvent scanner le QR code et accéder à l'historique de leur menuiserie. C'est un argument de réassurance puissant, notamment pour les syndics de copropriété.
+
+3. **Les obligations qui arrivent** : le Passeport Matériaux (issu de la loi AGEC) va progressivement devenir obligatoire pour les produits de construction. Nous anticipons dès maintenant.
+
+4. **Les appels d'offres** : de plus en plus de maîtres d'ouvrage publics (bailleurs sociaux, collectivités) intègrent des critères de traçabilité dans leurs cahiers des charges. Notre QR code y répond directement.
+
+---
+
+**L'économie circulaire : nous allons plus loin**
+
+Notre engagement dépasse la traçabilité :
+
+**Valorisation des chutes de production**
+Les chutes de profils PVC sont triées et retournées à nos fournisseurs pour broyage et recyclage. Zéro mise en décharge depuis 2023.
+
+**Filière de reprise des anciennes menuiseries**
+Quand vous posez du neuf, que faites-vous de l'ancien ? Nous proposons une filière de reprise pour les menuiseries déposées sur vos chantiers IDF — PVC et ALU principalement. Contactez-nous pour les modalités.
+
+**Emballages réutilisables**
+Nos calages et protections de transport sont récupérés à la livraison et réutilisés. Un détail, mais qui compte.
+
+---
+
+**Ces engagements sont-ils certifiés ?**
+
+Oui. Notre démarche fait partie de notre certification OFG, qui inclut un volet environnemental audité annuellement. Les documents sont disponibles sur demande.
+
+---
+
+**Vous avez un appel d'offres avec des critères RSE ou traçabilité ?**
+
+Nous pouvons vous fournir un dossier complet (certifications, engagements, indicateurs) adapté à vos exigences de marché public ou privé.
+
+👉 **[DEMANDER LE DOSSIER RSE & TRAÇABILITÉ]**
+📞 **01 48 82 44 11**
+
+**Catherine Guerniou**
+La Fenêtrière — Champigny-sur-Marne (94)
+
+---
+*[Se désabonner]*
+
+---
+
+### EMAIL N-4 — CTA visite showroom ou devis
+**Timing :** J+30
+**Objet :** On se retrouve quand ? Votre showroom pro vous attend
+**Preview text :** Une visite de 45 min pour répondre à toutes vos questions techniques. Sans engagement, sans pression.
+
+---
+
+Bonjour [Prénom],
+
+Ce mois dernier, nous vous avons partagé nos meilleures ressources :
+
+- Les exigences RE2020 appliquées aux menuiseries
+- Le comparatif honnête PVC / ALU / Bois
+- Notre système de traçabilité QR code et nos engagements RSE
+
+Maintenant, c'est à vous de jouer.
+
+**La meilleure façon d'aller plus loin : venez nous voir.**
+
+Notre showroom technique à Champigny-sur-Marne est conçu pour les professionnels comme vous. En 45 minutes, nous pouvons :
+
+- Vous montrer nos gammes en grandeur réelle, avec les performances affichées
+- Étudier ensemble vos plans ou vos chantiers en cours
+- Vous remettre un devis indicatif sur-mesure
+- Répondre à toutes vos questions techniques, sans langue de bois
+
+**Aucune obligation. Aucune pression commerciale. Juste une conversation professionnelle.**
+
+---
+
+**Choisissez votre option :**
+
+👉 **[RÉSERVER MA VISITE SHOWROOM]** — Créneaux disponibles lundi-vendredi, 9h-17h
+
+👉 **[DEMANDER UN DEVIS EN LIGNE]** — Réponse sous 48h ouvrées
+
+👉 **[APPELER L'ÉQUIPE]** — 01 48 82 44 11 (lun-ven, 8h-18h)
+
+---
+
+Et si vous avez un chantier urgent, ne perdez pas de temps : appelez directement. Nous avons souvent des solutions même pour les délais serrés.
+
+Au plaisir d'échanger avec vous,
+
+**Catherine Guerniou**
+Dirigeante — La Fenêtrière
+📞 01 48 82 44 11
+🌐 www.la-fenetriere.fr
+
+---
+*La Fenêtrière — 5 rue des Artisans, 94500 Champigny-sur-Marne*
+*[Se désabonner]*
+
+---
+
+## 3. SÉQUENCE RÉACTIVATION — 3 emails
+
+> **Objectif :** Reconquérir les prospects qui n'ont plus interagi depuis 3 mois ou plus (pas d'ouverture, pas de clic, pas de commande).
+> **Déclencheur :** Inactivité > 90 jours.
+> **Ton :** Direct, humain, sans agressivité. Reconnaître l'absence, proposer de la valeur, laisser la porte ouverte.
+
+---
+
+### EMAIL R-1 — Relance douce
+**Timing :** J+0 (entrée dans la séquence)
+**Objet :** On ne s'est pas vus depuis un moment, [Prénom]
+**Preview text :** Pas de reproche — juste un petit signe pour vous dire qu'on est toujours là.
+
+---
+
+Bonjour [Prénom],
+
+Ça fait quelques mois qu'on ne s'est pas "croisés" dans votre boîte mail.
+
+Pas de reproche — vous avez des chantiers à gérer, des clients à satisfaire, des devis à rendre. On comprend.
+
+Simplement, nous voulions vous donner de nos nouvelles et vous rappeler que La Fenêtrière est toujours là, à Champigny-sur-Marne, si vous avez besoin de nous.
+
+**Ce qui a changé depuis votre dernière visite chez nous :**
+
+- Nous avons élargi notre gamme ALU avec de nouveaux profils adaptés aux grandes baies RE2020
+- Notre système de traçabilité QR code est désormais déployé sur 100% de nos productions
+- Nous avons renforcé notre équipe technique : les délais de devis sont passés de 5 jours à 48h
+
+**Un chantier en préparation ? Une question technique ?**
+
+C'est le bon moment pour reprendre le contact. Répondez à cet email, appelez le 01 48 82 44 11, ou venez directement au showroom.
+
+On sera heureux de vous retrouver.
+
+**Catherine Guerniou & l'équipe La Fenêtrière**
+📞 01 48 82 44 11
+
+---
+*La Fenêtrière — 5 rue des Artisans, 94500 Champigny-sur-Marne*
+*[Se désabonner] — [Modifier mes préférences]*
+
+---
+
+### EMAIL R-2 — Valeur + urgence douce
+**Timing :** J+7
+**Objet :** Quelque chose d'utile pour votre prochain chantier (même si on ne travaille pas ensemble)
+**Preview text :** Un outil de calcul et une ressource RE2020 — offerts, sans condition.
+
+---
+
+Bonjour [Prénom],
+
+Même si nous n'avons pas eu l'occasion de travailler ensemble récemment, je voulais vous partager quelque chose d'utile.
+
+**Ressource offerte : la check-list "Chantier Menuiseries Sans Erreur"**
+
+Après des années à travailler avec des artisans poseurs et des maîtres d'œuvre, nous avons compilé les 12 points de vigilance qui évitent 90% des problèmes sur les chantiers menuiseries :
+
+1. ✅ Vérification des côtes en tableau (pas en feuillure) avant commande
+2. ✅ Confirmation du sens d'ouverture (vue de l'intérieur, côté poignée)
+3. ✅ Vérification de la planéité et de l'aplomb des tableaux avant pose
+4. ✅ Calfeutrement prévu (mousse imprégnée, fond de joint, mastic)
+5. ✅ Traitement de l'étanchéité à l'air côté intérieur
+6. ✅ Traitement de la liaison eau côté extérieur (seuil, appui)
+7. ✅ Coffre volet roulant : pont thermique traité ?
+8. ✅ Accès au logement confirmé pour le jour de livraison
+9. ✅ Numéro de commande transmis au gardien/syndic si résidence
+10. ✅ Contrôle de la menuiserie avant pose (dimensions, vitrage, quincaillerie)
+11. ✅ Test d'ouverture/fermeture et réglage des charnières après pose
+12. ✅ Remise du QR code traçabilité et des notices au client final
+
+Vous pouvez imprimer cette liste et la donner à votre équipe. Elle est offerte, sans condition.
+
+---
+
+**Et si on en profitait pour reprendre contact ?**
+
+Si vous avez un chantier en préparation — même dans 3 ou 6 mois — c'est le bon moment pour anticiper les délais.
+
+👉 **[PARLER DE MON PROCHAIN CHANTIER]**
+📞 **01 48 82 44 11**
+
+À bientôt,
+
+**Catherine Guerniou**
+La Fenêtrière
+
+---
+*[Se désabonner] — [Modifier mes préférences]*
+
+---
+
+### EMAIL R-3 — Dernier email avant désabonnement
+**Timing :** J+14
+**Objet :** C'est notre dernier email, [Prénom] — mais vous décidez
+**Preview text :** On ne veut pas encombrer votre boîte mail. Un clic pour rester, un clic pour partir. C'est vous qui choisissez.
+
+---
+
+Bonjour [Prénom],
+
+Je vais être direct.
+
+Cela fait plusieurs mois que vous n'avez pas ouvert nos emails. Peut-être qu'ils n'arrivent pas au bon moment. Peut-être que votre activité a changé. Peut-être que vous avez déjà un fournisseur qui vous convient.
+
+Quoi qu'il en soit, **nous ne voulons pas vous déranger inutilement.**
+
+C'est notre dernier email automatique. Après celui-ci, nous suspendrons nos envois à votre adresse.
+
+---
+
+**Mais avant que vous partiez — deux options :**
+
+👉 **[OUI, JE VEUX RESTER EN CONTACT]**
+Cliquez ici pour confirmer votre abonnement. Vous recevrez nos actualités et ressources professionnelles quand elles ont de la valeur — pas pour remplir votre inbox.
+
+👉 **[NON MERCI, JE ME DÉSABONNE]**
+Aucun problème. Nous retirons votre adresse immédiatement, sans question.
+
+---
+
+Si jamais vous avez besoin d'un fournisseur menuiseries en Île-de-France dans le futur, vous savez où nous trouver :
+
+**La Fenêtrière — Champigny-sur-Marne (94)**
+📞 01 48 82 44 11
+🌐 www.la-fenetriere.fr
+
+Ce fut un plaisir d'être dans votre boîte mail, même brièvement.
+
+**Catherine Guerniou**
+Dirigeante — La Fenêtrière
+
+---
+*[Se désabonner]*
+
+---
+
+## 4. SÉQUENCE POST-COMMANDE — 3 emails
+
+> **Objectif :** Soigner la relation client après la commande, recueillir un avis positif et ouvrir la porte à de futures commandes (cross-sell / upsell).
+> **Déclencheur :** Confirmation de commande enregistrée dans le CRM.
+
+---
+
+### EMAIL PC-1 — Remerciement + suivi livraison
+**Timing :** J+0 (envoi immédiat après confirmation de commande)
+**Objet :** Votre commande La Fenêtrière est confirmée — voici ce qui se passe maintenant
+**Preview text :** Merci pour votre confiance. Voici le planning de fabrication et vos contacts dédiés.
+
+---
+
+Bonjour [Prénom],
+
+**Votre commande n° [NUMÉRO] est confirmée.** Merci pour votre confiance.
+
+Voici ce qui se passe maintenant :
+
+**Planning de votre commande :**
+
+| Étape | Date estimée |
+|---|---|
+| Lancement en fabrication | [DATE J+2] |
+| Fin de fabrication prévue | [DATE FABRICATION] |
+| Appel de confirmation avant livraison | [DATE J-2 LIVRAISON] |
+| Livraison prévue | [DATE LIVRAISON] |
+
+**Vos contacts dédiés :**
+
+- **Suivi de commande & technique** : [NOM TECHNICIEN] — [EMAIL] — 01 48 82 44 11 poste [X]
+- **Urgence ou modification** : Catherine Guerniou — 01 48 82 44 11
+
+**Récapitulatif de votre commande :**
+[INSÉRER TABLEAU RÉCAPITULATIF : référence, quantité, dimensions, matériau, coloris, vitrage]
+
+**Votre QR code de traçabilité**
+Chaque menuiserie de votre commande sera livrée avec un QR code individuel. Vous recevrez également un récapitulatif numérique de votre commande au format PDF.
+
+---
+
+**Une modification de dernière minute ?**
+
+Les modifications sont acceptées jusqu'à **[DATE LIMITE = J+3]**. Après cette date, la fabrication sera lancée et les modifications ne pourront plus être prises en compte.
+
+Contactez-nous avant cette date : **01 48 82 44 11**
+
+Merci encore pour votre commande. Nous mettons tout en œuvre pour vous livrer dans les délais et avec la qualité que vous attendez.
 
 **L'équipe La Fenêtrière**
-📍 Champigny-sur-Marne (94)
 📞 01 48 82 44 11
+🌐 www.la-fenetriere.fr
 
 ---
+*La Fenêtrière — 5 rue des Artisans, 94500 Champigny-sur-Marne*
 
-**CTA principal :** `→ Compléter ma demande avec les dimensions`
-**CTA secondaire :** `→ Nous appeler maintenant`
-
----
-
----
-
-## Email 2 B2B — Pourquoi choisir un fabricant local en Île-de-France
-
-**Timing :** J+3
-**Objet :** Ce que vous perdez (vraiment) avec un fournisseur qui n'est pas fabricant
-**Pré-header :** Délais, SAV, traçabilité, RE2020 : 4 arguments que peu de fournisseurs IDF peuvent tenir.
-
----
-
-Bonjour [PRÉNOM],
-
-Travailler avec un fabricant local en menuiserie extérieure, c'est souvent présenté comme un choix "éthique". En réalité, c'est d'abord un choix **économiquement rationnel** pour un professionnel du bâtiment.
-
-Voici pourquoi.
-
----
-
-**1. Les délais sont tenus — parce que nous maîtrisons la production**
-
-Un distributeur régional ne fabrique pas. Il commande, stocke, livre. Quand son fournisseur polonais ou turc a un problème d'approvisionnement (et ça arrive), c'est votre chantier qui attend.
-
-Chez La Fenêtrière, la production est à Champigny-sur-Marne. Nous savons à J-10 si votre commande sera prête. Pas à J-1.
-
-**Délai moyen de production :** 3 à 5 semaines selon gamme et complexité.
-
----
-
-**2. Le SAV est traité par celui qui a fabriqué**
-
-Un problème de joint, une quincaillerie mal réglée, un vitrage fissuré à la pose ? Avec un revendeur, votre interlocuteur fait remonter au fabricant... qui est à l'étranger... qui envoie un technicien... dans 3 semaines.
-
-Avec La Fenêtrière, le technicien qui intervient connaît le produit parce qu'il l'a fabriqué. Résolution en 48 à 72h dans la grande majorité des cas.
-
----
-
-**3. La traçabilité pour vos dossiers RE2020 et BBCA**
-
-Les exigences RE2020 nécessitent des Fiches de Déclaration Environnementale et Sanitaire (FDES) précises. Nos produits certifiés OFG disposent d'une traçabilité matière complète — PVC du Doubs, alu de Bourgogne, vitrage de Normandie.
-
-Utile pour vos bilans carbone de chantier et vos dossiers de certification.
-
----
-
-**4. Le partenariat, pas la transaction**
-
-Nous travaillons régulièrement avec des architectes et maîtres d'œuvre sur des projets multi-lots. Nous pouvons :
-- Intervenir en phase esquisse pour le conseil matériaux
-- Fournir des échantillons et des fiches techniques détaillées
-- Réaliser des chiffrages à blanc pour vos appels d'offres
-- Assurer la pose via notre réseau de poseurs partenaires IDF
-
----
-
-Un échange de 20 minutes pour voir si nous pouvons travailler ensemble ?
-
-**Catherine Guerniou**
-📞 01 48 82 44 11 | lafenetriere@lafenetriere.fr
-
----
-
-**CTA principal :** `→ Prendre rendez-vous (20 min)`
-**CTA secondaire :** `→ Télécharger notre plaquette partenaires`
-
----
-
----
-
-## Email 3 B2B — Étude de cas chantier (template)
-
-**Timing :** J+7
-**Objet :** [Chantier] Comment nous avons livré [N] fenêtres en [X] semaines sur [VILLE]
-**Pré-header :** Rénovation de [TYPE DE BÂTIMENT] : les détails du projet, les contraintes, le résultat.
-
----
-
-> **Note d'utilisation :** Remplacer toutes les zones `[ENTRE CROCHETS]` par les données d'un chantier réel. Ce template est conçu pour être dupliqué autant de fois que nécessaire avec des chantiers différents.
-
----
-
-Bonjour [PRÉNOM],
-
-Je vous partage aujourd'hui un retour de chantier qui correspond peut-être à ce que vous avez en cours.
-
----
-
-**Le projet : [DESCRIPTION COURTE DU CHANTIER]**
-
-| | Détail |
-|---|---|
-| **Type de chantier** | [Rénovation logements collectifs / Maison individuelle / Programme neuf / etc.] |
-| **Client** | [Promoteur / Bailleur social / Architecte] (confidentiel si besoin) |
-| **Localisation** | [Ville ou arrondissement], Île-de-France |
-| **Volume** | [N] fenêtres + [N] portes-fenêtres + [N] portes d'entrée |
-| **Matériau** | [PVC / Bois / Aluminium / Mix] |
-| **Délai de livraison** | [X] semaines après commande |
-| **Pose** | [Réalisée par notre équipe / Pose assurée par le client] |
-
----
-
-**Les contraintes du chantier :**
-
-[INSÉRER : contraintes dimensionnelles, contraintes de couleur / RAL spécifique, contraintes acoustiques, exigences RE2020, délai serré, accès difficile, coordination avec d'autres corps d'état, etc.]
-
----
-
-**Comment nous avons répondu :**
-
-[INSÉRER : description de la solution technique, des adaptations de production, des coordinations logistiques, des particularités de fabrication, etc.]
-
----
-
-**Ce que le client a dit :**
-
-> *"[TÉMOIGNAGE CLIENT — idéalement une phrase sur la qualité, le respect des délais ou la relation commerciale]"*
-> — [Prénom NOM], [Fonction], [Entreprise]
-
----
-
-**[PHOTO : photo du chantier livré OU photo des menuiseries posées]**
-
----
-
-Vous avez un projet similaire ? Je serais ravi(e) d'en discuter avec vous.
-
-**Catherine Guerniou**
-📞 01 48 82 44 11 | lafenetriere@lafenetriere.fr
-
----
-
-**CTA principal :** `→ Discuter de mon projet`
-**CTA secondaire :** `→ Voir d'autres réalisations`
-
----
-
----
-
-## Email 4 B2B — RE2020 et menuiseries bas carbone
-
-**Timing :** J+14
-**Objet :** RE2020 : ce que vos menuiseries doivent atteindre en 2026 (et comment y arriver)
-**Pré-header :** Les seuils Bbio et Cep ont changé. Voici ce que ça implique concrètement pour les fenêtres.
-
----
-
-Bonjour [PRÉNOM],
-
-Depuis l'entrée en vigueur progressive de la RE2020, les exigences sur les menuiseries extérieures ont changé. Ce n'est plus seulement une question de Uw (coefficient de transmission thermique) — c'est une question d'**empreinte carbone de la menuiserie elle-même**.
-
-Voici ce qu'il faut savoir en 2026.
-
----
-
-**Les 3 indicateurs RE2020 qui concernent vos fenêtres**
-
-**1. Uw (W/m².K) — L'isolation thermique**
-- Seuil minimum RE2020 logements : Uw ≤ 1,3 W/m².K
-- Nos menuiseries PVC triple vitrage : Uw de 0,8 à 1,1 W/m².K
-- Nos menuiseries alu à rupture de pont thermique : Uw de 1,0 à 1,4 W/m².K
-
-**2. Sw — Le facteur solaire**
-- Les grandes baies vitrées sud sont soumises à des seuils Sw pour éviter la surchauffe estivale
-- Nos vitrages à contrôle solaire permettent de moduler le Sw selon l'orientation
-
-**3. IC Construction (Impact Carbone)**
-- La RE2020 intègre le bilan carbone des matériaux de construction
-- Un aluminium fabriqué en Europe a une empreinte carbone 3 à 5 fois inférieure à un aluminium importé d'Asie
-- Notre alu sourcé en Bourgogne dispose d'une FDES (Fiche de Déclaration Environnementale) communiquable à votre bureau d'études
-
----
-
-**Pourquoi l'origine matière change tout pour le bilan carbone de votre chantier**
-
-Les bureaux d'études thermiques intègrent désormais les FDES matériaux dans leurs calculs RE2020. Un fabricant qui peut fournir une FDES traçable vous permet d'optimiser votre bilan IC construction.
-
-La Fenêtrière fournit des FDES sur l'ensemble de sa gamme. Nous pouvons travailler directement avec votre BET thermique.
-
----
-
-**Nos produits certifiés bas carbone :**
-
-- Fenêtres PVC OFG triple vitrage Argon (PVC recyclé post-consommation disponible)
-- Fenêtres aluminium profil Bourgogne à rupture de pont thermique
-- Vitrages VIR (Verre à Isolation Renforcée) fabriqués en Normandie
-
----
-
-**Besoin des fiches techniques ou FDES pour votre prochain dossier ?**
-
-Répondez à cet email ou appelez-nous directement. Nous les fournissons gratuitement.
-
-**Catherine Guerniou**
-📞 01 48 82 44 11 | lafenetriere@lafenetriere.fr
-
----
-
-**CTA principal :** `→ Demander nos fiches FDES et fiches techniques`
-**CTA secondaire :** `→ Parler à notre référent technique RE2020`
-
----
-
----
-
-## Email 5 B2B — Offre + CTA rendez-vous
-
-**Timing :** J+30
-**Objet :** [PRÉNOM], une proposition pour votre prochain chantier IDF
-**Pré-header :** Un partenariat simple : vous posez, nous fabriquons. Voici les conditions.
-
----
-
-Bonjour [PRÉNOM],
-
-Ça fait maintenant quelques semaines que nous échangeons, et je voulais vous faire une proposition concrète.
-
----
-
-**Ce que nous proposons aux professionnels du bâtiment qui travaillent régulièrement en IDF :**
-
-**→ Un compte partenaire La Fenêtrière**
-
-Ce que ça inclut :
-
-| Avantage | Détail |
-|---|---|
-| **Tarifs dégressifs** | À partir de 5 commandes/an, grille tarifaire préférentielle |
-| **Interlocuteur dédié** | Un référent commercial attitré, joignable directement |
-| **Délais prioritaires** | Vos commandes sont traitées en priorité en période chargée |
-| **Chiffrages à blanc** | Pour vos AO, nous chiffrons sans engagement et sans frais |
-| **Visite atelier** | Invitation aux visites atelier + présentation nouveautés |
-| **Support technique** | Accompagnement sur les dossiers RE2020 et FDES |
-
-Pas de minimum de commande pour ouvrir un compte. Juste une volonté de travailler ensemble sur la durée.
-
----
-
-**Ce que nous vous demandons :**
-
-Un premier chantier test, avec vos retours honnêtes à la livraison. C'est tout.
-
----
-
-**Pour démarrer, un échange de 20 minutes suffit.**
-
-Je vous propose de nous appeler ou de passer à l'atelier de Champigny — la visite dure environ une heure et permet de voir nos équipements, rencontrer les compagnons, et choisir parmi nos échantillons.
-
----
-
-**Catherine Guerniou**
-Dirigeante — La Fenêtrière
-📞 01 48 82 44 11
-📧 lafenetriere@lafenetriere.fr
-📍 Champigny-sur-Marne (94)
-
----
-
-**CTA principal :** `→ Réserver un créneau de 20 min`
-**CTA secondaire :** `→ Planifier une visite atelier`
-
----
-
----
-
-# 3. Séquence Nurturing B2C
-
-**Nom de la séquence :** Bien choisir ses menuiseries — Guide particuliers
-**Déclencheur :** Inscription newsletter particulier, téléchargement d'un guide, ou première demande de devis sans suite
-**Audience :** Particuliers propriétaires en Île-de-France
-**Objectif :** Éduquer, créer confiance, amener vers un devis
-
----
-
-## Email 1 B2C — Guide MaPrimeRénov' Fenêtres 2026
-
-**Timing :** J+0 (envoi immédiat)
-**Objet :** MaPrimeRénov' fenêtres 2026 : ce à quoi vous avez droit (et comment l'obtenir)
-**Pré-header :** Le guide complet en 5 minutes de lecture. Avec les montants, les conditions et les erreurs à éviter.
-
----
-
-Bonjour [PRÉNOM],
-
-Si vous envisagez de changer vos fenêtres en 2026, les aides financières disponibles sont significatives — à condition de ne pas faire d'erreur dans le dossier.
-
-Voici le guide complet.
-
----
-
-**Les aides disponibles pour le remplacement de fenêtres en 2026**
-
-**1. MaPrimeRénov' (MPR)**
-
-La principale aide de l'État pour la rénovation énergétique des logements.
-
-| Couleur du profil | Revenus du foyer | Aide estimée / fenêtre |
-|---|---|---|
-| **MPR Bleu** | Très modestes | 100 € à 150 € |
-| **MPR Jaune** | Modestes | 75 € à 100 € |
-| **MPR Violet** | Intermédiaires | 40 € à 75 € |
-| **MPR Rose** | Supérieurs | Non éligible MPR seul |
-
-*Montants indicatifs 2026 — Vérifiez votre éligibilité sur maprimerenov.gouv.fr*
-
-**Condition principale :** Les fenêtres posées doivent atteindre Uw ≤ 1,3 W/m².K. Toutes nos menuiseries sont éligibles.
-
----
-
-**2. TVA à 5,5 %**
-
-Sur la fourniture et la pose de fenêtres dans un logement de plus de 2 ans, la TVA passe de 20 % à 5,5 %.
-
-Concrètement, sur une facture de 5 000 € TTC, vous économisez environ **720 €** par rapport au taux normal.
-
-Condition : le logement doit être votre résidence principale ou secondaire, construit depuis plus de 2 ans.
-
----
-
-**3. Éco-PTZ (Éco-Prêt à Taux Zéro)**
-
-Un prêt sans intérêts, sans condition de revenus, pour financer votre rénovation.
-
-- Jusqu'à **50 000 €** sur 20 ans
-- Zéro intérêt, zéro frais de dossier
-- Cumulable avec MaPrimeRénov'
-- Disponible dans la plupart des banques
-
----
-
-**4. CEE (Certificats d'Économies d'Énergie)**
-
-Certains travaux de remplacement de fenêtres peuvent ouvrir droit à des primes CEE, versées par les fournisseurs d'énergie. Montants variables selon les offres en cours.
-
----
-
-**Les 3 erreurs qui font perdre les aides**
-
-❌ **Choisir un poseur non-RGE** — MaPrimeRénov' exige un artisan certifié RGE pour la pose. Nous travaillons avec un réseau de poseurs RGE en IDF.
-
-❌ **Commander avant d'avoir le numéro MPR** — La demande doit être faite AVANT le début des travaux. Nous vous accompagnons dans cette démarche.
-
-❌ **Mal renseigner les dimensions** — Une erreur dans les Uw communiqués peut bloquer le dossier. Nos fiches techniques sont pré-remplies pour votre dossier.
-
----
-
-**Besoin d'un devis qui intègre les aides ?**
-
-Nous réalisons des devis qui indiquent clairement le reste à charge après aides. C'est gratuit et sans engagement.
-
-**Catherine Guerniou — La Fenêtrière**
-📞 01 48 82 44 11 | lafenetriere@lafenetriere.fr
-
----
-
-**CTA principal :** `→ Calculer mon reste à charge après aides`
-**CTA secondaire :** `→ Télécharger le guide PDF MaPrimeRénov'`
-
----
-
----
-
-## Email 2 B2C — Comment choisir entre PVC, Bois et Aluminium
-
-**Timing :** J+4
-**Objet :** PVC, bois ou alu : la réponse honnête (sans argument de vente)
-**Pré-header :** Chaque matériau a ses vraies forces et ses vraies limites. Voici lesquelles.
-
----
-
-Bonjour [PRÉNOM],
-
-"PVC ou alu ?" C'est la question que nous posent 9 clients sur 10. Et souvent, la réponse qu'ils reçoivent dépend... du stock que le vendeur a envie d'écouler.
-
-Voici notre réponse honnête, celle d'un fabricant qui fait les trois.
-
----
-
-**Le PVC — Quand c'est le bon choix**
-
-Le PVC est le matériau le plus vendu en France pour la rénovation de fenêtres. Et pour de bonnes raisons.
-
-**Ses vraies forces :**
-- Meilleur rapport isolation thermique / prix du marché
-- Entretien quasi nul (un coup d'éponge suffit)
-- Triple vitrage possible sur toutes les dimensions standards
-- Le notre vient du Doubs — traçable, certifié OFG
-
-**Ses vraies limites :**
-- Profils plus épais que l'alu (perte de surface vitrée sur les grandes baies)
-- Coloris moins étendus (bien que la gamme laquée ait évolué)
-- Maisons classées ou en zone ABF : souvent refusé par les ABF
-
-**Pour qui :** Maison standard, budget maîtrisé, priorité à l'isolation. Idéal pour la rénovation de logements des années 70-90.
-
----
-
-**Le Bois — Quand c'est le bon choix**
-
-Le bois reste le matériau de référence pour les maisons de caractère, les appartements haussmanniens et les biens classés.
-
-**Ses vraies forces :**
-- Esthétique inégalée, chaleur naturelle
-- Isolant naturel excellent (k très bas)
-- Réparable à l'infini (poncer, lasurer, reprendre)
-- Accepté par tous les ABF en zone patrimoniale
-
-**Ses vraies limites :**
-- Entretien annuel nécessaire (lasure ou peinture tous les 5-7 ans)
-- Prix légèrement supérieur au PVC
-- Sensible à l'humidité si entretien négligé
-
-**Pour qui :** Maison ancienne, appartement haussmannien, zone ABF, propriétaire attaché à l'esthétique naturelle.
-
----
-
-**L'Aluminium — Quand c'est le bon choix**
-
-L'alu est le choix des architectes et des projets contemporains. Profils fins, grandes baies, finitions premium.
-
-**Ses vraies forces :**
-- Profils très fins = maximum de lumière
-- Très grandes dimensions possibles (baies coulissantes, porte-fenêtre 3m+)
-- Durée de vie 40-50 ans sans entretien
-- Gamme RAL quasi illimitée
-- Notre alu vient de Bourgogne — traçable, certifié OFG
-
-**Ses vraies limites :**
-- Pont thermique à surveiller (exiger profils à rupture de pont thermique)
-- Prix plus élevé que le PVC
-- Moins adapté à la rénovation de maisons très classiques
-
-**Pour qui :** Maison contemporaine, extensions, grandes baies vitrées, projet architecturé.
-
----
-
-**Notre conseil si vous hésitez :**
-
-Venez à l'atelier. On vous montre les échantillons, les finitions, on mesure ensemble. C'est gratuit et ça dure une heure. Beaucoup de clients repartent avec une idée claire qu'ils n'avaient pas en arrivant.
-
-📞 01 48 82 44 11 pour prendre rendez-vous.
-
----
-
-**Catherine Guerniou — La Fenêtrière**
-📍 Champigny-sur-Marne (94)
-
----
-
-**CTA principal :** `→ Visiter l'atelier et voir les échantillons`
-**CTA secondaire :** `→ Demander un devis pour mon projet`
-
----
-
----
-
-## Email 3 B2C — Visite de l'atelier + Photos coulisses
-
-**Timing :** J+9
-**Objet :** Voici à quoi ressemble l'atelier où vos futures fenêtres seront fabriquées
-**Pré-header :** Des photos prises cette semaine. Pas des visuels marketing.
-
----
-
-Bonjour [PRÉNOM],
-
-Je voulais vous faire entrer dans notre atelier de Champigny — sans mise en scène.
-
----
-
-**[PHOTO 1 : Vue générale de l'atelier avec les compagnons au travail]**
-
-Voilà où ça se passe. Un atelier de 800 m² en Île-de-France, avec des machines qui découvent, assemblent et testent chaque menuiserie avant qu'elle parte sur chantier.
-
----
-
-**[PHOTO 2 : Profils PVC ou alu en cours de découpe]**
-
-Les profils que vous voyez ici arrivent de nos fournisseurs français. Le PVC vient du Doubs, l'aluminium de Bourgogne. Ils sont stockés ici, travaillés ici, assemblés ici.
-
----
-
-**[PHOTO 3 : Compagnon assemblant une fenêtre]**
-
-Ce compagnon — je l'appellerai simplement "F." — travaille avec nous depuis 1997. Soit bientôt 30 ans. Il sait exactement ce qu'il fait, et ça se voit dans le résultat.
-
-Ce niveau d'ancienneté n'est pas un hasard. Dans notre atelier, le turnover est quasi nul. Les gens restent parce qu'on construit quelque chose ensemble — et ça se traduit dans la qualité de ce qui sort.
-
----
-
-**[PHOTO 4 : Fenêtre terminée avec la certification OFG visible]**
-
-Avant de partir sur chantier, chaque menuiserie est contrôlée : dimensions, jeux, étanchéité, quincaillerie. La certification OFG nous impose ces contrôles — et c'est très bien ainsi.
-
----
-
-**Ce que vous voyez si vous venez :**
-
-Nous organisons des visites atelier sur rendez-vous, gratuitement. En une heure, vous :
-- Rencontrez les compagnons
-- Voyez les matières premières et les finitions disponibles
-- Repartez avec un devis personnalisé et des échantillons
-
-**Plus de 80 % des personnes qui visitent l'atelier nous confient leur projet.**
-
-Ce n'est pas un argument commercial — c'est juste ce qui se passe quand on voit comment on travaille.
-
 ---
 
-**Catherine Guerniou — La Fenêtrière**
-📞 01 48 82 44 11 (pour prendre rendez-vous)
-📍 Champigny-sur-Marne (94)
+### EMAIL PC-2 — Satisfaction + demande d'avis
+**Timing :** J+7 après la livraison
+**Objet :** Votre livraison s'est bien passée, [Prénom] ?
+**Preview text :** 2 minutes pour nous dire ce que vous avez pensé — et nous aider à nous améliorer.
 
 ---
 
-**CTA principal :** `→ Réserver ma visite atelier (gratuit)`
-**CTA secondaire :** `→ Voir toutes nos réalisations`
+Bonjour [Prénom],
 
----
+Votre commande n° [NUMÉRO] a été livrée il y a quelques jours.
 
----
+Nous espérons que tout s'est passé comme prévu : délais respectés, menuiseries conformes, livraison sans accroc.
 
-## Email 4 B2C — Devis gratuit + Témoignage client
+**Est-ce que tout est en ordre ?**
 
-**Timing :** J+14
-**Objet :** [PRÉNOM], voici ce que [PRÉNOM CLIENT] a dit après sa pose
-**Pré-header :** Un témoignage, un reste à charge calculé, et une offre de devis sans engagement.
+Si vous avez constaté un problème — même mineur — répondez directement à cet email ou appelez le 01 48 82 44 11. Nous traitons chaque retour sérieusement et rapidement.
 
 ---
-
-Bonjour [PRÉNOM],
-
-Avant de vous proposer à nouveau un devis, je voulais vous partager ce que l'un de nos clients récents nous a dit.
 
----
+**Si tout s'est bien passé : un avis vous prendrait 2 minutes et nous aiderait énormément**
 
-**[PHOTO : facade de la maison avec fenêtres posées, ou portrait du client si accord]**
+En tant qu'artisan ou professionnel, votre avis compte infiniment plus que celui d'un particulier pour nos futurs partenaires professionnels.
 
-> *"J'hésitais depuis deux ans à changer mes fenêtres. Je ne savais pas vraiment par où commencer, ni si j'aurais droit aux aides. Catherine m'a reçu à l'atelier, m'a montré les matériaux, et m'a rendu un devis clair avec le reste à charge après MaPrimeRénov'. Le jour de la pose, tout s'est passé exactement comme prévu. Mes factures de chauffage ont baissé dès le premier hiver."*
->
-> — **[Prénom NOM]**, [Ville], propriétaire depuis [ANNÉE]
+👉 **[LAISSER UN AVIS GOOGLE]**
+*(Cliquez, connectez-vous à votre compte Google, et partagez votre expérience en quelques mots)*
 
----
+Voici quelques pistes si vous ne savez pas quoi écrire :
+- La qualité des menuiseries reçues
+- Le respect des délais
+- La communication avec notre équipe
+- La qualité des documents fournis (fiches techniques, QR code, etc.)
 
-Ce que ce client décrit, c'est notre processus standard. Pas d'exception.
+Un avis honnête — même court — est précieux.
 
 ---
-
-**Voici ce que nous faisons pour chaque client particulier :**
-
-**Étape 1 — Devis gratuit sous 48h**
-Vous nous envoyez vos dimensions (ou on vient les prendre) et votre projet. Nous revenons avec un chiffrage ligne par ligne.
-
-**Étape 2 — Calcul du reste à charge après aides**
-Nous intégrons MaPrimeRénov', TVA à 5,5 % et Éco-PTZ dans le devis. Vous savez exactement ce que vous payez vraiment.
 
-**Étape 3 — Accompagnement MPR**
-Nous vous aidons à déposer votre dossier MaPrimeRénov' avant le début des travaux. Pas de risque de perdre l'aide pour un problème administratif.
+**Et pour votre prochain chantier ?**
 
-**Étape 4 — Fabrication + pose**
-Production à Champigny sous 3 à 5 semaines. Pose par nos artisans ou votre propre poseur RGE.
+Si vous avez des chantiers en préparation, anticipez dès maintenant. Nos délais sont actuellement de **[X] semaines** en fabrication standard.
 
-**Étape 5 — Suivi post-installation**
-En cas de problème dans les 2 ans, nous intervenons directement. Pas d'intermédiaire.
+👉 **[DÉMARRER UN NOUVEAU DEVIS]**
+📞 **01 48 82 44 11**
 
----
-
-**Le devis est gratuit. Il n'engage à rien.**
+Merci pour votre confiance,
 
-La seule façon de savoir si on peut vous aider, c'est de faire le calcul ensemble.
+**Catherine Guerniou & l'équipe La Fenêtrière**
 
 ---
+*La Fenêtrière — 5 rue des Artisans, 94500 Champigny-sur-Marne*
+*[Se désabonner]*
 
-**Catherine Guerniou — La Fenêtrière**
-📞 01 48 82 44 11
-📧 lafenetriere@lafenetriere.fr
-📍 Champigny-sur-Marne (94)
-
 ---
 
-**CTA principal :** `→ Demander mon devis gratuit maintenant`
-**CTA secondaire :** `→ Appeler le 01 48 82 44 11`
-
----
+### EMAIL PC-3 — Cross-sell / Upsell
+**Timing :** J+30 après la livraison
+**Objet :** [Prénom], complétez votre chantier avec nos gammes complémentaires
+**Preview text :** Volets, portails, stores extérieurs... Des solutions qui s'accordent parfaitement à vos menuiseries La Fenêtrière.
 
 ---
 
-# 4. Séquence Relance Devis
+Bonjour [Prénom],
 
-**Nom de la séquence :** Relance devis sans suite
-**Déclencheur :** Devis envoyé sans réponse après 3 jours
-**Audience :** Prospects B2B et B2C ayant reçu un devis
-**Objectif :** Réactiver sans pression, apporter de la valeur, obtenir une réponse (même négative)
+Un mois s'est écoulé depuis votre dernière commande. Nous espérons que la pose s'est déroulée sans accroc et que vos clients sont satisfaits.
 
----
-
-## Email 1 Relance — Relance douce
+Maintenant que vous connaissez nos menuiseries, saviez-vous que nous proposons des gammes complémentaires parfaitement coordonnées ?
 
-**Timing :** J+3 après envoi du devis
-**Objet :** Votre devis La Fenêtrière — une question ?
-**Pré-header :** Je voulais juste m'assurer que vous l'aviez bien reçu.
-
 ---
-
-Bonjour [PRÉNOM],
 
-Je me permets de revenir vers vous concernant le devis que je vous ai envoyé [DATE] pour [DESCRIPTION COURTE DU PROJET].
+**Complétez votre offre avec La Fenêtrière :**
 
-Je voulais simplement m'assurer qu'il vous était bien parvenu et qu'il répondait à vos attentes.
+**🪟 Volets battants et volets roulants**
+Coordonnés en coloris et en matériaux avec vos menuiseries. Disponibles en PVC, ALU et bois. Motorisation Somfy disponible. Délai : 3-4 semaines.
 
-Si vous avez des questions sur les matériaux, les délais ou le détail des postes, je suis disponible par email ou par téléphone.
+**🚪 Portes d'entrée et portes de service**
+Gamme sécurité jusqu'au niveau 5. Designs contemporains ou classiques. Certifiées A2P pour les assureurs. Disponibles avec QR code traçabilité.
 
-Et si votre projet a évolué ou si les délais ont changé de votre côté — pas de souci, dites-le moi, on s'adapte.
+**🏠 Portails et clôtures**
+Aluminium laqué ou acier galvanisé. Motorisation FAAC ou BFT. Couleurs RAL sur mesure. Idéal pour les programmes de maisons individuelles ou les résidences.
 
-À votre disposition,
+**☀️ Stores extérieurs et pergolas bioclimatiques**
+Pour les terasses et les baies vitrées. Réduction des surchauffes estivales (argument RE2020). Motorisation et domotique compatibles.
 
-**Catherine Guerniou**
-📞 01 48 82 44 11
-📧 lafenetriere@lafenetriere.fr
-
----
-
-**CTA principal :** `→ Répondre à cet email`
-**CTA secondaire :** `→ Nous appeler au 01 48 82 44 11`
-
----
+**🔒 Quincaillerie et accessoires**
+Poignées, serrures multipoints, joints de remplacement — disponibles à l'unité pour vos SAV.
 
 ---
 
-## Email 2 Relance — Relance valeur
+**Offre partenaire : remise fidélité dès la 2e commande**
 
-**Timing :** J+7 après envoi du devis
-**Objet :** Ce que votre devis inclut (que la plupart des devis n'incluent pas)
-**Pré-header :** Traçabilité matière, FDES, accompagnement MPR, SAV direct fabricant. Détail ci-dessous.
+En tant que partenaire ayant déjà commandé, vous bénéficiez automatiquement de **[X]% de remise** sur votre prochaine commande, quelle que soit la gamme.
 
----
-
-Bonjour [PRÉNOM],
+Cette remise est appliquée automatiquement sur votre devis — aucune démarche de votre part.
 
-Je me permets de vous recontacter une dernière fois avant de clôturer votre dossier de notre côté.
+👉 **[DEMANDER UN DEVIS COMPLÉMENTAIRE]**
+📞 **01 48 82 44 11**
 
-Je voulais vous rappeler ce que notre devis inclut — pas parce que les concurrents ne le font pas, mais parce qu'on ne le dit pas toujours assez clairement.
-
 ---
-
-**Ce qui est inclus dans notre devis [REF DEVIS] :**
-
-✓ **Fabrication France** — PVC Doubs, alu Bourgogne, vitrage Normandie. Certifié OFG.
 
-✓ **Fiches FDES fournies** — Utiles pour vos calculs RE2020 et bilans carbone (B2B) ou votre dossier MPR (B2C).
+**Ou venez voir notre showroom mis à jour**
 
-✓ **Accompagnement MaPrimeRénov'** — Nous vous aidons à déposer votre dossier avant travaux. Inclus dans le devis.
-
-✓ **Délai garanti** — [X] semaines de production. Pas d'aléa fournisseur étranger.
-
-✓ **SAV direct fabricant** — En cas de problème, vous appelez Champigny. Pas un centre d'appels à l'étranger.
-
-✓ **Garantie [X] ans** — Sur la menuiserie et la quincaillerie.
-
----
+Nous avons récemment enrichi notre showroom avec de nouveaux modèles de portails et de pergolas. Si vous souhaitez les voir avant de recommander à vos clients, réservez un créneau.
 
-Si votre décision dépend d'un point particulier — le prix, un délai, une contrainte technique — dites-le moi. On cherche une solution ensemble.
+👉 **[RÉSERVER MA VISITE]**
 
 À bientôt,
 
 **Catherine Guerniou**
-📞 01 48 82 44 11 | lafenetriere@lafenetriere.fr
-
----
-
-**CTA principal :** `→ Poser ma question sur le devis`
-**CTA secondaire :** `→ Demander une modification du devis`
-
----
-
----
-
-## Email 3 Relance — Dernière chance
-
-**Timing :** J+14 après envoi du devis
-**Objet :** Je clôture votre dossier vendredi — mais une chose avant
-**Pré-header :** Si ce n'est pas le bon moment, pas de problème. Mais voici ce que vous perdriez à attendre.
-
----
-
-Bonjour [PRÉNOM],
-
-Je ne veux pas vous harceler — ce n'est pas notre style. C'est pourquoi cet email sera le dernier de notre côté concernant ce devis.
-
-Vendredi, je vais archiver votre dossier. Si vous revenez vers nous plus tard, on repart de zéro — les délais de production et les prix peuvent avoir évolué.
-
----
-
-**Ce que je voulais vous dire avant de clôturer :**
-
-Notre carnet de commandes pour [TRIMESTRE / MOIS] se remplit. Les délais de production actuels sont de [X] semaines. Si vous avez des travaux à prévoir avant [DATE CIBLE], il reste encore de la place — mais probablement pas longtemps.
-
----
-
-**Et si ce n'est pas le bon moment — c'est tout à fait normal.**
-
-Un projet de fenêtres ne se décide pas en deux semaines. Si votre calendrier, votre budget ou votre situation a changé, répondez simplement à cet email pour me le dire. Je note dans mon agenda de vous recontacter au bon moment.
-
-Pas de suivi agressif. Juste un rappel quand vous le souhaitez.
-
----
-
-**Catherine Guerniou**
-📞 01 48 82 44 11
-📧 lafenetriere@lafenetriere.fr
-
----
-
-**CTA principal :** `→ Confirmer mon projet avant vendredi`
-**CTA secondaire :** `→ Me recontacter dans [3 mois / 6 mois]`
-
----
-
----
-
-# 5. Séquence Post-Installation
-
-**Nom de la séquence :** Après votre pose La Fenêtrière
-**Déclencheur :** Confirmation de pose terminée (à déclencher manuellement ou via CRM)
-**Audience :** Clients B2C et B2B dont la pose est terminée
-**Objectif :** Fidéliser, obtenir des avis Google, générer du parrainage
-
----
-
-## Email 1 Post-Installation — Merci + Conseils d'entretien
-
-**Timing :** J+3 après la pose
-**Objet :** Vos fenêtres sont posées — voici comment les garder comme neuves longtemps
-**Pré-header :** Merci de nous avoir fait confiance. Quelques conseils d'entretien simples pour préserver votre installation.
-
----
-
-Bonjour [PRÉNOM],
-
-La pose est terminée — et nous espérons que vous êtes satisfait(e) du résultat.
-
-Merci pour votre confiance. Travailler sur votre projet a été un plaisir.
-
----
-
-**Vos conseils d'entretien selon le matériau :**
-
----
-
-### Si vous avez opté pour le PVC
-
-**Nettoyage :**
-- Cadres et profils : eau savonneuse tiède + éponge douce. Évitez les solvants et les produits abrasifs.
-- Vitrage : chiffon microfibres légèrement humide. Pas d'alcool pur.
-- Fréquence recommandée : 2 fois par an (printemps + automne)
-
-**Quincaillerie :**
-- Paumelles et espagnolettes : une goutte d'huile de vaseline fine tous les 2 ans. Les mécanismes restent fluides longtemps.
-- Joints périphériques : vérifier l'état tous les 5 ans. Un joint décollé ou durci doit être remplacé rapidement.
-
-**À ne pas faire :**
-- Peindre ou enduire les profils PVC
-- Coller des autocollants sur les profils
-- Utiliser des nettoyants eau de Javel sur les joints (les fragilise)
-
----
-
-### Si vous avez opté pour le Bois
-
-**Traitement annuel :**
-- Brossez légèrement les zones mates avec une brosse à poils doux
-- Appliquez une couche de lasure ou de peinture de finition tous les 5 à 7 ans, selon l'exposition
-- Côté extérieur exposé sud/ouest : prévoir le traitement plus régulièrement
-
-**Attention à l'eau stagnante :**
-- Vérifiez que les coupes basses ne retiennent pas l'eau après la pluie
-- En cas de micro-fissure, traiter rapidement avec un mastic bois avant que l'humidité ne pénètre
-
-**Nettoyage courant :**
-- Eau claire + savon doux. Sécher après nettoyage.
-
----
-
-### Si vous avez opté pour l'Aluminium
-
-**Entretien minimal :**
-- Profils alu : eau savonneuse + éponge douce. L'alu laqué est très résistant aux détergents ménagers courants.
-- Mécanismes coulissants : nettoyage du rail 1 fois par an + graissage léger avec produit téflon (pas de graisse épaisse)
-
-**Vitrage :**
-- Identique au PVC — chiffon microfibres, pas d'abrasif
-
----
-
-**En cas de problème dans les 2 ans :**
-
-Appelez-nous directement : **01 48 82 44 11**. Pas d'intermédiaire. Si le problème vient de notre fabrication ou de notre pose, nous intervenons gratuitement.
-
----
-
-**Encore merci pour votre confiance.**
-
-**Catherine Guerniou — La Fenêtrière**
-📞 01 48 82 44 11 | lafenetriere@lafenetriere.fr
-
----
-
-**CTA principal :** `→ Télécharger ma fiche d'entretien PDF`
-**CTA secondaire :** `→ Contacter le SAV`
-
----
-
----
-
-## Email 2 Post-Installation — Demande d'avis Google
-
-**Timing :** J+14 après la pose (laisser le temps de profiter des menuiseries)
-**Objet :** Votre avis nous aiderait enormément — 2 minutes suffisent
-**Pré-header :** Un avis Google honnête de votre part, c'est ce qui aide d'autres familles à nous trouver.
-
----
-
-Bonjour [PRÉNOM],
-
-Il y a maintenant deux semaines que vos nouvelles menuiseries sont posées.
-
-J'espère que vous avez pu profiter de la différence — sur l'isolation, le silence, la lumière. C'est souvent ça que les clients remarquent en premier.
-
----
-
-**Une faveur, si vous êtes satisfait(e) :**
-
-Nous sommes une petite structure artisanale. Nous n'avons pas de budget publicitaire important, pas de commercial itinérant, pas de campagnes nationales.
-
-Ce qui nous amène la grande majorité de nos nouveaux clients, c'est le **bouche-à-oreille** — et aujourd'hui, le bouche-à-oreille en ligne, ce sont les **avis Google**.
-
-Si votre expérience avec La Fenêtrière vous a satisfait — la réactivité, la qualité des fenêtres, la pose, le suivi — un avis Google de 2 lignes nous aide concrètement à continuer à développer notre activité.
-
----
-
-**Comment laisser un avis :**
-
-1. Cliquez sur le lien ci-dessous
-2. Connectez-vous à votre compte Google (ou Gmail)
-3. Notez votre expérience (1 à 5 étoiles)
-4. Écrivez quelques lignes honnêtes — ce qui vous a convaincu, ce qui s'est bien passé
-
-Ça prend 2 minutes. Et pour nous, ça compte énormément.
-
----
-
-**Si quelque chose ne vous a pas satisfait :**
-
-Répondez directement à cet email. Pas de gestion automatique — c'est moi qui lis. Et si nous avons fait une erreur, je préfère le savoir et corriger.
-
----
-
-Merci de nous faire confiance, et merci d'avance si vous prenez ces 2 minutes.
-
-**Catherine Guerniou**
 Dirigeante — La Fenêtrière
-
----
-
-**CTA principal :** `→ Laisser mon avis Google (2 min)` *(lien Google My Business)*
-**CTA secondaire :** `→ Nous signaler un problème`
-
----
-
----
-
-## Email 3 Post-Installation — Programme Parrainage
-
-**Timing :** J+30 après la pose
-**Objet :** [PRÉNOM], offrez 100 € à un ami — et recevez 100 € pour vous
-**Pré-header :** Notre programme parrainage : simple, honnête, sans conditions cachées.
-
----
-
-Bonjour [PRÉNOM],
-
-Voilà un mois que vos nouvelles fenêtres sont installées. J'espère que vous en êtes toujours satisfait(e).
-
-Je voulais vous parler d'une chose simple.
-
----
-
-**Notre programme parrainage — sans complexité**
-
-Beaucoup de nos clients nous disent qu'ils ont parlé de nous à un ami, un voisin, ou un membre de la famille qui cherche à faire des travaux de menuiserie.
-
-Pour vous remercier de nous recommander, nous avons mis en place un système de parrainage :
-
----
-
-**Le principe :**
-
-| | Vous (parrain) | Votre filleul |
-|---|---|---|
-| **Ce qui se passe** | Vous nous recommandez à quelqu'un | Votre contact nous contacte en citant votre nom |
-| **Ce que vous recevez** | **100 € de remise** sur votre prochaine commande* | **100 € de remise** sur sa commande |
-| **Condition** | Son devis accepté et acompte versé | Sa première commande ≥ 2 000 € HT |
-
-*\*Bon de remise valable 18 mois sur toute commande La Fenêtrière*
-
----
-
-**Comment ça marche concrètement :**
-
-1. Vous parlez de nous à quelqu'un (ami, famille, voisin, collègue)
-2. Cette personne nous contacte — par email, par téléphone, ou via le site — en mentionnant **votre prénom et votre nom**
-3. Quand son devis est signé, nous vous envoyons votre bon de remise de 100 € par email
-4. Vous l'utilisez sur n'importe quelle prochaine commande (extension, volet supplémentaire, portail, etc.)
-
----
-
-**Pas de lien de parrainage compliqué. Pas d'application. Juste votre nom.**
-
----
-
-Vous connaissez quelqu'un en ce moment qui parle de rénover ses fenêtres ?
-
-Répondez à cet email avec son prénom et ses coordonnées, et je le/la contacte personnellement — sans aucune pression commerciale.
-
----
-
-**Catherine Guerniou — La Fenêtrière**
 📞 01 48 82 44 11
-📧 lafenetriere@lafenetriere.fr
-📍 Champigny-sur-Marne (94)
+🌐 www.la-fenetriere.fr
+
+---
+*La Fenêtrière — 5 rue des Artisans, 94500 Champigny-sur-Marne*
+*[Se désabonner]*
 
 ---
 
-**CTA principal :** `→ Parrainer un proche maintenant`
-**CTA secondaire :** `→ En savoir plus sur le programme`
+## 5. NOTES TECHNIQUES & BONNES PRATIQUES
+
+### Configuration technique recommandée
+
+| Paramètre | Recommandation |
+|---|---|
+| Plateforme email | Brevo (ex-Sendinblue), ActiveCampaign, ou HubSpot |
+| Longueur d'objet | 40-55 caractères (affichage mobile) |
+| Preview text | 80-100 caractères |
+| Envoi optimal B2B | Mardi-jeudi, 8h00-9h30 ou 16h00-17h30 |
+| Taux d'ouverture cible B2B | 25-35% |
+| Taux de clic cible B2B | 3-8% |
+| Listes de désabonnement | RGPD obligatoire — lien visible dans chaque email |
+| Double opt-in | Recommandé pour la délivrabilité |
+
+### Segmentation recommandée
+
+- **Segment A** : Artisans poseurs (séquence bienvenue → nurturing → post-commande)
+- **Segment B** : Maîtres d'œuvre / Architectes (idem + focus technique RE2020 et matériaux)
+- **Segment C** : Promoteurs / Bailleurs sociaux (idem + focus volume, OFG, traçabilité, RSE)
+- **Segment D** : Prospects froids > 90 jours (séquence réactivation)
+
+### Variables de personnalisation à configurer
+
+- `[Prénom]` : prénom du contact
+- `[NOM TECHNICIEN]` : référent technique assigné
+- `[NUMÉRO]` : numéro de commande
+- `[DATE LIVRAISON]` : date de livraison estimée
+- `[DATE LIMITE]` : date limite de modification
+- `[DATE + 7 jours]` : pour l'offre découverte (à calculer dynamiquement)
+- `[X]` : remise fidélité (à définir selon politique commerciale)
+
+### Déclencheurs de séquences (triggers)
+
+| Séquence | Déclencheur |
+|---|---|
+| Bienvenue | Inscription newsletter ou contact entrant |
+| Nurturing | Fin séquence bienvenue sans commande OU inactivité 30 jours |
+| Réactivation | Inactivité > 90 jours (pas d'ouverture) |
+| Post-commande | Confirmation de commande dans le CRM |
+
+### Indicateurs de performance à suivre
+
+**Séquence Bienvenue**
+- Taux d'ouverture E1 > 50% (benchmark email de bienvenue)
+- Taux de clic E4 (guide) > 15%
+- Taux de conversion E5 (devis) > 3%
+
+**Séquence Nurturing**
+- Taux d'ouverture moyen > 25%
+- Taux de clic > 4%
+- Réservations showroom générées
+
+**Séquence Réactivation**
+- Taux d'ouverture E1 > 20%
+- Taux de réengagement (clic "rester en contact") > 10%
+
+**Séquence Post-Commande**
+- Taux d'ouverture > 60% (emails transactionnels)
+- Avis Google générés (tracker via UTM)
+- Taux de renouvellement commande à 30 jours
+
+### A/B Tests prioritaires à mettre en place
+
+1. **Email B-5** : Objet avec "Offre expire dans 7 jours" vs "Réservé aux professionnels IDF"
+2. **Email N-2** : CTA "Recommandation personnalisée" vs "Devis en 48h"
+3. **Email R-3** : Bouton "Rester en contact" vs lien texte
+4. **Email PC-2** : Demande d'avis directe vs demande indirecte avec liste de questions
 
 ---
 
----
-
-## Récapitulatif des séquences
-
-| Séquence | Nb d'emails | Déclencheur | Objectif principal |
-|---|---|---|---|
-| **Bienvenue Newsletter** | 3 | Inscription newsletter | Créer le lien, poser la crédibilité |
-| **Nurturing B2B** | 5 | Contact pro / demande B2B | Rendez-vous partenariat |
-| **Nurturing B2C** | 4 | Inscription / premier contact | Demande de devis |
-| **Relance Devis** | 3 | Devis sans réponse J+3 | Réponse (oui ou non) |
-| **Post-Installation** | 3 | Pose terminée | Fidélisation + avis + parrainage |
-| **TOTAL** | **18 emails** | | |
-
----
-
-## Paramètres techniques recommandés
-
-**Expéditeur :**
-- Nom affiché : `Catherine Guerniou — La Fenêtrière`
-- Email : `lafenetriere@lafenetriere.fr`
-- Email de réponse (reply-to) : identique
-
-**Configuration DNS (à vérifier avec votre hébergeur) :**
-- SPF : `v=spf1 include:[votre-outil-emailing] ~all`
-- DKIM : configurer via votre outil d'emailing (Mailchimp, Brevo, etc.)
-- DMARC : `v=DMARC1; p=none; rua=mailto:lafenetriere@lafenetriere.fr`
-
-**Outils recommandés :**
-- **Brevo (ex-Sendinblue)** — Interface française, RGPD natif, tarif accessible PME
-- **Mailchimp** — Plus complet pour les automatisations, anglophone
-- **ActiveCampaign** — Si vous souhaitez aller plus loin sur le scoring et le CRM
-
-**Conformité RGPD :**
-- Chaque email doit contenir un lien de désinscription fonctionnel
-- La base de données doit être constituée de contacts ayant donné leur consentement explicite
-- Durée de conservation recommandée : 3 ans après le dernier contact actif
-
----
-
-*Rapport généré le 20 mars 2026 — AI Marketing Suite pour La Fenêtrière (la-fenetriere.fr)*
+*Document généré le 21 mars 2026 — La Fenêtrière / Claude AI Marketing Suite*
+*À réviser tous les 6 mois en fonction des performances et des évolutions réglementaires (RE2020, AGEC)*

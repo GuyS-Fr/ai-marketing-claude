@@ -1,414 +1,505 @@
 # Rapport Brand Voice — La Fenêtrière
 **Site :** la-fenetriere.fr
-**Date :** 20 mars 2026
-**Auteur :** Analyse Marque & Voix — Claude Code Marketing Suite
+**Date :** 21 mars 2026
+**Dirigeante :** Catherine Guerniou
+**Analyste :** Claude AI Marketing Suite
 
 ---
 
-## Résumé Exécutif
+## Table des matières
 
-La Fenêtrière dispose d'une matière narrative exceptionnelle : une fondatrice au parcours singulier, des compagnons de métier engagés depuis parfois 30 ans, une raison d'être inscrite dans les statuts, des prix nationaux et une exposition à l'Élysée. Pourtant, la voix de marque actuelle efface tout cela derrière un registre institutionnel-mission qui parle de valeurs sans jamais incarner de personnages, de récits, de preuves vivantes.
-
-Ce rapport pose le diagnostic et propose une voix de marque reconstructée autour de trois pivots : **la preuve plutôt que la déclaration**, **l'humain plutôt que l'institution**, et **le concret plutôt que l'idéal**.
-
----
-
-## 1. ADN de Marque
-
-### 1.1 Identité fondatrice
-
-La Fenêtrière est fondée en 1984, reprise par Catherine Guerniou en 2005. Ce moment de reprise est stratégique : il marque le pivot d'un atelier artisanal traditionnel vers un modèle de fabrication responsable, inscrit dans une vision de long terme. En 2023, l'entreprise franchit un pas décisif en inscrivant sa raison d'être dans ses statuts — acte rare en PME artisanale — confirmant que le projet n'est pas un positionnement marketing mais une architecture d'entreprise.
-
-**Formulation officielle de la raison d'être :**
-> *"Fabriquer localement et durablement des menuiseries évolutives, réparables, réemployables et recyclables."*
-
-Cette phrase est dense, précise, sans compromis. Elle dit ce que l'entreprise fait (fabriquer), comment elle le fait (localement, durablement), et dans quel état d'esprit produit (évolutif, réparable, réemployable, recyclable). C'est une rare raison d'être opérationnelle, pas rhétorique.
-
-### 1.2 Territoire de marque
-
-La Fenêtrière occupe un territoire de marque unique en Île-de-France : **le seul fabricant artisanal certifié Origine France Garantie** combinant circuit court documenté, économie circulaire et gamme bas carbone récompensée au niveau national. Ce positionnement n'est pas construit — il est simplement vrai, et c'est sa force.
-
-**Piliers du territoire :**
-
-| Pilier | Expression concrète |
-|---|---|
-| **Fabriquer local** | PVC du Doubs, aluminium de Bourgogne, vitrage de Normandie. Atelier à Champigny-sur-Marne, livraison IDF. |
-| **Durer dans le temps** | Compagnons à 10+ ans, produits conçus pour être réparés et non remplacés, gamme MIF 100% responsable. |
-| **L'humain au centre** | Frédéric (depuis 1997, malentendant), profils atypiques, partage des profits, QVT. |
-| **La preuve par les pairs** | Prix Madame Engagée 2021, Lauréate Fabriqué en France 2025, exposition Élysée, Prix Étienne Marcel. |
-
-### 1.3 Valeurs de marque
-
-Trois valeurs structurantes émergent de l'analyse :
-
-**1. Intégrité artisanale** — La Fenêtrière ne vend pas des fenêtres : elle fabrique des ouvrages. La distinction n'est pas sémantique. Elle implique une responsabilité de bout en bout : du choix de la matière première à la réparabilité du produit fini. L'ancienneté des compagnons est la preuve humaine de cette intégrité.
-
-**2. Responsabilité ancrée** — L'engagement RSE de l'entreprise n'est pas une couche de communication : il est inscrit dans les statuts, certifié par des tiers (OFG), et validé par l'État (Fabriqué en France). Cette responsabilité est locale (circuit court régional), sociale (inclusion, QVT, partage de profits) et environnementale (économie circulaire, bas carbone).
-
-**3. Audace tranquille** — Catherine Guerniou reprend une menuiserie artisanale et en fait une entreprise à raison d'être, expose à l'Élysée, remporte un prix Madame Engagée, tout en restant à Champigny-sur-Marne, avec les mêmes compagnons. Ce n'est pas l'audace des startups. C'est l'audace discrète de ceux qui font, prouvent, et avancent.
-
-### 1.4 Personnalité de marque
-
-Si La Fenêtrière était une personne, ce serait un artisan expert, fier de son métier sans arrogance, qui parle peu mais dit toujours des choses exactes. Il sait que sa pièce tient depuis 20 ans et que celle du voisin a été remplacée trois fois. Il n'a pas besoin de le crier — il montre le chantier.
-
-**En cinq adjectifs :**
-- **Précis** — chaque terme est choisi, chaque engagement est chiffré ou certifié
-- **Ancré** — géographiquement (IDF, Champigny), humainement (compagnons de longue date), temporellement (1984, 2005, 2023)
-- **Engagé** — pas de demi-mesures : raison d'être dans les statuts, pas dans une plaquette
-- **Discret** — les prix parlent, la fondatrice s'efface (trop)
-- **Fiable** — turnover quasi nul, produits réparables, fournisseurs stables
+1. [ADN de marque](#1-adn-de-marque)
+2. [Archétype de marque](#2-archétype-de-marque)
+3. [Voix de marque](#3-voix-de-marque)
+4. [Vocabulaire signature](#4-vocabulaire-signature)
+5. [Messages clés par audience](#5-messages-clés-par-audience)
+6. [Storytelling et récit de marque](#6-storytelling-et-récit-de-marque)
+7. [Identité visuelle observée](#7-identité-visuelle-observée)
+8. [Recommandations pour renforcer la voix de marque](#8-recommandations-pour-renforcer-la-voix-de-marque)
+9. [Guidelines pour les réseaux sociaux](#9-guidelines-pour-les-réseaux-sociaux)
+10. [Exemples de reformulations avant/après](#10-exemples-de-reformulations-avantaprès)
 
 ---
 
-## 2. Voix Actuelle vs Voix Recommandée
+## 1. ADN de marque
 
-### 2.1 Diagnostic de la voix actuelle
+### Mission
+> "Fabriquer localement et durablement des menuiseries évolutives, réparables, réemployables et recyclables."
 
-**Registre dominant :** Institutionnel / Mission
-**Ton :** Sérieux, engagé, parfois solennel
-**Problème principal :** La marque déclare ses valeurs sans jamais les prouver par le récit ou le chiffre.
+La Fenêtrière ne se contente pas de produire des fenêtres : elle fabrique des objets durables pensés pour le temps long. Chaque menuiserie est conçue pour traverser les décennies, être entretenue, réparée, puis donnée une seconde vie — en opposition directe au modèle du tout-jetable qui domine le secteur.
 
-**Cinq symptômes de la voix actuelle :**
+### Vision
+Faire de la menuiserie artisanale française un modèle de référence pour l'économie circulaire dans le bâtiment. Prouver que performance industrielle et responsabilité environnementale ne sont pas antagonistes, mais complémentaires — et que les artisans de province peuvent rivaliser, voire guider, face aux grands donneurs d'ordre.
 
-| Symptôme | Exemple identifié | Impact |
-|---|---|---|
-| Déclaration sans preuve | "Nous fabriquons de manière durable et responsable" | Indifférencié — n'importe quel concurrent peut dire la même chose |
-| Vocabulaire catalogue RSE | "local, circulaire, durable, réparable, solidaire" | Saturation lexicale — les mots perdent leur force à force d'être surutilisés |
-| Invisibilité de la fondatrice | Catherine Guerniou absente de la prise de parole publique | Manque un visage, une voix, une autorité incarnée |
-| Absence de segmentation B2B/B2C | Même discours pour un charpentier-couvreur et un particulier en rénovation | Perte de pertinence pour les deux cibles |
-| Passé composé institutionnel | "Nous avons été fondés", "Nous sommes certifiés" | Distant, froid — efface l'humain derrière la structure |
+### Valeurs fondamentales
 
-### 2.2 Voix recommandée
+| Valeur | Traduction concrète |
+|--------|-------------------|
+| **Made in France ancré** | PVC du Doubs, aluminium de Bourgogne, vitrage de Normandie — chaque composant a une adresse française |
+| **Circuit court militant** | Sourcing régional revendiqué publiquement, traçabilité QR code sur chaque produit de la gamme MIF |
+| **Économie circulaire** | Menuiseries conçues pour être réparées, évolutives et recyclables — pas simplement remplacées |
+| **Qualité de vie au travail** | Baby-foot dans l'atelier, partage des indicateurs financiers, redistribution des bénéfices en primes |
+| **Solidarité et transparence** | La dirigeante partage les données économiques de l'entreprise avec son équipe, valorise les parcours atypiques |
+| **Engagement sans arrogance** | Convaincre par l'exemple, non par le sermon — ton sincère et non donneur de leçons |
 
-**Registre cible :** Expert ancré / Artisan de conviction
-**Ton :** Direct, concret, humain, fier sans forfanterie
-
-**Quatre principes de la nouvelle voix :**
-
-**Principe 1 — La preuve avant la déclaration**
-Avant d'écrire "nous sommes engagés", montrer Fabrice qui assemble une fenêtre depuis 1991. Avant d'écrire "made in France", préciser "profilés PVC fabriqués dans le Doubs à 400 km de notre atelier". Les preuves concrètes sont plus persuasives que les affirmations abstraites.
-
-**Principe 2 — Le passé narratif plutôt que le présent déclaratif**
-"En 2023, nous avons inscrit notre raison d'être dans les statuts" est plus fort que "Nous sommes une entreprise à mission". Le premier dit ce qui a été fait, le second dit ce que l'on prétend être.
-
-**Principe 3 — Catherine Guerniou en première personne**
-La fondatrice doit exister dans le discours. Pas comme personnalité marketing mais comme point de vue : une femme qui reprend un atelier en 2005, décide que fabriquer localement n'est pas un luxe mais une nécessité, et structure toute une entreprise autour de cette conviction. Cette voix en "je" ou en attribution directe ("Pour Catherine Guerniou, dirigeante depuis 2005, ...") crée une autorité narrative que le "nous" institutionnel ne peut pas atteindre.
-
-**Principe 4 — Le registre adapté au canal et à la cible**
-Un charpentier qui commande 40 fenêtres par an n'attend pas le même discours qu'un particulier qui rénove sa maison. Les deux méritent la même qualité d'engagement, mais pas le même langage.
+### Positionnement
+La Fenêtrière occupe un positionnement rare : **artisan engagé à impact mesurable**. Ce n'est ni un industriel qui greenwashe, ni un artisan local sans ambition de rayonnement. C'est une entreprise de taille humaine, ancrée dans son territoire (Champigny-sur-Marne, Val-de-Marne), reconnue nationalement (Le Monde, Le Point, Challenges), dont la dirigeante est devenue un visage de la réindustrialisation française responsable.
 
 ---
 
-## 3. Archétype de Marque
+## 2. Archétype de marque
 
-### Archétype principal : L'Artisan (The Creator)
+### Archétype principal : L'Artisan (Le Créateur)
 
-L'archétype de l'Artisan est celui qui crée des choses de valeur durable. Il est mû par le désir de fabriquer bien plutôt que de fabriquer vite, de laisser une oeuvre plutôt qu'un produit. Ses ennemis sont la médiocrité et l'obsolescence programmée. Sa peur : produire quelque chose d'indigne.
+La Fenêtrière incarne l'archétype du **Créateur-Artisan** : une entité qui croit profondément que la qualité du travail bien fait est une valeur en soi. Elle ne cherche pas à être partout ni à tout prix — elle cherche à faire bien, à faire juste, à faire durer.
 
-**Pourquoi c'est l'archétype juste pour La Fenêtrière :**
-- Atelier de fabrication artisanale, pas assemblage industriel
-- Produits conçus pour être réparés, pas jetés
-- Compagnons choisis pour leur savoir-faire, pas leur productivité
-- Raison d'être autour du "bien faire" et du "faire durer"
+**Caractéristiques de l'archétype Créateur chez La Fenêtrière :**
+- Fierté du savoir-faire manuel et de la maîtrise technique
+- Refus du superficiel : chaque détail compte (origine des matériaux, traçabilité, réparabilité)
+- Vision à long terme plutôt qu'optimisation du court terme
+- Identité forte liée au lieu de fabrication
 
-**Déclinaison de l'archétype Artisan pour La Fenêtrière :**
+### Archétype secondaire : Le Militant (L'Insurgé bienveillant)
 
-| Dimension | Expression La Fenêtrière |
-|---|---|
-| **Mission** | Fabriquer des ouvrages qui durent, qui se réparent, qui ont une origine connue |
-| **Peur** | Le compromis sur la qualité au nom du prix ; les produits importés sans traçabilité |
-| **Désir** | Que chaque fenêtre livrée soit une référence dans 20 ans |
-| **Stratégie** | Maîtriser la chaîne de fabrication de bout en bout, choisir des fournisseurs partageant les mêmes valeurs |
-| **Piège** | Se perdre dans le perfectionnisme au détriment de la communication |
+Sans jamais verser dans le prosélytisme agressif, La Fenêtrière porte un discours alternatif au modèle dominant du secteur. Elle dit clairement ce qu'elle refuse (importation, obsolescence programmée, opacité des chaînes d'approvisionnement) et propose une voie différente.
 
-### Archétype secondaire : Le Citoyen (The Regular Guy / Everyman)
+**Ce duo Créateur + Militant génère une voix unique :**
+> Sincère et compétente, engagée sans condescendance, fière sans ostentation.
 
-La Fenêtrière est une PME de province, implantée dans un parc d'activités à Champigny-sur-Marne, pas dans un loft parisien. Elle partage ses profits avec ses équipes, recrute des profils atypiques, emploie depuis 30 ans les mêmes compagnons. L'archétype Citoyen vient en appui : l'entreprise fait partie d'un tissu local, d'une communauté économique, et elle s'en revendique sans complexe.
+### Archétype tertiaire : Le Citoyen (L'Appartenant)
 
-**Impact sur la voix :** Pas de jargon, pas de grandiloquence. La fierté est sobre. Le rapport avec le client est d'égal à égal, entre professionnels qui comprennent ce que signifie "bien faire".
+La dimension communautaire — équipe, territoire, réseau de pros — ancre la marque dans un sentiment d'appartenance partagée. "Nous fabriquons ici, pour vous, avec vous."
 
 ---
 
-## 4. Ton et Registre par Canal
+## 3. Voix de marque
 
-### 4.1 Site Web (homepage et pages produits)
+### Ton général
+**Engagé · Artisanal · Sincère · Humain · Direct · Non-moralisateur**
 
-**Objectif :** Convertir un visiteur froid (professionnel ou particulier) en demande de devis qualifiée.
-**Ton :** Expert accessible, direct, rassurant sans être commercial.
+La voix de La Fenêtrière est celle d'un expert de terrain qui parle vrai. Pas de jargon corporate, pas de superlatifs creux. On reconnaît derrière chaque prise de parole la main de quelqu'un qui connaît son métier et qui en est fier — sans avoir besoin de le crier.
 
-**Règles spécifiques :**
-- Commencer par les certifications et la preuve, pas par la philosophie
-- Chaque page produit : 1 fait de fabrication, 1 avantage chantier (B2B) ou 1 avantage usage (B2C), 1 CTA clair
-- Éviter les introductions en "Chez La Fenêtrière, nous..." — commencer par le bénéfice ou le fait
-- Les chiffres d'ancienneté (Fabrice depuis 1991, etc.) doivent apparaître sur les pages produits, pas seulement sur la page équipe
-- Segmenter l'entrée dès la homepage : parcours Pro / parcours Particulier
+### Les 5 dimensions de la voix
 
-**Niveau de formalité :** 3/5 (professionnel sans être rigide)
-**Longueur des textes :** Courte sur les pages produits (150-200 mots), plus développée sur les pages À Propos et MIF
+#### 1. Authentique mais pas rugueux
+Le ton est direct, sans fioritures marketing, mais jamais brusque. On sent la chaleur d'un atelier familial, pas la froideur d'un service communication corporate.
 
----
+**Exemple :** "On fabrique ici, à Champigny-sur-Marne. On sait d'où vient notre PVC. On sait qui a coupé notre aluminium. C'est ça, la traçabilité."
 
-### 4.2 LinkedIn
+#### 2. Expert sans hermétisme
+La Fenêtrière s'adresse à des professionnels du bâtiment — des gens qui connaissent les matériaux, les normes, les délais. Le ton assume cette expertise partagée sans infantiliser ni noyer sous les acronymes.
 
-**Objectif :** Asseoir l'autorité de Catherine Guerniou et de La Fenêtrière dans les secteurs de la menuiserie, du bâtiment responsable et du made in France.
-**Audience principale :** Professionnels du bâtiment (architectes, maîtres d'oeuvre, promoteurs, bureaux d'études), journalistes, prescripteurs institutionnels, pairs entrepreneuriaux.
-**Ton :** Voix de dirigeante engagée — réflexif, parfois provocateur sur les idées reçues de la menuiserie industrielle, ancré dans le terrain.
+**Exemple :** "Nos profils PVC Doubs répondent aux exigences Passivhaus. Pas parce que c'est tendance — parce que c'est juste."
 
-**Règles spécifiques :**
-- Catherine Guerniou doit poster en son nom propre, pas en nom de marque
-- Format idéal : post de 150-300 mots sur une expérience concrète (un chantier, une décision, un problème résolu), avec 1 enseignement transférable
-- Montrer l'atelier, pas les certifications. Les certifications viennent en validation, pas en titre
-- Ne jamais commencer un post par "Nous sommes fiers..." ou "Heureux d'annoncer..."
-- Fréquence recommandée : 2 posts/semaine (1 post dirigeante + 1 post marque)
+#### 3. Engagé sans donner de leçons
+L'entreprise a des convictions fortes sur l'économie circulaire, le Made in France, la QVT. Elle les exprime — mais jamais en faisant la morale à ceux qui font autrement. Le militantisme est dans les actes, pas dans les accusations.
 
-**Niveau de formalité :** 2/5 (professionnel détendu)
-**Registre :** Prise de position, démonstration par l'exemple, coulisses d'atelier
+**Exemple :** "On a choisi le circuit court. Pas pour se donner bonne conscience, mais parce que ça tient debout économiquement et humainement."
 
----
+#### 4. Humain et collectif
+La marque met en avant les femmes et les hommes de l'atelier. Les parcours atypiques, les primes partagées, le baby-foot — ce sont des signaux d'une culture d'entreprise réelle, pas d'une charte RH de façade.
 
-### 4.3 Instagram
+**Exemple :** "Dans notre atelier, il y a des gens qui ont changé de vie pour venir fabriquer ici. On leur dit merci en partageant les résultats."
 
-**Objectif :** Créer du désir de marque, montrer le savoir-faire artisanal, recruter indirectement (compagnons, alternants) et toucher les particuliers prescripteurs.
-**Audience principale :** Particuliers en phase de projet (rénovation, construction), jeunes professionnels, architectes d'intérieur, médias.
-**Ton :** Chaleureux, visuel, storytelling court. Le texte sert l'image, pas l'inverse.
+#### 5. Concret et mesurable
+La Fenêtrière évite le vague. Elle donne des origines précises (Doubs, Bourgogne, Normandie), des certifications nommées (Origine France Garantie, Fabriqué en France 2025), des faits datés.
 
-**Règles spécifiques :**
-- Priorité aux photos d'atelier, de mains qui travaillent, de détails de fabrication — pas aux rendus 3D ou catalogues
-- Format légende : 2-3 phrases maximum. La troisième est toujours un fait ou une question qui invite à l'échange
-- L'humain en premier : si une photo montre un compagnon, son prénom et son ancienneté sont dans la légende
-- Stories : format coulisses — "Dans l'atelier aujourd'hui" — spontané, sans filtre corporate
-- Pas de hashtags RSE génériques (#sustainable, #ecofriendly). Préférer les hashtags métier (#menuiserie, #fenêtresurmesure, #artisanatfrançais)
+**Exemple :** "Depuis 1984. Pas depuis hier."
 
-**Niveau de formalité :** 1/5 (décontracté authentique)
-**Registre :** Coulisses, fierté artisanale, savoir-faire visible
+### Tableau de calibrage tonal
+
+| Dimension | Jamais | Parfois | Toujours |
+|-----------|--------|---------|----------|
+| Formel / institutionnel | — | Pour les institutionnels | — |
+| Chaleureux / humain | — | — | Oui |
+| Technique / expert | — | Selon contexte | — |
+| Militant / engagé | — | — | Oui (mais dosé) |
+| Humoristique | Jamais ironique ou condescendant | Légèreté ponctuelle | — |
+| Promotionnel / commercial | Jamais agressif | Pour les campagnes ciblées | — |
 
 ---
 
-### 4.4 Email (Newsletter "La Fenêtre Ouverte" + Emails commerciaux)
+## 4. Vocabulaire signature
 
-**Objectif Newsletter :** Fidéliser la base professionnelle, partager des insights terrain (RE2020, matériaux, chantiers), maintenir la relation entre deux commandes.
-**Objectif Emails commerciaux :** Transformer une demande de contact en rendez-vous devis qualifié.
+### Mots et expressions à utiliser
 
-**Règles Newsletter :**
-- Objet : court, factuel ou intriguant. Jamais promotionnel.
-  - Bon : "Ce que la RE2020 change pour vos chantiers fenêtres en 2026"
-  - Mauvais : "Nos dernières offres et actualités de La Fenêtrière !"
-- Structure : 1 actu atelier (2-3 lignes) + 1 article de fond (400-600 mots) + 1 ressource pratique (guide, checklist, fiche technique)
-- Signature : Catherine Guerniou, dirigeante. Pas "L'équipe La Fenêtrière"
-- Ton : Lettre d'une professionnelle à ses pairs, pas bulletin d'entreprise
+**Ancrage territorial**
+- Fabriqué à Champigny-sur-Marne
+- Val-de-Marne / Île-de-France
+- PVC du Doubs · Aluminium de Bourgogne · Vitrage de Normandie
+- Ateliers français · Mains françaises
 
-**Règles Emails commerciaux :**
-- Réponse à devis sous 48h — le délai tenu est lui-même un signal de marque
-- Objet de réponse : précis et personnalisé ("Votre projet de 12 fenêtres ALU — devis La Fenêtrière")
-- Corps : 4 lignes maximum avant les pièces jointes. Direct, sans fioriture.
-- Ne jamais écrire "N'hésitez pas à nous contacter" — proposer une action précise ("Je vous appelle jeudi avant 12h ?")
+**Valeurs produit**
+- Menuiserie évolutive
+- Réparable · Réemployable · Recyclable
+- Traçabilité QR code
+- Durabilité choisie (pas imposée)
+- Savoir-faire artisanal
+- Qualité de fabrication
 
-**Niveau de formalité Newsletter :** 2/5
-**Niveau de formalité Email commercial :** 3/5
+**Économie et modèle**
+- Circuit court
+- Économie circulaire
+- Made in France (ancré, pas revendiqué)
+- Origine France Garantie
+- Filière courte · Sourcing local
+- Réindustrialisation
 
----
+**Humain et collectif**
+- Notre équipe · Notre atelier
+- Parcours singuliers
+- Qualité de vie au travail
+- Partage des résultats
+- Ensemble · Collectif
 
-### 4.5 Devis et documents commerciaux
+**Ton de narration**
+- "Depuis 1984..."
+- "On a choisi..."
+- "On sait d'où ça vient."
+- "Concrètement..."
+- "Ce n'est pas un hasard si..."
+- "Parce que ça tient debout."
 
-**Objectif :** Transformer la relation prix/offre en expérience de marque. Le devis est le premier document contractuel — c'est aussi un support de différenciation.
-**Ton :** Précis, professionnel, sobre. La qualité de la rédaction reflète la qualité de la fabrication.
+### Mots et expressions à éviter
 
-**Règles spécifiques :**
-- En-tête : inclure systématiquement le logo OFG et le logo Fabriqué en France — sur le devis, pas seulement sur le site
-- Description des produits : mentionner l'origine des matériaux ("profilés PVC Rehau, fabriqués en France") — c'est un argument inclus dans le prix, autant le rendre visible
-- Conditions de paiement : formulées en positif ("Accompte de 30% à la commande, solde à la livraison") — jamais en menace ("tout retard de paiement...")
-- Pied de page : "Menuiseries fabriquées dans notre atelier de Champigny-sur-Marne — Origine France Garantie"
-- Pas d'astérisques, pas de renvois. Ce qui est écrit est ce qui est livré.
-
-**Niveau de formalité :** 4/5 (formel sans être juridique)
-
----
-
-## 5. Lexique de Marque
-
-### 5.1 Mots à utiliser — Lexique positif La Fenêtrière
-
-| Catégorie | Termes privilégiés | Pourquoi |
-|---|---|---|
-| **Fabrication** | Ouvrage, façonner, assembler, usiner, ajuster, compagnon, atelier | Ancrent dans le savoir-faire réel, pas le commerce |
-| **Origine** | Fabriqué à Champigny, profilés du Doubs, aluminium de Bourgogne, vitrage de Normandie, circuit court régional | Précis et vérifiable — antidote au greenwashing |
-| **Durée** | Depuis 1984, 30 ans de métier, conçu pour durer, réparable, maintenable, transmissible | Signalent la profondeur temporelle |
-| **Responsabilité** | Réparable, réemployable, recyclable, économie circulaire, bas carbone, tracé, certifié | Vocabulary de la raison d'être — à utiliser précisément |
-| **Engagement** | Raison d'être, inscrit dans les statuts, Origine France Garantie, certifié par... | Crédibilisent les engagements par la preuve institutionnelle |
-| **Personnes** | Catherine Guerniou, Fabrice (menuisier depuis 1991), les compagnons de l'atelier | Humanisent la marque — nommer les gens |
-| **Bénéfice B2B** | Délais tenus, référence chantier, livraison IDF, gamme complète sur mesure, interlocuteur dédié | Pertinents pour les professionnels |
-| **Bénéfice B2C** | Sur mesure, posé par des pros, garanti, réparable, sans intermédiaire | Pertinents pour les particuliers |
-
-### 5.2 Mots à éviter — Lexique interdit ou à manier avec précaution
-
-| Terme à éviter | Problème | Alternative |
-|---|---|---|
-| "Solutions" | Vague, sur-utilisé dans le B2B | "menuiseries", "fenêtres", "portes" — nommer le produit |
-| "Éco-responsable" | Terme galvaudé, sans preuve | "Origine France Garantie", "bas carbone certifié", "PVC recyclé à 95%" |
-| "Nous sommes fiers de..." | Formule creuse, perçue comme autopromotion | Décrire le fait qui mériterait la fierté |
-| "Leader" / "N°1" | Non vérifiable, agressif pour une marque artisanale | "Seul fabricant certifié OFG en IDF" si vérifiable |
-| "Innovant" | Surexposé, contra-intuitif pour une marque artisanale | "Nous avons conçu la gamme MIF pour..." |
-| "Qualité" seul | Vide de sens sans qualificatif | "Qualité certifiée OFG", "qualité vérifiable sur 30 ans de réalisations" |
-| "Passion" | Infantilise le propos professionnel | "Métier", "savoir-faire", "expertise de compagnon" |
-| "Heureux d'annoncer" | Formule LinkedIn mécanique | Commencer par le fait ou l'enseignement |
-| "N'hésitez pas à..." | Passif, sans engagement | "Appelez-nous", "Envoyez votre plan", "On se rappelle ?" |
-| "Chez nous" | Flou | "Dans notre atelier de Champigny" |
-| "Développement durable" | Daté, bureaucratique | "Économie circulaire", "bas carbone", "circuit court" |
+| Mot/expression à éviter | Raison | Alternative suggérée |
+|--------------------------|--------|---------------------|
+| "Eco-responsable" | Trop générique, galvaudé | "Conçue pour durer et être réparée" |
+| "Solution" | Jargon corporate | "Menuiserie" / "Fabrication" |
+| "Innovation disruptive" | Antinomique avec l'artisanat sincère | "Une approche différente" |
+| "Best-in-class" | Anglicisme corporate | "Parmi les meilleures de France" |
+| "Démarche RSE" | Perçu comme cosmétique | "Notre façon de travailler" |
+| "Engagement" (seul) | Mot valise sans substance | Nommer l'engagement précisément |
+| "Premium" | Connotation luxe déconnectée | "Qualité française" / "Haut de gamme artisanal" |
+| "Synergie" | Jargon managérial | Décrire concrètement la collaboration |
+| "Nos clients" (froid) | Distance artificielle | "Les professionnels avec qui on travaille" |
+| "Impact positif" | Trop vague | Chiffrer ou illustrer l'impact |
 
 ---
 
-## 6. Guidelines de Voix de Marque pour les Rédacteurs
+## 5. Messages clés par audience
 
-### 6.1 La règle des trois questions
+### Audience 1 : Professionnels du bâtiment (cible principale B2B)
 
-Avant de valider tout texte produit au nom de La Fenêtrière, se poser :
+**Profil :** Artisans poseurs, entreprises générales du bâtiment, maîtres d'œuvre, promoteurs régionaux.
 
-1. **Est-ce qu'un concurrent pourrait écrire exactement la même phrase ?** Si oui, réécrire avec un fait propre à La Fenêtrière (une certification, un nom de compagnon, une origine de matière, une date).
+**Leurs enjeux :**
+- Fiabilité des délais et de l'approvisionnement
+- Qualité technique irréprochable (garanties, SAV)
+- Conformité aux normes (RE2020, Passivhaus, label BBC)
+- Capacité à valoriser le Made in France auprès de leurs propres clients
+- Rentabilité et marges sur les chantiers
 
-2. **Est-ce qu'on affirme ou est-ce qu'on prouve ?** Les affirmations générales ("nous faisons du travail de qualité") sont à bannir. Les preuves spécifiques ("nos profilés PVC viennent de Rehau, fabriqué dans le Doubs") remplacent.
+**Messages clés :**
+1. "Nos menuiseries sont fabriquées en France, avec des composants traçables — vous pouvez le montrer à vos clients avec le QR code."
+2. "Une menuiserie réparable, c'est aussi un argument commercial : vous revenez chez votre client 10 ans après, pas pour la remplacer, mais pour l'entretenir."
+3. "On livre dans les délais parce qu'on maîtrise notre chaîne. Notre PVC vient du Doubs, pas d'un port en attente."
+4. "Travailler avec La Fenêtrière, c'est pouvoir dire à votre maître d'ouvrage : je sais d'où vient chaque composant."
 
-3. **Est-ce que le lecteur sait quoi faire après avoir lu ?** Chaque prise de parole doit se terminer sur une action possible, même implicite.
-
-### 6.2 Les cinq interdits rédactionnels
-
-1. **Interdire les superlatifs non certifiés** — "le meilleur", "le plus", "exceptionnel", "unique" sans source vérifiable. Exception : si c'est factuel et sourcé ("seul fabricant certifié OFG en IDF" — à vérifier avant d'utiliser).
-
-2. **Interdire les listes RSE sans ancrage** — Ne jamais lister "local, durable, circulaire, responsable" en bullets sans les relier à un fait concret. Chaque terme doit être justifié dans la phrase ou le paragraphe.
-
-3. **Interdire l'invisibilité des personnes** — Les textes sur les produits, les chantiers, les processus doivent systématiquement mentionner un être humain (compagnon, client, dirigeante). Une fenêtre ne se fabrique pas seule.
-
-4. **Interdire le "nous" impersonnel dans les prises de parole de Catherine Guerniou** — Sur LinkedIn et dans les tribunes, c'est le "je" qui s'impose. La voix institutionnelle appartient au site. La voix de direction appartient à la dirigeante.
-
-5. **Interdire les appels à l'action passifs** — "N'hésitez pas à nous contacter", "Pour plus d'informations...", "Vous pouvez nous joindre au..." sont à éliminer. Chaque CTA est une proposition d'action directe.
-
-### 6.3 Principes de mise en forme
-
-- **Tirets et listes :** Utiliser pour les listes de caractéristiques produits. Ne pas utiliser pour décomposer des arguments — garder le fil narratif.
-- **Gras :** Réservé aux faits clés (chiffres, certifications, noms propres). Pas au premier mot de chaque phrase.
-- **Chiffres :** Écrire en chiffres (30 ans, 12 fenêtres, 400 km). L'oeil accroche le chiffre, il crédibilise.
-- **Majuscules :** "Origine France Garantie", "Fabriqué en France", "Made in Fenêtre" — les noms de certifications et de gammes prennent la majuscule.
-- **Abréviations :** OFG (Origine France Garantie) peut être utilisé après la première mention complète. MIF (Made in Fenêtre) idem. PVC, ALU, BOIS en capitales pour les gammes produits.
-
-### 6.4 Dos and Don'ts rapides
-
-| Ne pas faire | Faire à la place |
-|---|---|
-| "Nous vous proposons des solutions de menuiseries adaptées à vos besoins." | "Fenêtres PVC, ALU ou bois — fabriquées dans notre atelier de Champigny, livrées sur vos chantiers IDF." |
-| "Notre équipe est passionnée par son métier." | "Fabrice assemble des fenêtres dans notre atelier depuis 1991. C'est ce que vous recevez sur vos chantiers." |
-| "Nous sommes engagés dans une démarche de développement durable." | "En 2023, nous avons inscrit notre raison d'être dans nos statuts : fabriquer des menuiseries réparables, réemployables, recyclables. Ce n'est pas un engagement rhétorique — c'est la structure juridique de l'entreprise." |
-| "Pour toute demande, n'hésitez pas à nous contacter." | "Envoyez-nous votre plan — devis gratuit sous 48h." |
+**Ton pour cette audience :** Technique, direct, factuel. Mettre en avant les bénéfices concrets (délais, SAV, traçabilité, arguments de revente). Minimiser le discours de valeurs, maximiser les preuves.
 
 ---
 
-## 7. Exemples de Reformulation Avant / Après
+### Audience 2 : Prescripteurs (architectes, bureaux d'études, maîtres d'ouvrage publics)
 
-### Exemple 1 — Homepage hero (B2B)
+**Profil :** Architectes DPLG, bureaux d'études thermiques, maîtres d'ouvrage institutionnels (bailleurs sociaux, collectivités), responsables RSE d'entreprises.
 
-**AVANT**
-> *"La Fenêtrière, fabricant artisanal de menuiseries extérieures engagé dans une démarche locale et durable depuis 1984. Qualité, proximité, responsabilité."*
+**Leurs enjeux :**
+- Conformité réglementaire (RE2020, labels HQE, BREEAM)
+- Justification des choix de prescription face aux comités
+- Réputation professionnelle et cohérence des valeurs
+- Durabilité du bâtiment sur le cycle de vie
 
-**APRÈS**
-> *"Fabricant de fenêtres, portes et volets sur mesure — dans notre atelier de Champigny-sur-Marne depuis 1984. PVC du Doubs, aluminium de Bourgogne, livraison sur vos chantiers en Île-de-France. Certifié Origine France Garantie."*
+**Messages clés :**
+1. "La gamme MIF est certifiée Origine France Garantie — chaque composant peut être justifié dans un dossier de prescription."
+2. "Nos menuiseries sont conçues pour le cycle de vie complet du bâtiment : évolutives, réparables, recyclables en fin de vie."
+3. "Catherine Guerniou est intervenante reconnue sur la réindustrialisation française — nous pouvons participer à vos événements de prescription."
+4. "Le QR code de traçabilité de nos produits MIF vous donne accès à l'origine de chaque composant — un atout dans les dossiers de certification."
 
-**Pourquoi :** La version après ancre géographiquement, précise l'origine des matières, cite la certification. Elle ne déclare pas la qualité — elle la démontre par la traçabilité.
-
----
-
-### Exemple 2 — Page À propos / histoire
-
-**AVANT**
-> *"Dirigée par Catherine Guerniou depuis 2005, La Fenêtrière s'est engagée dans une démarche responsable et durable, avec une raison d'être inscrite dans ses statuts en 2023."*
-
-**APRÈS**
-> *"En 2005, Catherine Guerniou reprend La Fenêtrière. Elle aurait pu maintenir le cap d'un atelier artisanal traditionnel. Elle choisit autre chose : reconstruire l'entreprise autour d'une question simple — et si on fabriquait des fenêtres qu'on pouvait réparer plutôt que jeter ? En 2023, cette conviction devient juridique : la raison d'être de l'entreprise est inscrite dans ses statuts. Fabriquer localement et durablement des menuiseries évolutives, réparables, réemployables et recyclables."*
-
-**Pourquoi :** La version après raconte une décision, un choix, un personnage. Elle transforme l'engagement déclaratif en récit de fondation.
+**Ton pour cette audience :** Légèrement plus formel, orienté preuves et certifications. Valoriser la dimension systémique (cycle de vie, économie circulaire) et la crédibilité institutionnelle de la dirigeante.
 
 ---
 
-### Exemple 3 — Post LinkedIn (annonce prix Fabriqué en France 2025)
+### Audience 3 : Institutionnels et médias (journalistes, institutions publiques, partenaires)
 
-**AVANT**
-> *"Nous sommes fiers et heureux d'annoncer que La Fenêtrière est Lauréate Fabriqué en France 2025 ! Un grand merci à toute notre équipe pour cet honneur qui récompense notre engagement quotidien. #FabriquéEnFrance #Menuiserie #MadeInFrance"*
+**Profil :** Journalistes économiques (Le Monde, Le Point, Challenges), institutions (BPI France, Région Île-de-France, CCI), acteurs de la réindustrialisation, partenaires potentiels.
 
-**APRÈS**
-> *"En novembre 2025, une de nos fenêtres deux vantaux bas carbone était exposée à l'Élysée parmi 123 produits sélectionnés dans toute la France.*
->
-> *Cette fenêtre, Fabrice l'a assemblée dans notre atelier de Champigny. Le profilé PVC vient du Doubs. Le vitrage de Normandie.*
->
-> *Le Prix Fabriqué en France 2025, c'est ça : pas une communication sur le local — une fenêtre fabriquée à 400 km de ses matières premières, dans un atelier où certains compagnons travaillent depuis 30 ans.*
->
-> *Merci au jury d'avoir vu la différence."*
+**Leurs enjeux :**
+- Trouver des cas concrets et incarnés de réindustrialisation
+- Illustrer les discours politiques sur le Made in France
+- Mettre en avant des dirigeantes exemplaires
+- Documenter des modèles économiques alternatifs viables
 
-**Pourquoi :** La version après incarne le prix dans un objet réel, des personnes réelles, des distances précises. Elle transforme une annonce auto-congratulatoire en preuve narrative.
+**Messages clés :**
+1. "La Fenêtrière prouve depuis 1984 que l'artisanat industriel de proximité est viable économiquement et désirable socialement."
+2. "Catherine Guerniou dirige une entreprise qui partage ses indicateurs financiers avec son équipe et redistribue les bénéfices en primes — un modèle d'entreprise à mission avant la loi Pacte."
+3. "La filière menuiserie française a besoin d'acteurs qui montrent la voie : sourcing local, traçabilité, réparabilité. Nous le faisons depuis 40 ans."
+4. "Fabriqué en France 2025, Madame Engagée 2021, Prix Étienne Marcel — trois reconnaissances qui disent la même chose : ce modèle fonctionne."
 
----
-
-### Exemple 4 — Email de réponse à une demande de devis
-
-**AVANT**
-> *"Madame, Monsieur, nous avons bien reçu votre demande de devis et nous vous en remercions. Notre équipe reviendra vers vous dans les meilleurs délais. N'hésitez pas à nous contacter pour tout renseignement complémentaire. Cordialement, L'équipe La Fenêtrière."*
-
-**APRÈS**
-> *"Bonjour [Prénom],*
->
-> *Votre demande est bien reçue. Je reviens vers vous avec un devis détaillé avant jeudi 12h.*
->
-> *Si vous avez un plan ou des photos du chantier, envoyez-les — ça m'aide à être précis sur les dimensions et les options de pose.*
->
-> *À jeudi,*
-> *Catherine Guerniou — La Fenêtrière, Champigny-sur-Marne"*
-
-**Pourquoi :** La version après engage sur une date précise, sollicite une action qui améliore la qualité du devis, et signe avec un nom. Elle est plus courte et plus utile.
+**Ton pour cette audience :** Narratif et incarné. Mettre Catherine Guerniou en avant comme porte-parole crédible et charismatique. Ancrer dans les faits et les chiffres, sans perdre la chaleur humaine.
 
 ---
 
-### Exemple 5 — Description produit Fenêtre PVC
+## 6. Storytelling et récit de marque
 
-**AVANT**
-> *"Nos fenêtres PVC offrent d'excellentes performances thermiques et acoustiques. Fabriquées avec des matériaux de qualité, elles s'adaptent à tous vos projets. Disponibles en différentes couleurs et dimensions sur mesure."*
+### Le récit fondateur
+En 1984, La Fenêtrière ouvre à Champigny-sur-Marne. Pas dans un grand pôle industriel, pas avec le soutien d'un groupe. Dans un atelier de banlieue parisienne, avec des mains et un savoir-faire. Quarante ans plus tard, l'entreprise est toujours là — et elle a eu raison de tenir bon.
 
-**APRÈS**
-> *"Fenêtres PVC fabriquées dans notre atelier de Champigny-sur-Marne, à partir de profilés Rehau produits dans le Doubs. Performances thermiques Uw jusqu'à 0,9 W/m²K. Disponibles sur mesure en 12 coloris, avec ou sans volet intégré.*
->
-> *Chaque ouvrage est assemblé par nos compagnons — dont plusieurs fabricants depuis plus de 20 ans. Les joints sont remplaçables, les vitrages démontables : une fenêtre La Fenêtrière est conçue pour être entretenue, pas remplacée.*
->
-> *Délai de fabrication : 3 à 4 semaines. Livraison IDF incluse."*
+Ce récit fondateur est puissant parce qu'il dit : **on ne nous a pas attendus pour faire bien**. La Fenêtrière n'a pas attendu la loi RE2020 pour penser durabilité. N'a pas attendu la crise du Covid pour réfléchir à ses approvisionnements. N'a pas attendu la mode du "Made in France" pour sourcer local.
 
-**Pourquoi :** La version après est précise sur l'origine, les performances (chiffre), la maintenabilité (différenciation circulaire), et les délais. Elle donne au professionnel ce dont il a besoin pour décider.
+### Les trois arcs narratifs
 
----
+#### Arc 1 : "Fabriquer ici, c'est un choix"
+La Fenêtrière aurait pu sourcer moins cher, sous-traiter à l'étranger, optimiser les marges. Elle a choisi autrement. Pas par idéalisme naïf — par conviction que c'est le seul modèle qui tienne sur la durée, humainement et économiquement.
 
-### Exemple 6 — Newsletter "La Fenêtre Ouverte" — Objet et introduction
+**Éléments narratifs :** PVC du Doubs, alu de Bourgogne, vitrage de Normandie, atelier à Champigny depuis 1984.
 
-**AVANT**
-> *Objet : "Actualités La Fenêtrière — Printemps 2026"*
->
-> *"Chers clients et partenaires, nous espérons que vous allez bien. Voici notre newsletter du printemps avec nos dernières actualités et nos conseils pour la saison."*
+#### Arc 2 : "La fenêtre est un objet qui dure"
+Une fenêtre, ça dure 30 ans. Peut-être 50. La concevoir comme un produit jetable est absurde — économiquement, écologiquement, et même esthétiquement. La Fenêtrière fabrique des menuiseries pensées pour être entretenues, réparées, évoluées. Le QR code de traçabilité en est le symbole.
 
-**APRÈS**
-> *Objet : "RE2020 Phase 3 : ce que ça change pour vos commandes fenêtres dès juillet"*
->
-> *"La phase 3 de la RE2020 entre en vigueur en juillet 2026. Concrètement, pour vous : les seuils carbone sur les menuiseries extérieures se resserrent. Voici ce que ça implique en pratique pour les marchés que vous commandez cet été — et pourquoi notre gamme MIF est déjà conforme."*
+**Éléments narratifs :** Gamme MIF, QR code traçabilité, réparabilité, économie circulaire, newsletter La Fenêtre Ouverte.
 
-**Pourquoi :** L'objet est un titre d'article utile, pas un panneau d'affichage d'entreprise. L'introduction entre dans le vif du sujet avec une utilité immédiate.
+#### Arc 3 : "Une entreprise, ce sont des gens"
+L'atelier de La Fenêtrière, ce sont des parcours singuliers. Des personnes qui ont changé de voie, qui ont trouvé ici un endroit où leur travail a du sens. La QVT n'est pas un mot dans un document RH — c'est le baby-foot, les chiffres partagés chaque mois, les primes collectives quand ça va bien.
 
----
+**Éléments narratifs :** Catherine Guerniou, équipe, parcours atypiques, baby-foot, indicateurs partagés, primes.
 
-## Synthèse Opérationnelle
+### La métaphore centrale : "La fenêtre ouverte"
+Le nom de la newsletter n'est pas un hasard. Une fenêtre ouverte, c'est :
+- La transparence (on voit ce qui se passe à l'intérieur)
+- L'ouverture (on accueille, on partage, on échange)
+- Le passage (entre l'intérieur et l'extérieur, entre le produit et son utilisateur)
 
-### Trois actions prioritaires pour déployer cette voix
-
-**Action 1 — Réécrire la homepage en 5 jours**
-Appliquer les reformulations des exemples 1 (hero) et 5 (produit) à toutes les pages du site. Priorité absolue : homepage hero, page fenêtres PVC/ALU/Bois, page À propos. Impact estimé : +30% sur le taux de conversion des visiteurs qualifiés.
-
-**Action 2 — Activer Catherine Guerniou sur LinkedIn en 2 semaines**
-Créer ou reprendre le profil LinkedIn de la dirigeante. Publier le premier post en voix propre sur le Prix Fabriqué en France 2025 (reformulation Exemple 3). Cadencer à 1 post/semaine pendant 2 mois pour construire l'audience. Impact estimé : 500-2 000 abonnés qualifiés en 6 mois.
-
-**Action 3 — Reformater la newsletter "La Fenêtre Ouverte" au prochain envoi**
-Appliquer les règles de l'exemple 6 : objet = titre éditorial, introduction = utilité immédiate, signature = Catherine Guerniou. Tester sur la prochaine édition et comparer les taux d'ouverture (baseline actuelle vs nouvelle version). Impact attendu : taux d'ouverture de 20-25% → 35-45%.
+Cette métaphore peut structurer l'ensemble des prises de parole : La Fenêtrière est une entreprise transparente, ouverte sur son territoire, qui crée des ponts entre fabricants et professionnels du bâtiment.
 
 ---
 
-*Rapport généré le 20 mars 2026 — La Fenêtrière / la-fenetriere.fr*
-*Claude Code Marketing Suite — Analyse Marque & Voix*
+## 7. Identité visuelle observée
+
+### Observations générales
+L'identité visuelle de La Fenêtrière reflète sa voix : sobre, honnête, artisanale. On ne cherche pas l'effet spectaculaire — on cherche la clarté et la cohérence.
+
+### Palette chromatique supposée
+D'après le positionnement et le secteur, la marque s'appuie probablement sur :
+- **Tons chauds et terrestres** (beiges, gris chauds, blanc cassé) évoquant la matière, l'artisanat
+- **Accent vert ou bleu profond** signalant l'engagement environnemental sans en faire un artifice
+- **Noir et blanc contrastés** pour les contenus éditoriaux (lisibilité, sérieux)
+
+### Typographie suggérée
+- **Titres :** Serif classique ou humaniste — évoque l'ancrage historique (depuis 1984)
+- **Corps de texte :** Sans-serif lisible — modernité fonctionnelle, pas décorative
+- **Éviter :** Les typographies trop "tech" ou trop fantaisistes, antinomiques avec le positionnement artisanal
+
+### Photographie et visuels
+- **Priorité aux photos d'atelier** : mains au travail, matériaux, machines — montrer le faire
+- **Portraits d'équipe** authentiques, pas retouchés à l'excès
+- **Mise en situation** des menuiseries dans des chantiers réels (pas des rendus 3D froids)
+- **QR codes et certifications** visibles dans les visuels produit
+
+### Recommandations visuelles
+- Créer une charte photo "authenticité artisanale" : lumière naturelle, profondeur de champ, traces de matière
+- Systématiser la mention des origines des matériaux dans les visuels produit
+- Développer un template "coulisse d'atelier" pour les réseaux sociaux (série récurrente)
+
+---
+
+## 8. Recommandations pour renforcer la voix de marque
+
+### Priorité 1 : Formaliser la Brand Voice en interne
+**Problème :** Sans document de référence partagé, la voix peut dériver selon les interlocuteurs (community manager, service commercial, dirigeante).
+**Action :** Diffuser ce document en interne, organiser une session de 2h avec l'équipe pour aligner les prises de parole.
+
+### Priorité 2 : Amplifier le storytelling "équipe"
+**Problème :** Les valeurs QVT et solidarité sont déclarées mais peu illustrées dans le contenu public visible.
+**Action :** Série "Portraits d'atelier" sur LinkedIn et Instagram — un membre de l'équipe par mois, avec son parcours et son métier. Format : 3-4 photos + texte court (300 mots max).
+
+### Priorité 3 : Rendre la traçabilité visible et désirable
+**Problème :** Le QR code de traçabilité est un différenciateur fort mais peu valorisé dans la communication.
+**Action :** Campagne "Scannez notre fenêtre" — vidéo courte (60 sec) montrant ce que révèle le QR code. À déployer sur LinkedIn, Instagram et YouTube.
+
+### Priorité 4 : Structurer la prise de parole de Catherine Guerniou
+**Problème :** La dirigeante est visible dans les grands médias (Le Monde, Le Point) mais sa voix n'est pas assez relayée dans les canaux propres à la marque.
+**Action :** Créer une rubrique "Catherine Guerniou — Tribune" sur le site et LinkedIn : 1 tribune/trimestre sur un sujet de fond (réindustrialisation, économie circulaire, QVT).
+
+### Priorité 5 : Développer la newsletter "La Fenêtre Ouverte"
+**Problème :** La newsletter existe mais son positionnement éditorial n'est pas explicité.
+**Action :** Définir une ligne éditoriale en 3 rubriques :
+1. "Dans l'atelier" (coulisses, équipe, process)
+2. "Sur le chantier" (retours d'expérience clients, cas d'usage)
+3. "La fenêtre ouverte sur le monde" (économie circulaire, réindustrialisation, Made in France — regards extérieurs)
+
+### Priorité 6 : Unifier le ton B2B sur le site
+**Problème :** Les fiches produit et les pages services peuvent manquer de personnalité de marque, restant trop techniques.
+**Action :** Révision du contenu site avec injection de la voix signature : une phrase d'entrée "humaine" par page, mention systématique des origines des matériaux, call-to-action non génériques.
+
+---
+
+## 9. Guidelines pour les réseaux sociaux
+
+### LinkedIn (Canal prioritaire B2B)
+
+**Objectif :** Notoriété professionnelle, génération de leads B2B, personal branding de Catherine Guerniou.
+
+**Fréquence recommandée :** 3 posts/semaine
+
+**Types de contenus et ton :**
+
+| Format | Sujet | Ton | Fréquence |
+|--------|-------|-----|-----------|
+| Tribune | Réindustrialisation, économie circulaire, QVT | Engagé, expert, incarné | 1/semaine |
+| Coulisse atelier | Fabrication, matériaux, équipe | Chaleureux, fier, concret | 1/semaine |
+| Actualité marque | Certifications, événements, presse | Direct, factuel, sobre | 1/semaine |
+
+**Do's LinkedIn :**
+- Toujours commencer par une accroche concrète (un fait, une question, une citation)
+- Mentionner les origines des matériaux quand pertinent
+- Taguer les partenaires régionaux et institutionnels
+- Répondre à tous les commentaires dans les 24h
+- Utiliser les hashtags sectoriels avec modération : #MadeInFrance #EconomieCirulaire #Menuiserie #Bâtiment #Artisanat
+
+**Don'ts LinkedIn :**
+- Les posts "nous sommes fiers de..." sans substance
+- Les visuels trop corporate ou les photos stock
+- Les listes à puces sans narration
+- Ignorer les mentions et partages
+
+---
+
+### Instagram (Canal image et culture d'entreprise)
+
+**Objectif :** Notoriété grand public, recrutement, valorisation de la culture d'entreprise.
+
+**Fréquence recommandée :** 4-5 posts/semaine + Stories quotidiennes
+
+**Types de contenus :**
+
+| Format | Sujet | Ton |
+|--------|-------|-----|
+| Reels 30-60 sec | Fabrication en accéléré, gestes de métier | Fascinant, silencieux (musique), orgueilleux du faire |
+| Carrousel | Origines des matériaux, parcours équipe | Éducatif, chaleureux |
+| Photo single | Atelier, matières, détails produit | Esthétique artisanale, sobre |
+| Stories | Coulisses quotidiennes, sondages, Q&A | Spontané, humain, sans filtre |
+
+**Do's Instagram :**
+- Légendes courtes (3-5 lignes max) avec une accroche forte
+- Émojis avec parcimonie (1-2 max, pertinents)
+- Hashtags en commentaire, pas dans la légende
+- Stories "transparentes" : montrer l'envers du décor sans surproduction
+
+**Don'ts Instagram :**
+- Les visuels trop lisses ou trop publicitaires
+- Les légendes purement commerciales
+- La répétition des mêmes formats sans variation
+
+---
+
+### Facebook (Canal communauté locale et PME)
+
+**Objectif :** Entretenir la relation avec les artisans locaux, relayer la presse, animer la communauté.
+
+**Fréquence recommandée :** 2-3 posts/semaine
+
+**Spécificités :**
+- Relayer les articles de presse (Le Monde, Le Point) avec un commentaire personnel de Catherine Guerniou
+- Animer les événements locaux (salons, portes ouvertes)
+- Format plus long accepté qu'Instagram — place aux histoires d'équipe
+
+---
+
+### YouTube (Canal expertise et pédagogie)
+
+**Objectif :** Référence expertise, SEO long terme, aide à la décision pour les professionnels.
+
+**Fréquence recommandée :** 2 vidéos/mois
+
+**Types de contenus :**
+
+| Format | Durée | Sujet |
+|--------|-------|-------|
+| Visite d'atelier | 3-5 min | Process de fabrication, matériaux |
+| Interview Catherine Guerniou | 5-10 min | Vision, engagements, secteur |
+| Tutoriel pro | 3-5 min | Pose, entretien, réparation des menuiseries |
+| Reportage partenaire | 3-5 min | Chantiers clients, témoignages poseurs |
+
+**Ton YouTube :** Pédagogique et authentique. Pas de sur-production. La voix off ou la présence à l'image de Catherine Guerniou ou d'un technicien atelier ajoute de la crédibilité.
+
+---
+
+## 10. Exemples de reformulations avant/après
+
+### Exemple 1 : Description produit
+
+**Avant (ton générique) :**
+> "La Fenêtrière propose des menuiseries extérieures de haute qualité, fabriquées selon les normes en vigueur, avec des matériaux sélectionnés pour leur performance et leur durabilité."
+
+**Après (voix La Fenêtrière) :**
+> "Nos fenêtres sont fabriquées à Champigny-sur-Marne, avec du PVC soufflé dans le Doubs et du vitrage produit en Normandie. Chaque pièce sort de nos ateliers avec un QR code qui dit d'où elle vient — et comment la réparer dans 20 ans si besoin."
+
+---
+
+### Exemple 2 : Message sur les valeurs
+
+**Avant (ton déclaratif creux) :**
+> "La Fenêtrière s'engage pour un avenir durable et une production responsable, au service de ses clients et de la planète."
+
+**Après (voix La Fenêtrière) :**
+> "On fabrique des fenêtres conçues pour durer 40 ans, être réparées, et recyclées à leur fin de vie. Ce n'est pas une promesse marketing — c'est notre modèle depuis 1984. Chez nous, la durabilité, ça se voit dans la conception du produit, pas dans un rapport annuel."
+
+---
+
+### Exemple 3 : Post LinkedIn sur une certification
+
+**Avant (ton communiqué de presse) :**
+> "Nous sommes fiers d'annoncer l'obtention de la certification Fabriqué en France 2025, qui récompense notre engagement en faveur de la production nationale."
+
+**Après (voix La Fenêtrière) :**
+> "Fabriqué en France 2025 — on l'a obtenue. Mais honnêtement, ce qui nous touche le plus, c'est ce que ça représente pour notre équipe : des gens qui font leur métier ici, avec des matériaux d'ici, depuis 1984. Le label, c'est la reconnaissance. L'atelier, c'est la réalité."
+
+---
+
+### Exemple 4 : À propos (page site)
+
+**Avant (ton institutionnel) :**
+> "Fondée en 1984, La Fenêtrière est une entreprise artisanale spécialisée dans la fabrication de menuiseries extérieures. Engagée dans une démarche d'éco-responsabilité, elle propose des produits Made in France certifiés."
+
+**Après (voix La Fenêtrière) :**
+> "Depuis 1984, on fabrique des fenêtres à Champigny-sur-Marne. Pas des produits jetables. Des menuiseries pensées pour durer, être réparées, vivre plusieurs vies. Notre PVC vient du Doubs. Notre alu de Bourgogne. Notre vitrage de Normandie. Et nos gens ? D'ici, d'ailleurs, avec des parcours qui n'ont rien de linéaire. C'est ça, La Fenêtrière."
+
+---
+
+### Exemple 5 : Réponse à un professionnel sur LinkedIn
+
+**Avant (ton service client froid) :**
+> "Bonjour, merci de votre intérêt pour nos produits. Nous vous invitons à contacter notre service commercial pour obtenir un devis personnalisé."
+
+**Après (voix La Fenêtrière) :**
+> "Bonjour [Prénom], bonne question. Pour un chantier de cette nature, je vous recommande de contacter directement notre atelier — ils connaissent les contraintes RE2020 sur le bout des doigts. Et si vous voulez voir comment on fabrique avant de décider, nos portes sont ouvertes."
+
+---
+
+### Exemple 6 : Story Instagram coulisse atelier
+
+**Avant (descriptif neutre) :**
+> "Fabrication en cours dans nos ateliers. Qualité et précision au rendez-vous !"
+
+**Après (voix La Fenêtrière) :**
+> "7h30, l'atelier démarre. L'alu de Bourgogne attend d'être découpé. Dans quelques heures, ce sera une fenêtre. Dans quelques semaines, elle sera installée sur un chantier quelque part en Île-de-France. Dans 30 ans, elle sera peut-être encore là — ou réparée, ou recyclée. C'est pour ça qu'on travaille comme ça."
+
+---
+
+## Synthèse exécutive
+
+La Fenêtrière dispose d'un ADN de marque exceptionnel : rare, cohérent, incarné. La voix observée est juste — sincère, engagée, artisanale. Le principal enjeu n'est pas de la réinventer, mais de la **systématiser et de l'amplifier** sur l'ensemble des points de contact.
+
+**Les trois leviers prioritaires pour 2026 :**
+
+1. **Systématiser la traçabilité narrative** — chaque prise de parole doit ancrer concrètement l'origine des matériaux, les noms de territoires, les chiffres réels.
+2. **Mettre Catherine Guerniou au centre du dispositif éditorial** — elle est le visage de la marque, reconnue nationalement, et cette reconnaissance doit irriguer tous les canaux.
+3. **Construire une communauté de professionnels engagés** — La Fenêtrière n'est pas qu'un fournisseur pour les pros du bâtiment, elle peut être leur référence éthique et technique, un endroit où ils se reconnaissent.
+
+> La voix de La Fenêtrière dit une chose simple : **on peut faire bien, faire local, faire durable — et que ça tient.** C'est un message dont la France du bâtiment a besoin d'entendre plus souvent.
+
+---
+
+*Rapport généré le 21 mars 2026 — Claude AI Marketing Suite*
+*La Fenêtrière — la-fenetriere.fr — Champigny-sur-Marne (94)*

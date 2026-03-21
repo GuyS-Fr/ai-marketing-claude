@@ -1,25 +1,25 @@
 # Audit Marketing : La Fenêtrière
-**URL :** https://www.la-fenetriere.fr/
-**Date :** 20 mars 2026
-**Type d'entreprise :** Fabricant artisanal de menuiseries extérieures (B2B/B2C)
-**Score Marketing Global : 38/100 (Grade : F)**
+**URL :** https://www.la-fenetriere.fr
+**Date :** 21 mars 2026
+**Type d'entreprise :** Fabricant artisanal B2B — Menuiseries extérieures
+**Score Marketing Global : 46/100 (Grade : D)**
 
 ---
 
 ## Résumé Exécutif
 
-La Fenêtrière obtient un score marketing global de **38/100**, ce qui la place en zone critique. Ce résultat masque cependant un paradoxe majeur : l'entreprise possède un **positionnement stratégique exceptionnel** (certification Origine France Garantie, Lauréate Fabriqué en France 2025, exposition à l'Élysée, économie circulaire authentique) mais une **vitrine digitale qui sabote activement sa conversion**.
+La Fenêtrière obtient un score marketing global de **46/100**, ce qui la place dans la catégorie "en dessous de la moyenne" malgré des actifs de marque exceptionnels. Ce paradoxe résume la situation : l'entreprise possède un positionnement rare et authentique (fabricant local Made in France, économie circulaire, certifications de premier rang, dirigeante médiatisée) mais son site web échoue à convertir cette légitimité en leads et en chiffre d'affaires.
 
-**Force principale :** Un positionnement concurrentiel quasi-unique en Île-de-France — seul fabricant artisanal local certifié OFG combinant circuit court, économie circulaire et gamme bas carbone récompensée nationalement. Score concurrentiel : 67/100.
+Le point fort majeur est **l'identité de marque** (76/100) : la combinaison certification Origine France Garantie + Lauréate Fabriqué en France 2025 + exposition à l'Élysée + mission circulaire inscrite dans les statuts est quasi-unique dans le secteur de la menuiserie. Le QR code de traçabilité produit (gamme MIF) est un différenciateur technologique que les grandes enseignes n'ont pas.
 
-**Faiblesse principale :** Une exécution digitale défaillante sur les fondamentaux — blog en erreur 404, pages produits vides (aucun visuel, aucune description, aucun prix), formulaire de contact à 11 champs (taux de complétion estimé à 2-5%), absence totale de schema markup et de balises title/meta description. Score CRO : 20/100.
+Le point faible critique est **la conversion** (19/100) : le site ne possède aucun bouton "Demander un devis", le formulaire de contact comporte 11 champs dont le SIRET, les pages produits sont quasi vides, et le numéro de téléphone n'est pas cliquable sur mobile. Le site perd entre 97 et 99 % de ses visiteurs sans aucune conversion.
 
-**Top 3 actions prioritaires :**
-1. **Réparer le blog et créer des pages produits riches** — impact estimé : x3 sur le trafic organique et x5 sur la conversion
-2. **Simplifier le formulaire de contact** (passer de 11 à 4-5 champs) — impact : +300% de taux de complétion
-3. **Implémenter les balises SEO fondamentales** (title, meta, schema LocalBusiness, sitemap) — impact : visibilité Google multipliée
+**Les 3 actions prioritaires :**
+1. Ajouter un CTA "Demander un devis gratuit — Réponse sous 48h" dans le header et le hero
+2. Réduire le formulaire de 11 à 5 champs et ajouter de la réassurance
+3. Créer de vraies pages produits avec photos, descriptions et CTA
 
-**Impact financier estimé :** L'implémentation de l'ensemble des recommandations pourrait générer un passage de 3-8 contacts/mois à 30-50 contacts/mois (base 1 000 visiteurs), soit un potentiel de chiffre d'affaires supplémentaire de 15 000 à 50 000 €/mois selon le panier moyen.
+**Impact estimé de l'ensemble des recommandations :** +15 000 à 60 000 €/mois de chiffre d'affaires additionnel en 90 jours, en capitalisant sur les actifs existants.
 
 ---
 
@@ -27,198 +27,222 @@ La Fenêtrière obtient un score marketing global de **38/100**, ce qui la place
 
 | Catégorie | Score | Poids | Score Pondéré | Constat Clé |
 |-----------|-------|-------|---------------|-------------|
-| Content & Messaging | 34/100 | 25% | 8,5 | Pages produits vides, blog 404, zéro témoignage client |
-| Conversion Optimization | 20/100 | 20% | 4,0 | Formulaire 11 champs, aucun CTA devis, parcours de conversion inexistant |
-| SEO & Discoverability | 22/100 | 20% | 4,4 | Absence de title/meta, pas de sitemap, zéro schema markup |
-| Competitive Positioning | 67/100 | 15% | 10,1 | Niche quasi-monopolistique en IDF, certifications supérieures |
-| Brand & Trust | 68/100 | 10% | 6,8 | Arsenal de certifications remarquable, storytelling équipe authentique |
-| Growth & Strategy | 41/100 | 10% | 4,1 | Opportunités MaPrimeRénov'/RE2020 non captées, pricing opaque |
-| **TOTAL** | | **100%** | **37,9 ≈ 38/100** | |
+| Content & Messaging | 58/100 | 25% | 14.5 | Identité authentique mais textes centrés entreprise, pas client |
+| Conversion Optimization | 19/100 | 20% | 3.8 | Aucun CTA devis, formulaire 11 champs, pages produits vides |
+| SEO & Découvrabilité | 36/100 | 20% | 7.2 | Sitemap absent, 0 schema markup, 95% images sans alt |
+| Positionnement Concurrentiel | 61/100 | 15% | 9.15 | Différenciation forte mais invisibilité digitale vs concurrents |
+| Marque & Confiance | 76/100 | 10% | 7.6 | ADN exceptionnel, certifications solides, dirigeante visible |
+| Croissance & Stratégie | 44/100 | 10% | 4.4 | Alignement marché parfait mais aucune boucle de croissance |
+| **TOTAL** | | **100%** | **46/100** | |
 
 ---
 
 ## Quick Wins (Cette Semaine)
 
-1. **Corriger le blog "Le Mag"** — La page retourne une erreur 404. Chaque jour de 404 est une perte de positionnement SEO. Rediriger ou réactiver immédiatement. *Impact : stoppe la dégradation SEO.*
+### 1. Ajouter un CTA "Demander un devis gratuit" partout
+**Quoi :** Bouton contrasté "Demander un devis gratuit — Réponse sous 48h" dans le header sticky, le hero de la homepage et chaque page produit.
+**Où :** Header, hero, pages produits, page atelier.
+**Pourquoi :** Le site n'a actuellement AUCUN appel à l'action de conversion primaire.
+**Impact estimé :** +200 à 400 % de contacts entrants (de 3-8 à 15-30/mois).
 
-2. **Ajouter un bouton "Demander un devis gratuit" en hero de la homepage** — Actuellement aucun CTA visible sur la page d'accueil. *Impact estimé : +20-30% de conversions homepage.*
+### 2. Rendre le téléphone cliquable sur mobile
+**Quoi :** Baliser le numéro 01 48 82 44 11 en `<a href="tel:+33148824411">`.
+**Effort :** 1 heure de développement.
+**Impact estimé :** +15 à 20 % de contacts mobiles.
 
-3. **Supprimer 6 champs du formulaire de contact** — Retirer Siret, Adresse pro, Tél bureau, CP, Ville, Pays. Garder : Nom, Email, Tél, Société (optionnel), Message. Ajouter "Devis gratuit — sans engagement — réponse sous 48h". *Impact : taux de complétion x3 à x5.*
+### 3. Réduire le formulaire de contact à 5 champs
+**Quoi :** Garder Prénom, Email, Téléphone, Type de besoin (menu déroulant), Message. Retirer SIRET, Adresse, CP, Ville, Pays, Tél bureau. Rendre Société optionnel.
+**Pourquoi :** Un formulaire de 11 champs a un taux de complétion de 2 à 5 % vs 20 à 35 % pour 4-5 champs.
+**Impact estimé :** ×4 à ×7 le taux de complétion du formulaire.
 
-4. **Afficher les badges certifications en hero** — "Lauréate Fabriqué en France 2025" et "Origine France Garantie" doivent être en haut de page, pas enfouis dans la navigation. *Impact : confiance immédiate du visiteur.*
+### 4. Remonter les badges certifications dans le hero
+**Quoi :** Afficher Origine France Garantie + Fabriqué en France 2025 above the fold, visibles immédiatement.
+**Pourquoi :** Ces certifications sont les actifs de confiance les plus forts du site, actuellement enfouis.
+**Impact estimé :** +10 à 15 % de temps passé sur site et taux de conversion.
 
-5. **Baliser le numéro de téléphone en click-to-call** — Le 01 48 82 44 11 doit être cliquable sur mobile avec `tel:`. *Impact : +15-20% de contacts mobiles.*
+### 5. Ajouter un message de réassurance sous le formulaire
+**Quoi :** "Devis gratuit — Sans engagement — Réponse sous 48h ouvrées" avec badges OFG.
+**Effort :** 30 minutes.
+**Impact estimé :** +20 à 30 % de taux de complétion du formulaire.
 
-6. **Implémenter les balises title et meta description** — Sur toutes les pages, en priorité la homepage : "Fabricant de fenêtres PVC et ALU sur mesure | La Fenêtrière - Champigny-sur-Marne". *Impact : contrôle des extraits Google.*
+### 6. Corriger les pages en erreur
+**Quoi :** Les pages /valeurs-engagements et /produits retournent des erreurs. Corriger ou rediriger en 301.
+**Impact estimé :** Récupération du trafic SEO perdu + amélioration du crawl budget.
 
-7. **Ajouter les attributs alt sur toutes les images** — La quasi-totalité des images n'a pas d'alt. Logo inclus. *Impact : SEO images + accessibilité.*
-
-8. **Générer et soumettre un sitemap.xml** — Actuellement absent (404). Ajouter la directive dans robots.txt. *Impact : indexation complète par Google.*
+### 7. Générer et publier un sitemap.xml
+**Quoi :** Créer un sitemap.xml et le référencer dans robots.txt.
+**Pourquoi :** Actuellement en 404 — Google ne peut pas indexer efficacement le site.
+**Impact estimé :** Amélioration de l'indexation de 30 à 50 % des pages.
 
 ---
 
 ## Recommandations Stratégiques (Ce Mois)
 
-1. **Construire de vraies pages produits** — Pour chaque gamme (Fenêtres PVC/Bois/ALU, Portes, Volets, Portails) : 3 bénéfices clés, 1 cas d'usage, 1 photo de réalisation, 1 CTA devis. C'est LA correction qui transformera le trafic existant en devis qualifiés. *Impact : conversion x3 à x5.*
+### 1. Construire de vraies pages produits
+Créer une page dédiée pour chaque gamme (PVC, Bois, ALU, Portes, Volets) avec 4-6 photos de réalisations, description orientée bénéfices client, FAQ produit, et CTA devis. Les pages produits actuelles sont quasi vides — taux d'abandon estimé 85 à 95 %.
 
-2. **Créer une section "Ils nous font confiance"** — Collecter 5-8 témoignages clients (installateurs, architectes, particuliers). Format : photo + prénom + métier + 2 phrases. Placer en homepage et pages produits. *Impact : conversion +15-25%.*
+### 2. Collecter et afficher des témoignages B2B
+Recueillir 6 à 10 témoignages de clients professionnels (artisans, maîtres d'œuvre, architectes) avec nom, société, type de chantier. Les intégrer en homepage, pages produits et page contact. Actuellement : 0 témoignage client visible.
 
-3. **Implémenter le schema markup JSON-LD** — LocalBusiness sur l'accueil et contact, Organization avec sameAs vers les réseaux sociaux, FAQPage sur /faq, Article sur les articles du Mag. *Impact : rich snippets Google, pack local.*
+### 3. Créer un "Espace Professionnels" dédié
+Regrouper : catalogue technique téléchargeable, fiches produits, délais de fabrication affichés, conditions de partenariat, formulaire de devis pro simplifié. Donner un parcours clair aux prospects B2B.
 
-4. **Publier 3 articles SEO ciblés** — "Comment bénéficier de MaPrimeRénov' pour vos fenêtres en 2026", "Fenêtre PVC vs ALU vs Bois : guide complet", "RE2020 et menuiseries : ce qui change pour les professionnels". *Impact : +30-50% trafic organique à 6 mois.*
+### 4. Implémenter le schema markup
+Priorité : `LocalBusiness` sur /contact, `Article` sur les articles du Mag, `FAQPage` sur /faq, `BreadcrumbList` sur la navigation. Impact immédiat sur les rich results Google.
 
-5. **Segmenter l'entrée du site B2B / B2C** — Deux parcours distincts depuis la homepage : "Je suis professionnel du bâtiment →" / "Je suis particulier →". Chaque parcours mène à un contenu adapté. *Impact : pertinence et conversion des deux audiences.*
+### 5. Ajouter les alt text sur toutes les images
+95 % des images n'ont aucun attribut alt — invisibles pour Google Images et les lecteurs d'écran. Commencer par l'accueil et les pages produits.
 
-6. **Créer une page dédiée "Lauréate Élysée 2025"** — Avec photos de l'exposition, communiqué, et la fenêtre deux vantaux bas carbone. C'est un actif de marque unique non exploité. *Impact : autorité + retombées presse.*
+### 6. Publier du contenu SEO B2B
+Créer des contenus de comparaison ("Pourquoi choisir un fabricant local plutôt qu'une grande enseigne nationale") et de réglementation ("RE2020 et performances thermiques : ce que ça change pour vos chantiers"). 1 article/mois minimum.
 
 ---
 
 ## Initiatives Long Terme (Ce Trimestre)
 
-1. **Relancer Le Mag avec un calendrier éditorial** — 6 articles fondateurs : choix matériaux, RE2020, économie circulaire bâtiment, visite atelier, entretien fenêtres bois, témoignage chantier. Publication bi-mensuelle. *Impact : trafic SEO longue traîne + autorité thématique.*
+### 1. Stratégie de contenu B2B complète
+Publier 1 article/mois sur des sujets à valeur ajoutée pour les pros : guides techniques, décryptages réglementaires (RE2020, loi AGEC), comparatifs matériaux. Objectif : positionner La Fenêtrière comme expert sectoriel et générer du trafic SEO qualifié.
 
-2. **Programme prescripteurs architectes/maîtres d'œuvre** — Formaliser un réseau de prescripteurs B2B en IDF avec commission ou avantages. *Impact : +15-25% volume B2B, canal de croissance scalable.*
+### 2. Programme prescripteurs
+Créer une boucle de croissance referral : programme pour les artisans poseurs, économistes de la construction, architectes avec incentives non financiers (co-branding, formation, visite atelier VIP).
 
-3. **Calculateur bilan carbone intégré** — Outil en ligne comparant l'empreinte carbone d'une menuiserie La Fenêtrière vs menuiserie importée. *Impact : outil de vente différenciant + SEO + argument marchés publics.*
+### 3. Activer LinkedIn comme levier B2B
+Publier 2x/semaine : chantiers, circularité, RE2020, vie d'atelier. Cibler architectes, bureaux d'études, maîtres d'ouvrage, bailleurs sociaux. La dirigeante a déjà la visibilité médiatique — il faut la transformer en audience propriétaire.
 
-4. **Refonte de la stratégie de pricing** — Page "Comprendre le prix d'une menuiserie Made in France" avec décryptage des composantes de valeur (sans tarif fixe). Configurateur devis en ligne. *Impact : qualification des prospects, réduction des demandes non qualifiées.*
+### 4. Monétiser l'expertise via des webinaires
+Webinaire mensuel gratuit "Menuiserie & RE2020" converti en livre blanc téléchargeable. Génère des leads qualifiés et renforce le positionnement expert.
 
-5. **Stratégie LinkedIn B2B** — 2 posts/semaine : coulisses fabrication, portraits équipe, chantiers livrés, actualités normatives. Ciblage prescripteurs et maîtres d'ouvrage IDF. *Impact : visibilité prescripteurs, notoriété de marque.*
+### 5. Activer le QR code comme outil commercial B2B
+Proposer aux donneurs d'ordre un tableau de bord de traçabilité carbone par chantier — argument direct pour les appels d'offres RSE et les marchés publics.
 
 ---
 
 ## Analyse Détaillée par Catégorie
 
-### Content & Messaging — 34/100
+### Content & Messaging (58/100)
 
-**Diagnostic :** Le site souffre d'un décalage entre la richesse réelle de son positionnement et la pauvreté de son expression éditoriale. La proposition de valeur ("Fabriquer localement et durablement des menuiseries évolutives, réparables, réemployables et recyclables") est une phrase de mission fabricant, pas une promesse client orientée bénéfice.
+**Points forts :**
+- Identité de marque authentique et différenciante : Made in France local + économie circulaire + QVT + entreprise à mission
+- Storytelling humain de qualité : dirigeante visible, parcours atypiques dans l'équipe, transparence
+- Cohérence de ton remarquable : engagée, artisanale, sincère sur l'ensemble du site
+- Raison d'être formulée avec précision : "menuiseries évolutives, réparables, réemployables et recyclables"
 
-**Forces :**
-- Différenciation authentique Made in France + économie circulaire
-- Voix de marque cohérente et crédible (70/100 en cohérence)
-- Capital certifications solide (4 prix/certifications)
+**Points faibles :**
+- Absence totale d'orientation client dans les textes : les contenus parlent de l'entreprise, pas des problèmes du professionnel
+- CTA quasi inexistants : ni "Demandez un devis", ni "Visitez notre showroom", ni "Téléchargez notre catalogue pro"
+- Blog trop pauvre : 10 articles sur 3 ans, dont 3 newsletters archivées et 4 articles sur des prix reçus
+- La preuve sociale B2B est inexistante : aucun témoignage client, aucune référence chantier
+- Ambiguïté B2B/B2C dans le message : le slogan "fabriquées à côté de chez vous" évoque le particulier
 
-**Faiblesses critiques :**
-- Pages produits vides : impossible de vendre sans décrire ce qu'on vend
-- Blog en erreur 404 : perte directe de trafic SEO et d'autorité
-- Zéro preuve sociale client : aucun témoignage, aucune étude de cas
-- Proposition de valeur fabricant-centrique : parle de "nous", pas du bénéfice "vous"
-- Absence de segmentation B2B/B2C dans le discours
+### Conversion Optimization (19/100)
 
-### Conversion Optimization — 20/100
+**Points forts :**
+- Les certifications constituent un actif de confiance réel (mal placé mais existant)
+- Newsletter avec formulaire simple (email seul)
+- Numéro de téléphone visible
+- Showroom technique pour professionnels (actif offline sous-exploité)
 
-**Diagnostic :** Un dispositif de conversion quasi inexistant. Le parcours actuel est : Homepage → Produits (vide) → Atelier (limité) → Contact (11 champs) → ABANDON.
+**Points faibles :**
+- Aucun CTA de conversion primaire sur l'ensemble du site
+- Formulaire de contact à 11 champs dont SIRET, sans réassurance
+- Pages produits quasi vides : 2 liens texte, aucune photo, aucun CTA
+- 0 témoignage client, 0 avis affiché, 0 cas client
+- Téléphone non cliquable sur mobile
+- Blog "Le Mag" partiellement en erreur 404
+- Aucune page devis dédiée
+- Taux de conversion estimé : 0,3 à 0,8 % (benchmark optimal : 3 à 6 %)
 
-**Défaillances critiques :**
-- Page Produits score 1/10 : taux d'abandon estimé 85-95%
-- Formulaire 11 champs : taux de complétion estimé 2-5% (benchmark 4-5 champs : 15-25%)
-- Aucun CTA "Demander un devis" sur le parcours (ni en hero, ni sur produits, ni sur valeurs)
+### SEO & Découvrabilité (36/100)
 
-**Projection d'impact (base 1 000 visiteurs/mois) :**
+**Points forts :**
+- URLs propres et descriptives
+- Maillage interne fonctionnel
+- Articles du Mag substantiels (750-900 mots)
+- Google Analytics opérationnel + Axeptio RGPD
 
-| Scénario | Taux de conversion | Contacts/mois |
-|----------|-------------------|---------------|
-| Actuel | 0,3-0,8% | 3-8 |
-| Après Quick Wins | 1,5-2,5% | 15-25 |
-| Après refonte produits + témoignages | 3-5% | 30-50 |
+**Points faibles :**
+- Sitemap.xml absent (404) — priorité absolue
+- 95 % des images sans alt text
+- Aucun schema markup (JSON-LD) sur aucune page
+- Title et meta descriptions non détectables (probablement en JS)
+- H1 absent sur la page d'accueil
+- Pas de WebP, pas de lazy loading
+- Pages en erreur dans le maillage (/valeurs-engagements, /produits)
 
-### SEO & Discoverability — 22/100
+### Positionnement Concurrentiel (61/100)
 
-**Diagnostic :** Des lacunes SEO fondamentales empêchent Google d'indexer et valoriser correctement le site.
+**Points forts :**
+- Positionnement unique "atelier de proximité Made in France" en IDF
+- Différenciation produit concrète : QR code traçabilité, gamme MIF, sourcing nommé
+- Avantage compétitif durable : rareté foncière, savoir-faire, certifications
+- Dirigeante médiatisée = actif non-copiable
 
-**Constats critiques :**
-- Absence de balises `<title>` et `<meta description>` sur toutes les pages clés
-- Sitemap XML absent (404)
-- Zéro schema markup (pas de LocalBusiness, pas de Organization)
-- Quasi-totalité des images sans attribut alt
-- Robots.txt minimal sans référence au sitemap
-- Hiérarchie H1/H2/H3 incohérente (pas de H1 sur certaines pages)
-- Absence de balises Open Graph pour les réseaux sociaux
-
-**Points positifs :**
-- URLs propres et descriptives (/notre-atelier, /economie-circulaire)
-- Maillage interne minimal mais existant (~13 liens depuis l'accueil)
-
-### Competitive Positioning — 67/100
-
-**Diagnostic :** Positionnement authentique et différencié, mais insuffisamment exploité commercialement et digitalement.
-
-**Forces majeures :**
-- **Niche quasi-monopolistique en IDF** : seul atelier de fabrication local combinant OFG + circuit court + économie circulaire
-- **Stack de certifications supérieur** : OFG + Fabriqué en France 2025 + Madame Engagée + Étienne Marcel — inégalé dans le secteur
-- **Adéquation parfaite avec la commande publique** : RE2020, marchés publics, critères ESG bailleurs sociaux
-- **Délais courts** : avantage structurel vs fabricants alsaciens ou normands
-
-**Faiblesses :**
-- Positionnement prix opaque (aucun repère tarifaire)
-- Présence sur sites tiers quasi-inexistante (3 avis GoWork, fiche PagesJaunes basique)
-- Visibilité digitale B2B insuffisante
+**Points faibles :**
+- Aucune page de comparaison concurrentielle, aucun contenu "vs"
+- Pas de prix indicatifs en ligne (friction pour les pros qui pré-chiffrent)
+- Présence fragmentée sur les sites d'avis tiers
+- SEO organique faible vs Tryba, IRIS Fenêtres, Decobaie
 
 ### Comparaison Concurrentielle
 
-| Critère | **La Fenêtrière** | **Tryba** | **Lorenove** | **Minco** | **Atulam** |
-|---------|-------------------|-----------|-------------|-----------|-----------|
-| Type | Artisanal local | Industriel + réseau | Réseau concessionnaires | Industriel | Artisanal |
-| Production | Champigny (94) | Alsace | 8 sites France | Loire-Atl. | Creuse |
-| Cible | Pros 95% | Particuliers + pros | Particuliers | Pros revendeurs | Rénovation haut-de-gamme |
-| Made in France | OFG certifié + circuit court | Fabrication France | 100% France | 100% France PEFC | 100% France |
-| Économie circulaire | **Fort** | Faible | Faible | Partielle | Faible |
-| Présence digitale | Faible | Très forte | Forte | Moyenne | Moyenne |
-| Certifications RSE | **Très fort** | Faible | Moyenne | Moyenne | Faible |
+| Facteur | La Fenêtrière | TRYBA | IRIS Fenêtres | Decobaie |
+|---------|---------------|-------|---------------|----------|
+| Cible principale | Pros bâtiment | Particuliers + pros | Particuliers + pros | Pros + particuliers |
+| Fabrication locale | Champigny (94) | Alsace | Usine SMT | Val-d'Oise |
+| Certification MIF | OFG + Fabriqué en France | Non certifié | Non certifié | Non certifié |
+| Prix indicatifs | Non communiqués | Sur devis | Sur devis | À partir de 250 € TTC |
+| Traçabilité produit | QR code | Non | Non | Non |
+| Présence digitale | Presse forte / SEO faible | Très forte | Moyenne | Forte |
+| Différenciateur clé | Circuit court + certifié | Notoriété + réseau | Proximité IDF | Prix usine |
 
-### Brand & Trust — 68/100
+### Marque & Confiance (76/100)
 
-**Diagnostic :** Arsenal de certifications remarquable pour une PME artisanale, storytelling d'équipe authentique et différenciant, mais incohérence fatale entre promesse et expérience digitale.
+**Points forts :**
+- ADN circulaire ancré dans le produit, pas seulement dans le discours
+- Dirigeante comme actif de marque rare dans l'industrie
+- Sourcing géolocalisé créant une preuve de transparence unique
+- Exposition à l'Élysée = légitimité institutionnelle
 
-**Forces :**
-- Lauréate Fabriqué en France 2025, exposition Élysée (fenêtre bas carbone parmi 123 produits sélectionnés)
-- Catherine Guerniou, dirigeante depuis 2005, Prix Madame Engagée — actif de marque inexploité
-- Équipe stable (compagnons à 10+ ans), profils atypiques, partage des profits
-- Circuit court documenté et vérifiable (PVC du Doubs, alu de Bourgogne, bois de Normandie)
+**Points faibles :**
+- Équipe invisible : les acheteurs B2B veulent savoir qui fabrique
+- Concentration de la marque sur la seule figure de la dirigeante
+- Newsletter sans stratégie éditoriale structurée
 
-**Faiblesses :**
-- Blog 404 et pages produits vides ruinent la crédibilité
-- Zéro chiffre clé publié (ancienneté, volume production, CO2 économisé)
-- La fondatrice est invisible sur le site
-- Segmentation B2B/B2C floue
+### Croissance & Stratégie (44/100)
 
-### Growth & Strategy — 41/100
+**Points forts :**
+- Alignement marché parfait : RE2020, taxonomie verte, loi AGEC, Made in France post-Covid
+- QR code traçabilité = actif technologique commercial
+- Médiatisation organique de la dirigeante
 
-**Diagnostic :** Opportunités majeures non saisies. Le marché de la menuiserie repart (+9,5% sur le neuf prévu en 2026, MaPrimeRénov' réouverte), mais La Fenêtrière n'a aucun dispositif pour capter cette demande.
-
-**Forces :**
-- Positionnement défendable dans un marché en contraction
-- Pricing power existant (premium 20-40% justifiable) mais non activé
-- Alignement parfait avec RE2020 et commande publique
-
-**Faiblesses :**
-- Aucune stratégie de pricing visible
-- Blog 404 = zéro trafic organique
-- Non-captation de la demande MaPrimeRénov' / RE2020
-- Aucune boucle de croissance structurée (pas de programme prescripteurs, pas de lead magnet)
-- Absence de références chantiers
+**Points faibles :**
+- Aucune boucle de croissance systémique (pas de referral, pas de contenu, pas de leads)
+- Digital décoratif : 4 réseaux sans conversion B2B
+- Pas de webinaires ni événements en ligne
+- Croissance dépendante d'événements exogènes (prix, presse)
 
 ---
 
-## Impact Financier Estimé
+## Synthèse de l'Impact Revenus
 
 | Recommandation | Impact Mensuel Estimé | Confiance | Délai |
-|---------------|----------------------|-----------|-------|
-| Simplifier formulaire contact (11→5 champs) | +5 à 15 devis/mois | Haute | 1 semaine |
-| Construire pages produits riches + CTAs | +10 à 25 devis/mois | Haute | 3 semaines |
-| Implémenter SEO fondamental (title, meta, sitemap) | +200 à 500 visiteurs/mois | Haute | 2 semaines |
-| Réparer blog + 3 articles SEO | +300 à 800 visiteurs/mois | Moyenne | 1 mois |
-| Témoignages clients + études de cas | +5 à 10 devis/mois | Moyenne | 1 mois |
-| Programme prescripteurs B2B | +3 à 8 chantiers/mois | Moyenne | 3 mois |
-| Calculateur carbone + landing MaPrimeRénov' | +500 à 1 500 visiteurs/mois | Moyenne | 3 mois |
-| **Total Potentiel** | **+15 à 50 devis/mois** | | |
+|----------------|----------------------|-----------|-------|
+| CTA devis + formulaire simplifié | +5 000 à 10 000 € | Élevée | 1 semaine |
+| Pages produits enrichies | +5 000 à 15 000 € | Moyenne | 3-4 semaines |
+| Témoignages B2B + preuve sociale | +3 000 à 8 000 € | Moyenne | 2-3 semaines |
+| Corrections SEO techniques | +2 000 à 5 000 € | Moyenne | 2-4 semaines |
+| Stratégie contenu B2B | +5 000 à 15 000 € | Moyenne | 2-3 mois |
+| Programme prescripteurs | +5 000 à 10 000 € | Basse | 2-3 mois |
+| **Total Potentiel** | **+25 000 à 63 000 €/mois** | | |
 
 ---
 
 ## Prochaines Étapes
 
-1. **Cette semaine** — Corriger le blog 404, simplifier le formulaire, ajouter un CTA devis en homepage, et afficher les badges certifications en hero
-2. **Ce mois** — Construire les pages produits, collecter les témoignages clients, implémenter le SEO technique (title, meta, sitemap, schema)
-3. **Ce trimestre** — Lancer le calendrier éditorial du Mag, créer le programme prescripteurs, développer la stratégie LinkedIn B2B
+1. **Cette semaine :** Ajouter le CTA devis, simplifier le formulaire, rendre le téléphone cliquable — 1 journée de développement, impact immédiat
+2. **Ce mois :** Créer les pages produits, collecter les témoignages, corriger les erreurs SEO techniques
+3. **Ce trimestre :** Lancer la stratégie de contenu B2B, activer LinkedIn, créer le programme prescripteurs
+
+---
 
 *Généré par AI Marketing Suite — `/market audit`*

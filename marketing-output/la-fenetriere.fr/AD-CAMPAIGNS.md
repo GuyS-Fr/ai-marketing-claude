@@ -1,1159 +1,693 @@
 # Campagnes Publicitaires — La Fenêtrière (la-fenetriere.fr)
 **Fabricant artisanal de menuiseries extérieures — Champigny-sur-Marne (94)**
-*Rapport rédigé le 20 mars 2026*
+*Rapport rédigé le 21 mars 2026*
 
 ---
 
 ## Sommaire
 
-1. [Google Ads — Search (5 annonces)](#1-google-ads--search)
-2. [Google Ads — Local (3 annonces)](#2-google-ads--local)
-3. [Meta Ads — Facebook / Instagram (4 campagnes)](#3-meta-ads--facebookinstagram)
-4. [LinkedIn Ads — B2B (2 campagnes)](#4-linkedin-ads--b2b)
-5. [Angles créatifs (6 angles)](#5-angles-créatifs)
-6. [Budget par canal — 3 scénarios](#6-budget-par-canal--3-scénarios)
-7. [KPIs et objectifs par campagne](#7-kpis-et-objectifs-par-campagne)
-8. [Planning de test A/B](#8-planning-de-test-ab)
-9. [Stratégie de retargeting](#9-stratégie-de-retargeting)
+1. [Google Ads — 3 campagnes](#1-google-ads)
+2. [LinkedIn Ads — 2 campagnes](#2-linkedin-ads)
+3. [Meta Ads — 2 campagnes](#3-meta-ads)
+4. [Angles créatifs — 5 concepts](#4-angles-creatifs)
+5. [Budget et projections](#5-budget-et-projections)
 
 ---
 
-## 1. Google Ads — Search
+## 1. GOOGLE ADS
 
-> **Paramètres généraux Search**
-> - Ciblage géographique : Île-de-France (75, 77, 78, 91, 92, 93, 94, 95) + exclusion DOM-TOM
-> - Langue : Français
-> - Réseau : Réseau de recherche uniquement (pas de display inclus automatiquement)
-> - Enchères : CPC manuel en phase de test, puis passage en cible-CPA après 30 conversions
-> - Calendrier de diffusion : Lun–Ven 8h–19h / Sam 9h–13h
-> - Suivi des conversions : appels téléphoniques (≥60 s), formulaires de devis, clics sur email
+### Principes directeurs
 
----
-
-### Annonce Search #1 — Fenêtres PVC Made in France (Prospection générale)
-
-**Groupe d'annonces :** `Fenêtres PVC fabricant`
-**Type :** Annonce Responsive Search (RSA)
-
-**Mots-clés cibles :**
-```
-[fenêtre PVC fabricant Île-de-France]
-[fenêtre PVC fabriquée en France]
-"menuiserie PVC fabricant direct"
-[achat fenêtre PVC fabricant]
-fenêtre PVC sur mesure IDF +fabricant
-```
-
-**Titres (15 — Google choisit les meilleurs combos) :**
-```
-Titres principaux :
-1. Fenêtres PVC Fabriquées en France
-2. Fabricant Direct — Sans Intermédiaire
-3. Livraison en Île-de-France
-4. Devis Gratuit Sous 48h
-5. Fenêtres PVC Sur Mesure IDF
-6. Certifié Fabriqué en France 2025
-7. Atelier à Champigny-sur-Marne
-8. Menuiseries Depuis 1984
-9. Circuit Court — PVC du Doubs
-10. Pose Incluse Possible
-11. Prix Fabricant Direct
-12. Label OFG Certifié
-13. Fenêtres Bois / PVC / ALU
-14. Catherine Guerniou — Dirigeante
-15. Rénovation & Neuf IDF
-```
-
-**Descriptions (4) :**
-```
-D1 : Fabricant artisanal depuis 1984, La Fenêtrière conçoit vos fenêtres PVC dans son atelier
-de Champigny-sur-Marne. Livraison rapide en Île-de-France. Devis gratuit en 48h.
-
-D2 : Certifiée Fabriqué en France 2025 (Palais de l'Élysée) et label OFG. Nos fenêtres PVC
-proviennent du Doubs — qualité traçable, prix fabricant. Appelez le 01 48 82 44 11.
-
-D3 : Fenêtres PVC, bois, aluminium sur mesure. Devis gratuit pour particuliers et
-professionnels du bâtiment. Circuit court, délais maîtrisés, garantie fabricant.
-
-D4 : Artisan menuisier IDF récompensé Prix Madame Engagée. Matériaux sourcés en France,
-production locale, impact carbone réduit. Contactez-nous pour un chiffrage précis.
-```
-
-**Extensions d'annonce :**
-- **Appel :** 01 48 82 44 11 (Lun–Ven 8h–18h)
-- **Lieu :** La Fenêtrière, 94500 Champigny-sur-Marne
-- **Liens annexes :**
-  - "Demander un Devis" → /devis
-  - "Notre Atelier" → /atelier
-  - "Fenêtres PVC" → /fenetres-pvc
-  - "Certifications" → /labels
-- **Accroche :** "Livraison IDF sous 15 jours ouvrés"
-- **Prix :** "Fenêtres PVC à partir de 350 € posées"
-- **Image :** Fenêtre PVC blanche installée dans une belle façade rénovée
-
-**Budget journalier recommandé :** 15–25 €/jour
-**Landing page :** `/fenetres-pvc` avec section devis + badge Fabriqué en France + avis clients
+- Géolocalisation stricte : **Île-de-France** (rayon 80 km autour de Champigny-sur-Marne)
+- Ciblage horaire : lundi–vendredi 7h–19h, samedi 8h–13h
+- Langue : Français
+- Réseau de recherche uniquement pour les campagnes marque et acquisition
+- Smart Bidding (cible CPA) dès la collecte de 30 conversions/mois
 
 ---
 
-### Annonce Search #2 — Fenêtres Aluminium Professionnels (B2B Pros)
+### 1.1 Campagne MARQUE (défensive)
 
-**Groupe d'annonces :** `Fenêtres ALU professionnels bâtiment`
-**Type :** RSA
+**Objectif :** protéger la requête de marque contre la concurrence, capter les visiteurs à forte intention.
 
-**Mots-clés cibles :**
-```
-[fenêtre aluminium professionnel bâtiment IDF]
-[menuiserie ALU fournisseur artisan IDF]
-"fenêtre alu professionnel Île-de-France"
-[fournisseur menuiserie professionnels 94]
-menuiserie aluminium +fabricant +professionnel +IDF
-```
+**Budget suggéré :** 150 €/mois (CPC marque très bas, ~0,30–0,60 €)
 
-**Titres (15) :**
-```
-1. Menuiseries ALU Pour Professionnels
-2. Fournisseur Fabricant Direct IDF
-3. Commandes Pros — Devis Rapide
-4. Aluminium Sourcé en Bourgogne
-5. Livraison Chantier Île-de-France
-6. Partenaire Bâtiment Depuis 1984
-7. Label OFG — Qualité Certifiée
-8. Délais Tenus, Prix Stables
-9. Fenêtres ALU Sur Mesure
-10. Compte Pro — Tarifs Négociés
-11. Référence Artisans et Maîtres d'Œuvre
-12. Fabriqué en France Garanti
-13. Circuit Court Sans Intermédiaire
-14. Devis Pro Sous 24h
-15. Champigny-sur-Marne — Val-de-Marne
-```
+#### Mots-clés (exact + expression)
 
-**Descriptions (4) :**
-```
-D1 : Vous êtes artisan, entreprise générale ou maître d'œuvre en IDF ? La Fenêtrière est votre
-fournisseur fabricant de fenêtres aluminium. Tarifs pros, délais maîtrisés, livraison chantier.
+| Type | Mot-clé |
+|------|---------|
+| Exact | [la fenêtrière] |
+| Exact | [la-fenetriere.fr] |
+| Exact | [la fenêtrière champigny] |
+| Expression | "fenêtrière champigny sur marne" |
+| Expression | "fenêtrière menuiserie 94" |
+| Exact | [lafenetriere] |
 
-D2 : Fenêtres et portes aluminium fabriquées en Île-de-France depuis 1984. Matériaux sourcés en
-Bourgogne. Commandes pros acceptées. Compte dédié avec devis sous 24h. Tél : 01 48 82 44 11.
+**Mots-clés négatifs :** rideaux, volets roulants, fenêtre cassée, réparation vitre, vitrier
 
-D3 : Certifié Fabriqué en France 2025. Qualité traçable, délais stables, prix fabricant direct.
-Idéal pour chantiers IDF : rénovation, neuf, copropriétés. Contactez notre équipe dédiée pros.
+#### Annonce 1 — Marque principale
 
-D4 : Depuis 1984, nos artisans servent des centaines de professionnels du bâtiment en IDF.
-Menuiseries ALU sur mesure. Pas d'intermédiaire = meilleur rapport qualité/prix du marché.
-```
+**Titres (30 car. max)**
+1. La Fenêtrière — Officiel
+2. Fabricant Fenêtres IDF
+3. Devis Gratuit Pro & Particulier
+4. Certifié OFG · Fabriqué France
+5. Atelier à Champigny-sur-Marne
+6. Livraison IDF · Délais Maîtrisés
 
-**Extensions d'annonce :**
-- **Appel :** 01 48 82 44 11
-- **Liens annexes :**
-  - "Espace Professionnel" → /pro
-  - "Tarifs Pros" → /tarifs-pros
-  - "Livraison Chantier" → /livraison
-  - "Nos Références" → /references
-- **Accroche :** "Tarifs pros négociables dès 5 fenêtres"
-- **Formulaire pour prospects :** "Devis Pro IDF — Réponse sous 24h"
+**Descriptions (90 car. max)**
+1. Fabricant artisanal de fenêtres PVC, Bois & ALU en Île-de-France. Certifié OFG. Demandez votre devis.
+2. Seul atelier de menuiserie de proximité en IDF. Économie circulaire. Exposition Élysée 2025. Contactez-nous.
 
-**Budget journalier recommandé :** 10–20 €/jour
-**Landing page :** `/pro` — page dédiée professionnels avec formulaire de commande groupée
+#### Extensions
+
+- **Sitelinks :** Demander un devis | Nos certifications | Réalisations chantiers | Nous contacter
+- **Accroche (callouts) :** Certifié OFG | Fabriqué en France | Économie circulaire | Livraison IDF
+- **Appel :** Numéro de téléphone direct (heures ouvrées)
+- **Lieu :** Adresse atelier Champigny-sur-Marne
 
 ---
 
-### Annonce Search #3 — Remplacement Fenêtres + MaPrimeRénov' (B2C Rénovation)
+### 1.2 Campagne ACQUISITION — "Fabricant Fenêtres IDF"
 
-**Groupe d'annonces :** `Remplacement fenêtres aide MaPrimeRénov`
-**Type :** RSA
+**Objectif :** capter les artisans, maîtres d'œuvre et architectes en phase de recherche active de fournisseur.
 
-**Mots-clés cibles :**
-```
-[remplacement fenêtres MaPrimeRénov IDF]
-[fenêtres éligibles aides rénovation Île-de-France]
-"changer ses fenêtres aide état IDF"
-[rénovation fenêtres subvention IDF]
-+remplacement +fenêtres +aide +énergie +94
-```
+**Budget suggéré :** 1 400 €/mois
 
-**Titres (15) :**
-```
-1. Changez Vos Fenêtres Avec MaPrimeRénov'
-2. Jusqu'à 100 € d'Aide par Fenêtre
-3. Éligible MaPrimeRénov' & CEE
-4. Fenêtres PVC/Bois/ALU Certifiées
-5. Devis Gratuit — Aide Calculée
-6. Fabricant Direct IDF — Économisez
-7. Réduisez Votre Facture Énergétique
-8. Pose et SAV Inclus
-9. Label Fabriqué en France 2025
-10. Fenêtres Thermiques Haute Performance
-11. Accompagnement Admin MaPrimeRénov'
-12. Atelier Champigny-sur-Marne
-13. 40 Ans d'Expérience — Depuis 1984
-14. Devis en 48h, Installation Rapide
-15. Maison Individuelle & Appartement
-```
+#### Groupes d'annonces et mots-clés
 
-**Descriptions (4) :**
-```
-D1 : Remplacez vos fenêtres avec les aides MaPrimeRénov' et CEE. La Fenêtrière, fabricant
-artisanal IDF, vous accompagne du devis à l'installation. Économies d'énergie garanties.
+**Groupe 1 — Fabricant fenêtres IDF**
 
-D2 : Fenêtres PVC double ou triple vitrage, certifiées et fabriquées en France. Éligibles
-MaPrimeRénov'. Devis gratuit avec simulation d'aides. Livraison et pose en Île-de-France.
+| Correspondance | Mot-clé |
+|----------------|---------|
+| Expression | "fabricant fenêtres île-de-france" |
+| Expression | "fabricant menuiseries IDF" |
+| Expression | "fabricant PVC sur mesure paris" |
+| Large modifié | fournisseur fenêtres artisan paris |
+| Exact | [fabricant fenêtres val de marne] |
+| Exact | [fabricant menuiseries 94] |
 
-D3 : Fabricant direct depuis 1984 à Champigny-sur-Marne. Sans intermédiaire = prix 20% moins
-cher qu'un revendeur. Dossier MaPrimeRénov' simplifié. Appelez le 01 48 82 44 11.
+**Groupe 2 — Achat pro / grossiste menuiserie**
 
-D4 : Profitez des aides de l'État pour rénover vos fenêtres. La Fenêtrière gère votre dossier
-d'aide de A à Z. Certifié Fabriqué en France 2025. Label OFG. Plus de 40 ans d'artisanat.
-```
+| Correspondance | Mot-clé |
+|----------------|---------|
+| Expression | "achat fenêtres en gros artisan" |
+| Expression | "fournisseur menuiseries poseur" |
+| Exact | [menuiserie grossiste IDF] |
+| Expression | "tarif pro fenêtres PVC bois alu" |
+| Expression | "menuiserie fournisseur chantier" |
 
-**Extensions d'annonce :**
-- **Appel :** 01 48 82 44 11
-- **Liens annexes :**
-  - "Simuler Mes Aides" → /aides-maprimerenov
-  - "Demander un Devis" → /devis
-  - "Fenêtres Double Vitrage" → /double-vitrage
-  - "Témoignages Clients" → /avis
-- **Accroche :** "MaPrimeRénov' : jusqu'à 40% remboursés sur vos fenêtres"
-- **Promotion :** "Devis gratuit + simulation d'aides incluse"
+**Groupe 3 — Certifications / qualité**
 
-**Budget journalier recommandé :** 15–30 €/jour (intention d'achat élevée)
-**Landing page :** `/aides-maprimerenov` — simulateur d'aides + formulaire devis + badges certif.
+| Correspondance | Mot-clé |
+|----------------|---------|
+| Exact | [menuiserie certifiée OFG] |
+| Expression | "fenêtres fabriquées en france idf" |
+| Expression | "menuiserie label qualité paris" |
+| Expression | "fenêtres artisanales île-de-france" |
 
----
+**Groupe 4 — Maîtres d'œuvre / architectes**
 
-### Annonce Search #4 — Volets & Portails Île-de-France
+| Correspondance | Mot-clé |
+|----------------|---------|
+| Expression | "menuiseries sur mesure architecte" |
+| Expression | "fournisseur menuiseries maître d'oeuvre" |
+| Expression | "fabricant fenêtres promoteur immobilier" |
+| Expression | "menuiserie bois alu sur mesure chantier" |
 
-**Groupe d'annonces :** `Volets portails fabricant IDF`
-**Type :** RSA
+**Mots-clés négatifs globaux :** particulier, pas cher, discount, occasion, réparation, vitrier, volet roulant, fenêtre de toit, velux, ikea, leroy merlin, castorama, brico dépôt
 
-**Mots-clés cibles :**
-```
-[volets roulants fabricant IDF]
-[portail sur mesure fabricant Île-de-France]
-"volets battants bois sur mesure IDF"
-[portail aluminium fabricant direct 94]
-+volets +sur mesure +fabricant +IDF
-```
+#### Annonces
 
-**Titres (15) :**
-```
-1. Volets & Portails Sur Mesure IDF
-2. Fabricant Direct — Volets Battants & Roulants
-3. Portails Aluminium Fabriqués en France
-4. Volets Bois Artisanaux — Atelier IDF
-5. Devis Volets Gratuit Sous 48h
-6. Portails Sur Mesure — Prix Fabricant
-7. Champigny-sur-Marne — Livraison IDF
-8. Label Fabriqué en France 2025
-9. Volets PVC / Bois / ALU
-10. Portails Coulissants & Battants
-11. Pose Incluse — Artisan Certifié
-12. Depuis 1984 — Artisan de Confiance
-13. Motorisation Volets Disponible
-14. Devis Personnalisé Rapide
-15. Toute l'IDF — Val-de-Marne Spécialiste
-```
+**Annonce A — Axe "Proximité & réactivité"**
 
-**Descriptions (4) :**
-```
-D1 : Volets battants, roulants, portails aluminium — fabriqués dans notre atelier de
-Champigny-sur-Marne depuis 1984. Pose incluse en Île-de-France. Devis gratuit en 48h.
+*Titres*
+1. Fabricant Fenêtres en IDF
+2. Atelier Pro à 15 min de Paris
+3. PVC · Bois · ALU Sur Mesure
+4. Devis Gratuit Sous 24h
+5. Certifié OFG · Fabriqué France
+6. Livraison Chantier Île-de-France
 
-D2 : Portails sur mesure et volets fabriqués en France. Aluminium sourcé en Bourgogne,
-bois de qualité. Pas d'importation. Label OFG et Fabriqué en France 2025 (Élysée).
+*Descriptions*
+1. Atelier de menuiserie artisanal en Île-de-France. PVC, Bois, ALU sur mesure pour artisans poseurs et maîtres d'œuvre. Devis gratuit.
+2. Seul fabricant de proximité en IDF. Certifications OFG & Fabriqué en France. Économie circulaire. Tarifs pros. Contactez notre équipe.
 
-D3 : Volets et portails artisanaux livrés et posés en IDF. Fabricant direct = économisez
-sur les intermédiaires. Plus de 40 ans de savoir-faire. Tél : 01 48 82 44 11.
+**Annonce B — Axe "Certifications & confiance"**
 
-D4 : Personnalisez volets et portails à vos mesures exactes. Gamme complète : PVC, bois,
-aluminium. Livraison rapide Île-de-France. Fabricant certifié, garantie fabricant étendue.
-```
+*Titres*
+1. Menuiseries Certifiées OFG IDF
+2. Fabriqué en France — Val-de-Marne
+3. Qualité Artisanale Garantie
+4. Référence Architectes & MOE
+5. Atelier Champigny-sur-Marne
+6. Demandez un Devis Pro
 
-**Extensions d'annonce :**
-- **Appel :** 01 48 82 44 11
-- **Liens annexes :**
-  - "Nos Volets" → /volets
-  - "Nos Portails" → /portails
-  - "Demander un Devis" → /devis
-  - "Galerie Réalisations" → /realisations
-- **Accroche :** "Fabricant direct = jusqu'à 25% d'économie vs revendeur"
+*Descriptions*
+1. La Fenêtrière : fabricant artisanal de fenêtres certifié OFG et Fabriqué en France 2025. Vos chantiers IDF livrés dans les délais. Devis pro gratuit.
+2. Menuiseries PVC, Bois & ALU pour professionnels du bâtiment. Partenaire de confiance des architectes et maîtres d'œuvre en Île-de-France.
 
-**Budget journalier recommandé :** 8–15 €/jour
-**Landing page :** `/volets-portails` — photos de réalisations + configurateur + formulaire devis
+**Annonce C — Axe "Économie circulaire"**
+
+*Titres*
+1. Fenêtres Eco-Responsables IDF
+2. Menuiserie Économie Circulaire
+3. Fabricant Local Val-de-Marne
+4. Matériaux Durables · Pro Bâtiment
+5. Certifié OFG & France 2025
+6. Devis Gratuit · Livraison IDF
+
+*Descriptions*
+1. Engagés dans l'économie circulaire, nos ateliers Champigny produisent des menuiseries durables pour vos chantiers. Certifié OFG & Exposition Élysée.
+2. Choisissez un fabricant IDF responsable et certifié. PVC, Bois, ALU sur mesure. Livraison sur tous vos chantiers Île-de-France. Contactez-nous.
+
+#### Extensions
+
+- **Sitelinks :** Nos gammes PVC | Menuiseries Bois | Gamme ALU | Télécharger notre catalogue | Nos réalisations
+- **Prix (si applicable) :** À partir de X€ la fenêtre PVC standard (tarif pro)
+- **Promotion :** Devis gratuit sous 24h pour tout professionnel du bâtiment
+- **Accroche :** Certifié OFG | Fabriqué en France | Livraison IDF | Atelier local 94
 
 ---
 
-### Annonce Search #5 — Menuiserie Bois Artisanale (Différenciation premium)
+### 1.3 Campagne REMARKETING (RLSA + Display)
 
-**Groupe d'annonces :** `Menuiserie bois artisanale IDF`
-**Type :** RSA
+**Objectif :** recibler les visiteurs du site qui n'ont pas converti, les ramener vers la demande de devis.
 
-**Mots-clés cibles :**
-```
-[fenêtre bois sur mesure artisan IDF]
-[menuiserie bois fabricant Île-de-France]
-"fenêtre bois fabricant direct Paris"
-[porte bois sur mesure artisanal 94]
-+menuiserie +bois +artisan +IDF
-```
+**Budget suggéré :** 350 €/mois
 
-**Titres (15) :**
-```
-1. Fenêtres Bois Artisanales Sur Mesure
-2. Menuisier Bois — Atelier IDF Depuis 1984
-3. Bois Sélectionné — Qualité Artisan
-4. Fabriqué en France — Label Officiel
-5. Portes & Fenêtres Bois Personnalisées
-6. Devis Bois Gratuit Sous 48h
-7. Fabricant Direct Île-de-France
-8. Menuiserie Bois Haute Gamme
-9. Catherine Guerniou — Artisane Engagée
-10. Prix Madame Engagée 2024
-11. Atelier Champigny-sur-Marne
-12. Bois Traité — Durabilité Garantie
-13. Pose Artisanale Soignée IDF
-14. Sur Mesure = Votre Projet Unique
-15. Fenêtres Bois Éligibles Aides Énergie
-```
+#### Audiences de remarketing (à créer via Google Analytics 4)
 
-**Descriptions (4) :**
-```
-D1 : Fenêtres et portes bois artisanales, fabriquées sur mesure dans notre atelier de
-Champigny-sur-Marne. Bois sélectionné, finitions soignées. Livraison et pose IDF.
+| Segment | Durée de membership | Priorité |
+|---------|-------------------|----------|
+| Visiteurs page "Devis" (non convertis) | 30 jours | Haute |
+| Visiteurs pages produits (PVC/Bois/ALU) | 21 jours | Haute |
+| Visiteurs ayant passé +2 min sur le site | 60 jours | Moyenne |
+| Visiteurs page "Certifications" ou "À propos" | 90 jours | Faible |
+| Similaires aux convertis (Smart List) | — | Haute |
 
-D2 : La Fenêtrière, c'est 40 ans de savoir-faire artisanal. Fenêtres bois sur mesure,
-certifiées Fabriqué en France 2025. Pas de production en série — chaque pièce est unique.
+#### RLSA (Réseau de recherche)
 
-D3 : Dirigée par Catherine Guerniou, lauréate Prix Madame Engagée, notre entreprise
-artisanale conçoit vos menuiseries bois avec passion. Devis gratuit. 01 48 82 44 11.
+Reprendre les mots-clés de la campagne acquisition avec **enchère majorée de +30 %** pour les audiences haute priorité.
 
-D4 : Fenêtres bois double vitrage, portes bois massif, volets bois — gamme 100% traçable
-et fabriquée en France. Éligible MaPrimeRénov'. Artisan labellisé OFG en IDF.
-```
+#### Display Remarketing
 
-**Extensions d'annonce :**
-- **Appel :** 01 48 82 44 11
-- **Liens annexes :**
-  - "Fenêtres Bois" → /fenetres-bois
-  - "Notre Atelier" → /atelier
-  - "Prix & Certifications" → /labels
-  - "Nos Réalisations Bois" → /realisations-bois
-- **Accroche :** "Artisan menuisier bois — chaque fenêtre fabriquée à la main"
+**Format :** Responsive Display Ads
 
-**Budget journalier recommandé :** 8–12 €/jour
-**Landing page :** `/fenetres-bois` — storytelling artisan + galerie + CTA devis
+*Titres (court — 25 car.)*
+1. Votre devis est prêt !
+2. On a vos fenêtres en stock
+3. Retournez sur votre devis
+
+*Titres (long — 90 car.)*
+1. La Fenêtrière — Fabricant artisanal de menuiseries en Île-de-France
+2. Fenêtres PVC, Bois, ALU sur mesure — Certifié OFG — Livraison IDF
+
+*Descriptions (90 car.)*
+1. Vous avez visité notre site. Demandez votre devis pro gratuit, livré sous 24h. Atelier local IDF.
+2. Reprenez votre projet de menuiseries là où vous l'avez laissé. Tarifs pros. Certifié OFG & France.
+
+**Images recommandées :** photo atelier en activité, fenêtre posée sur chantier, certification OFG
+
+**CTA :** "Demander mon devis" / "Voir nos tarifs pro"
+
+#### Extensions (RLSA)
+
+- **Accroche :** Devis sous 24h | Tarifs pros exclusifs | Certifié OFG
 
 ---
 
-## 2. Google Ads — Local
+## 2. LINKEDIN ADS
 
-> **Paramètres généraux Local**
-> - Type de campagne : Campagne Performance Max (ou Local Ads classiques)
-> - Ciblage géographique : Champigny-sur-Marne + rayon 30 km (couvre Paris, Vincennes, Créteil, Nogent, Joinville, Saint-Maur, Charenton, Vitry, Ivry, Maisons-Alfort, Boissy, Sucy, Chennevières…)
-> - Objectif : visites en boutique / appels / itinéraires
-> - Extensions obligatoires : lieu, appel, avis, horaires
+### Principes directeurs
 
----
-
-### Annonce Local #1 — "Menuisier Près de Chez Moi" (Particuliers)
-
-**Ciblage :** Rayon 15 km autour de Champigny-sur-Marne
-**Appareil :** Mobile prioritaire (recherche locale)
-
-**Titre principal :** `La Fenêtrière — Menuisier À Champigny`
-**Titre secondaire :** `Fenêtres PVC/Bois/ALU | Depuis 1984`
-**Description :** `Fabricant artisanal de menuiseries. Devis gratuit à domicile. Label Fabriqué en France. Venez visiter notre showroom.`
-
-**Extensions obligatoires :**
-- **Lieu :** La Fenêtrière, [adresse complète], 94500 Champigny-sur-Marne — Bouton "Itinéraire"
-- **Appel :** 01 48 82 44 11 — Bouton "Appeler" (mobile)
-- **Avis :** Affichage note Google (viser 4,5 étoiles minimum)
-- **Horaires :** Lun–Ven 8h–18h / Sam 9h–12h
-- **Promotion :** "Visite atelier sur rendez-vous — Showroom ouvert"
-
-**Budget journalier recommandé :** 8–12 €/jour
-**Objectif :** Appels téléphoniques + demandes d'itinéraire
+- Géolocalisation : **Île-de-France** (toutes provinces)
+- Langue : Français
+- Enchères : CPC manuel pour notoriété, CPL objectif pour lead gen
+- Fréquence plafonnée à 4 impressions/membre/semaine
+- Test A/B systématique sur les visuels (photo atelier vs. schéma technique)
 
 ---
 
-### Annonce Local #2 — "Fabricant Local — Val-de-Marne" (Rayon élargi)
+### 2.1 Campagne NOTORIÉTÉ — Thought Leadership
 
-**Ciblage :** Rayon 30 km + départements 94, 93, 77 Ouest
-**Appareil :** Desktop + Mobile
+**Objectif :** positionner La Fenêtrière comme référence artisanale et éco-responsable auprès des décideurs du bâtiment IDF.
 
-**Titre principal :** `Fabricant Fenêtres Val-de-Marne — IDF`
-**Titre secondaire :** `Livraison & Pose Toute l'Île-de-France`
-**Description :** `Atelier de fabrication à Champigny-sur-Marne. Fenêtres, portes, volets sur mesure. Fabriqué en France. Devis gratuit 48h. 01 48 82 44 11.`
+**Budget suggéré :** 600 €/mois
 
-**Extensions obligatoires :**
-- **Lieu :** La Fenêtrière — avec carte visible
-- **Appel :** 01 48 82 44 11
-- **Avis :** Étoiles Google
-- **Liens annexes :**
-  - "Voir le Showroom" → /showroom
-  - "Zone de Livraison" → /zone-livraison
-- **Accroche :** "Livraison chantier disponible toute l'IDF"
+#### Audience ciblée
 
-**Budget journalier recommandé :** 10–15 €/jour
-**Objectif :** Génération de leads formulaire + appels
+| Critère | Valeur |
+|---------|--------|
+| Localisation | Île-de-France |
+| Secteur d'activité | Construction, Architecture, Immobilier, Génie civil |
+| Fonctions | Architecte, Maître d'œuvre, Directeur technique, Responsable achats, Chef de projet BTP, Gérant PME bâtiment |
+| Taille entreprise | 1–200 salariés (exclure les grands groupes) |
+| Ancienneté | Directeur, Manager, Senior (décideurs d'achat) |
+| Intérêts | Développement durable, Construction, Bâtiment durable, HQE, RE2020 |
 
----
+**Taille d'audience estimée :** 15 000–40 000 membres IDF
 
-### Annonce Local #3 — "Urgence / Remplacement Rapide" (Intention forte)
+#### Format
 
-**Ciblage :** Rayon 20 km — enchère majorée mobile (+40%)
-**Mots-clés d'urgence :**
-```
-"remplacement fenêtre rapide IDF"
-"fenêtre cassée remplacement urgent"
-[fenêtrier urgence 94]
-"devis fenêtre rapide Champigny"
-```
+- **Document Ads** (PDF téléchargeable, génère des leads qualifiés) — format principal
+- **Single Image Ads** pour la notoriété pure
+- **Video Ads** (30–60 s, sous-titrés) — si budget disponible
 
-**Titre principal :** `Remplacement Fenêtre Rapide IDF`
-**Titre secondaire :** `Fabricant Local — Devis en 24h`
-**Description :** `Fenêtre endommagée ? Rénovation urgente ? Notre atelier de Champigny-sur-Marne intervient rapidement. Fabricant direct = délais courts. Appelez maintenant.`
+#### Contenu créatif — Document Ad
 
-**Extensions obligatoires :**
-- **Appel :** 01 48 82 44 11 (mis en avant en premier)
-- **Lieu :** La Fenêtrière, Champigny-sur-Marne
-- **Avis :** Note Google mise en avant
-- **Accroche :** "Intervention possible sous 10 jours ouvrés"
-- **Lien direct :** "Demande urgente" → /devis-urgent
+**Titre du document :** "Guide 2026 : Choisir son fabricant de menuiseries en IDF — Les 7 critères des professionnels du bâtiment"
 
-**Budget journalier recommandé :** 5–10 €/jour
-**Objectif :** Appels immédiats — KPI = durée appel > 60 secondes
+**Headline de l'annonce (150 car.) :**
+> Vous cherchez un fournisseur de menuiseries fiable en Île-de-France ? Voici ce que vérifient vraiment les architectes et maîtres d'œuvre avant de signer.
+
+**Texte introductif (600 car.) :**
+> En tant que professionnel du bâtiment en IDF, vous savez que le choix d'un fabricant de menuiseries impacte directement vos délais, votre marge et la satisfaction de vos clients.
+>
+> Certification OFG, capacité de production locale, traçabilité des matériaux, délais réels de livraison... Nous avons compilé les 7 critères décisifs que les architectes et maîtres d'œuvre utilisent pour sélectionner leurs fournisseurs de fenêtres.
+>
+> La Fenêtrière — atelier artisanal certifié OFG, Fabriqué en France 2025, Exposition Élysée — partage son expertise depuis Champigny-sur-Marne (94).
+
+**CTA :** "Télécharger le guide gratuit"
 
 ---
 
-## 3. Meta Ads — Facebook/Instagram
+#### Contenu créatif — Single Image Ad
 
-> **Paramètres généraux Meta**
-> - Compte publicitaire : Page Facebook La Fenêtrière + compte Instagram associé
-> - Pixel Meta installé sur la-fenetriere.fr (événements : PageView, Lead, Contact, ViewContent)
-> - Objectif général : entonnoir complet TOFU/MOFU/BOFU
-> - Ciblage géographique : Île-de-France (rayon élargi possible jusqu'à 50 km de Champigny)
-> - Format recommandé : ratio 1:1 (feed) et 9:16 (Reels/Stories)
-> - A/B test systématique sur visuels et accroche
+**Visuel :** Photo de l'atelier en production (artisan au travail, lumière naturelle, fenêtre en cours de fabrication)
 
----
+**Headline (70 car.) :**
+> L'unique atelier de menuiseries artisanal en Île-de-France.
 
-### Campagne Meta #1 — NOTORIÉTÉ : "L'Atelier & Les Valeurs" (Carrousel)
+**Corps du texte :**
+> Certifié OFG. Fabriqué en France 2025. Exposition Élysée.
+> La Fenêtrière livre vos chantiers IDF avec la réactivité que votre planning exige.
+> PVC · Bois · ALU · Sur mesure.
 
-**Objectif Meta :** Notoriété / Portée
-**Audience :**
-- Âge : 30–65 ans
-- Localisation : IDF — 50 km autour de Champigny
-- Intérêts : rénovation maison, décoration intérieure, architecture, artisanat français, développement durable
-- Exclusions : personnes ayant déjà visité le site (géré en retargeting)
+**CTA :** "En savoir plus"
 
-**Format :** Carrousel 5 cartes (Facebook + Instagram Feed)
-
-**Texte primaire :**
-```
-Depuis 1984, on fabrique vos fenêtres à deux pas de chez vous.
-
-Pas en Chine. Pas en Europe de l'Est. À Champigny-sur-Marne.
-
-Notre PVC vient du Doubs. Notre aluminium de Bourgogne. Notre verre de Normandie.
-Et nos menuiseries ? Elles restent en Île-de-France.
-
-Certifiés Fabriqué en France 2025 par l'Élysée. Labellisés OFG.
-Récompensés Prix Madame Engagée.
-
-C'est ça, La Fenêtrière. ✋
-```
-
-**Cartes du carrousel :**
-1. **Carte 1** — Photo atelier production / Titre : "Fabriqué ici, livré chez vous" / CTA : En savoir plus
-2. **Carte 2** — Photo Catherine Guerniou en atelier / Titre : "40 ans de savoir-faire artisanal" / Desc : "Dirigée par Catherine depuis 2005"
-3. **Carte 3** — Photo matières premières (PVC, bois, alu) / Titre : "Matériaux 100% français" / Desc : "Doubs · Bourgogne · Normandie"
-4. **Carte 4** — Photo du label Fabriqué en France Élysée / Titre : "Certifiés par l'Élysée en 2025" / Desc : "Un label officiel, une promesse tenue"
-5. **Carte 5** — Belle réalisation finale installée / Titre : "Votre projet, notre fierté" / CTA : Demander un devis
-
-**Titre de l'annonce :** `La Fenêtrière — Artisan Menuisier IDF Depuis 1984`
-**Description :** `Fenêtres, portes, volets — Made in France. Livraison Île-de-France.`
-**CTA :** En savoir plus → /notre-histoire
-
-**Budget :** 3–5 €/jour (notoriété, optimisation portée)
-**Durée recommandée :** Campagne toujours active (evergreen)
-**KPI :** CPM, Reach, Taux d'engagement, clics sur "En savoir plus"
+**URL de destination :** Page "À propos" ou page certifications
 
 ---
 
-### Campagne Meta #2 — CONSIDÉRATION : "Visite Atelier & Témoignages" (Vidéo)
+### 2.2 Campagne LEAD GENERATION
 
-**Objectif Meta :** Trafic / Vues vidéo / Engagement
-**Audience :**
-- Âge : 35–65 ans
-- Localisation : IDF
-- Intérêts : travaux maison, fenêtres double vitrage, isolation thermique, artisanat, Île-de-France
-- Audience similaire (Lookalike 1%) basée sur les visiteurs du site
+**Objectif :** collecter des leads qualifiés (artisans poseurs, maîtres d'œuvre) directement sur LinkedIn via le formulaire natif Lead Gen Form.
 
-**Format :** Vidéo 60–90 sec (format 9:16 prioritaire pour Reels)
+**Budget suggéré :** 800 €/mois
 
-**Script vidéo suggéré (voix off + images atelier) :**
-```
-[0–5 sec] Hook : "Cette fenêtre a été fabriquée ici, à 20 minutes de Paris."
-[5–20 sec] Plan atelier : machines, découpe profilés, assemblage
-[20–35 sec] Interview Catherine Guerniou : "En 40 ans, j'ai vu des fabricants délocaliser.
-Nous, on a fait le choix inverse."
-[35–50 sec] Témoignage client (voix + texte) : "Livré en 12 jours, posé en une matinée.
-Qualité remarquable."
-[50–65 sec] Plan produit fini installé + label Fabriqué en France
-[65–75 sec] CTA : "Demandez votre devis gratuit — La Fenêtrière, Champigny-sur-Marne"
-```
+#### Audience ciblée
 
-**Texte primaire :**
-```
-👀 Vous avez 90 secondes ? Regardez comment naît une fenêtre fabriquée à Champigny-sur-Marne.
+| Critère | Valeur |
+|---------|--------|
+| Localisation | Île-de-France |
+| Intitulés de poste | Artisan poseur, Poseur menuiserie, Gérant entreprise pose, Chef d'équipe BTP, Conducteur de travaux, Maître d'œuvre, Architecte DPLG, Promoteur immobilier |
+| Secteur | Construction, Promotion immobilière, Services aux entreprises (BTP) |
+| Taille entreprise | 1–50 salariés |
+| Exclure | Fonctions RH, Marketing, Finance (non décideurs achat matériaux) |
 
-De la découpe du profilé à la pose chez vous — tout se passe en Île-de-France.
+**Taille d'audience estimée :** 8 000–20 000 membres
 
-Les clients qui nous font confiance témoignent : qualité, délais, et un vrai interlocuteur
-artisan.
+#### Format
 
-📍 Champigny-sur-Marne — Livraison toute l'IDF
-🏆 Certifié Fabriqué en France 2025 (Palais de l'Élysée)
-```
+**Lead Gen Form Ad** (formulaire natif LinkedIn)
 
-**Titre :** `Comment naît une fenêtre made in France ?`
-**Description :** `Visite de l'atelier La Fenêtrière — Champigny-sur-Marne`
-**CTA :** En savoir plus → /atelier
+**Champs du formulaire :**
+- Prénom / Nom (pré-rempli)
+- Email professionnel (pré-rempli)
+- Téléphone
+- Entreprise (pré-rempli)
+- Intitulé de poste (pré-rempli)
+- Volume moyen de fenêtres/mois (liste déroulante : 1–10 / 11–30 / 31–100 / +100)
+- Code postal du chantier principal
 
-**Budget :** 5–8 €/jour
-**Durée :** 3 mois, renouveler avec nouveau témoignage
-**KPI :** Coût par vue 3 sec, taux de complétion à 50%, CTR
+**Offre (lead magnet) :** Catalogue pro 2026 + grille tarifaire confidentielle
 
 ---
 
-### Campagne Meta #3 — CONVERSION B2C : "Devis Gratuit + MaPrimeRénov'" (Lead Gen)
+**Visuel :** Montage 3 fenêtres (PVC blanc, bois chêne, ALU anthracite) sur fond d'atelier
 
-**Objectif Meta :** Génération de leads (formulaire natif Meta ou trafic vers landing page)
-**Audience :**
-- Âge : 35–65 ans propriétaires
-- Localisation : IDF, priorité 94, 75, 92, 93, 77
-- Intérêts : rénovation maison, travaux, MaPrimeRénov', isolation, fenêtres, propriétaires immobilier
-- Comportement : "Propriétaire de maison" (ciblage Meta), "Acheteurs engagés"
-- Retargeting inclus : visiteurs site (voir section retargeting)
+**Headline (70 car.) :**
+> Tarifs pros 2026 : nos menuiseries PVC, Bois & ALU en IDF
 
-**Format :** Image statique + version vidéo courte (15 sec)
+**Corps du texte :**
+> Artisan poseur ou maître d'œuvre en Île-de-France ?
+>
+> Accédez à notre catalogue professionnel 2026 et à nos tarifs partenaires réservés aux professionnels du bâtiment. La Fenêtrière — fabricant certifié OFG, Fabriqué en France — livre dans toute l'IDF avec des délais garantis.
+>
+> Plus de 20 ans d'expertise. Atelier à Champigny-sur-Marne (94). Réponse sous 24h.
 
-**Texte primaire (version A — angle aide financière) :**
-```
-💸 Saviez-vous que l'État peut financer jusqu'à 40% de vos nouvelles fenêtres ?
+**CTA :** "Télécharger le catalogue pro"
 
-MaPrimeRénov' + CEE = des aides cumulables que vous avez peut-être déjà droit.
-
-La Fenêtrière, fabricant artisanal à Champigny-sur-Marne, vous fait votre devis GRATUIT
-et calcule vos aides en même temps.
-
-✅ Fenêtres fabriquées en France (label Élysée 2025)
-✅ Livraison et pose en Île-de-France
-✅ Dossier MaPrimeRénov' accompagné
-
-Demandez votre devis — c'est gratuit et sans engagement.
-```
-
-**Texte primaire (version B — angle économies long terme) :**
-```
-Une fenêtre qui date d'avant 2000 vous fait perdre de l'argent chaque mois.
-
-Remplacer ses fenêtres = jusqu'à 25% d'économie sur sa facture de chauffage.
-
-Et avec les aides MaPrimeRénov', le reste à charge peut être minime.
-
-La Fenêtrière, fabricant local en IDF depuis 1984 : devis gratuit en 48h, fenêtres
-fabriquées ici, posées par nos équipes.
-
-👉 Cliquez pour simuler votre devis.
-```
-
-**Titre :** `Devis Fenêtres Gratuit + Simulation Aides`
-**Description :** `Fabriquées en France. Livrées en IDF. MaPrimeRénov' accompagnée.`
-**CTA :** Demander un devis → /devis ou formulaire natif Meta
-
-**Visuel suggéré :** Maison rénovée avec belles fenêtres + badge MaPrimeRénov' + badge Fabriqué en France
-
-**Budget :** 8–15 €/jour
-**Durée :** En continu — booster en sept–oct (saison chauffage) et jan–fév
-**KPI :** CPL (coût par lead), taux de conversion formulaire, taux de closing devis
+**Message de confirmation post-formulaire :**
+> Merci ! Votre catalogue et notre grille tarifaire pro vous seront envoyés par email sous 2h ouvrées. Un conseiller La Fenêtrière peut vous rappeler si vous le souhaitez.
 
 ---
 
-### Campagne Meta #4 — CONVERSION B2B : "Pros du Bâtiment IDF" (Ciblage professionnel)
+**Annonce variante B — Axe urgence/saison**
 
-**Objectif Meta :** Génération de leads professionnels
-**Audience :**
-- Âge : 28–60 ans
-- Localisation : IDF
-- Intérêts professionnels : construction bâtiment, maçonnerie, travaux publics, menuiserie, architecture, immobilier professionnel
-- Titres de poste (Meta) : Artisan, Chef de chantier, Gérant entreprise BTP, Maître d'œuvre, Conducteur de travaux
-- Comportement : Propriétaires de petite entreprise
+**Headline :**
+> Chantiers printemps 2026 : sécurisez vos menuiseries maintenant
 
-**Format :** Image + Carrousel (témoignages pros)
+**Corps du texte :**
+> La saison printemps approche. Nos délais de fabrication sont de 3–4 semaines. Ne prenez pas de retard sur votre planning.
+>
+> En tant que fabricant IDF, La Fenêtrière peut produire et livrer vos menuiseries directement sur chantier. Tarifs partenaires disponibles sur demande.
 
-**Texte primaire :**
-```
-📐 Vous êtes artisan, entreprise générale ou maître d'œuvre en Île-de-France ?
-
-La Fenêtrière est votre fournisseur de menuiseries depuis 1984.
-
-Ce qui change avec un fabricant direct :
-→ Délais maîtrisés (nous produisons nous-mêmes)
-→ Prix stables sans surprise
-→ Interlocuteur unique de la commande à la livraison
-→ Matériaux traçables Made in France (un argument pour vos clients)
-
-Nous travaillons avec des centaines d'artisans et entreprises IDF.
-Tarifs pros sur devis. Livraison chantier disponible.
-
-👉 Contactez-nous pour un partenariat.
-```
-
-**Titre :** `Fournisseur Menuiseries Pros — Fabricant IDF`
-**Description :** `Tarifs pros, délais maîtrisés, livraison chantier. Made in France.`
-**CTA :** En savoir plus → /pro
-
-**Carrousel optionnel (3 cartes témoignages pros) :**
-1. "Entreprise X — 12 chantiers livrés en IDF / 'Délais toujours respectés'"
-2. "Maître d'œuvre Y — 'Qualité fabricant, prix compétitif, vrai partenariat'"
-3. "Artisan Z — 'Le seul fabricant local avec qui je travaille désormais'"
-
-**Budget :** 5–10 €/jour
-**Durée :** En continu — booster en jan–fév (préparation saison BTP)
-**KPI :** CPL, qualité des leads (taille commande), taux de closing
+**CTA :** "Demander mes tarifs partenaires"
 
 ---
 
-## 4. LinkedIn Ads — B2B
+## 3. META ADS
 
-> **Paramètres généraux LinkedIn**
-> - Objectif : génération de leads professionnels qualifiés
-> - Format : Single Image Ad + Message InMail sponsorisé
-> - Ciblage avancé LinkedIn par fonction, secteur, zone géographique
-> - Budget LinkedIn = CPC élevé (3–8 €/clic) → concentrer sur profils à haute valeur
+### Principes directeurs
 
----
-
-### Campagne LinkedIn #1 — Architectes & Maîtres d'Œuvre IDF
-
-**Objectif :** Génération de leads / Notoriété B2B
-**Ciblage :**
-- Localisation : Île-de-France
-- Fonctions : Architecture, Design & Construction, Gestion de projets (BTP)
-- Titres de poste : Architecte, Maître d'œuvre, Chef de projet construction, Chargé d'affaires BTP, Directeur technique, Ingénieur bâtiment
-- Secteur : Construction, Architecture, Immobilier
-- Taille d'entreprise : 1–200 salariés (cabinets indépendants prioritaires)
-- Exclure : grandes ESN, constructeurs nationaux (Bouygues, Vinci)
-
-**Format :** Single Image Ad
-
-**Visuel suggéré :** Photo épurée — fenêtre ALU haut de gamme dans un bâtiment architectural moderne, avec en surimpression le badge "Fabriqué en France 2025" et "Atelier IDF depuis 1984"
-
-**Texte de l'annonce :**
-```
-Vous concevez des projets en Île-de-France. Vos clients demandent du Made in France.
-
-La Fenêtrière est le seul fabricant artisanal de menuiseries extérieures basé en IDF
-certifié Fabriqué en France 2025 par l'Élysée.
-
-Ce que vous gagnez en travaillant avec nous :
-▸ Un argument différenciant pour vos appels d'offres
-▸ Des menuiseries sur mesure, fabriquées localement (pas de délais d'importation)
-▸ Un interlocuteur fabricant direct — pas un distributeur
-▸ Matériaux traçables : PVC Doubs, Alu Bourgogne, Vitrage Normandie
-
-Fenêtres, portes, volets, portails — toute la gamme menuiseries extérieures.
-Livraison et pose sur vos chantiers IDF.
-
-Découvrez notre catalogue professionnel.
-```
-
-**Titre :** `Menuiseries Made in France pour Vos Projets IDF`
-**Description :** `Fabricant certifié Élysée 2025 — Atelier Champigny-sur-Marne — Devis pros sous 24h`
-**CTA :** Télécharger → Catalogue Pro PDF / ou En savoir plus → /pro
-
-**Format complémentaire — InMail Sponsorisé :**
-```
-Objet : Un fabricant de fenêtres Made in France à 20 min de vos chantiers IDF
-
-Bonjour [Prénom],
-
-Je me permets de vous contacter car La Fenêtrière, fabricant artisanal de menuiseries
-à Champigny-sur-Marne, cherche à développer ses partenariats avec des architectes et
-maîtres d'œuvre en Île-de-France.
-
-Nous sommes certifiés Fabriqué en France 2025 (Palais de l'Élysée) — un argument de plus
-en plus différenciant sur les appels d'offres et pour vos clients exigeants.
-
-Notre atelier produit : fenêtres PVC/Bois/ALU, portes, volets, portails — sur mesure,
-avec des matériaux sourcés en France (PVC du Doubs, Alu de Bourgogne, Vitrage de Normandie).
-
-Je serais ravi(e) de vous envoyer notre catalogue pro ou de vous proposer une visite
-de notre atelier à Champigny-sur-Marne.
-
-Bonne journée,
-Catherine Guerniou
-Dirigeante — La Fenêtrière
-01 48 82 44 11
-```
-
-**Budget :** 10–20 €/jour (CPC élevé LinkedIn — prioriser les semaines de salons BTP)
-**KPI :** CTR, CPL, taux d'ouverture InMail (>20% cible), prises de RDV
+- Plateformes : Facebook + Instagram (placements automatiques optimisés)
+- Géolocalisation : Île-de-France (rayon élargi à 100 km de Champigny)
+- Pixel Meta installé et événements configurés (PageView, Lead, Contact)
+- Audiences personnalisées alimentées en continu depuis le site
 
 ---
 
-### Campagne LinkedIn #2 — Conducteurs de Travaux & Entreprises Générales IDF
+### 3.1 Campagne RETARGETING SITE
 
-**Objectif :** Leads commerciaux — volume de commandes récurrentes
-**Ciblage :**
-- Localisation : Île-de-France
-- Fonctions : Opérations, Construction & Travaux
-- Titres de poste : Conducteur de travaux, Chef de chantier, Directeur travaux, Responsable achats BTP, Gérant entreprise bâtiment, Directeur opérations BTP
-- Secteur : Construction, Travaux publics, Immobilier résidentiel
-- Taille d'entreprise : 10–500 salariés
+**Objectif :** reconvertir les visiteurs du site qui n'ont pas complété le formulaire de contact ou de devis.
 
-**Format :** Carrousel LinkedIn (3–5 slides)
+**Budget suggéré :** 300 €/mois
 
-**Slide 1 — Accroche :**
-```
-Visuel : Logo La Fenêtrière + "Fabricant menuiseries IDF depuis 1984"
-Texte : "Vos chantiers méritent des menuiseries fabriquées en France."
-```
+#### Audiences
 
-**Slide 2 — Problème :**
-```
-Visuel : Chantier en cours / fenêtre à installer
-Texte : "Délais fournisseur imprévisibles. Matériaux importés.
-Prix qui s'envolent. Vous méritez mieux."
-```
+| Segment | Fenêtre | Exclusions |
+|---------|---------|-----------|
+| Visiteurs toutes pages (30 j.) | 30 jours | Convertis (lead ou contact) |
+| Visiteurs pages produits (21 j.) | 21 jours | Convertis |
+| Visiteurs page devis (non soumis, 14 j.) | 14 jours | Convertis |
+| Visiteurs +60 secondes (45 j.) | 45 jours | Convertis |
 
-**Slide 3 — Solution :**
-```
-Visuel : Atelier La Fenêtrière — production en cours
-Texte : "Fabricant local = délais maîtrisés, prix stables, interlocuteur direct.
-Certifié Fabriqué en France 2025."
-```
+#### Format
 
-**Slide 4 — Preuves :**
-```
-Visuel : Logos certifications (OFG, Fabriqué en France, Madame Engagée)
-Texte : "Centaines de chantiers IDF. Labels officiels. 40 ans d'expérience."
-```
+- **Stories + Reels** (9:16 vertical) — pour mobile, format dominant
+- **Carousel** — pour présenter les 3 gammes (PVC, Bois, ALU)
+- **Single Image** — format simple et efficace en fil d'actualité
 
-**Slide 5 — CTA :**
-```
-Visuel : Équipe La Fenêtrière devant l'atelier
-Texte : "Demandez votre catalogue pro et tarifs préférentiels."
-CTA : Télécharger → Catalogue Pro
-```
+#### Copy — Annonce Carousel "Nos 3 gammes"
 
-**Texte de l'annonce principale :**
-```
-📦 Vous approvisionnez des chantiers en IDF et cherchez un fournisseur de menuiseries
-fiable, local et certifié Made in France ?
+**Titre principal :**
+> Vous cherchez des menuiseries pour votre chantier IDF ?
 
-La Fenêtrière (Champigny-sur-Marne) produit fenêtres, portes, volets et portails dans
-son atelier depuis 1984.
+**Corps du texte :**
+> La Fenêtrière est le seul fabricant artisanal de menuiseries en Île-de-France. Certifié OFG, Fabriqué en France. Tarifs professionnels disponibles.
 
-✓ Fabricant = pas d'intermédiaire, prix compétitifs
-✓ Certifié Fabriqué en France 2025 (Élysée) — valorisez vos chantiers
-✓ Livraison sur vos sites IDF
-✓ Commandes groupées avec compte pro dédié
+*Carte 1 — PVC*
+> **Gamme PVC**
+> Rapport qualité/prix optimal. Isolation thermique RT2012/RE2020. Blanc, gris anthracite, bois décor.
 
-Téléchargez notre catalogue professionnel.
-```
+*Carte 2 — Bois*
+> **Gamme Bois**
+> Chêne, pin, méranti. Finitions sur mesure. Label Fabriqué en France. Idéal rénovation haut de gamme.
 
-**Titre :** `Catalogue Pro — Menuiseries Fabriquées en IDF`
-**Description :** `Fenêtres, portes, volets — fabricant direct depuis 1984. Tarifs pros sur demande.`
-**CTA :** Télécharger → Catalogue Pro PDF (lead gen form LinkedIn)
+*Carte 3 — ALU*
+> **Gamme Aluminium**
+> Thermolaqué RAL au choix. Grandes dimensions. Ultra-durable. Idéal logements collectifs & bureaux.
 
-**Budget :** 8–15 €/jour
-**KPI :** Leads qualifiés (téléchargements catalogue), CPL, taux de conversion en devis
+*Carte 4 — CTA*
+> **Demandez votre devis pro**
+> Réponse sous 24h. Livraison IDF garantie.
+
+**CTA :** "Demander un devis"
 
 ---
 
-## 5. Angles Créatifs
+#### Copy — Annonce Stories/Reels "Rappel de visite"
 
-> Six angles différenciants pour La Fenêtrière, déclinables sur tous les canaux.
+**Visuel :** Vidéo courte (8–12 s) montrant une fenêtre en cours de fabrication dans l'atelier. Sous-titres obligatoires.
 
----
+**Texte overlay :**
+> Vous avez visité La Fenêtrière.
+> Votre devis pro est à portée de clic.
+> [Demander mon devis]
 
-### Angle #1 — "Made in France Officiel" (Label Élysée)
-
-**Hook :**
-> *"Ce label, seules 500 entreprises françaises l'ont reçu. La Fenêtrière en fait partie."*
-
-**Argument :**
-Certifiée Fabriqué en France 2025 par le Palais de l'Élysée, La Fenêtrière est l'une des rares manufactures de menuiseries d'Île-de-France à avoir reçu cette distinction officielle. Ce n'est pas un auto-label marketing — c'est une certification d'État.
-
-**Preuve :**
-- Certification remise au Palais de l'Élysée en 2025
-- Label OFG (Origine France Garantie)
-- Traçabilité complète des matériaux : PVC Doubs, ALU Bourgogne, Vitrage Normandie
-
-**CTA :**
-*"Découvrez les produits qui portent ce label → /labels"*
-
-**Déclinaisons :** Google Search (titre), Meta (image du label Élysée), LinkedIn (slide 4), storytelling site web
+**CTA :** "En savoir plus" > Page devis
 
 ---
 
-### Angle #2 — "Économie Circulaire & Circuit Court"
+### 3.2 Campagne LOOKALIKE
 
-**Hook :**
-> *"Votre fenêtre a voyagé moins de 400 km. Votre ancienne fenêtre importée ? 8 000 km."*
+**Objectif :** toucher de nouveaux professionnels du bâtiment IDF similaires aux clients et leads existants.
 
-**Argument :**
-Chaque matériau provient de France : PVC du Doubs, aluminium de Bourgogne, vitrage de Normandie. Zéro importation, empreinte carbone divisée, économie locale soutenue. La Fenêtrière est une démonstration concrète qu'il est possible de produire mieux, plus proche, sans compromis sur la qualité.
+**Budget suggéré :** 400 €/mois
 
-**Preuve :**
-- Carte des fournisseurs français
-- Comparatif carbone vs produit importé (à créer)
-- Gamme MIF 100% responsable
+#### Audiences
 
-**CTA :**
-*"Nos matériaux, leur origine → /circuit-court"*
+| Audience source | Lookalike | Géo | Notes |
+|-----------------|-----------|-----|-------|
+| Liste clients actuels (emails) | 1–2 % | IDF | Audience principale |
+| Leads formulaire site | 1–3 % | IDF | Si volume >100 leads |
+| Visiteurs convertis (Pixel) | 1–2 % | IDF | En continu |
+| Abonnés page Facebook | 2–4 % | IDF | Qualité moindre |
 
-**Déclinaisons :** Meta Ads (carrousel sourcing), Instagram organique, communiqués presse
+**Taille d'audience estimée (1 %) :** 20 000–50 000 personnes en IDF
 
----
+**Ciblage supplémentaire (layering) :** Intérêts = Construction, BTP, Immobilier, Artisanat, Fenêtres et portes, Rénovation
 
-### Angle #3 — "Artisanat & Histoire Familiale"
+#### Format
 
-**Hook :**
-> *"1984. Un atelier. Une passion. 40 ans après, La Fenêtrière fabrique toujours vos fenêtres à Champigny."*
+**Annonce A — Single Image "Atelier IDF"**
 
-**Argument :**
-L'histoire de La Fenêtrière est une histoire humaine : fondée en 1984, reprise par Catherine Guerniou en 2005, l'entreprise incarne la transmission du savoir-faire artisanal. Dans un monde de production de masse, cette dimension humaine est un avantage compétitif réel pour les clients qui cherchent authenticité et durabilité.
+**Visuel :** Photo en grand format de l'atelier, fenêtre en production au premier plan, lumière naturelle.
 
-**Preuve :**
-- Photo Catherine Guerniou en atelier
-- Photos équipe historique vs équipe actuelle
-- Prix Madame Engagée (reconnaissance publique de l'engagement)
+**Titre (40 car.) :**
+> Le fabricant artisanal des pros IDF
 
-**CTA :**
-*"Notre histoire → /notre-histoire"*
+**Corps du texte :**
+> Artisan poseur, maître d'œuvre ou architecte en Île-de-France ? Découvrez La Fenêtrière, seul fabricant artisanal de menuiseries certifié OFG en IDF. PVC, Bois, ALU sur mesure. Livraison chantier. Tarifs professionnels.
 
-**Déclinaisons :** Meta (vidéo interview Catherine), LinkedIn (article thought leadership), Google Display
+**CTA :** "En savoir plus" > Page d'accueil pro ou landing page dédiée
 
 ---
 
-### Angle #4 — "Proximité & Délais Maîtrisés"
+**Annonce B — Vidéo "Présentation atelier" (30–45 s)**
 
-**Hook :**
-> *"À 20 minutes de Paris, un fabricant qui livre votre fenêtre en moins de 15 jours."*
+*Script recommandé :*
 
-**Argument :**
-La proximité géographique est un avantage opérationnel concret : délais plus courts, possibilité de visiter l'atelier, interlocuteur joignable au 01 48 82 44 11, pas de délai d'importation. Pour les professionnels du bâtiment, c'est un argument décisif. Pour les particuliers, c'est la sécurité d'avoir affaire à un artisan local.
+> [0–5 s] Plan large de l'atelier, machines en activité, artisan au travail.
+> Voix off : "À Champigny-sur-Marne, en plein cœur de l'Île-de-France..."
+>
+> [5–15 s] Zoom sur une fenêtre en cours de fabrication.
+> Voix off : "...un atelier artisanal fabrique vos menuiseries sur mesure depuis plus de 20 ans."
+>
+> [15–25 s] Montage rapide : logo OFG, logo Fabriqué en France, photo Exposition Élysée.
+> Voix off : "Certifié OFG. Fabriqué en France 2025. Exposé à l'Élysée."
+>
+> [25–35 s] Artisan remet une fenêtre à un client professionnel, poignée de main.
+> Voix off : "PVC, Bois, ALU — livré sur vos chantiers dans toute l'IDF."
+>
+> [35–45 s] Logo La Fenêtrière + site web.
+> Voix off : "La Fenêtrière. Le fabricant des professionnels du bâtiment en Île-de-France."
 
-**Preuve :**
-- Délai moyen affiché : 10–15 jours ouvrés
-- Zone de livraison IDF cartographiée
-- Témoignages sur délais tenus
-
-**CTA :**
-*"Votre devis en 48h → /devis"*
-
-**Déclinaisons :** Google Local Ads, Meta (urgence), SMS/email retargeting
-
----
-
-### Angle #5 — "MaPrimeRénov' & Économies Énergie"
-
-**Hook :**
-> *"Vos fenêtres vous coûtent de l'argent chaque hiver. L'État peut financer leur remplacement."*
-
-**Argument :**
-Les aides MaPrimeRénov' et CEE permettent de financer significativement le remplacement des fenêtres. La Fenêtrière, en tant que fabricant certifié, peut accompagner ses clients dans ces démarches — un service à valeur ajoutée qui transforme une dépense en investissement rentable.
-
-**Preuve :**
-- Montants des aides (à détailler selon profil : jusqu'à 100 €/fenêtre selon revenus)
-- Certifications RGE associées (à mentionner si applicable)
-- Témoignages de clients ayant bénéficié des aides
-
-**CTA :**
-*"Simulez vos aides gratuitement → /aides-maprimerenov"*
-
-**Déclinaisons :** Google Search (mot-clé fort), Meta B2C, email séquence, landing page dédiée
+**CTA :** "Demander un devis" > Landing page pro
 
 ---
 
-### Angle #6 — "Femme Dirigeante Engagée — Prix Madame Engagée"
-
-**Hook :**
-> *"Diriger une manufacture artisanale en IDF en 2025. Catherine l'a fait. Et elle a été récompensée pour ça."*
-
-**Argument :**
-Le Prix Madame Engagée est une reconnaissance nationale de l'engagement entrepreneurial de Catherine Guerniou. Cet angle humanise la marque, génère de la sympathie, et positionne La Fenêtrière comme une entreprise responsable portée par des valeurs fortes — pas seulement par la recherche de profit.
-
-**Preuve :**
-- Diplôme / couverture médiatique Prix Madame Engagée
-- Interview Catherine sur sa vision
-- Statistiques : % de femmes dirigeantes dans l'artisanat du bâtiment (encore minoritaire)
-
-**CTA :**
-*"Rencontrez Catherine → /notre-equipe"*
-
-**Déclinaisons :** Meta (Reels interview), LinkedIn (article personnel), presse locale/nationale, RP digitales
+## 4. ANGLES CREATIFS
 
 ---
 
-## 6. Budget par Canal — 3 Scénarios
+### Angle 1 — "Le dernier fabricant artisanal d'IDF"
 
-### Scénario A — Budget Minimal (500 €/mois)
-*Idéal pour démarrer, tester les canaux, générer les premières données*
+**Concept :** Capitaliser sur le caractère rare et unique de la position de La Fenêtrière — le seul atelier artisanal de menuiseries en Île-de-France — en créant un sentiment d'urgence et d'exclusivité.
 
-| Canal | Budget mensuel | Priorité |
-|-------|---------------|----------|
-| Google Search (2 groupes prioritaires) | 200 € | ★★★★★ |
-| Google Local Ads | 100 € | ★★★★☆ |
-| Meta Ads (1 campagne lead gen B2C) | 150 € | ★★★★☆ |
-| LinkedIn Ads | 0 € | — |
-| Réserve test / ajustement | 50 € | — |
-| **TOTAL** | **500 €** | |
+**Headline :**
+> Il reste encore un fabricant artisanal de fenêtres en Île-de-France. C'est nous.
 
-**Focus :** Google Search sur mots-clés chauds (MaPrimeRénov' + fabricant IDF) + Meta lead gen B2C
+**Body copy :**
+> Alors que la grande distribution impose ses standards et ses délais, La Fenêtrière a fait le choix inverse : rester artisanal, rester local, rester exigeant. Depuis notre atelier de Champigny-sur-Marne, nous fabriquons chaque fenêtre à la commande — PVC, Bois ou ALU — pour répondre précisément aux exigences de vos chantiers. Pas de stock générique. Pas d'intermédiaire. La menuiserie que vous commandez est celle que vous installez.
+
+**CTA :** "Découvrir notre savoir-faire"
+
+**Format visuel recommandé :** Photo noir et blanc de l'atelier + couleur sur le logo / titre | Format idéal : LinkedIn Single Image, Google Display, Meta Feed
 
 ---
 
-### Scénario B — Budget Intermédiaire (1 000 €/mois)
-*Recommandé : couverture multi-canal, A/B testing possible, B2B inclus*
+### Angle 2 — "La certification qui change tout"
 
-| Canal | Budget mensuel | Priorité |
-|-------|---------------|----------|
-| Google Search (4 groupes d'annonces) | 350 € | ★★★★★ |
-| Google Local Ads | 150 € | ★★★★☆ |
-| Meta Ads — Notoriété (carrousel) | 100 € | ★★★☆☆ |
-| Meta Ads — Lead Gen B2C | 200 € | ★★★★★ |
-| Meta Ads — B2B | 100 € | ★★★★☆ |
-| LinkedIn Ads (campagne architectes) | 100 € | ★★★☆☆ |
-| **TOTAL** | **1 000 €** | |
+**Concept :** Utiliser les certifications OFG et Fabriqué en France comme éléments de différenciation décisifs, en rappelant aux professionnels les enjeux réglementaires et contractuels liés au choix d'un fournisseur certifié.
 
-**Focus :** Entonnoir complet + test LinkedIn pour identifier rentabilité canal B2B
+**Headline :**
+> Vos clients vous demandent des preuves. Nous les avons.
 
----
+**Body copy :**
+> RE2020, HQE, chantiers de réhabilitation labellisés... vos donneurs d'ordre exigent de plus en plus de traçabilité sur les matériaux. La Fenêtrière est certifiée OFG et Fabriqué en France 2025. Nos menuiseries sont documentées, traçables, et éligibles aux démarches de construction durable. Vous livrez des preuves à vos clients. Nous vous les fournissons.
 
-### Scénario C — Budget Optimal (2 000 €/mois)
-*Croissance accélérée, tous canaux actifs, retargeting, A/B tests complets*
+**CTA :** "Télécharger notre dossier certifications"
 
-| Canal | Budget mensuel | Priorité |
-|-------|---------------|----------|
-| Google Search (5 groupes) | 600 € | ★★★★★ |
-| Google Local Ads | 200 € | ★★★★☆ |
-| Google Display / Retargeting | 150 € | ★★★★☆ |
-| Meta Ads — Notoriété carrousel | 150 € | ★★★☆☆ |
-| Meta Ads — Vidéo considération | 150 € | ★★★★☆ |
-| Meta Ads — Lead Gen B2C | 350 € | ★★★★★ |
-| Meta Ads — B2B pros | 150 € | ★★★★☆ |
-| LinkedIn Ads — Architectes | 150 € | ★★★☆☆ |
-| LinkedIn Ads — Conducteurs travaux | 100 € | ★★★☆☆ |
-| Réserve boosts saisonniers | 150 € (mars, sept) | — |
-| Frais de gestion / création visuels | 100 € | — |
-| **TOTAL** | **2 000 €** | |
-
-**Focus :** Stratégie full-funnel, optimisation continue par canal, scaling des campagnes rentables
+**Format visuel recommandé :** Infographie certifications (OFG + Fabriqué en France + Élysée) sur fond sobre | Format idéal : LinkedIn Document Ad, Google Display, Email
 
 ---
 
-## 7. KPIs et Objectifs par Campagne
+### Angle 3 — "Votre chantier ne peut pas attendre"
 
-### KPIs Google Ads
+**Concept :** Répondre directement à la douleur principale des artisans poseurs et maîtres d'œuvre : les délais non tenus de leurs fournisseurs actuels. Positionner La Fenêtrière comme partenaire de confiance sur les délais.
 
-| Campagne | KPI Principal | Objectif | KPI Secondaire | Alerte si |
-|----------|--------------|----------|----------------|-----------|
-| Search PVC / MaPrimeRénov' | CPL (coût/lead) | ≤ 35 € | CTR | CTR < 3% → revoir titres |
-| Search B2B Pros | CPL | ≤ 50 € | Qualité lead | CPL > 80 € → revoir ciblage |
-| Search Bois premium | CPL | ≤ 45 € | Durée visite LP | Taux rebond > 70% |
-| Local — Appels | Coût/appel | ≤ 15 € | Durée appel (>60s) | Durée <30s = mauvaise intention |
-| Local — Urgence | Appels immédiats | ≥ 5/semaine | Taux de closing | Taux closing <20% |
+**Headline :**
+> Un chantier en retard à cause des menuiseries ? Plus jamais.
 
-### KPIs Meta Ads
+**Body copy :**
+> Vous connaissez ce scénario : le fournisseur confirme 4 semaines, le chantier démarre, et les fenêtres arrivent en semaine 7. Résultat : maçons qui attendent, client mécontent, pénalités. Chez La Fenêtrière, notre atelier est à 15 minutes de Paris. Nous fabriquons, nous livrons, nous tenons nos délais. Et si l'urgence s'impose, on en parle.
 
-| Campagne | KPI Principal | Objectif | KPI Secondaire | Alerte si |
-|----------|--------------|----------|----------------|-----------|
-| Notoriété Carrousel | CPM | ≤ 8 € | Reach mensuel | CPM > 15 € → fatigué |
-| Vidéo Considération | Coût vue 3s | ≤ 0,05 € | Taux complétion 50% | <15% → revoir hook |
-| Lead Gen B2C | CPL | ≤ 20 € | Taux closing devis | CPL > 40 € → alerte |
-| B2B Pros | CPL | ≤ 30 € | Taille commande | Leads non qualifiés >50% |
+**CTA :** "Vérifier nos disponibilités"
 
-### KPIs LinkedIn Ads
-
-| Campagne | KPI Principal | Objectif | KPI Secondaire | Alerte si |
-|----------|--------------|----------|----------------|-----------|
-| Architectes | CPL | ≤ 60 € | Taux ouverture InMail | <15% → revoir objet |
-| Conducteurs travaux | Téléchargements catalogue | ≥ 10/mois | Taux contact commercial | CPL > 100 € |
-
-### KPIs Globaux
-
-| Indicateur | Objectif mensuel (scénario B) |
-|-----------|-------------------------------|
-| Leads totaux générés | ≥ 30 leads/mois |
-| Appels téléphoniques | ≥ 20 appels qualifiés/mois |
-| Devis envoyés | ≥ 15 devis/mois |
-| Taux de closing devis | ≥ 25% |
-| CA attribuable aux ads | ≥ 5x le budget ads (ROAS) |
-| Coût d'acquisition client | ≤ 150 € / client |
+**Format visuel recommandé :** Avant/après (chantier bloqué vs. chantier livré) | Format idéal : Meta Stories, LinkedIn Sponsored Content, Google Display
 
 ---
 
-## 8. Planning de Test A/B
+### Angle 4 — "Construire mieux, localement"
 
-> Règle d'or : ne tester qu'une variable à la fois. Durée minimale par test : 2 semaines ou 100 conversions.
+**Concept :** Capitaliser sur la tendance de l'économie circulaire et du sourcing local dans le BTP. S'adresser aux architectes et promoteurs qui ont des engagements RSE à tenir envers leurs clients finaux.
 
-### Trimestre 1 (mois 1–3) — Tests Fondations
+**Headline :**
+> Vos fenêtres fabriquées à 15 km de vos chantiers. C'est ce qu'on appelle local.
 
-| Semaine | Canal | Variable testée | Version A | Version B |
-|---------|-------|----------------|-----------|-----------|
-| S1–S2 | Google Search | Titre principal | "Fenêtres PVC Fabriquées en France" | "Fabricant Direct IDF Depuis 1984" |
-| S3–S4 | Google Search | Description | Angle économies MaPrimeRénov' | Angle qualité artisanale |
-| S5–S6 | Meta B2C | Visuel principal | Photo réalisation posée | Photo atelier fabrication |
-| S7–S8 | Meta B2C | Accroche texte | "L'État finance vos fenêtres" | "Votre fenêtre vieillissante vous coûte cher" |
-| S9–S10 | Meta B2B | Format | Image statique | Carrousel témoignages |
-| S11–S12 | Landing page | CTA bouton | "Demander un Devis Gratuit" | "Calculer Mes Aides + Devis" |
+**Body copy :**
+> Choisir La Fenêtrière, c'est choisir un fabricant qui produit, transforme et livre sans quitter l'Île-de-France. Moins de transport. Moins d'empreinte carbone. Plus de traçabilité. Pour les architectes et promoteurs engagés dans des démarches HQE, BREEAM ou à émissions réduites, nos menuiseries sont une réponse concrète — pas une promesse de catalogue.
 
-### Trimestre 2 (mois 4–6) — Tests Optimisation
+**CTA :** "Découvrir notre démarche circulaire"
 
-| Période | Canal | Variable testée | Objectif |
-|---------|-------|----------------|---------|
-| Mois 4 | Google Local | Rayon géographique | 15 km vs 30 km → CPL |
-| Mois 4 | Meta | Audience | Intérêts rénovation vs Lookalike 1% | CPL |
-| Mois 5 | LinkedIn | Format | Single Image vs Carrousel | CTR + CPL |
-| Mois 5 | Meta Vidéo | Durée vidéo | 60 sec vs 90 sec | Taux complétion |
-| Mois 6 | Google Search | Stratégie d'enchères | CPC manuel vs CPA cible | Volume leads + CPL |
-| Mois 6 | Landing Page | Formulaire | 3 champs vs 6 champs | Taux remplissage |
-
-### Trimestre 3 (mois 7–9) — Tests Scaling
-
-| Période | Action | Objectif |
-|---------|--------|---------|
-| Mois 7 | Scaler les gagnants A/B T1 et T2 | +50% budget sur campagnes prouvées |
-| Mois 8 | Test nouvelles audiences Meta (Lookalike 2–5%) | Élargir volume sans dégradation CPL |
-| Mois 9 | Test Google Performance Max | Comparer vs Search manuel |
-
-### Règles de décision A/B
-
-- **Critère de victoire :** Amélioration ≥ 15% du KPI principal avec significativité statistique >90%
-- **Budget test :** Minimum 200 € par variante avant décision
-- **Archivage :** Documenter tous les résultats (même les échecs) dans un fichier partagé
-- **Ne jamais** changer deux variables simultanément (biais de lecture)
+**Format visuel recommandé :** Carte IDF avec rayon de livraison + icônes circulaires | Format idéal : LinkedIn, Meta Feed, Brochure digitale
 
 ---
 
-## 9. Stratégie de Retargeting
+### Angle 5 — "L'Élysée a choisi. Et vous ?"
 
-> Le retargeting cible les visiteurs qui ont montré un intérêt sans convertir. Pour La Fenêtrière, ces audiences sont particulièrement précieuses car le cycle de décision pour des menuiseries est long (2–8 semaines).
+**Concept :** Exploiter la valeur de preuve sociale exceptionnelle de l'exposition à l'Élysée. Si le palais présidentiel a sélectionné La Fenêtrière, c'est une référence indiscutable de qualité — argument puissant en B2B pour rassurer sur la qualité.
 
----
+**Headline :**
+> Nos menuiseries ont été exposées à l'Élysée. Vos chantiers méritent le même niveau.
 
-### Audiences de Retargeting à Créer
+**Body copy :**
+> En 2025, La Fenêtrière a été sélectionnée pour l'exposition de l'Élysée dédiée à l'artisanat d'excellence. Pas pour le prestige — pour la qualité de fabrication qui l'a justifié. Cette même rigueur artisanale, nous l'appliquons à chaque commande, qu'il s'agisse de 2 fenêtres ou de 200. Fabriqué en France. Certifié OFG. Choisi par les plus exigeants.
 
-**Via Pixel Meta :**
+**CTA :** "Demander un échantillon / une visite atelier"
 
-| Audience | Condition | Taille estimée | Valeur |
-|----------|-----------|---------------|--------|
-| Visiteurs site (tous) | Visite dans les 30 jours | Base | Moyen |
-| Visiteurs page /devis (sans soumission) | URL contient /devis + pas d'événement Lead | Haute valeur | Très élevé |
-| Visiteurs page /fenetres-pvc, /bois, /alu | URL spécifique produit | Qualifié | Élevé |
-| Visiteurs vidéo (>25% de la vidéo) | Engagement vidéo Meta | Chaud | Élevé |
-| Leads non conclus | Liste CRM uploadée | Très qualifiés | Maximum |
-| Clients existants | Liste emails CRM | Upsell/Recommandation | Élevé |
-
-**Via Google Ads (RLSA) :**
-
-| Liste | Condition | Action |
-|-------|-----------|--------|
-| Visiteurs /devis sans conversion | 30 jours | Enchère +50% sur mots-clés génériques |
-| Visiteurs pages produits | 60 jours | Afficher ads Display de rappel |
-| Visiteurs page /pro (B2B) | 90 jours | Cibler sur LinkedIn aussi |
+**Format visuel recommandé :** Photo de l'exposition Élysée (si disponible) ou visuel sombre élégant avec logo officiel | Format idéal : LinkedIn Single Image, Meta Feed, Email campagne, Page "Références" du site
 
 ---
 
-### Séquence de Retargeting (Parcours 6 semaines)
+## 5. BUDGET ET PROJECTIONS
 
-```
-JOUR 1-3 : Visiteur arrive sur site → ne convertit pas
-    ↓
-JOUR 3 — RAPPEL DOUX (Meta/Display)
-    Visuel : Produit vu + "Vous avez regardé nos fenêtres..."
-    Message : "Votre devis gratuit vous attend. Réponse en 48h."
-    CTA : Demander un devis → /devis
+### 5.1 Répartition budgétaire recommandée
 
-    ↓
-JOUR 7 — ARGUMENT PREUVE SOCIALE (Meta)
-    Visuel : Témoignage client + réalisation
-    Message : "Ils ont choisi La Fenêtrière. Voilà leur témoignage."
-    CTA : Voir les avis → /temoignages
+Budget mensuel total : **2 000 € – 5 000 €**
 
-    ↓
-JOUR 14 — ANGLE URGENCE DOUCE (Meta + Google Display)
-    Message : "Saison des travaux : les délais s'allongent. Réservez votre créneau."
-    CTA : Demander un devis maintenant
+Ci-dessous deux scenarii : PME débutante (2 000 €/mois) et PME croissance (4 500 €/mois).
 
-    ↓
-JOUR 21 — OFFRE INCITATIVE (Meta)
-    Message : "Devis gratuit + simulation MaPrimeRénov' offerte jusqu'au [date]."
-    CTA : Profiter de l'offre → /devis
+| Canal | Budget PME Débutante | % | Budget PME Croissance | % |
+|-------|---------------------|---|----------------------|---|
+| Google Ads — Marque | 150 € | 7,5 % | 200 € | 4,4 % |
+| Google Ads — Acquisition | 700 € | 35 % | 1 400 € | 31 % |
+| Google Ads — Remarketing | 150 € | 7,5 % | 350 € | 7,8 % |
+| LinkedIn Ads — Notoriété | 300 € | 15 % | 600 € | 13,3 % |
+| LinkedIn Ads — Lead Gen | 400 € | 20 % | 800 € | 17,8 % |
+| Meta Ads — Retargeting | 150 € | 7,5 % | 300 € | 6,7 % |
+| Meta Ads — Lookalike | 150 € | 7,5 % | 400 € | 8,9 % |
+| Frais de gestion (agence) | — | — | 450 € | 10 % |
+| **TOTAL** | **2 000 €** | **100 %** | **4 500 €** | **100 %** |
 
-    ↓
-JOUR 30 — RELANCE FINALE (Meta)
-    Message : "Une dernière chance de découvrir nos fenêtres Made in France."
-    Visuel : Atelier La Fenêtrière + badge Élysée
+**Recommandation phase 1 (mois 1–3) :** Démarrer à 2 000 €, prioriser Google Acquisition + LinkedIn Lead Gen. Collecter les données de conversion avant de scaler.
 
-    ↓
-JOUR 42 — SORTIE DE SÉQUENCE
-    → Réintégration en audience froide après 90 jours d'inactivité
-```
+**Recommandation phase 2 (mois 4+) :** Augmenter à 4 500 € si CPL < 80 € et si la capacité commerciale de traitement des leads suit.
 
 ---
 
-### Retargeting B2B Spécifique
+### 5.2 CPL estimé par canal
 
-**LinkedIn + Meta combinés :**
+Les estimations ci-dessous sont basées sur les benchmarks sectoriels BTP/menuiseries B2B en France (2025–2026).
 
-1. **Visiteurs page /pro** (sans conversion) → LinkedIn InMail sponsorisé J+7
-   - Message : "Vous avez visité notre page pro. Avez-vous vu notre catalogue ?"
-   - CTA : Télécharger catalogue PDF
+| Canal | CPL estimé (fourchette) | Volume leads/mois | Qualité lead | Notes |
+|-------|------------------------|-------------------|--------------|-------|
+| Google — Marque | 20–40 € | 3–8 | Très haute | Forte intention d'achat |
+| Google — Acquisition | 60–120 € | 8–20 | Haute | Concurrence modérée IDF |
+| Google — Remarketing | 30–60 € | 5–12 | Haute | Audience chaude |
+| LinkedIn — Lead Gen | 80–200 € | 5–15 | Très haute | CPL élevé mais décideurs |
+| LinkedIn — Notoriété | Non applicable | — | — | Mesure en CPM/reach |
+| Meta — Retargeting | 25–50 € | 5–10 | Haute | Audience chaude |
+| Meta — Lookalike | 40–90 € | 8–18 | Moyenne | Ciblage moins précis B2B |
 
-2. **Ouvreurs email campagne B2B** (liste CRM) → Meta Ads custom audience
-   - Message : "Vous nous connaissez déjà. Passons au devis ?"
+**CPL moyen pondéré estimé (mix complet) :** 55–90 €/lead
 
-3. **Téléchargeurs catalogue** → Séquence email automatique (3 emails sur 10 jours)
-   - Email 1 (J+1) : Bienvenue + présentation équipe
-   - Email 2 (J+4) : Témoignage d'un artisan partenaire
-   - Email 3 (J+10) : Proposition de RDV commercial
-
----
-
-### Budget Retargeting Recommandé
-
-| Canal | Budget retargeting mensuel | % du budget total |
-|-------|--------------------------|-------------------|
-| Meta (audiences chaudes) | 80–150 € | 15% |
-| Google Display (RLSA) | 50–100 € | 8% |
-| LinkedIn (visiteurs /pro) | 50–80 € | 6% |
-| **Total retargeting** | **180–330 €/mois** | ~25-30% budget |
-
-> Le retargeting génère en général un CPL 40–60% inférieur au trafic froid. C'est un investissement prioritaire même avec un budget serré.
+**Volume total leads/mois estimé :**
+- Budget 2 000 €/mois : 15–30 leads qualifiés
+- Budget 4 500 €/mois : 35–65 leads qualifiés
 
 ---
 
-## Annexe — Calendrier Saisonnier Recommandé
+### 5.3 ROI projeté
 
-| Période | Action prioritaire | Raison |
-|---------|-------------------|--------|
-| Janvier–Février | Boost Google Search + Meta B2B | Début saison BTP, prises de commande |
-| Mars–Avril | Boost Meta B2C MaPrimeRénov' | Préparation saison travaux printemps |
-| Mai–Juin | Maintien + test nouveaux angles | Pleine saison travaux |
-| Juillet–Août | Réduction budgets (-30%) | Été : baisse demande particuliers |
-| Septembre | Boost maximal toutes campagnes | Reprise forte — meilleur ROI de l'année |
-| Octobre–Novembre | MaPrimeRénov' + isolation | Saison chauffage → motivation achat |
-| Décembre | Réduction (-40%) + retargeting seul | Fêtes, peu de décisions travaux |
+**Hypothèses de calcul :**
+
+| Paramètre | Valeur estimée |
+|-----------|---------------|
+| Panier moyen B2B (commande fenêtres) | 3 500 – 8 000 € HT |
+| Taux de conversion lead → devis | 40 % |
+| Taux de conversion devis → commande | 25 % |
+| Taux de transformation global (lead → client) | 10 % |
+| Marge brute sur vente | 35–45 % |
+| Valeur vie client (2 ans, réachat artisan) | 15 000 – 40 000 € |
+
+**Projection mensuelle — Budget 2 000 €/mois :**
+
+| Indicateur | Estimation |
+|------------|-----------|
+| Leads générés | 20–30 |
+| Devis envoyés | 8–12 |
+| Commandes signées | 2–4 |
+| CA généré (mois) | 7 000 – 28 000 € HT |
+| Marge brute générée | 2 450 – 12 600 € |
+| ROAS (retour sur dépense pub) | 3,5x – 14x |
+| ROI net (après budget pub) | 22 % – 530 % |
+
+**Projection mensuelle — Budget 4 500 €/mois :**
+
+| Indicateur | Estimation |
+|------------|-----------|
+| Leads générés | 45–65 |
+| Devis envoyés | 18–26 |
+| Commandes signées | 5–9 |
+| CA généré (mois) | 17 500 – 64 000 € HT |
+| Marge brute générée | 6 125 – 28 800 € |
+| ROAS (retour sur dépense pub) | 3,9x – 14,2x |
+| ROI net (après budget pub) | 36 % – 540 % |
+
+**Note :** Ces projections sont des estimations basées sur les benchmarks sectoriels. Les performances réelles dépendent de la qualité du site web, de la rapidité de traitement des leads, de la compétitivité tarifaire et de la saisonnalité (pics mars–mai et septembre–octobre).
 
 ---
 
-*Rapport AD-CAMPAIGNS.md — La Fenêtrière (la-fenetriere.fr)*
-*Champigny-sur-Marne (94) — Fabricant artisanal de menuiseries extérieures*
-*Rédigé le 20 mars 2026 — Expert Marketing Digital*
+### 5.4 KPIs de suivi recommandés
+
+| KPI | Fréquence | Outil | Objectif |
+|-----|-----------|-------|---------|
+| CPL par canal | Hebdomadaire | Google Ads / Meta Ads / LinkedIn | < 90 € |
+| Taux de conversion site (lead form) | Hebdomadaire | Google Analytics 4 | > 3 % |
+| Taux d'ouverture email de suivi lead | Hebdomadaire | CRM / Mailchimp | > 40 % |
+| Délai de traitement lead | Quotidien | CRM | < 4h ouvrées |
+| Taux devis → commande | Mensuel | CRM | > 20 % |
+| ROAS global | Mensuel | Tableau de bord consolidé | > 3x |
+| Coût par visite qualifiée | Mensuel | GA4 | < 3 € |
+| Score de qualité Google Ads | Mensuel | Google Ads | > 7/10 |
+
+---
+
+### 5.5 Roadmap de lancement
+
+| Phase | Durée | Actions prioritaires |
+|-------|-------|---------------------|
+| **Phase 0 — Setup** | Semaines 1–2 | Pixel Meta + GA4 + conversions Google, création des audiences, landing page pro dédiée |
+| **Phase 1 — Test** | Mois 1–2 | Lancement Google Marque + Acquisition, Meta Retargeting, LinkedIn Lead Gen |
+| **Phase 2 — Optimisation** | Mois 3–4 | A/B tests annonces, optimisation CPL, ajustement audiences, launch lookalike |
+| **Phase 3 — Scale** | Mois 5+ | Augmentation budgets sur canaux performants, nouveaux formats (vidéo, Display), automation CRM |
+
+---
+
+*Document rédigé le 21 mars 2026 — La Fenêtrière (la-fenetriere.fr)*
+*Données et projections basées sur les benchmarks BTP/menuiseries B2B France 2025–2026.*
+*À réviser après 90 jours de données réelles.*
